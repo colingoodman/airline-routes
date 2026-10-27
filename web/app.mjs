@@ -1,7 +1,7 @@
-import {indexData,filterRoutes,visibleHubs,greatCircle,uniqueConnections} from './model.mjs';
+import {indexData,filterRoutes,visibleHubs,greatCircle,uniqueConnections,worldOffsets,shiftedPaths,routeBounds} from './model.mjs';
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const state={alliances:new Set(['star','skyteam','oneworld']),airlines:new Set(),airports:new Set(),seasonal:true,charter:false};
-let data,ix,map,lines,pins,renderer,filtered=[],page=0;const PAGE_SIZE=75;
+let data,ix,map,lines,pins,renderer,pinRenderer,baseRenderer,worldGeo,filtered=[],page=0;const PAGE_SIZE=75;const worldLayers=new Map(),routeGeometry=new Map();
 const airportLabel=a=>`${a.id} · ${a.city||a.name}`;
 const airlineColor=id=>ix.alliances.get(ix.airlines.get(id).alliance_id).color;
 const sourceLink=id=>{const s=data.sources.find(x=>x.id===id);return s?`<a href="${esc(s.url)}" target="_blank" rel="noopener">Wikipedia ↗</a>`:'—';};
@@ -30,35 +30,67 @@ function renderTable(){
  $('previous').disabled=page===0;$('next').disabled=start+PAGE_SIZE>=filtered.length;$('empty').hidden=filtered.length>0;
 }
 function selectAirport(id){state.airports=new Set([id]);page=0;update();}
+function renderWorld(){
+ if(!worldGeo)return;
+ const offsets=worldOffsets(map.getBounds().getWest(),map.getBounds().getEast());
+ for(const [offset,layer] of worldLayers)if(!offsets.includes(offset)){map.removeLayer(layer);worldLayers.delete(offset);}
+ for(const offset of offsets)if(!worldLayers.has(offset)){
+  const layer=L.geoJSON(worldGeo,{pane:'land',renderer:baseRenderer,coordsToLatLng:c=>L.latLng(c[1],c[0]+offset),style:{color:'#b6c6d4',weight:.6,fillColor:'#f8fafb',fillOpacity:1},interactive:false}).addTo(map);
+  worldLayers.set(offset,layer);
+ }
+}
 function renderMap(){
  lines.clearLayers();pins.clearLayers();
+ const bounds=map.getBounds(),padding=Math.max(90,bounds.getEast()-bounds.getWest()),west=bounds.getWest()-padding,east=bounds.getEast()+padding,offsets=worldOffsets(bounds.getWest(),bounds.getEast());
  const connections=uniqueConnections(filtered),relevant=new Set(filtered.flatMap(r=>[r.hub_airport_id,r.destination_airport_id]));
  const vh=visibleHubs(data,state),hubIds=new Set(vh.map(h=>h.airport_id));
  if(!state.airports.size)vh.forEach(h=>relevant.add(h.airport_id));
  for(const r of connections){
   const a=ix.airports.get(r.hub_airport_id),b=ix.airports.get(r.destination_airport_id),onlySeasonal=r.services.every(x=>x.status==='seasonal');
-  const line=L.polyline(greatCircle(a,b),{renderer,color:airlineColor(r.airline_id),weight:1.15,opacity:.36,dashArray:onlySeasonal?'4 5':null});
+  const geometryKey=[a.id,b.id].join('|');
+  if(!routeGeometry.has(geometryKey))routeGeometry.set(geometryKey,greatCircle(a,b));
+  for(const offset of offsets){
+  const paths=shiftedPaths(routeGeometry.get(geometryKey),offset,west,east);if(!paths.length)continue;
+  const line=L.polyline(paths,{pane:'routes',renderer,color:airlineColor(r.airline_id),weight:1.15,opacity:.36,dashArray:onlySeasonal?'4 5':null});
   line.bindPopup(`<strong>${esc(ix.airlines.get(r.airline_id).name)}</strong><br>${esc(airportLabel(a))} — ${esc(airportLabel(b))}<br>${r.services.map(s=>`${s.hub_airport_id} → ${s.destination_airport_id} · ${esc(s.service_brand)} · ${s.status==='seasonal'?'Seasonal':'Listed'}${s.note?' · '+esc(s.note):''}<br>${sourceLink(s.source_id)}`).join('<hr>')}<p class="hint">Line joins the listed airports; exact flight path and nonstop operation are not verified.</p>`);
   line.on('mouseover',()=>line.setStyle({weight:3,opacity:.9})).on('mouseout',()=>line.setStyle({weight:1.15,opacity:.36}));line.addTo(lines);
+  }
  }
  for(const id of relevant){
   const a=ix.airports.get(id),isHub=hubIds.has(id),serving=vh.filter(h=>h.airport_id===id),colors=[...new Set(serving.map(h=>airlineColor(h.airline_id)))];
-  const marker=L.circleMarker([a.latitude,a.longitude],{renderer,radius:isHub?4.5:2.2,color:isHub?'#fff':'#50647d',weight:isHub?1.2:.3,fillColor:isHub?(colors.length===1?colors[0]:'#293c51'):'#627c96',fillOpacity:isHub?1:.65});
+  for(const offset of offsets){
+  const longitude=a.longitude+offset;if(longitude<west||longitude>east)continue;
+  const marker=L.circleMarker([a.latitude,longitude],{pane:'airports',renderer:pinRenderer,radius:isHub?4.5:2.2,color:isHub?'#fff':'#50647d',weight:isHub?1.2:.3,fillColor:isHub?(colors.length===1?colors[0]:'#293c51'):'#627c96',fillOpacity:isHub?1:.65});
   const box=document.createElement('div');box.innerHTML=`<strong>${esc(a.id)} · ${esc(a.name)}</strong><br>${esc(a.city)}, ${esc(a.country)}${serving.length?'<hr>'+serving.map(h=>`${esc(ix.airlines.get(h.airline_id).name)} · ${h.kind==='secondary_hub'?'secondary hub':'hub'}<br><small>${h.route_count} parsed services · ${esc(h.coverage.replaceAll('_',' '))}<br>${sourceLink(h.source_id)}</small>`).join('<br>'):''}<br>`;
   const btn=document.createElement('button');btn.textContent='Show routes touching '+id;btn.addEventListener('click',()=>selectAirport(id));box.append(btn);
   marker.bindPopup(box).bindTooltip(`${esc(a.id)} · ${esc(a.city||a.name)}`);marker.addTo(pins);
+  }
  }
  $('counts').textContent=`${connections.length.toLocaleString()} connections · ${new Set(filtered.map(r=>r.airline_id)).size} airlines · ${[...relevant].filter(x=>hubIds.has(x)).length} hubs · ${relevant.size} airports`;
 }
 function update(){filtered=filterRoutes(data,state);page=Math.min(page,Math.max(0,Math.ceil(filtered.length/PAGE_SIZE)-1));renderAirlines();renderAirports();renderMap();renderTable();persist();}
-function fit(){const pts=[...new Set(filtered.flatMap(r=>[r.hub_airport_id,r.destination_airport_id]))].map(id=>{const a=ix.airports.get(id);return[a.latitude,a.longitude]});if(pts.length)map.fitBounds(L.latLngBounds(pts),{padding:[30,30],maxZoom:7});}
+function fit(){
+ const pts=[...new Set(filtered.flatMap(r=>[r.hub_airport_id,r.destination_airport_id]))].map(id=>{const a=ix.airports.get(id);return[a.latitude,a.longitude];});
+ if(!pts.length)return;
+ const paths=[];
+ for(const r of uniqueConnections(filtered)){
+  const key=[r.hub_airport_id,r.destination_airport_id].join('|');
+  if(!routeGeometry.has(key))routeGeometry.set(key,greatCircle(ix.airports.get(r.hub_airport_id),ix.airports.get(r.destination_airport_id)));
+  paths.push(...routeGeometry.get(key));
+ }
+ map.fitBounds(routeBounds(pts,paths,map.getCenter().lng),{padding:[30,30],maxZoom:7});
+}
 function persist(){const p=new URLSearchParams();if(state.alliances.size!==3)p.set('alliances',[...state.alliances].join(','));if(state.airlines.size)p.set('airlines',[...state.airlines].join(','));if(state.airports.size)p.set('airports',[...state.airports].join(','));if(!state.seasonal)p.set('seasonal','0');if(state.charter)p.set('charter','1');history.replaceState(null,'',location.pathname+(p.size?'?'+p:'')+location.hash);}
 function restore(){const p=new URLSearchParams(location.search);for(const [key,ids] of [['alliances',new Set(data.alliances.map(a=>a.id))],['airlines',new Set(data.airlines.map(a=>a.id))],['airports',new Set(data.airports.map(a=>a.id))]])if(p.has(key))state[key]=new Set(p.get(key).split(',').filter(x=>ids.has(x)));state.seasonal=p.get('seasonal')!=='0';state.charter=p.get('charter')==='1';}
 async function init(){
  const response=await fetch('data.json');if(!response.ok)throw new Error(`Dataset request failed (${response.status})`);data=await response.json();ix=indexData(data);restore();
- map=L.map('map',{preferCanvas:true,minZoom:0,maxZoom:10,zoomSnap:.25,worldCopyJump:false}).fitBounds([[-60,-180],[80,180]],{padding:[10,10]});map.attributionControl.addAttribution('Basemap: Natural Earth / geo-countries · Airport data: OurAirports · Routes: Wikipedia');
- renderer=L.canvas({padding:.3});lines=L.layerGroup().addTo(map);pins=L.layerGroup().addTo(map);
- fetch('world.geojson').then(r=>{if(!r.ok)throw new Error('Basemap unavailable');return r.json();}).then(geo=>{L.geoJSON(geo,{style:{color:'#b6c6d4',weight:.6,fillColor:'#f8fafb',fillOpacity:1},interactive:false}).addTo(map).bringToBack();}).catch(()=>{$('loading').textContent='Basemap unavailable. Airport pins and route filters still work.';});
+ map=L.map('map',{preferCanvas:true,minZoom:0,maxZoom:10,zoomSnap:.25,worldCopyJump:true}).fitBounds([[-60,-180],[80,180]],{padding:[10,10]});map.attributionControl.addAttribution('Basemap: Natural Earth / geo-countries · Airport data: OurAirports · Routes: Wikipedia');
+ for(const [name,z] of [['land',220],['routes',420],['airports',620]])map.createPane(name).style.zIndex=z;
+ map.getPane('land').style.pointerEvents='none';
+ baseRenderer=L.canvas({pane:'land',padding:1});renderer=L.canvas({pane:'routes',padding:1});pinRenderer=L.canvas({pane:'airports',padding:1});
+ lines=L.layerGroup().addTo(map);pins=L.layerGroup().addTo(map);
+ map.on('moveend',()=>{renderWorld();renderMap();});
+ fetch('world.geojson').then(r=>{if(!r.ok)throw new Error('Basemap unavailable');return r.json();}).then(geo=>{worldGeo=geo;renderWorld();}).catch(()=>{$('loading').textContent='Basemap unavailable. Airport pins and route filters still work.';});
  $('snapshot').textContent=`Snapshot: ${data.as_of} · ${data.airlines.length} airlines · ${data.hubs.length} airline–hub records`;
  const gaps=data.hubs.filter(h=>!['parsed'].includes(h.coverage));
  $('methodology').innerHTML=`<p>${esc(data.scope.routes)}</p><p>${esc(data.scope.seasonality)}</p><p>${data.issues.length} extraction issues; ${gaps.length} airline–hub records need source or mapping review. “Parsed” describes extraction, not schedule completeness. Inspect the JSON issues and per-hub coverage fields.</p><p>Future and suspended/ended entries are retained in <code>excluded_routes</code> and omitted from this map.</p><p>Regional brands are grouped under their parent member; operating carrier is not independently verified. This is a research snapshot, not a booking schedule.</p><p>Source: Wikipedia (CC BY-SA); airport metadata: OurAirports (public domain); verified airport aliases: Wikipedia and Wikidata (CC0). Pinned source revisions are linked from the service table.</p>`;

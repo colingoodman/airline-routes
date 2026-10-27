@@ -36,3 +36,34 @@ export function uniqueConnections(routes) {
  for(const r of routes){const pair=[r.hub_airport_id,r.destination_airport_id].sort();const k=r.airline_id+'|'+pair.join('|');if(!result.has(k))result.set(k,{...r,services:[]});result.get(k).services.push(r);}
  return [...result.values()];
 }
+
+// Include adjacent worlds during dragging; recompute after every completed pan.
+export function worldOffsets(west,east) {
+ const margin=Math.max(1,Math.ceil((east-west)/360));
+ const first=Math.floor((west+180)/360)-margin,last=Math.floor((east+180)/360)+margin;
+ return Array.from({length:last-first+1},(_,i)=>(first+i)*360);
+}
+export function shiftedPaths(paths,offset,west,east) {
+ return paths.filter(p=>Math.max(...p.map(x=>x[1]))+offset>=west && Math.min(...p.map(x=>x[1]))+offset<=east).map(p=>p.map(([lat,lon])=>[lat,lon+offset]));
+}
+// The complement of the largest gap is the tightest circular airport extent.
+export function fitPositions(points,center=0) {
+ if(!points.length)return [];
+ const longs=[...new Set(points.map(([,lon])=>((lon%360)+360)%360))].sort((a,b)=>a-b);
+ let gap=-1,start=longs[0];
+ for(let i=0;i<longs.length;i++){
+  const next=longs[(i+1)%longs.length]+(i===longs.length-1?360:0),size=next-longs[i];
+  if(size>gap){gap=size;start=next%360;}
+ }
+ const shifted=points.map(([lat,lon])=>{let x=((lon%360)+360)%360;if(x<start)x+=360;return[lat,x];});
+ const middle=(Math.min(...shifted.map(x=>x[1]))+Math.max(...shifted.map(x=>x[1])))/2,offset=360*Math.round((center-middle)/360);
+ return shifted.map(([lat,lon])=>[lat,lon+offset]);
+}
+export function routeBounds(points,paths,center=0) {
+ const fitted=fitPositions(points,center);if(!fitted.length)return [];
+ let south=Infinity,north=-Infinity,west=Infinity,east=-Infinity;
+ for(const [lat,lon] of fitted){south=Math.min(south,lat);north=Math.max(north,lat);west=Math.min(west,lon);east=Math.max(east,lon);}
+ const middle=(west+east)/2;
+ for(const path of paths)for(const [lat,lon] of path){const x=lon+360*Math.round((middle-lon)/360);south=Math.min(south,lat);north=Math.max(north,lat);west=Math.min(west,x);east=Math.max(east,x);}
+ return [[south,west],[north,east]];
+}
