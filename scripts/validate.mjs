@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const root=new URL('../',import.meta.url),d=JSON.parse(fs.readFileSync(new URL('web/data.json',root),'utf8'));
@@ -24,3 +25,5 @@ assert.ok(d.airlines.every(a=>d.routes.some(r=>r.airline_id===a.id)));
 const audit=d.discovery_audit;assert.equal(audit.summary.admitted_carriers,d.airlines.length);assert.equal(audit.summary.admitted_origins,d.hubs.length);assert.equal(audit.summary.directory_entries,audit.candidates.length);assert.equal(audit.carrier_admissions.filter(a=>a.admitted).length,d.airlines.length);assert.equal(audit.origin_admissions.filter(a=>a.admitted).length,d.hubs.length);assert.deepEqual(audit,JSON.parse(fs.readFileSync(new URL('scripts/discovery-audit.json',root))));
 for(const [id,icao] of [['ALY','HEAX'],['PXN','VEPU'],['XYI','ZJYX']]){const a=d.airports.find(a=>a.id===id);assert.equal(a?.icao,icao);assert.ok(a.identifier_source_id);}assert.ok(!ap.has('HBE'));assert.deepEqual(d.airports.find(a=>a.id==='ALY').former_iata_codes,['HBE']);
 console.log(JSON.stringify({airlines:d.airlines.length,hubs:d.hubs.length,airports:d.airports.length,services:d.routes.length,excluded:d.excluded_routes.length,unresolvedLinkedDestinations:d.issues.length,partialOrigins:d.hubs.filter(h=>h.coverage==='parsed_with_unresolved').length,classification:{lowCost:d.airlines.filter(a=>a.low_cost===true).length,regional:d.airlines.filter(a=>a.regional===true).length},discovery:audit.summary},null,2));
+
+const mapProjection=JSON.parse(fs.readFileSync(new URL('web/map-data.json',root),'utf8'));assert.equal(mapProjection.canonical_sha256,createHash('sha256').update(fs.readFileSync(new URL('web/data.json',root))).digest('hex'),'Map projection is stale. Run npm run build:data.');assert.equal(mapProjection.routes.length,d.routes.length);

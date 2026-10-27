@@ -9,3 +9,5 @@ for name in ['roster-hubs.json','airport-overrides.json','airport-overrides-evid
 url='https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv'
 (w/'ourairports.csv').write_bytes(urlopen(Request(url,headers={'User-Agent':'AllianceRouteMap/1.0'}),timeout=90).read())
 subprocess.run([sys.executable,str(root/'scripts/collect.py'),'--work',str(w),'--out',str(root/'web/data.json'),'--as-of',args.as_of],check=True)
+
+subprocess.run(['node',str(root/'scripts/build-runtime.mjs')],check=True)

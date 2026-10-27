@@ -24,6 +24,8 @@ python3 -m http.server 8080 --bind 127.0.0.1 --directory web
 
 Open <http://127.0.0.1:8080>. No API keys, build step, online map tiles, or runtime package installation are needed. Leaflet, world outlines and data are included locally. Ordinary source files need an HTTP server; the portable viewer below opens directly.
 
+The map initially loads the compact, generated `web/map-data.json` display projection. **`web/data.json` remains the complete normalized download**, including all audit and provenance records. `npm run build:data` regenerates the projection after data changes; validation rejects a stale projection. The portable viewer embeds both and creates the full download only when requested.
+
 The full-width map wraps east and west, repeating land, routes and pins across the date line. Filters sit underneath. Land, routes and airports have ordered panes; land cannot cover the network. “Fit routes” includes full curved paths and chooses a Pacific-centered extent when appropriate. Pins and routes open their source evidence. The service table is paginated; its airport buttons filter routes touching that airport.
 
 Alliances/categories, airlines, airports and operating-model filters combine. Multiple selected airlines are a union; multiple airports show any service touching any selected airport. No explicit airline selection means all eligible carriers. Seasonal and charter controls are independent; charter services are off initially. A carrier represented only by charter entries is therefore hidden until charter services are enabled. Filters are bookmarked in the URL; Reset restores the defaults.
@@ -96,9 +98,9 @@ python3 -m venv .venv
 .venv/bin/python scripts/rebuild.py --as-of 2026-10-27
 ```
 
-The 14 Node tests cover filter composition, scoped brand models, reciprocal connections, airport aliases, full curved bounds and repeated-world geometry. The 21 Python tests cover source table ancestry, primary-brand matching, section labels, status/date handling, metadata safety, uncoded airports conservative business-model classification and directory identity boundaries. Dataset validation checks every key/reference, source pin, carrier-origin count, evidence flag, partial-coverage gap and admission-audit count, plus the Denver/Paris example routes. Browser checks exercise model filters and brand scoping on the rendered map.
+The 27 Node tests cover filter composition, scoped brand models, reciprocal connections, airport aliases, full curved bounds and repeated-world geometry. The 21 Python tests cover source table ancestry, primary-brand matching, section labels, status/date handling, metadata safety, uncoded airports conservative business-model classification and directory identity boundaries. Dataset validation checks every key/reference, source pin, carrier-origin count, evidence flag, partial-coverage gap and admission-audit count, plus the Denver/Paris example routes. Browser checks exercise model filters and brand scoping on the rendered map. Projection tests compare every service field and filter result with the complete normalized dataset; geometry tests cover projection, simplification error, clipping, spatial hit testing and buffer reuse.
 
-The rebuild uses the reviewed roster, aliases, metadata corrections/addition and classifications in `scripts/`; it downloads public OurAirports metadata and fetches airport articles using cached responses and bounded retries. A newer date does not automatically re-review those inputs. Use a fresh cache for a route refresh and review changed roster/classification/identity evidence. Network failures and newly unresolved entries are recorded explicitly. A rebuilt snapshot must pass validation before release.
+The rebuild also requires Node.js to regenerate the display projection. The rebuild uses the reviewed roster, aliases, metadata corrections/addition and classifications in `scripts/`; it downloads public OurAirports metadata and fetches airport articles using cached responses and bounded retries. A newer date does not automatically re-review those inputs. Use a fresh cache for a route refresh and review changed roster/classification/identity evidence. Network failures and newly unresolved entries are recorded explicitly. A rebuilt snapshot must pass validation before release.
 
 For a new discovery inventory, without modifying the released roster or dataset:
 
@@ -109,6 +111,31 @@ For a new discovery inventory, without modifying the released roster or dataset:
 ```
 
 Discovery results require identity, operating-status, origin and route admission review. `scripts/discovery-audit.json` records this release's decisions; `scripts/airline-models.json` retains the reviewed model inputs. Raw research HTML is not distributed. Public Wikipedia endpoints sometimes rate-limit access; inaccessible evidence is disclosed rather than inferred.
+
+## Performance audit
+
+The 27 October 2026 audit found that the overview created 140,934 individual Leaflet route objects and 15,001 pin objects, including oversized offscreen world copies. Every pan rebuilt them. Search also rescanned routes and rebuilt indexes; startup loaded and serialized the complete 16 MB research dataset.
+
+The viewer now batches routes into up to ten color/seasonality canvas strokes. It caches spherical geometry and model indexes, simplifies projected curves within 0.65 CSS pixels, clips spatial hit-test segments to the buffered viewport, retains pins during pans, and reuses the route buffer for small pans. Routes remain individually clickable through a spatial index; no routes are sampled or removed. Overscan is 20% rather than 100%. Search reuses eligibility results instead of scanning the network per keystroke. The source download and all data facts remain unchanged.
+
+Three alternating runs in the same browser tab at **1280 × 720, pixel ratio 1**, on localhost without CPU/network throttling:
+
+| Measurement | Before | After |
+| --- | ---: | ---: |
+| Median application-ready time | 2,523 ms | 450 ms |
+| Median synchronous map construction | 2,275 ms | 270 ms |
+| Initial map data, uncompressed | 15,994,246 bytes | 2,734,905 bytes |
+| Route/pin canvas backing storage at first frame | 51.8 MB | 16.9 MB |
+
+These are application instrumentation measurements, **not Lighthouse scores, field Core Web Vitals, INP, or total process-memory measurements**. Canvas byte estimates use width × height × four bytes and exclude JavaScript objects, the basemap and browser/GPU overhead. Raw measurements, samples, pixel ratios and limitations are in `benchmarks/performance-audit.json`. Large overview redraws can still take around 100 ms; small pans inside the buffer avoid that redraw. Serving `map-data.json` with gzip reduces its body to about 716 KB; the basic Python preview does not enable HTTP compression.
+
+To reproduce data-operation benchmarks:
+
+```sh
+npm run benchmark
+```
+
+Open the normal viewer with `?audit=1` to record bounded timing samples in the root element's `data-performance` attribute. Profiling is off by default and makes no external requests. Browser comparisons must keep viewport, pixel ratio, filter state and network conditions equal. Use `npm run build:data` and rerun validation/tests after changing the complete dataset. The normalized source data is checked for exact equality throughout this optimization.
 
 ## Sources and attribution
 

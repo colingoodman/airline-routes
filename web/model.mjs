@@ -1,19 +1,23 @@
+const dataIndexes=new WeakMap();
 export function indexData(data) {
- return { sources:new Map((data.sources||[]).map(s=>[s.id,s])), airports: new Map(data.airports.map(a=>[a.id,a])), airlines:new Map(data.airlines.map(a=>[a.id,a])), alliances:new Map(data.alliances.map(a=>[a.id,a])), brands:new Map((data.service_brand_models||[]).map(b=>[b.id,b])) };
+ if(dataIndexes.has(data))return dataIndexes.get(data);
+ const index={ models:new WeakMap(), sources:new Map((data.sources||[]).map(s=>[s.id,s])), airports: new Map(data.airports.map(a=>[a.id,a])), airlines:new Map(data.airlines.map(a=>[a.id,a])), alliances:new Map(data.alliances.map(a=>[a.id,a])), brands:new Map((data.service_brand_models||[]).map(b=>[b.id,b])) };
+ dataIndexes.set(data,index);return index;
 }
 export function routeModel(index,route) {
+ if(index.models.has(route))return index.models.get(route);
  const airline=index.airlines.get(route.airline_id),brand=index.brands.get(route.service_brand_id);
- return Object.fromEntries(['low_cost','regional'].map(key=>[key,typeof brand?.[key]==='boolean'?brand[key]:typeof airline?.[key]==='boolean'?airline[key]:null]));
+ const value={low_cost:typeof brand?.low_cost==='boolean'?brand.low_cost:typeof airline?.low_cost==='boolean'?airline.low_cost:null,regional:typeof brand?.regional==='boolean'?brand.regional:typeof airline?.regional==='boolean'?airline.regional:null};index.models.set(route,value);return value;
 }
 function modelMatches(model,state) {
  const lowCost=state.lowCost||'all';
  return (lowCost==='all'||lowCost==='yes'&&model.low_cost===true||lowCost==='no'&&model.low_cost===false||lowCost==='unknown'&&model.low_cost===null) && (!state.regional||model.regional===true);
 }
 export function filterRoutes(data,state) {
- const ix=indexData(data);
+ const ix=indexData(data),typed=state.regional||(state.lowCost&&state.lowCost!=='all');
  return data.routes.filter(r=>{
   const a=ix.airlines.get(r.airline_id);
-  return state.alliances.has(a.alliance_id) && (!state.airlines.size || state.airlines.has(a.id)) && (!state.airports.size || state.airports.has(r.hub_airport_id)||state.airports.has(r.destination_airport_id)) && (state.seasonal || r.status!=='seasonal') && (state.charter || r.service_type!=='charter') && modelMatches(routeModel(ix,r),state);
+  return state.alliances.has(a.alliance_id) && (!state.airlines.size || state.airlines.has(a.id)) && (!state.airports.size || state.airports.has(r.hub_airport_id)||state.airports.has(r.destination_airport_id)) && (state.seasonal || r.status!=='seasonal') && (state.charter || r.service_type!=='charter') && (!typed||modelMatches(routeModel(ix,r),state));
  });
 }
 export function airlineOptions(data,state) {
@@ -46,7 +50,7 @@ export function greatCircle(a,b,steps=48) {
 }
 export function uniqueConnections(routes) {
  const result=new Map();
- for(const r of routes){const pair=[r.hub_airport_id,r.destination_airport_id].sort();const k=r.airline_id+'|'+pair.join('|');if(!result.has(k))result.set(k,{...r,services:[]});result.get(k).services.push(r);}
+ for(const r of routes){const a=r.hub_airport_id,b=r.destination_airport_id;const k=r.airline_id+'|'+(a<b?a+'|'+b:b+'|'+a);if(!result.has(k))result.set(k,{...r,services:[]});result.get(k).services.push(r);}
  return [...result.values()];
 }
 

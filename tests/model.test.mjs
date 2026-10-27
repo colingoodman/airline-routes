@@ -63,3 +63,11 @@ test('brand classifications filter services without transferring a subsidiary fl
  assert.deepEqual(filterRoutes(data,{...state,regional:true}).map(r=>r.destination_airport_id),['YQB']);
  assert.equal(filterRoutes(data,{...state,regional:true,lowCost:'yes'}).length,0);
 });
+
+test('cached indexes stay isolated by dataset and explicit false brands override parent flags',()=>{
+ const route={airline_id:'X',service_brand_id:'X|brand',hub_airport_id:'A',destination_airport_id:'B'};
+ const first={alliances:[{id:'nonaligned'}],airports:[],airlines:[{id:'X',alliance_id:'nonaligned',low_cost:true}],service_brand_models:[{id:'X|brand',low_cost:false}],routes:[route]};
+ const second={...first,service_brand_models:[{id:'X|brand',low_cost:true}]};
+ const state={alliances:new Set(['nonaligned']),airlines:new Set(),airports:new Set(),lowCost:'yes',seasonal:true,charter:true};
+ assert.equal(filterRoutes(first,state).length,0);assert.equal(filterRoutes(second,state).length,1);assert.equal(filterRoutes(first,{...state,lowCost:'no'}).length,1);
+});

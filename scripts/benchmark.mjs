@@ -1,0 +1,8 @@
+import fs from'node:fs';import path from'node:path';import{fileURLToPath}from'node:url';import{performance}from'node:perf_hooks';import{gzipSync}from'node:zlib';
+import{filterRoutes,airlineOptions,visibleHubs,uniqueConnections}from'../web/model.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),raw=fs.readFileSync(path.join(root,'web/data.json'),'utf8'),d=JSON.parse(raw);
+const state={alliances:new Set(d.alliances.map(a=>a.id)),airlines:new Set(),airports:new Set(),seasonal:true,charter:false,lowCost:'all',regional:false};
+function measure(name,fn,n=20){fn();const samples=[];for(let i=0;i<n;i++){const start=performance.now();fn();samples.push(performance.now()-start);}samples.sort((a,b)=>a-b);return{name,median_ms:+samples[Math.floor(n/2)].toFixed(2),p90_ms:+samples[Math.min(n-1,Math.floor(n*.9))].toFixed(2)};}
+const filtered=filterRoutes(d,state),connections=uniqueConnections(filtered),runtime=fs.readFileSync(path.join(root,'web/map-data.json'));
+const out={environment:{node:process.version,platform:process.platform,architecture:process.arch},payload:{canonical_bytes:Buffer.byteLength(raw),runtime_bytes:runtime.length,runtime_gzip_bytes:gzipSync(runtime).length},routes:d.routes.length,connections:connections.length,measurements:[measure('filter default',()=>filterRoutes(d,state)),measure('filter low-cost',()=>filterRoutes(d,{...state,lowCost:'yes'})),measure('airline search eligibility',()=>airlineOptions(d,state)),measure('typed hub selection',()=>visibleHubs(d,{...state,regional:true})),measure('group connections',()=>uniqueConnections(filtered))]};
+if(process.argv[2])fs.writeFileSync(path.resolve(process.argv[2]),JSON.stringify(out,null,2)+'\n');console.log(JSON.stringify(out,null,2));
