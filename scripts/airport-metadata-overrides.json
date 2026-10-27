@@ -7,7 +7,7 @@
     "wikipedia_link": "https://en.wikipedia.org/wiki/Alexandria_International_Airport_(Egypt)",
     "effective_on": "2026-09-16",
     "source_url": "https://www.aegeanhub.com/fr/booking-process-and-sales/newsletter/",
-    "source_title": "Airport Code Change – Alexandria International Airport (HBE → ALY), 10 August 2026",
+    "source_title": "Airport Code Change \u2013 Alexandria International Airport (HBE \u2192 ALY), 10 August 2026",
     "note": "Aegean's trade bulletin confirms ALY for flights on or after 16 September 2026. Retain the physical Borg El Arab airport coordinates from OurAirports row 3180; do not substitute the closed El Nouzha airport that formerly used ALY.",
     "previous_iata": "HBE"
   },
@@ -20,7 +20,7 @@
     "wikipedia_link": "https://en.wikipedia.org/wiki/Purnia_Airport",
     "verified_on": "2026-10-27",
     "source_url": "https://www.goindigo.in/airport-directory/india/purnea-pxn.html",
-    "source_title": "Purnea Airport (PXN) – IndiGo airport directory",
+    "source_title": "Purnea Airport (PXN) \u2013 IndiGo airport directory",
     "supporting_source_urls": [
       "https://en.wikipedia.org/w/index.php?oldid=1366865186"
     ],
@@ -35,10 +35,78 @@
     "wikipedia_link": "https://en.wikipedia.org/wiki/Sansha_Yongxing_Airport",
     "verified_on": "2026-10-27",
     "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380079301",
-    "source_title": "Sansha Yongxing Airport – Wikipedia airport infobox",
+    "source_title": "Sansha Yongxing Airport \u2013 Wikipedia airport infobox",
     "supporting_source_urls": [
       "https://en.wikipedia.org/w/index.php?oldid=1380079301"
     ],
     "note": "OurAirports row 32745 (XP-0003) already identifies this physical airport and its position but has blank IATA and ICAO fields. Fill only the missing identifiers from the reviewed source; no former IATA code is asserted. No assignment effective date was verified; verified_on records the research date. Pinned Wikipedia infobox evidence: https://en.wikipedia.org/w/index.php?oldid=1380079301"
+  },
+  "DAC": {
+    "ourairports_id": "26534",
+    "iata_code": "DAC",
+    "icao_code": "VGHS",
+    "name": "Hazrat Shahjalal International Airport",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Hazrat_Shahjalal_International_Airport",
+    "verified_on": "2026-10-27",
+    "source_url": "https://www.wikidata.org/wiki/Q30603",
+    "source_title": "Verified Dhaka airport identity",
+    "note": "Replace a malformed non-Wikipedia link in upstream airport metadata with the documented English Wikipedia airport page. DAC/VGHS and the physical airport coordinates are retained."
+  },
+  "YKBA": {
+    "ourairports_id": "525158",
+    "icao_code": "YKBA",
+    "verified_on": "2026-10-27",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363953672",
+    "source_title": "Kens Bore Airport \u2013 airport infobox",
+    "note": "Reviewed identifiers added to the same explicitly matched OurAirports physical airport; its coordinates and country are retained. No code-assignment effective date or former code is inferred."
+  },
+  "11900": {
+    "icao_code": "PAAF",
+    "ourairports_id": "11900",
+    "verified_on": "2026-10-27",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377100754",
+    "source_title": "Minto_Al_Wright_Airport",
+    "note": "Explicit airport infobox identifier and coordinates identify the existing physical OurAirports row; assignment date not inferred."
+  },
+  "595013": {
+    "icao_code": "VRKM",
+    "ourairports_id": "595013",
+    "verified_on": "2026-10-27",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368538730",
+    "source_title": "Muli_Airport",
+    "note": "Explicit airport infobox identifier and coordinates identify the existing physical OurAirports row; assignment date not inferred."
+  },
+  "525691": {
+    "icao_code": "VLNK",
+    "ourairports_id": "525691",
+    "verified_on": "2026-10-27",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1362768367",
+    "source_title": "Nong_Khang_Airport",
+    "note": "Explicit airport infobox identifier and coordinates identify the existing physical OurAirports row; assignment date not inferred. Source IATA collides with another active metadata row and is deliberately withheld pending transition review."
+  },
+  "507154": {
+    "icao_code": "YWGA",
+    "ourairports_id": "507154",
+    "verified_on": "2026-10-27",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363087885",
+    "source_title": "Wodgina_Airport",
+    "note": "Explicit airport infobox identifier and coordinates identify the existing physical OurAirports row; assignment date not inferred."
+  },
+  "5211": {
+    "icao_code": "OIZS",
+    "ourairports_id": "5211",
+    "verified_on": "2026-10-27",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363077479",
+    "source_title": "Saravan_Airport",
+    "note": "Explicit airport infobox identifier and coordinates identify the existing physical OurAirports row; assignment date not inferred. Source IATA collides with another active metadata row and is deliberately withheld pending transition review."
+  },
+  "20107": {
+    "ourairports_id": "20107",
+    "ident": "KHYI",
+    "icao_code": "KHYI",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363082529",
+    "verified_on": "2026-10-27",
+    "note": "Wikipedia explicitly assigns ICAO; coordinates agree with the same physical OurAirports record",
+    "metadata_distance_km": 0.011
   }
 }

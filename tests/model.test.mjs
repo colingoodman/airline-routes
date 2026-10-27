@@ -53,3 +53,13 @@ test('bookmarked former airport codes resolve to the current physical-airport id
  assert.deepEqual(canonicalAirportIds(airports,['HBE','CAI','BOGUS']),['ALY','CAI']);
  assert.deepEqual(canonicalAirportIds(airports,['ALY']),['ALY']);
 });
+
+test('brand classifications filter services without transferring a subsidiary flag to its parent',()=>{
+ const data={alliances:[{id:'star'}],airports:[],airlines:[{id:'AC',alliance_id:'star',low_cost:null,regional:null}],service_brand_models:[{id:'rouge',low_cost:true,regional:null},{id:'main',low_cost:null,regional:null},{id:'express',regional:true,low_cost:null}],routes:[{airline_id:'AC',service_brand_id:'rouge',hub_airport_id:'YYZ',destination_airport_id:'MCO'},{airline_id:'AC',service_brand_id:'main',hub_airport_id:'YYZ',destination_airport_id:'LHR'},{airline_id:'AC',service_brand_id:'express',hub_airport_id:'YUL',destination_airport_id:'YQB'}]};
+ const state={alliances:new Set(['star']),airlines:new Set(),airports:new Set(),seasonal:true,charter:true};
+ assert.deepEqual(filterRoutes(data,{...state,lowCost:'yes'}).map(r=>r.destination_airport_id),['MCO']);
+ assert.equal(filterRoutes(data,{...state,lowCost:'unknown'}).length,2);
+ assert.equal(filterRoutes(data,{...state,lowCost:'no'}).length,0);
+ assert.deepEqual(filterRoutes(data,{...state,regional:true}).map(r=>r.destination_airport_id),['YQB']);
+ assert.equal(filterRoutes(data,{...state,regional:true,lowCost:'yes'}).length,0);
+});

@@ -1,8 +1,12 @@
 # Airline network route map
 
-A local, buildless map and a single normalized dataset covering the active full members of Star Alliance, SkyTeam, and oneworld, plus a curated category of 40 major non-aligned carriers. The snapshot date is **27 October 2026**.
+A local interactive map and one normalized JSON dataset of worldwide passenger airline networks. The snapshot date is **27 October 2026**.
 
-The delivered snapshot contains **100 carrier brands (60 alliance members plus 40 curated non-aligned carriers), 242 distinct hub/base airports (353 carrier–origin relationships), 2,065 airports, and 19,318 listed service records**. Every selected origin table was parsed and every linked destination resolved, with **zero extraction issues**. The non-aligned category adds **8,187 service records**. Another 370 announced or suspended/ended entries are retained separately. These counts describe the sourced snapshot, not a certification of timetable completeness.
+The expanded snapshot contains **572 carriers/brand networks, 1,304 carrier–origin relationships at 699 distinct hub/base airports, 3,358 airports, and 32,648 listed service records**. It retains all 100 carriers from the previous version and adds 472. Another **650 future or suspended/ended entries** are separate from the displayed network.
+
+The search audited **1,310 directory entries**: 955 in Wikipedia's worldwide passenger inventory, 197 regional entries, and 158 current low-cost entries. These overlap and are not 1,310 distinct airlines. After identity and operating-status review, 728 carrier proposals reached route admission; 572 had at least one usable origin. The complete candidate and origin decisions are embedded in `web/data.json`, including 156 rejected carrier proposals and 323 rejected origin proposals. Rejection means insufficient usable evidence for this map, not necessarily a defunct airline.
+
+**Coverage remains partial:** 159 linked destination entries across 80 admitted origins could not be resolved safely. Their resolved services are displayed, their coverage is `parsed_with_unresolved`, and every gap remains in `issues` with its source. The map header shows the partial-origin count. The dataset is a sourced reference snapshot, not an exhaustive worldwide timetable.
 
 ## Run
 
@@ -12,88 +16,106 @@ Requires Python 3. From this repository:
 npm start
 ```
 
-Or, without Node/npm:
+Or:
 
 ```sh
 python3 -m http.server 8080 --bind 127.0.0.1 --directory web
 ```
 
-Open <http://127.0.0.1:8080>. Serve over HTTP; opening `index.html` as a `file://` URL prevents JSON loading in many browsers. No API keys, build step, online map tiles, or runtime package installation are required. Leaflet, the world outline, and the dataset are included locally.
+Open <http://127.0.0.1:8080>. No API keys, build step, online map tiles, or runtime package installation are needed. Leaflet, world outlines and data are included locally. Ordinary source files need an HTTP server; the portable viewer below opens directly.
 
-Select alliances or Non-aligned, search and select one or more airlines, and search airports by code, name, or municipality. Airline selections are a union within the selected categories; airport selections show any service touching any selected airport. No explicit airline selection means all airlines in the selected categories. All four categories are selected by default. Non-aligned is a map category, not a fourth formal alliance. Seasonal and charter toggles are independent. The full-width map wraps east and west, repeating land, routes, and pins across the date line. Filters sit below the map. Land, routes, and airports render in separate ordered panes so land never covers the network. “Fit routes” includes the full curved paths and chooses a Pacific-centered extent when appropriate. Click a hub for its airlines and coverage; click a route for source evidence. The service table is paginated, and its airport buttons apply an airport filter. Filters are encoded in the URL for bookmarks. Reset restores the complete map.
+The full-width map wraps east and west, repeating land, routes and pins across the date line. Filters sit underneath. Land, routes and airports have ordered panes; land cannot cover the network. “Fit routes” includes full curved paths and chooses a Pacific-centered extent when appropriate. Pins and routes open their source evidence. The service table is paginated; its airport buttons filter routes touching that airport.
+
+Alliances/categories, airlines, airports and operating-model filters combine. Multiple selected airlines are a union; multiple airports show any service touching any selected airport. No explicit airline selection means all eligible carriers. Seasonal and charter controls are independent; charter services are off initially. A carrier represented only by charter entries is therefore hidden until charter services are enabled. Filters are bookmarked in the URL; Reset restores the defaults.
+
+## Low-cost and regional filters
+
+**Yes, low-cost status can be detected programmatically when Wikipedia explicitly documents it.** The dataset uses nullable `low_cost` and `regional` flags:
+
+- `true`: the same carrier/brand appears in the current geographic low-cost/regional directory, or its first present-tense introductory description explicitly identifies that business model.
+- `false`: an explicit full-service/legacy description supports a non-low-cost classification.
+- `null`: missing, mixed or conflicting evidence. Absence from a list, flag-carrier status, fares, nationality, company ownership and codeshares do not establish a negative.
+
+129 admitted carriers have a positive low-cost classification and 110 have a positive regional classification. Additional source-named service brands can qualify even when the parent is unknown: **Air Canada Rouge is low-cost; Air Canada Express is regional; those facts do not classify all Air Canada services.** Brand-level explicit classifications take precedence over carrier flags. The filters operate on individual service records, and all claim evidence is retained. The non-low-cost option is deliberately conservative and has few carriers; most unclassified network carriers remain unknown.
+
+Model changes preserve explicit airline selections. An incompatible combination shows no services and keeps the selection available to clear. The regional checkbox can combine with the low-cost dropdown.
 
 ## Portable viewer
 
-`node scripts/package.mjs /absolute/path/alliance-map.html` embeds the same JSON, world outline, styles, and map library into one HTML file. Open it directly in a browser; no server or network is needed. The download button exports the embedded normalized dataset. File-based previews do not update the URL when filters change.
+```sh
+node scripts/package.mjs /absolute/path/alliance-map.html
+```
 
-## Single-file data
+This embeds the same data, outlines, styles and library in one HTML file. Open it directly without a server or network. Its download button exports the embedded JSON. File-based viewers do not update the URL as filters change.
 
-**`web/data.json` is the complete normalized data deliverable.** It contains:
+## Normalized single-file data
 
-| Collection | Primary key | References / meaning |
+**`web/data.json` contains the complete data deliverable**, including evidence and the discovery audit.
+
+| Collection | Key | Meaning |
 | --- | --- | --- |
-| `alliances` | `id` | Three formal alliances and the Non-aligned category, with name, kind, and color |
-| `airlines` | Stable brand `id` (normally IATA) | `alliance_id`, classification sources, enumerated service brands, group scope, origin-selection notes |
-| `airports` | IATA `id` | Coordinates, ICAO, municipality, country, metadata source |
-| `hubs` | (`airline_id`, `airport_id`) | Hub/base/focus-city role, selection evidence, source notes, route source and coverage |
-| `routes` | Stable `id` | Airline, origin hub, destination, brand, service type, seasonality, source |
-| `excluded_routes` | Stable `id` | Announced future and suspended/ended source entries |
-| `airport_aliases` | `wikipedia_title` | Reviewed airport mapping and identity evidence source |
-| `sources` | `id` | URLs, retrieval date, revision IDs and content hashes |
-| `issues` | — | Unresolved source entries or extraction gaps, with their evidence |
+| `alliances` | `id` | Three alliances, Non-aligned and Suspended members; color and category kind |
+| `airlines` | Stable `id` | Membership type, enumerated brands, model flags and claim evidence |
+| `service_brand_models` | Carrier-qualified `id` | Brand name, carrier reference, model flags and evidence |
+| `airports` | `id` | Codes, coordinates, municipality, country and metadata source |
+| `hubs` | (`airline_id`, `airport_id`) | Hub/base/focus-city role, source, coverage, counts and notes |
+| `routes` | Stable `id` | Carrier, origin, destination, source brand, model reference, status and service type |
+| `excluded_routes` | Stable `id` | Future and suspended/ended source entries |
+| `airport_aliases` | `wikipedia_title` | Reviewed physical airport mapping with evidence |
+| `sources` | `id` | URLs, retrieval dates, pinned revisions and route HTML hashes |
+| `issues` | — | Every unresolved destination at admitted origins |
+| `discovery_audit` | — | Inventory, carrier/origin admission decisions, rejected identities and evidence gaps |
 
-Airline IDs are stable brand identifiers, generally based on IATA codes; Hawaiian retains `HA` as a brand key despite operational integration under Alaska's `AS` code. See its `identity_note`. Airport metadata is deduplicated. Every route references one selected airline or brand group and two airports; no Cartesian product of airline destinations and hubs is used. A pair of hubs can have a record in each direction when both source tables list it. A mainline service and a regional-brand service can also share the same airports. These are separate service records; the map draws one connection per airline and unordered airport pair, retaining all records in its popup.
+Carrier IDs usually use IATA brand codes. Collisions use explicit `icao:` or `wiki:` namespaces and retain identity notes; distinct airlines are never merged solely because they share a code or similar spelling. Australian Air Link and South African Airlink are distinct. Hawaiian retains stable brand key `HA` despite operational integration under Alaska's code.
 
-`listed` means present in the source's ordinary passenger destination row. `seasonal` means the source labels it seasonal. Neither asserts operation every day or on the snapshot date. `change_date`, when present, is parsed from the source note; a month-only date is represented as the first day of that month. Source notes are retained. Announced starts after the snapshot, undated announced starts, and ended/suspended entries are stored separately and omitted from the map.
+Airport IDs use IATA when available; otherwise `icao:` or `oa:` namespaces preserve documented uncoded facilities. `iata` and `icao` can be null. An airport's local identifier is not automatically treated as ICAO. Most metadata and coordinates come from OurAirports; one separately sourced Wikipedia airport addition (Sukilumba, ICAO VNFN) has its own provenance. Reviewed metadata corrections match physical row IDs and preserve their coordinates. Conflicting IATA assignments remain separate: Nong Khang and Saravan use ICAO namespaces without reassigning codes from another airport. Alexandria's former HBE queries normalize to current ALY at the same Borg El Arab location.
 
-## Research method and boundaries
+Every route references its carrier, service brand, two physical airports, and pinned airport-table evidence. There is no Cartesian product of an airline's destinations and hubs. Hub-to-hub routes may appear in both directions when both tables list them; mainline and regional brands can have separate records. The map draws one connection per carrier and unordered airport pair, retaining all source records in its popup.
 
-1. Verify full, active membership against alliance directories and official membership announcements. The roster includes ITA Airways in Star Alliance and Hawaiian Airlines in oneworld. Aeroflot and S7 are recorded separately as suspended. Juneyao is a connecting partner and is not included as a full member. The Non-aligned category adds 40 curated major carriers absent from those three current full-member rosters; airline infobox evidence and classification-source references are retained. Bilateral codeshares, airline ownership, and lesser regional groupings do not imply membership in a global alliance. Alaska is retained in oneworld and is not duplicated among independents.
-2. Read each airline's Wikipedia infobox for hubs and separately labeled secondary passenger hubs. For point-to-point carriers without hubs, use explicitly documented operating bases or focus cities, retaining those roles. For the new carriers, source-designated primary/largest bases narrow Ryanair, Wizz Air, easyJet, and Vueling to major origins; other carriers retain all current infobox operating bases when no narrower designation is given. Each airline's `hub_selection_note` records the rule. Future or ended bases are excluded as of the snapshot, and seasonal/base-closure notes are preserved. Exclude cargo hubs and unrelated partner-airline bases. LATAM explicitly combines the primary hubs of its five current operating airlines; the group brand and individual source service brands remain distinct in the data.
-3. Read each hub airport's **passenger airline/destination table**, matching the selected airline or brand group and explicitly listed service brands. Exclude cargo and historical tables. United Express, American Eagle, Delta Connection, and other enumerated branded services are grouped under their member airline and retain their source brand. General codeshares and all alliance partners are not automatically included.
-4. Normalize linked destinations to IATA airports using OurAirports' Wikipedia mappings, verified Wikipedia redirects, and explicit airport IATA identifiers. Never choose an airport solely because it shares a name or city. Preserve unresolved links as issues instead of inventing routes or coordinates.
-5. Pin Wikipedia route and hub/base evidence to page revisions. Record retrieval dates and route HTML hashes. Validate identifiers, references, hub counts, route uniqueness, coordinate bounds, announced dates, and the user's Denver/Paris example routes.
+`listed` means present in an ordinary source passenger row; `seasonal` means explicitly labeled seasonal, including section-level labels. Neither guarantees operation on a particular day. `change_date` is parsed from the note, with month-only dates represented by the first day. Future/undated announced starts and suspended/ended entries are retained separately and omitted from the map. Future closure notes do not prematurely remove a currently listed service. Notes describing a `via` stop are preserved.
 
-**Coverage describes extraction from public reference tables, not a certified worldwide timetable.** Wikipedia may omit service, retain obsolete rows, or mix seasonal and future changes. `parsed` means a matching source row was extracted with all its linked destinations mapped; it does not certify that the source itself is exhaustive. Every unresolved entry remains in `issues`, and every hub carries its coverage status and parsed counts. The data does not independently verify the operating carrier, actual nonstop operation, frequency, timetable validity, bookability, or precise flight path. Routes described with a `via` note preserve that note. Great-circle lines are geographic illustrations.
+## Research method and limits
 
-Three reviewed identifier corrections supplement the downloaded airport metadata: Alexandria HBE → ALY, effective 16 September 2026, confirmed by Aegean; Purnea PXN/VEPU, confirmed by IndiGo and Wikipedia; and Yongxing Island XYI/ZJYX, confirmed by a pinned airport infobox. `scripts/airport-metadata-overrides.json` matches fixed OurAirports row IDs and preserves their coordinates, avoiding any substitution of the closed El Nouzha airport formerly assigned ALY. Each corrected airport records identifier source references. The two missing-code enrichments record a verification date without inventing an assignment effective date. Former HBE searches and filter URLs resolve to ALY.
+1. Preserve the 60 verified active full alliance members (26 Star Alliance, 18 SkyTeam, 16 oneworld). Explicit affiliates and Juneyao's connecting-partner status retain distinct membership types; they do not increase the full-member counts. Aeroflot and S7 use a separate suspended-members category. Alaska remains in oneworld. Other regional airline groupings and codeshares do not imply membership in these alliances.
+2. Search worldwide passenger, current regional and current low-cost inventories. Review airline articles for operating dates, explicit hubs/bases/focus cities and company identity. Country directories and direct operating-airport statements can establish a small carrier's origin when explicit; headquarters cities and destination lists cannot. Exclude cargo-only, ceased, planned and ambiguous entries from the proposed passenger roster. Preserve candidate decisions.
+3. Use source-designated hubs, secondary hubs, operating bases or focus cities, retaining roles and selection notes. Previously reviewed major-origin selections for large point-to-point networks remain intact. LATAM remains an explicitly documented brand group.
+4. Parse each selected airport's passenger tables. Match the primary marketing-airline row or an enumerated brand exactly. A secondary “operated by Envoy” link in an American Eagle row does not assign that whole network to Envoy. Skip cargo/history tables and explicitly unavailable airports. Section-level seasonal/charter labels apply to their rows. A carrier with no resolved active service at any origin remains in the audit instead of producing an empty network.
+5. Resolve linked airports using unique metadata mappings and pinned explicit identifiers plus coordinate checks. Do not select an airport merely because it shares a city or name. Preserve towns, redlinks, source-closed airports, conflicting identities and rate-limited pages as gaps. Do not silently substitute a newer airport for a closed predecessor with the same code.
+6. Classify low-cost/regional flags with scoped evidence and unknown values. Pin route, hub and classification sources; validate all keys, references, coordinates, counts and example routes.
 
-The map and data are a reproducible reference snapshot. For actual travel, verify the airline's timetable.
+`parsed` describes complete extraction of the linked entries in a matching row, not an up-to-date or exhaustive timetable. Wikipedia can omit service, retain obsolete rows or mix future changes. This dataset does not independently verify actual operating carrier, nonstop operation, frequency, bookability or exact flight paths. Great-circle lines illustrate geography. For travel, check the airline's timetable.
 
-## Validation
+## Validate and rebuild
 
 ```sh
 npm test
 npm run validate
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/python tests/test_collect.py
+.venv/bin/python -m unittest discover -s tests -p 'test_*.py'
+.venv/bin/python scripts/rebuild.py --as-of 2026-10-27
 ```
 
-Node tests cover combined filters, empty and multi-airport selections, seasonal/charter inclusion, reciprocal route merging, and date-line geometry. Python tests cover table parsing, date annotations, and normalization. Dataset validation checks every foreign key, unique key, coordinate, hub count, pinned route source, membership count, and the requested example routes. Browser QA checks the rendered HTTP app and its interactive controls. The portable HTML passes embedded-JSON and JavaScript syntax checks with no external script, stylesheet, dataset, or map dependency. Direct `file://` preview could not be exercised in the app browser, which only permits HTTP/HTTPS URLs.
+The 14 Node tests cover filter composition, scoped brand models, reciprocal connections, airport aliases, full curved bounds and repeated-world geometry. The 21 Python tests cover source table ancestry, primary-brand matching, section labels, status/date handling, metadata safety, uncoded airports conservative business-model classification and directory identity boundaries. Dataset validation checks every key/reference, source pin, carrier-origin count, evidence flag, partial-coverage gap and admission-audit count, plus the Denver/Paris example routes. Browser checks exercise model filters and brand scoping on the rendered map.
 
-## Rebuild
+The rebuild uses the reviewed roster, aliases, metadata corrections/addition and classifications in `scripts/`; it downloads public OurAirports metadata and fetches airport articles using cached responses and bounded retries. A newer date does not automatically re-review those inputs. Use a fresh cache for a route refresh and review changed roster/classification/identity evidence. Network failures and newly unresolved entries are recorded explicitly. A rebuilt snapshot must pass validation before release.
 
-The checked-in dataset needs no network. Refreshing it requires public HTTP access and Python dependencies:
+For a new discovery inventory, without modifying the released roster or dataset:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
-.venv/bin/python scripts/rebuild.py --as-of 2026-10-27
-npm run validate
+.venv/bin/python scripts/discover.py --work work/discovery
+# Also inspect airline articles, serially with caching and bounded retries:
+.venv/bin/python scripts/discover.py --work work/discovery --articles
 ```
 
-The rebuild script downloads OurAirports metadata, copies the reviewed roster and airport aliases into ignored `work/`, and fetches Wikipedia hub-airport pages with a cache and bounded retries. To refresh a route snapshot, use a fresh cache directory or remove the ignored cached pages first. The carrier roster, hub/base classifications, service brands, metadata corrections, and alias evidence are intentionally reviewed inputs; a newer date does not automatically update them. Recheck those inputs when refreshing. Non-aligned coverage is intentionally curated and does not claim to enumerate every unaffiliated carrier worldwide. `scripts/nonaligned-hub-evidence.json` retains the source fields and origin-selection rationale. `scripts/airport-overrides-evidence.json` documents alias decisions. An unresolved new destination is an issue until its identity is reviewed. Some Wikipedia endpoints rate-limit automated access; the script tries article, API, and REST representations, and records failures explicitly.
+Discovery results require identity, operating-status, origin and route admission review. `scripts/discovery-audit.json` records this release's decisions; `scripts/airline-models.json` retains the reviewed model inputs. Raw research HTML is not distributed. Public Wikipedia endpoints sometimes rate-limit access; inaccessible evidence is disclosed rather than inferred.
 
 ## Sources and attribution
 
-- [Star Alliance member directory](https://www.staralliance.com/en/members); [ITA joining announcement](https://www.airindia.com/content/air-india/in/en/newsroom/press-release/ita-airways-joins-star-alliance.html).
-- [SkyTeam member directory](https://www.skyteam.com/en/about/our-members); [SkyTeam official anniversary infographic hosted by SAS](https://www.sasgroup.net/files/Public/290/4167223/skyteam-at-25--infographic.pdf).
-- [oneworld member directory](https://www.oneworld.com/members); [Hawaiian joining announcement](https://www.oneworld.com/news/oneworld-welcomes-hawaiian-airlines).
-- Wikipedia contributors: individual airline hub infoboxes and airport passenger tables, linked by revision in `data.json`. Text and source annotations are attributed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Facts have been extracted and normalized; source tables have not been reproduced as prose. Preserve attribution when reusing the dataset.
-- [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing): explicit airport IATA identifiers (P238), CC0; identity evidence appears in `airport_aliases` and `sources`.
-- [OurAirports](https://ourairports.com/data/): airport identities and coordinates, public domain.
-- [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) via [geo-countries](https://github.com/datasets/geo-countries): public-domain world outlines, simplified locally for display. Boundaries are illustrative.
-- [Leaflet 1.9.4](https://leafletjs.com/): BSD-2-Clause, license included in `web/vendor/leaflet-LICENSE`.
+- [Wikipedia passenger airline inventory](https://en.wikipedia.org/wiki/List_of_passenger_airlines), [regional airline inventory](https://en.wikipedia.org/wiki/List_of_regional_airlines), [low-cost airline inventory](https://en.wikipedia.org/wiki/List_of_low-cost_airlines), plus individual airline and airport pages pinned in the dataset. Extracted facts and short source notes are attributed to Wikipedia contributors under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Preserve attribution when reusing the data.
+- [Star Alliance](https://www.staralliance.com/en/members), [SkyTeam](https://www.skyteam.com/en/about/our-members), [oneworld](https://www.oneworld.com/members); official membership announcements linked in the data.
+- [OurAirports](https://ourairports.com/data/): public-domain airport metadata and coordinates. [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing): CC0 identifier evidence where noted.
+- [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) via [geo-countries](https://github.com/datasets/geo-countries): simplified public-domain outlines; illustrative boundaries.
+- [Leaflet 1.9.4](https://leafletjs.com/): BSD-2-Clause, included license in `web/vendor/leaflet-LICENSE`.
 
-Code is MIT licensed; third-party data and assets retain their respective terms.
+Code is MIT licensed; third-party data and assets retain their terms.

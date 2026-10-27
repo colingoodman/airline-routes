@@ -34,4 +34,22 @@ class ParsingTests(unittest.TestCase):
   result=c.apply_metadata_overrides(rows,entries,datetime.date(2026,10,27))[0];self.assertEqual(result['iata_code'],'PXN');self.assertNotIn('_former_iata_code',result);self.assertEqual(result['latitude_deg'],'25.75');self.assertEqual(result['icao_code'],'VEPU')
  def test_unicode_redirect_comparison(self):
   self.assertEqual(c.norm('Montr%C3%A9al%E2%80%93Trudeau_International_Airport'),c.norm('Montreal-Trudeau International Airport'))
+ def test_primary_brand_only_does_not_claim_incidental_operator_network(self):
+  cell=BeautifulSoup('<td><span class="flagicon"><a href="/wiki/United_States">US</a></span><a href="/wiki/American_Eagle">American Eagle</a> operated by <a href="/wiki/Envoy_Air">Envoy</a></td>','html.parser').td
+  self.assertTrue(c.airline_row_matches(cell,{c.norm('American Eagle')}));self.assertFalse(c.airline_row_matches(cell,{c.norm('Envoy Air')}))
+ def test_charter_section_context_is_applied_to_each_destination(self):
+  soup=BeautifulSoup('<h2>Airlines and destinations</h2><h3>Seasonal charter</h3><table><td><a href="/wiki/Airport_A">A</a></td></table>','html.parser')
+  self.assertTrue(c.passenger_table(soup.table));self.assertIn('Seasonal charter',c.table_context(soup.table))
+  row=c.route_items(soup.td,True,'charter')[0];self.assertTrue(row['seasonal']);self.assertEqual(row['service_type'],'charter')
+  nested=BeautifulSoup('<td><b>Seasonal:</b><a href="/wiki/A">A</a><b>Charter:</b><a href="/wiki/B">B</a></td>','html.parser').td
+  self.assertTrue(all(r['seasonal'] and r['service_type']=='charter' for r in c.route_items(nested,True,'charter')))
+ def test_uncoded_airport_has_namespaced_identity(self):
+  row={'id':'1','ident':'TEST1','type':'small_airport','iata_code':'','icao_code':'','wikipedia_link':'https://en.wikipedia.org/wiki/Airport_A'}
+  self.assertEqual(c.airport_identifier(row),'oa:TEST1');codes,titles=c.airport_indexes([row],{});self.assertEqual(titles[c.norm('Airport A')],row)
+  row['icao_code']='ABCD';self.assertEqual(c.airport_identifier(row),'icao:ABCD')
+ def test_external_metadata_url_is_never_a_wikipedia_title(self):
+  self.assertIsNone(c.wikipedia_title('https://example.com/wiki/Fake'));self.assertEqual(c.wikipedia_title('https://en.wikipedia.org/wiki/Airport_A'),'Airport_A')
+ def test_closed_status_is_not_inferred_from_history(self):
+  self.assertIsNone(c.airport_unavailable(BeautifulSoup('<p>Opened after the old airport closed in 2013.</p>','html.parser')))
+  self.assertIsNotNone(c.airport_unavailable(BeautifulSoup('<table class="infobox"><tr><th>Closed</th><td>2013</td></tr></table>','html.parser')))
 if __name__=='__main__':unittest.main()

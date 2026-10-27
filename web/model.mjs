@@ -1,18 +1,31 @@
 export function indexData(data) {
- return { airports: new Map(data.airports.map(a=>[a.id,a])), airlines:new Map(data.airlines.map(a=>[a.id,a])), alliances:new Map(data.alliances.map(a=>[a.id,a])) };
+ return { sources:new Map((data.sources||[]).map(s=>[s.id,s])), airports: new Map(data.airports.map(a=>[a.id,a])), airlines:new Map(data.airlines.map(a=>[a.id,a])), alliances:new Map(data.alliances.map(a=>[a.id,a])), brands:new Map((data.service_brand_models||[]).map(b=>[b.id,b])) };
+}
+export function routeModel(index,route) {
+ const airline=index.airlines.get(route.airline_id),brand=index.brands.get(route.service_brand_id);
+ return Object.fromEntries(['low_cost','regional'].map(key=>[key,typeof brand?.[key]==='boolean'?brand[key]:typeof airline?.[key]==='boolean'?airline[key]:null]));
+}
+function modelMatches(model,state) {
+ const lowCost=state.lowCost||'all';
+ return (lowCost==='all'||lowCost==='yes'&&model.low_cost===true||lowCost==='no'&&model.low_cost===false||lowCost==='unknown'&&model.low_cost===null) && (!state.regional||model.regional===true);
 }
 export function filterRoutes(data,state) {
  const ix=indexData(data);
  return data.routes.filter(r=>{
   const a=ix.airlines.get(r.airline_id);
-  return state.alliances.has(a.alliance_id) && (!state.airlines.size || state.airlines.has(a.id)) && (!state.airports.size || state.airports.has(r.hub_airport_id)||state.airports.has(r.destination_airport_id)) && (state.seasonal || r.status!=='seasonal') && (state.charter || r.service_type!=='charter');
+  return state.alliances.has(a.alliance_id) && (!state.airlines.size || state.airlines.has(a.id)) && (!state.airports.size || state.airports.has(r.hub_airport_id)||state.airports.has(r.destination_airport_id)) && (state.seasonal || r.status!=='seasonal') && (state.charter || r.service_type!=='charter') && modelMatches(routeModel(ix,r),state);
  });
 }
+export function airlineOptions(data,state) {
+ const ids=new Set(filterRoutes(data,{...state,airlines:new Set(),airports:new Set()}).map(r=>r.airline_id));
+ return data.airlines.filter(a=>ids.has(a.id));
+}
 export function visibleHubs(data,state) {
- const ix=indexData(data);
+ const ix=indexData(data),typed=state.regional||(state.lowCost&&state.lowCost!=='all');
+ const keys=typed?new Set(filterRoutes(data,{...state,airports:new Set()}).map(r=>r.airline_id+'|'+r.hub_airport_id)):null;
  return data.hubs.filter(h=>{
   const a=ix.airlines.get(h.airline_id);
-  return state.alliances.has(a.alliance_id)&&(!state.airlines.size||state.airlines.has(a.id));
+  return state.alliances.has(a.alliance_id)&&(!state.airlines.size||state.airlines.has(a.id))&&(!keys||keys.has(h.airline_id+'|'+h.airport_id));
  });
 }
 // Spherical interpolation avoids misleading straight lat/lon lines and splits at the dateline.

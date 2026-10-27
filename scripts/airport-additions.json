@@ -1,0 +1,30 @@
+[
+  {
+    "record": {
+      "id": "wiki:Sukilumba_Airport",
+      "ident": "VNFN",
+      "type": "small_airport",
+      "name": "Sukilumba Airport",
+      "latitude_deg": "26.877521833",
+      "longitude_deg": "87.905153833",
+      "elevation_ft": "1893",
+      "continent": "AS",
+      "iso_country": "NP",
+      "iso_region": "NP-P1",
+      "municipality": "Ilam",
+      "scheduled_service": "yes",
+      "icao_code": "VNFN",
+      "iata_code": "",
+      "gps_code": "VNFN",
+      "local_code": "",
+      "home_link": "",
+      "wikipedia_link": "https://en.wikipedia.org/wiki/Sukilumba_Airport",
+      "keywords": "Ilam Airport"
+    },
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363080864",
+    "source_revision": "1363080864",
+    "verified_on": "2026-10-27",
+    "note": "Airport explicitly ICAO VNFN with infobox coordinates, Nepal/Ilam location and public airport type. Page says opened 13 February 2022. No OurAirports row within 5km. Synthetic wiki ID explicitly records source; not an OurAirports-issued ID.",
+    "original_ourairports_ident": null
+  }
+]
