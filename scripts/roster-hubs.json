@@ -1,0 +1,1957 @@
+{
+  "as_of": "2026-10-27",
+  "airlines": [
+    {
+      "id": "A3",
+      "name": "Aegean Airlines",
+      "alliance": "star",
+      "wikipedia": "Aegean Airlines",
+      "hubs": [
+        {
+          "iata": "ATH",
+          "wikipedia": "Athens_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aegean_Airlines&oldid=1380084015",
+          "source_revision": 1380084015
+        },
+        {
+          "iata": "SKG",
+          "wikipedia": "Thessaloniki_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aegean_Airlines&oldid=1380084015",
+          "source_revision": 1380084015
+        },
+        {
+          "iata": "CHQ",
+          "wikipedia": "Chania_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aegean_Airlines&oldid=1380084015",
+          "source_revision": 1380084015
+        },
+        {
+          "iata": "HER",
+          "wikipedia": "Heraklion_International_Airport_\"Nikos_Kazantzakis\"",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aegean_Airlines&oldid=1380084015",
+          "source_revision": 1380084015
+        },
+        {
+          "iata": "KLX",
+          "wikipedia": "Kalamata_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aegean_Airlines&oldid=1380084015",
+          "source_revision": 1380084015
+        },
+        {
+          "iata": "LCA",
+          "wikipedia": "Larnaca_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aegean_Airlines&oldid=1380084015",
+          "source_revision": 1380084015
+        },
+        {
+          "iata": "RHO",
+          "wikipedia": "Rhodes_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aegean_Airlines&oldid=1380084015",
+          "source_revision": 1380084015
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "AC",
+      "name": "Air Canada",
+      "alliance": "star",
+      "wikipedia": "Air Canada",
+      "hubs": [
+        {
+          "iata": "YUL",
+          "wikipedia": "Montréal–Trudeau_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_Canada&oldid=1379109841",
+          "source_revision": 1379109841
+        },
+        {
+          "iata": "YYZ",
+          "wikipedia": "Toronto_Pearson_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_Canada&oldid=1379109841",
+          "source_revision": 1379109841
+        },
+        {
+          "iata": "YVR",
+          "wikipedia": "Vancouver_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_Canada&oldid=1379109841",
+          "source_revision": 1379109841
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "CA",
+      "name": "Air China",
+      "alliance": "star",
+      "wikipedia": "Air China",
+      "hubs": [
+        {
+          "iata": "PEK",
+          "wikipedia": "Beijing_Capital_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_China&oldid=1379957988",
+          "source_revision": 1379957988
+        },
+        {
+          "iata": "PKX",
+          "wikipedia": "Beijing_Daxing_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_China&oldid=1379957988",
+          "source_revision": 1379957988
+        },
+        {
+          "iata": "CTU",
+          "wikipedia": "Chengdu_Shuangliu_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_China&oldid=1379957988",
+          "source_revision": 1379957988
+        },
+        {
+          "iata": "TFU",
+          "wikipedia": "Chengdu_Tianfu_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_China&oldid=1379957988",
+          "source_revision": 1379957988
+        },
+        {
+          "iata": "PVG",
+          "wikipedia": "Shanghai_Pudong_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_China&oldid=1379957988",
+          "source_revision": 1379957988
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "AI",
+      "name": "Air India",
+      "alliance": "star",
+      "wikipedia": "Air India",
+      "hubs": [
+        {
+          "iata": "DEL",
+          "wikipedia": "Indira_Gandhi_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_India&oldid=1382151267",
+          "source_revision": 1382151267
+        },
+        {
+          "iata": "BLR",
+          "wikipedia": "Kempegowda_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_India&oldid=1382151267",
+          "source_revision": 1382151267
+        },
+        {
+          "iata": "BOM",
+          "wikipedia": "Chhatrapati_Shivaji_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_India&oldid=1382151267",
+          "source_revision": 1382151267
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "NZ",
+      "name": "Air New Zealand",
+      "alliance": "star",
+      "wikipedia": "Air New Zealand",
+      "hubs": [
+        {
+          "iata": "AKL",
+          "wikipedia": "Auckland_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_New_Zealand&oldid=1381508966",
+          "source_revision": 1381508966
+        },
+        {
+          "iata": "CHC",
+          "wikipedia": "Christchurch_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_New_Zealand&oldid=1381508966",
+          "source_revision": 1381508966
+        },
+        {
+          "iata": "WLG",
+          "wikipedia": "Wellington_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_New_Zealand&oldid=1381508966",
+          "source_revision": 1381508966
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "NH",
+      "name": "All Nippon Airways",
+      "alliance": "star",
+      "wikipedia": "All Nippon Airways",
+      "hubs": [
+        {
+          "iata": "HND",
+          "wikipedia": "Tokyo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=All_Nippon_Airways&oldid=1380522075",
+          "source_revision": 1380522075
+        },
+        {
+          "iata": "NRT",
+          "wikipedia": "Narita_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=All_Nippon_Airways&oldid=1380522075",
+          "source_revision": 1380522075
+        },
+        {
+          "iata": "ITM",
+          "wikipedia": "Osaka_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=All_Nippon_Airways&oldid=1380522075",
+          "source_revision": 1380522075
+        },
+        {
+          "iata": "KIX",
+          "wikipedia": "Kansai_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=All_Nippon_Airways&oldid=1380522075",
+          "source_revision": 1380522075
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "OZ",
+      "name": "Asiana Airlines",
+      "alliance": "star",
+      "wikipedia": "Asiana Airlines",
+      "hubs": [
+        {
+          "iata": "GMP",
+          "wikipedia": "Gimpo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Asiana_Airlines&oldid=1382073418",
+          "source_revision": 1382073418
+        },
+        {
+          "iata": "ICN",
+          "wikipedia": "Incheon_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Asiana_Airlines&oldid=1382073418",
+          "source_revision": 1382073418
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "OS",
+      "name": "Austrian Airlines",
+      "alliance": "star",
+      "wikipedia": "Austrian Airlines",
+      "hubs": [
+        {
+          "iata": "VIE",
+          "wikipedia": "Vienna_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Austrian_Airlines&oldid=1381639237",
+          "source_revision": 1381639237
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "AV",
+      "name": "Avianca",
+      "alliance": "star",
+      "wikipedia": "Avianca",
+      "hubs": [
+        {
+          "iata": "BOG",
+          "wikipedia": "El_Dorado_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Avianca&oldid=1379730369",
+          "source_revision": 1379730369
+        },
+        {
+          "iata": "CLO",
+          "wikipedia": "Alfonso_Bonilla_Aragón_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Avianca&oldid=1379730369",
+          "source_revision": 1379730369
+        },
+        {
+          "iata": "CTG",
+          "wikipedia": "Rafael_Núñez_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Avianca&oldid=1379730369",
+          "source_revision": 1379730369
+        },
+        {
+          "iata": "MDE",
+          "wikipedia": "José_María_Córdova_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Avianca&oldid=1379730369",
+          "source_revision": 1379730369
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "SN",
+      "name": "Brussels Airlines",
+      "alliance": "star",
+      "wikipedia": "Brussels Airlines",
+      "hubs": [
+        {
+          "iata": "BRU",
+          "wikipedia": "Brussels_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Brussels_Airlines&oldid=1381023221",
+          "source_revision": 1381023221
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "CM",
+      "name": "Copa Airlines",
+      "alliance": "star",
+      "wikipedia": "Copa Airlines",
+      "hubs": [
+        {
+          "iata": "PTY",
+          "wikipedia": "Tocumen_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Copa_Airlines&oldid=1379543785",
+          "source_revision": 1379543785
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "OU",
+      "name": "Croatia Airlines",
+      "alliance": "star",
+      "wikipedia": "Croatia Airlines",
+      "hubs": [
+        {
+          "iata": "ZAG",
+          "wikipedia": "Zagreb_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Croatia_Airlines&oldid=1382191153",
+          "source_revision": 1382191153
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "MS",
+      "name": "Egyptair",
+      "alliance": "star",
+      "wikipedia": "Egyptair",
+      "hubs": [
+        {
+          "iata": "CAI",
+          "wikipedia": "Cairo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Egyptair&oldid=1380230514",
+          "source_revision": 1380230514
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "HBE",
+          "wikipedia": "Borg_El_Arab_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Egyptair&oldid=1380230514",
+          "source_revision": 1380230514
+        },
+        {
+          "iata": "SSH",
+          "wikipedia": "Sharm_el-Sheikh_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Egyptair&oldid=1380230514",
+          "source_revision": 1380230514
+        }
+      ],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "ET",
+      "name": "Ethiopian Airlines",
+      "alliance": "star",
+      "wikipedia": "Ethiopian Airlines",
+      "hubs": [
+        {
+          "iata": "ADD",
+          "wikipedia": "Addis_Ababa_Bole_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Ethiopian_Airlines&oldid=1381146044",
+          "source_revision": 1381146044
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "BR",
+      "name": "EVA Air",
+      "alliance": "star",
+      "wikipedia": "EVA Air",
+      "hubs": [
+        {
+          "iata": "TPE",
+          "wikipedia": "臺灣桃園國際機場",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=EVA_Air&oldid=1379671007",
+          "source_revision": 1379671007
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "AZ",
+      "name": "ITA Airways",
+      "alliance": "star",
+      "wikipedia": "ITA Airways",
+      "hubs": [
+        {
+          "iata": "FCO",
+          "wikipedia": "Rome_Fiumicino_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=ITA_Airways&oldid=1381814292",
+          "source_revision": 1381814292
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "LO",
+      "name": "LOT Polish Airlines",
+      "alliance": "star",
+      "wikipedia": "LOT Polish Airlines",
+      "hubs": [
+        {
+          "iata": "WAW",
+          "wikipedia": "Warsaw_Frederic_Chopin_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=LOT_Polish_Airlines&oldid=1382064039",
+          "source_revision": 1382064039
+        },
+        {
+          "iata": "KRK",
+          "wikipedia": "Kraków_John_Paul_II_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=LOT_Polish_Airlines&oldid=1382064039",
+          "source_revision": 1382064039
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "LH",
+      "name": "Lufthansa",
+      "alliance": "star",
+      "wikipedia": "Lufthansa",
+      "hubs": [
+        {
+          "iata": "FRA",
+          "wikipedia": "Frankfurt_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Lufthansa&oldid=1381033375",
+          "source_revision": 1381033375
+        },
+        {
+          "iata": "MUC",
+          "wikipedia": "Munich_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Lufthansa&oldid=1381033375",
+          "source_revision": 1381033375
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "ZH",
+      "name": "Shenzhen Airlines",
+      "alliance": "star",
+      "wikipedia": "Shenzhen Airlines",
+      "hubs": [
+        {
+          "iata": "SZX",
+          "wikipedia": "Shenzhen_Bao'an_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Shenzhen_Airlines&oldid=1381822526",
+          "source_revision": 1381822526
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "SQ",
+      "name": "Singapore Airlines",
+      "alliance": "star",
+      "wikipedia": "Singapore Airlines",
+      "hubs": [
+        {
+          "iata": "SIN",
+          "wikipedia": "Singapore_Changi_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Singapore_Airlines&oldid=1381176756",
+          "source_revision": 1381176756
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "SA",
+      "name": "South African Airways",
+      "alliance": "star",
+      "wikipedia": "South African Airways",
+      "hubs": [
+        {
+          "iata": "JNB",
+          "wikipedia": "O._R._Tambo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=South_African_Airways&oldid=1381299438",
+          "source_revision": 1381299438
+        },
+        {
+          "iata": "CPT",
+          "wikipedia": "Cape_Town_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=South_African_Airways&oldid=1381299438",
+          "source_revision": 1381299438
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "LX",
+      "name": "Swiss International Air Lines",
+      "alliance": "star",
+      "wikipedia": "Swiss International Air Lines",
+      "hubs": [
+        {
+          "iata": "ZRH",
+          "wikipedia": "Zurich_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Swiss_International_Air_Lines&oldid=1381024857",
+          "source_revision": 1381024857
+        },
+        {
+          "iata": "GVA",
+          "wikipedia": "Geneva_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Swiss_International_Air_Lines&oldid=1381024857",
+          "source_revision": 1381024857
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "TP",
+      "name": "TAP Air Portugal",
+      "alliance": "star",
+      "wikipedia": "TAP Air Portugal",
+      "hubs": [
+        {
+          "iata": "LIS",
+          "wikipedia": "Lisbon_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=TAP_Air_Portugal&oldid=1381916582",
+          "source_revision": 1381916582
+        },
+        {
+          "iata": "OPO",
+          "wikipedia": "Francisco_Sá_Carneiro_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=TAP_Air_Portugal&oldid=1381916582",
+          "source_revision": 1381916582
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "TG",
+      "name": "Thai Airways International",
+      "alliance": "star",
+      "wikipedia": "Thai Airways International",
+      "hubs": [
+        {
+          "iata": "BKK",
+          "wikipedia": "Suvarnabhumi_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Thai_Airways_International&oldid=1381353980",
+          "source_revision": 1381353980
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "TK",
+      "name": "Turkish Airlines",
+      "alliance": "star",
+      "wikipedia": "Turkish Airlines",
+      "hubs": [
+        {
+          "iata": "IST",
+          "wikipedia": "Istanbul_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Turkish_Airlines&oldid=1382012411",
+          "source_revision": 1382012411
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "UA",
+      "name": "United Airlines",
+      "alliance": "star",
+      "wikipedia": "United Airlines",
+      "hubs": [
+        {
+          "iata": "ORD",
+          "wikipedia": "O'Hare_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        },
+        {
+          "iata": "DEN",
+          "wikipedia": "Denver_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        },
+        {
+          "iata": "GUM",
+          "wikipedia": "Antonio_B._Won_Pat_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        },
+        {
+          "iata": "IAH",
+          "wikipedia": "George_Bush_Intercontinental_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        },
+        {
+          "iata": "LAX",
+          "wikipedia": "Los_Angeles_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        },
+        {
+          "iata": "EWR",
+          "wikipedia": "Newark_Liberty_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        },
+        {
+          "iata": "SFO",
+          "wikipedia": "San_Francisco_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        },
+        {
+          "iata": "IAD",
+          "wikipedia": "Washington_Dulles_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=United_Airlines&oldid=1381470458",
+          "source_revision": 1381470458
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.staralliance.com/en/members"
+    },
+    {
+      "id": "AR",
+      "name": "Aerolíneas Argentinas",
+      "alliance": "skyteam",
+      "wikipedia": "Aerolíneas Argentinas",
+      "hubs": [
+        {
+          "iata": "AEP",
+          "wikipedia": "Aeroparque_Jorge_Newbery",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aerol%C3%ADneas_Argentinas&oldid=1381608748",
+          "source_revision": 1381608748
+        },
+        {
+          "iata": "EZE",
+          "wikipedia": "Ministro_Pistarini_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aerol%C3%ADneas_Argentinas&oldid=1381608748",
+          "source_revision": 1381608748
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "AM",
+      "name": "Aeroméxico",
+      "alliance": "skyteam",
+      "wikipedia": "Aeroméxico",
+      "hubs": [
+        {
+          "iata": "MEX",
+          "wikipedia": "Mexico_City_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aerom%C3%A9xico&oldid=1380046060",
+          "source_revision": 1380046060
+        },
+        {
+          "iata": "GDL",
+          "wikipedia": "Don_Miguel_Hidalgo_y_Costilla_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aerom%C3%A9xico&oldid=1380046060",
+          "source_revision": 1380046060
+        },
+        {
+          "iata": "MTY",
+          "wikipedia": "General_Mariano_Escobedo_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Aerom%C3%A9xico&oldid=1380046060",
+          "source_revision": 1380046060
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "UX",
+      "name": "Air Europa",
+      "alliance": "skyteam",
+      "wikipedia": "Air Europa",
+      "hubs": [
+        {
+          "iata": "MAD",
+          "wikipedia": "Adolfo_Suárez_Madrid–Barajas_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_Europa&oldid=1378858149",
+          "source_revision": 1378858149
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "AF",
+      "name": "Air France",
+      "alliance": "skyteam",
+      "wikipedia": "Air France",
+      "hubs": [
+        {
+          "iata": "CDG",
+          "wikipedia": "Charles_de_Gaulle_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Air_France&oldid=1379610346",
+          "source_revision": 1379610346
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "CI",
+      "name": "China Airlines",
+      "alliance": "skyteam",
+      "wikipedia": "China Airlines",
+      "hubs": [
+        {
+          "iata": "TPE",
+          "wikipedia": "臺灣桃園國際機場",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Airlines&oldid=1377446145",
+          "source_revision": 1377446145
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "MU",
+      "name": "China Eastern Airlines",
+      "alliance": "skyteam",
+      "wikipedia": "China Eastern Airlines",
+      "hubs": [
+        {
+          "iata": "KMG",
+          "wikipedia": "Kunming_Changshui_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "SHA",
+          "wikipedia": "Shanghai_Hongqiao_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "PVG",
+          "wikipedia": "Shanghai_Pudong_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "XIY",
+          "wikipedia": "Xi'an_Xianyang_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "PKX",
+          "wikipedia": "Beijing_Daxing_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "TFU",
+          "wikipedia": "Chengdu_Tianfu_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "HGH",
+          "wikipedia": "Hangzhou_Xiaoshan_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "NKG",
+          "wikipedia": "Nanjing_Lukou_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "TAO",
+          "wikipedia": "Qingdao_Jiaodong_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "WUH",
+          "wikipedia": "Wuhan_Tianhe_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "DLC",
+          "wikipedia": "Dalian_Zhoushuizi_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "CAN",
+          "wikipedia": "Guangzhou_Baiyun_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "HRB",
+          "wikipedia": "Harbin_Taiping_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "HFE",
+          "wikipedia": "Hefei_Xinqiao_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "TNA",
+          "wikipedia": "Jinan_Yaoqiang_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "LHW",
+          "wikipedia": "Lanzhou_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "KHN",
+          "wikipedia": "Nanchang_Changbei_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "NGB",
+          "wikipedia": "Ningbo_Lishe_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "SZX",
+          "wikipedia": "Shenzhen_Bao'an_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "TYN",
+          "wikipedia": "Taiyuan_Wusu_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "WUX",
+          "wikipedia": "Wuxi_Shuofang_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "XMN",
+          "wikipedia": "Xiamen_Gaoqi_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "XNN",
+          "wikipedia": "Xining_Caojiabao_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        },
+        {
+          "iata": "YNT",
+          "wikipedia": "Yantai_Penglai_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=China_Eastern_Airlines&oldid=1380705498",
+          "source_revision": 1380705498
+        }
+      ],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "DL",
+      "name": "Delta Air Lines",
+      "alliance": "skyteam",
+      "wikipedia": "Delta Air Lines",
+      "hubs": [
+        {
+          "iata": "ATL",
+          "wikipedia": "Hartsfield–Jackson_Atlanta_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "BOS",
+          "wikipedia": "Logan_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "DTW",
+          "wikipedia": "Detroit_Metropolitan_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "LAX",
+          "wikipedia": "Los_Angeles_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "MSP",
+          "wikipedia": "Minneapolis–Saint_Paul_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "JFK",
+          "wikipedia": "John_F._Kennedy_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "LGA",
+          "wikipedia": "LaGuardia_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "SLC",
+          "wikipedia": "Salt_Lake_City_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        },
+        {
+          "iata": "SEA",
+          "wikipedia": "Seattle–Tacoma_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Delta_Air_Lines&oldid=1379949768",
+          "source_revision": 1379949768
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "GA",
+      "name": "Garuda Indonesia",
+      "alliance": "skyteam",
+      "wikipedia": "Garuda Indonesia",
+      "hubs": [
+        {
+          "iata": "CGK",
+          "wikipedia": "Soekarno-Hatta_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Garuda_Indonesia&oldid=1382146713",
+          "source_revision": 1382146713
+        },
+        {
+          "iata": "DPS",
+          "wikipedia": "Ngurah_Rai_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Garuda_Indonesia&oldid=1382146713",
+          "source_revision": 1382146713
+        },
+        {
+          "iata": "UPG",
+          "wikipedia": "Sultan_Hasanuddin_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Garuda_Indonesia&oldid=1382146713",
+          "source_revision": 1382146713
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "KQ",
+      "name": "Kenya Airways",
+      "alliance": "skyteam",
+      "wikipedia": "Kenya Airways",
+      "hubs": [
+        {
+          "iata": "NBO",
+          "wikipedia": "Jomo_Kenyatta_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Kenya_Airways&oldid=1381315012",
+          "source_revision": 1381315012
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "KL",
+      "name": "KLM",
+      "alliance": "skyteam",
+      "wikipedia": "KLM",
+      "hubs": [
+        {
+          "iata": "AMS",
+          "wikipedia": "Amsterdam_Airport_Schiphol",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=KLM&oldid=1381885313",
+          "source_revision": 1381885313
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "KE",
+      "name": "Korean Air",
+      "alliance": "skyteam",
+      "wikipedia": "Korean Air",
+      "hubs": [
+        {
+          "iata": "GMP",
+          "wikipedia": "Gimpo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Korean_Air&oldid=1382073525",
+          "source_revision": 1382073525
+        },
+        {
+          "iata": "ICN",
+          "wikipedia": "Incheon_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Korean_Air&oldid=1382073525",
+          "source_revision": 1382073525
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "ME",
+      "name": "Middle East Airlines",
+      "alliance": "skyteam",
+      "wikipedia": "Middle East Airlines",
+      "hubs": [
+        {
+          "iata": "BEY",
+          "wikipedia": "Beirut_Rafic_Hariri_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Middle_East_Airlines&oldid=1379038210",
+          "source_revision": 1379038210
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "SK",
+      "name": "Scandinavian Airlines",
+      "alliance": "skyteam",
+      "wikipedia": "Scandinavian Airlines",
+      "hubs": [
+        {
+          "iata": "CPH",
+          "wikipedia": "Copenhagen_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        },
+        {
+          "iata": "OSL",
+          "wikipedia": "Oslo_Airport,_Gardermoen",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        },
+        {
+          "iata": "ARN",
+          "wikipedia": "Stockholm-Arlanda_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "BGO",
+          "wikipedia": "Bergen_Airport,_Flesland",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        },
+        {
+          "iata": "GOT",
+          "wikipedia": "Göteborg_Landvetter_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        },
+        {
+          "iata": "SVG",
+          "wikipedia": "Stavanger_Airport,_Sola",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        },
+        {
+          "iata": "TOS",
+          "wikipedia": "Tromsø_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        },
+        {
+          "iata": "TRD",
+          "wikipedia": "Trondheim_Airport,_Værnes",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Scandinavian_Airlines&oldid=1381646813",
+          "source_revision": 1381646813
+        }
+      ],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "SV",
+      "name": "Saudia",
+      "alliance": "skyteam",
+      "wikipedia": "Saudia",
+      "hubs": [
+        {
+          "iata": "JED",
+          "wikipedia": "King_Abdulaziz_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Saudia&oldid=1380839641",
+          "source_revision": 1380839641
+        },
+        {
+          "iata": "MED",
+          "wikipedia": "Prince_Mohammad_Bin_Abdulaziz_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Saudia&oldid=1380839641",
+          "source_revision": 1380839641
+        },
+        {
+          "iata": "DMM",
+          "wikipedia": "King_Fahd_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Saudia&oldid=1380839641",
+          "source_revision": 1380839641
+        },
+        {
+          "iata": "RUH",
+          "wikipedia": "King_Khalid_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Saudia&oldid=1380839641",
+          "source_revision": 1380839641
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "RO",
+      "name": "TAROM",
+      "alliance": "skyteam",
+      "wikipedia": "TAROM",
+      "hubs": [
+        {
+          "iata": "OTP",
+          "wikipedia": "Henri_Coandă_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=TAROM&oldid=1380352758",
+          "source_revision": 1380352758
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "VN",
+      "name": "Vietnam Airlines",
+      "alliance": "skyteam",
+      "wikipedia": "Vietnam Airlines",
+      "hubs": [
+        {
+          "iata": "HAN",
+          "wikipedia": "Noi_Bai_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Vietnam_Airlines&oldid=1381636677",
+          "source_revision": 1381636677
+        },
+        {
+          "iata": "SGN",
+          "wikipedia": "Tan_Son_Nhat_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Vietnam_Airlines&oldid=1381636677",
+          "source_revision": 1381636677
+        },
+        {
+          "iata": "DAD",
+          "wikipedia": "Da_Nang_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Vietnam_Airlines&oldid=1381636677",
+          "source_revision": 1381636677
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "KTI",
+          "wikipedia": "Techo_International_Airport_(Cambodia)",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Vietnam_Airlines&oldid=1381636677",
+          "source_revision": 1381636677
+        },
+        {
+          "iata": "SAI",
+          "wikipedia": "Siem_Reap–Angkor_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Vietnam_Airlines&oldid=1381636677",
+          "source_revision": 1381636677
+        }
+      ],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "VS",
+      "name": "Virgin Atlantic",
+      "alliance": "skyteam",
+      "wikipedia": "Virgin Atlantic",
+      "hubs": [
+        {
+          "iata": "LHR",
+          "wikipedia": "Heathrow_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Virgin_Atlantic&oldid=1381968058",
+          "source_revision": 1381968058
+        },
+        {
+          "iata": "MAN",
+          "wikipedia": "Manchester_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Virgin_Atlantic&oldid=1381968058",
+          "source_revision": 1381968058
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "MF",
+      "name": "XiamenAir",
+      "alliance": "skyteam",
+      "wikipedia": "XiamenAir",
+      "hubs": [
+        {
+          "iata": "FOC",
+          "wikipedia": "Fuzhou_Changle_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "XMN",
+          "wikipedia": "Xiamen_Gaoqi_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "PKX",
+          "wikipedia": "Beijing_Daxing_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "HGH",
+          "wikipedia": "Hangzhou_Xiaoshan_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "CSX",
+          "wikipedia": "Changsha_Huanghua_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "CKG",
+          "wikipedia": "Chongqing_Jiangbei_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "JJN",
+          "wikipedia": "Quanzhou_Jinjiang_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "SHA",
+          "wikipedia": "Shanghai_Hongqiao_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "TSN",
+          "wikipedia": "Tianjin_Binhai_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        },
+        {
+          "iata": "INC",
+          "wikipedia": "Yinchuan_Hedong_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=XiamenAir&oldid=1379683192",
+          "source_revision": 1379683192
+        }
+      ],
+      "membership_source_url": "https://www.skyteam.com/en/about/our-members"
+    },
+    {
+      "id": "AS",
+      "name": "Alaska Airlines",
+      "alliance": "oneworld",
+      "wikipedia": "Alaska Airlines",
+      "hubs": [
+        {
+          "iata": "ANC",
+          "wikipedia": "Ted_Stevens_Anchorage_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Alaska_Airlines&oldid=1381280083",
+          "source_revision": 1381280083
+        },
+        {
+          "iata": "LAX",
+          "wikipedia": "Los_Angeles_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Alaska_Airlines&oldid=1381280083",
+          "source_revision": 1381280083
+        },
+        {
+          "iata": "PDX",
+          "wikipedia": "Portland_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Alaska_Airlines&oldid=1381280083",
+          "source_revision": 1381280083
+        },
+        {
+          "iata": "SAN",
+          "wikipedia": "San_Diego_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Alaska_Airlines&oldid=1381280083",
+          "source_revision": 1381280083
+        },
+        {
+          "iata": "SFO",
+          "wikipedia": "San_Francisco_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Alaska_Airlines&oldid=1381280083",
+          "source_revision": 1381280083
+        },
+        {
+          "iata": "SEA",
+          "wikipedia": "Seattle–Tacoma_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Alaska_Airlines&oldid=1381280083",
+          "source_revision": 1381280083
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "BOI",
+          "wikipedia": "Boise_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Alaska_Airlines&oldid=1381280083",
+          "source_revision": 1381280083
+        }
+      ],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "AA",
+      "name": "American Airlines",
+      "alliance": "oneworld",
+      "wikipedia": "American Airlines",
+      "hubs": [
+        {
+          "iata": "CLT",
+          "wikipedia": "Charlotte/Douglas_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "ORD",
+          "wikipedia": "O'Hare_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "DFW",
+          "wikipedia": "Dallas/Fort_Worth_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "LAX",
+          "wikipedia": "Los_Angeles_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "MIA",
+          "wikipedia": "Miami_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "JFK",
+          "wikipedia": "John_F._Kennedy_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "LGA",
+          "wikipedia": "LaGuardia_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "PHL",
+          "wikipedia": "Philadelphia_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "PHX",
+          "wikipedia": "Phoenix_Sky_Harbor_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        },
+        {
+          "iata": "DCA",
+          "wikipedia": "Ronald_Reagan_Washington_National_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=American_Airlines&oldid=1382014776",
+          "source_revision": 1382014776
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "BA",
+      "name": "British Airways",
+      "alliance": "oneworld",
+      "wikipedia": "British Airways",
+      "hubs": [
+        {
+          "iata": "LGW",
+          "wikipedia": "Gatwick_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=British_Airways&oldid=1380081850",
+          "source_revision": 1380081850
+        },
+        {
+          "iata": "LHR",
+          "wikipedia": "Heathrow_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=British_Airways&oldid=1380081850",
+          "source_revision": 1380081850
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "CX",
+      "name": "Cathay Pacific",
+      "alliance": "oneworld",
+      "wikipedia": "Cathay Pacific",
+      "hubs": [
+        {
+          "iata": "HKG",
+          "wikipedia": "Hong_Kong_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Cathay_Pacific&oldid=1378436122",
+          "source_revision": 1378436122
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "TPE",
+          "wikipedia": "臺灣桃園國際機場",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Cathay_Pacific&oldid=1378436122",
+          "source_revision": 1378436122
+        }
+      ],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "FJ",
+      "name": "Fiji Airways",
+      "alliance": "oneworld",
+      "wikipedia": "Fiji Airways",
+      "hubs": [
+        {
+          "iata": "NAN",
+          "wikipedia": "Nadi_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Fiji_Airways&oldid=1381926777",
+          "source_revision": 1381926777
+        },
+        {
+          "iata": "SUV",
+          "wikipedia": "Nausori_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Fiji_Airways&oldid=1381926777",
+          "source_revision": 1381926777
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "AY",
+      "name": "Finnair",
+      "alliance": "oneworld",
+      "wikipedia": "Finnair",
+      "hubs": [
+        {
+          "iata": "HEL",
+          "wikipedia": "Helsinki_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Finnair&oldid=1380904958",
+          "source_revision": 1380904958
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "HA",
+      "name": "Hawaiian Airlines",
+      "alliance": "oneworld",
+      "wikipedia": "Hawaiian Airlines",
+      "hubs": [
+        {
+          "iata": "HNL",
+          "wikipedia": "Daniel_K._Inouye_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Hawaiian_Airlines&oldid=1381665371",
+          "source_revision": 1381665371
+        },
+        {
+          "iata": "OGG",
+          "wikipedia": "Kahului_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Hawaiian_Airlines&oldid=1381665371",
+          "source_revision": 1381665371
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "IB",
+      "name": "Iberia",
+      "alliance": "oneworld",
+      "wikipedia": "Iberia (airline)",
+      "hubs": [
+        {
+          "iata": "MAD",
+          "wikipedia": "Adolfo_Suárez_Madrid–Barajas_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Iberia_%28airline%29&oldid=1381904408",
+          "source_revision": 1381904408
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "JL",
+      "name": "Japan Airlines",
+      "alliance": "oneworld",
+      "wikipedia": "Japan Airlines",
+      "hubs": [
+        {
+          "iata": "HND",
+          "wikipedia": "Tokyo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        },
+        {
+          "iata": "NRT",
+          "wikipedia": "Narita_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        },
+        {
+          "iata": "ITM",
+          "wikipedia": "Osaka_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        },
+        {
+          "iata": "KIX",
+          "wikipedia": "Kansai_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "FUK",
+          "wikipedia": "Fukuoka_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        },
+        {
+          "iata": "NGO",
+          "wikipedia": "Chūbu_Centrair_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        },
+        {
+          "iata": "OKA",
+          "wikipedia": "Naha_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        },
+        {
+          "iata": "CTS",
+          "wikipedia": "New_Chitose_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Japan_Airlines&oldid=1381926694",
+          "source_revision": 1381926694
+        }
+      ],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "MH",
+      "name": "Malaysia Airlines",
+      "alliance": "oneworld",
+      "wikipedia": "Malaysia Airlines",
+      "hubs": [
+        {
+          "iata": "KUL",
+          "wikipedia": "Kuala_Lumpur_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Malaysia_Airlines&oldid=1381940341",
+          "source_revision": 1381940341
+        },
+        {
+          "iata": "BKI",
+          "wikipedia": "Kota_Kinabalu_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Malaysia_Airlines&oldid=1381940341",
+          "source_revision": 1381940341
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "WY",
+      "name": "Oman Air",
+      "alliance": "oneworld",
+      "wikipedia": "Oman Air",
+      "hubs": [
+        {
+          "iata": "MCT",
+          "wikipedia": "Seeb_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Oman_Air&oldid=1380905037",
+          "source_revision": 1380905037
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "QF",
+      "name": "Qantas",
+      "alliance": "oneworld",
+      "wikipedia": "Qantas",
+      "hubs": [
+        {
+          "iata": "BNE",
+          "wikipedia": "Brisbane_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Qantas&oldid=1382108027",
+          "source_revision": 1382108027
+        },
+        {
+          "iata": "MEL",
+          "wikipedia": "Melbourne_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Qantas&oldid=1382108027",
+          "source_revision": 1382108027
+        },
+        {
+          "iata": "PER",
+          "wikipedia": "Perth_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Qantas&oldid=1382108027",
+          "source_revision": 1382108027
+        },
+        {
+          "iata": "SYD",
+          "wikipedia": "Sydney_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Qantas&oldid=1382108027",
+          "source_revision": 1382108027
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "QR",
+      "name": "Qatar Airways",
+      "alliance": "oneworld",
+      "wikipedia": "Qatar Airways",
+      "hubs": [
+        {
+          "iata": "DOH",
+          "wikipedia": "Hamad_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Qatar_Airways&oldid=1381949726",
+          "source_revision": 1381949726
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "AT",
+      "name": "Royal Air Maroc",
+      "alliance": "oneworld",
+      "wikipedia": "Royal Air Maroc",
+      "hubs": [
+        {
+          "iata": "CMN",
+          "wikipedia": "Mohammed_V_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Royal_Air_Maroc&oldid=1381011388",
+          "source_revision": 1381011388
+        },
+        {
+          "iata": "TNG",
+          "wikipedia": "Tangier_Ibn_Battouta_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Royal_Air_Maroc&oldid=1381011388",
+          "source_revision": 1381011388
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "RJ",
+      "name": "Royal Jordanian",
+      "alliance": "oneworld",
+      "wikipedia": "Royal Jordanian",
+      "hubs": [
+        {
+          "iata": "AMM",
+          "wikipedia": "Queen_Alia_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Royal_Jordanian&oldid=1378653351",
+          "source_revision": 1378653351
+        }
+      ],
+      "focus_cities": [
+        {
+          "iata": "AQJ",
+          "wikipedia": "Aqaba_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=Royal_Jordanian&oldid=1378653351",
+          "source_revision": 1378653351
+        }
+      ],
+      "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "UL",
+      "name": "SriLankan Airlines",
+      "alliance": "oneworld",
+      "wikipedia": "SriLankan Airlines",
+      "hubs": [
+        {
+          "iata": "CMB",
+          "wikipedia": "Bandaranaike_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?title=SriLankan_Airlines&oldid=1381763522",
+          "source_revision": 1381763522
+        }
+      ],
+      "focus_cities": [],
+      "membership_source_url": "https://www.oneworld.com/members"
+    }
+  ],
+  "unmatched": [],
+  "suspended": [
+    {
+      "id": "SU",
+      "name": "Aeroflot",
+      "alliance": "skyteam"
+    },
+    {
+      "id": "S7",
+      "name": "S7 Airlines",
+      "alliance": "oneworld"
+    }
+  ]
+}

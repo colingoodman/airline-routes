@@ -1,0 +1,4111 @@
+{
+  "Leonardo_da_Vinci–Fiumicino_Airport": {
+    "iata": "FCO",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Rome Fiumicino Airport"
+  },
+  "Wellington_International_Airport": {
+    "iata": "WLG",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Wellington Airport"
+  },
+  "Heraklion_International_Airport": {
+    "iata": "HER",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Heraklion International Airport \"Nikos Kazantzakis\""
+  },
+  "Jakarta–Soekarno-Hatta": {
+    "iata": "CGK",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Soekarno–Hatta International Airport"
+  },
+  "Tokyo–Narita": {
+    "iata": "NRT",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Narita International Airport"
+  },
+  "Yining_Airport": {
+    "iata": "YIN",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Ili Yining International Airport"
+  },
+  "London–Gatwick": {
+    "iata": "LGW",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Gatwick Airport"
+  },
+  "Osaka–Kansai": {
+    "iata": "KIX",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Kansai International Airport"
+  },
+  "Sunan_Shuofang_International_Airport": {
+    "iata": "WUX",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Wuxi Shuofang Airport"
+  },
+  "Ürümqi_Diwopu_International_Airport": {
+    "iata": "URC",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Ürümqi Tianshan International Airport"
+  },
+  "Bangkok–Suvarnabhumi": {
+    "iata": "BKK",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Suvarnabhumi Airport"
+  },
+  "Beijing–Capital": {
+    "iata": "PEK",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Beijing Capital International Airport"
+  },
+  "Chicago–O'Hare": {
+    "iata": "ORD",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "O'Hare International Airport"
+  },
+  "Houston–Intercontinental": {
+    "iata": "IAH",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "George Bush Intercontinental Airport"
+  },
+  "Kuala_Lumpur–International": {
+    "iata": "KUL",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Kuala Lumpur International Airport"
+  },
+  "London–Heathrow": {
+    "iata": "LHR",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Heathrow Airport"
+  },
+  "New_York–JFK": {
+    "iata": "JFK",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "John F. Kennedy International Airport"
+  },
+  "Seattle/Tacoma": {
+    "iata": "SEA",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Seattle–Tacoma International Airport"
+  },
+  "Stockholm–Arlanda": {
+    "iata": "ARN",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Stockholm Arlanda Airport"
+  },
+  "Vasil_Levski_Sofia_Airport": {
+    "iata": "SOF",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Sofia Airport"
+  },
+  "Thessaloniki_International_Airport": {
+    "iata": "SKG",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Thessaloniki Airport"
+  },
+  "Bari_Karol_Wojtyla_Airport": {
+    "iata": "BRI",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Bari Karol Wojtyła Airport"
+  },
+  "Tromsø_Airport,_Langnes": {
+    "iata": "TOS",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Tromsø Airport"
+  },
+  "Volos_Airport": {
+    "iata": "VOL",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Nea Anchialos National Airport"
+  },
+  "Chișinău_Eugen_Doga_International_Airport": {
+    "iata": "RMO",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Chișinău International Airport"
+  },
+  "Humberto_Delgado_Airport": {
+    "iata": "LIS",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Lisbon Airport"
+  },
+  "Vienna_Airport": {
+    "iata": "VIE",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Vienna International Airport"
+  },
+  "Leros_Island_National_Airport": {
+    "iata": "LRS",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Leros Municipal Airport"
+  },
+  "Chengdu–Shuangliu": {
+    "iata": "CTU",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Chengdu Shuangliu International Airport"
+  },
+  "Timaru_Airport": {
+    "iata": "TIU",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Richard Pearse Airport"
+  },
+  "Biju_Patnaik_International_Airport": {
+    "iata": "BBI",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Biju Patnaik Airport"
+  },
+  "Chandigarh_International_Airport": {
+    "iata": "IXC",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Chandigarh Airport"
+  },
+  "Rome–Fiumicino": {
+    "iata": "FCO",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Rome Fiumicino Airport"
+  },
+  "Sydney_Kingsford_Smith_Airport": {
+    "iata": "SYD",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Sydney Airport"
+  },
+  "Toronto–Pearson": {
+    "iata": "YYZ",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382159342"
+  },
+  "Chengdu–Tianfu": {
+    "iata": "TFU",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Chengdu Tianfu International Airport"
+  },
+  "Ğabdulla_Tuqay_Kazan_International_Airport": {
+    "iata": "KZN",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Kazan International Airport"
+  },
+  "Moscow–Sheremetyevo": {
+    "iata": "SVO",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Sheremetyevo International Airport"
+  },
+  "Chengdu-Shuangliu": {
+    "iata": "CTU",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Chengdu Shuangliu International Airport"
+  },
+  "Lianyungang_Huaguoshan_Airport": {
+    "iata": "LYG",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Lianyungang Huaguoshan International Airport"
+  },
+  "Phuket_Airport": {
+    "iata": "HKT",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Phuket International Airport"
+  },
+  "Keflavík_Airport": {
+    "iata": "KEF",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Keflavík International Airport"
+  },
+  "Islam_Karimov_Tashkent_International_Airport": {
+    "iata": "TAS",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Tashkent International Airport"
+  },
+  "Marco_Polo_Airport": {
+    "iata": "VCE",
+    "method": "Wikipedia redirect to airport metadata title",
+    "canonical": "Venice Marco Polo Airport"
+  },
+  "Auckland_International_Airport": {
+    "iata": "AKL",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381931554"
+  },
+  "El_Dorado_International_Airport": {
+    "iata": "BOG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381307815"
+  },
+  "臺灣桃園國際機場": {
+    "iata": "TPE",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381259864"
+  },
+  "Rafael_Núñez_International_Airport": {
+    "iata": "CTG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380870970"
+  },
+  "Heraklion_International_Airport_\"Nikos_Kazantzakis\"": {
+    "iata": "HER",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381559148"
+  },
+  "Charles_de_Gaulle_Airport": {
+    "iata": "CDG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381922157"
+  },
+  "Suvarnabhumi_Airport": {
+    "iata": "BKK",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382118187"
+  },
+  "Christchurch_International_Airport": {
+    "iata": "CHC",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382170508"
+  },
+  "Munich_Airport": {
+    "iata": "MUC",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382185301"
+  },
+  "Shanghai_Hongqiao_International_Airport": {
+    "iata": "SHA",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381363394"
+  },
+  "Shenzhen_Bao'an_International_Airport": {
+    "iata": "SZX",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382034301"
+  },
+  "Newark_Liberty_International_Airport": {
+    "iata": "EWR",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381182468"
+  },
+  "Incheon_International_Airport": {
+    "iata": "ICN",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381764763"
+  },
+  "Zurich_Airport": {
+    "iata": "ZRH",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381323446"
+  },
+  "Lisbon_Airport": {
+    "iata": "LIS",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380199250"
+  },
+  "Thessaloniki_Airport": {
+    "iata": "SKG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382098482"
+  },
+  "Kalamata_International_Airport": {
+    "iata": "KLX",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381524617"
+  },
+  "Vancouver_International_Airport": {
+    "iata": "YVR",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382150456"
+  },
+  "Rhodes_International_Airport": {
+    "iata": "RHO",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381405270"
+  },
+  "Tocumen_International_Airport": {
+    "iata": "PTY",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381300916"
+  },
+  "Los_Angeles_International_Airport": {
+    "iata": "LAX",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382143599"
+  },
+  "Warsaw_Frederic_Chopin_Airport": {
+    "iata": "WAW",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381729006"
+  },
+  "Larnaca_International_Airport": {
+    "iata": "LCA",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381596195"
+  },
+  "Cairo_International_Airport": {
+    "iata": "CAI",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381929466"
+  },
+  "Aeroparque_Jorge_Newbery": {
+    "iata": "AEP",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381305479"
+  },
+  "Chengdu_Tianfu_International_Airport": {
+    "iata": "TFU",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382056601"
+  },
+  "Washington_Dulles_International_Airport": {
+    "iata": "IAD",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381859374"
+  },
+  "Kunming_Changshui_International_Airport": {
+    "iata": "KMG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381870829"
+  },
+  "San_Francisco_International_Airport": {
+    "iata": "SFO",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381867028"
+  },
+  "Itami_Airport": {
+    "iata": "ITM",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375003005"
+  },
+  "Geneva_Airport": {
+    "iata": "GVA",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381559707"
+  },
+  "Tokyo_International_Airport": {
+    "iata": "HND",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382131639"
+  },
+  "O'Hare_International_Airport": {
+    "iata": "ORD",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382040604"
+  },
+  "Addis_Ababa_Bole_International_Airport": {
+    "iata": "ADD",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380012454"
+  },
+  "Kraków_John_Paul_II_International_Airport": {
+    "iata": "KRK",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379191260"
+  },
+  "Kansai_International_Airport": {
+    "iata": "KIX",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382089262"
+  },
+  "Singapore_Changi_Airport": {
+    "iata": "SIN",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382074894"
+  },
+  "Antonio_B._Won_Pat_International_Airport": {
+    "iata": "GUM",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381241532"
+  },
+  "Mexico_City_International_Airport": {
+    "iata": "MEX",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382145259"
+  },
+  "General_Mariano_Escobedo_International_Airport": {
+    "iata": "MTY",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381463951"
+  },
+  "Adolfo_Suárez_Madrid–Barajas_Airport": {
+    "iata": "MAD",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382172790"
+  },
+  "Kempegowda_International_Airport": {
+    "iata": "BLR",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381613435"
+  },
+  "Istanbul_Airport": {
+    "iata": "IST",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382117582"
+  },
+  "O._R._Tambo_International_Airport": {
+    "iata": "JNB",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381455282"
+  },
+  "Montréal–Trudeau_International_Airport": {
+    "iata": "YUL",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382139161"
+  },
+  "Zagreb_Airport": {
+    "iata": "ZAG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382137169"
+  },
+  "Vienna_International_Airport": {
+    "iata": "VIE",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381729251"
+  },
+  "Athens_International_Airport": {
+    "iata": "ATH",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381572577"
+  },
+  "Beijing_Daxing_International_Airport": {
+    "iata": "PKX",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381848578"
+  },
+  "Cape_Town_International_Airport": {
+    "iata": "CPT",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379461593"
+  },
+  "Wellington_Airport": {
+    "iata": "WLG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377309029"
+  },
+  "Indira_Gandhi_International_Airport": {
+    "iata": "DEL",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381900383"
+  },
+  "George_Bush_Intercontinental_Airport": {
+    "iata": "IAH",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382146242"
+  },
+  "José_María_Córdova_International_Airport": {
+    "iata": "MDE",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381034660"
+  },
+  "Alfonso_Bonilla_Aragón_International_Airport": {
+    "iata": "CLO",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381023877"
+  },
+  "Shanghai_Pudong_International_Airport": {
+    "iata": "PVG",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382041129"
+  },
+  "Ministro_Pistarini_International_Airport": {
+    "iata": "EZE",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381179387"
+  },
+  "Rome_Fiumicino_Airport": {
+    "iata": "FCO",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381897802"
+  },
+  "Brussels_Airport": {
+    "iata": "BRU",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382076341"
+  },
+  "Toronto_Pearson_International_Airport": {
+    "iata": "YYZ",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382159342"
+  },
+  "Don_Miguel_Hidalgo_y_Costilla_International_Airport": {
+    "iata": "GDL",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381467259"
+  },
+  "Beijing_Capital_International_Airport": {
+    "iata": "PEK",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382040894"
+  },
+  "Chania_International_Airport": {
+    "iata": "CHQ",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382055555"
+  },
+  "Gimpo_International_Airport": {
+    "iata": "GMP",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381198024"
+  },
+  "Narita_International_Airport": {
+    "iata": "NRT",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381828145"
+  },
+  "Chengdu_Shuangliu_International_Airport": {
+    "iata": "CTU",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374830002"
+  },
+  "Denver_International_Airport": {
+    "iata": "DEN",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381598430"
+  },
+  "Chhatrapati_Shivaji_Maharaj_International_Airport": {
+    "iata": "BOM",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381871916"
+  },
+  "Francisco_Sá_Carneiro_Airport": {
+    "iata": "OPO",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380199309"
+  },
+  "Frankfurt_Airport": {
+    "iata": "FRA",
+    "method": "Wikipedia airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381769098"
+  },
+  "Christchurch_Airport": {
+    "iata": "CHC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Christchurch Airport",
+    "wikidata_id": "Q1061330",
+    "source_url": "https://www.wikidata.org/wiki/Q1061330"
+  },
+  "Dunedin_Airport": {
+    "iata": "DUD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Dunedin Airport",
+    "wikidata_id": "Q1364375",
+    "source_url": "https://www.wikidata.org/wiki/Q1364375"
+  },
+  "Hawke's_Bay_Airport": {
+    "iata": "NPE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Hawke's Bay Airport",
+    "wikidata_id": "Q3888583",
+    "source_url": "https://www.wikidata.org/wiki/Q3888583"
+  },
+  "Palmerston_North_Airport": {
+    "iata": "PMR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Palmerston North Airport",
+    "wikidata_id": "Q1432305",
+    "source_url": "https://www.wikidata.org/wiki/Q1432305"
+  },
+  "Queenstown_Airport": {
+    "iata": "ZQN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Queenstown Airport",
+    "wikidata_id": "Q1204970",
+    "source_url": "https://www.wikidata.org/wiki/Q1204970"
+  },
+  "Rotorua_Airport": {
+    "iata": "ROT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Rotorua Airport",
+    "wikidata_id": "Q1134679",
+    "source_url": "https://www.wikidata.org/wiki/Q1134679"
+  },
+  "Changi_Airport": {
+    "iata": "SIN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Changi Airport",
+    "wikidata_id": "Q32159",
+    "source_url": "https://www.wikidata.org/wiki/Q32159"
+  },
+  "Western_Sydney_Airport": {
+    "iata": "WSI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Western Sydney Airport",
+    "wikidata_id": "Q16903158",
+    "source_url": "https://www.wikidata.org/wiki/Q16903158"
+  },
+  "Taoyuan_International_Airport": {
+    "iata": "TPE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Taoyuan International Airport",
+    "wikidata_id": "Q44856",
+    "source_url": "https://www.wikidata.org/wiki/Q44856"
+  },
+  "Hobart_Airport": {
+    "iata": "HBA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Hobart Airport",
+    "wikidata_id": "Q15498",
+    "source_url": "https://www.wikidata.org/wiki/Q15498"
+  },
+  "Santiago_Pérez_Quiroz_Airport": {
+    "iata": "AUC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Santiago Pérez Quiroz Airport",
+    "wikidata_id": "Q2232461",
+    "source_url": "https://www.wikidata.org/wiki/Q2232461"
+  },
+  "El_Edén_International_Airport": {
+    "iata": "AXM",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "El Edén International Airport",
+    "wikidata_id": "Q2670829",
+    "source_url": "https://www.wikidata.org/wiki/Q2670829"
+  },
+  "Belém/Val-de-Cans_International_Airport": {
+    "iata": "BEL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Belém/Val-de-Cans International Airport",
+    "wikidata_id": "Q762986",
+    "source_url": "https://www.wikidata.org/wiki/Q762986"
+  },
+  "Simón_Bolívar_International_Airport_(Venezuela)": {
+    "iata": "CCS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Simón Bolívar International Airport (Venezuela)",
+    "wikidata_id": "Q1058344",
+    "source_url": "https://www.wikidata.org/wiki/Q1058344"
+  },
+  "Ingeniero_Aeronáutico_Ambrosio_L.V._Taravella_International_Airport": {
+    "iata": "COR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ingeniero Aeronáutico Ambrosio L.V. Taravella International Airport",
+    "wikidata_id": "Q201374",
+    "source_url": "https://www.wikidata.org/wiki/Q201374"
+  },
+  "Alfredo_Vásquez_Cobo_International_Airport": {
+    "iata": "LET",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Alfredo Vásquez Cobo International Airport",
+    "wikidata_id": "Q432334",
+    "source_url": "https://www.wikidata.org/wiki/Q432334"
+  },
+  "Madrid–Barajas_Airport": {
+    "iata": "MAD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Madrid–Barajas Airport",
+    "wikidata_id": "Q166276",
+    "source_url": "https://www.wikidata.org/wiki/Q166276"
+  },
+  "Monterrey_International_Airport": {
+    "iata": "MTY",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Monterrey International Airport",
+    "wikidata_id": "Q767660",
+    "source_url": "https://www.wikidata.org/wiki/Q767660"
+  },
+  "Almirante_Padilla_Airport": {
+    "iata": "RCH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Almirante Padilla Airport",
+    "wikidata_id": "Q2233144",
+    "source_url": "https://www.wikidata.org/wiki/Q2233144"
+  },
+  "Arturo_Merino_Benítez_International_Airport": {
+    "iata": "SCL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Arturo Merino Benítez International Airport",
+    "wikidata_id": "Q127671",
+    "source_url": "https://www.wikidata.org/wiki/Q127671"
+  },
+  "Alfonso_López_Pumarejo_Airport": {
+    "iata": "VUP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Alfonso López Pumarejo Airport",
+    "wikidata_id": "Q1936910",
+    "source_url": "https://www.wikidata.org/wiki/Q1936910"
+  },
+  "Ben_Gurion_Airport": {
+    "iata": "TLV",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ben Gurion Airport",
+    "wikidata_id": "Q181479",
+    "source_url": "https://www.wikidata.org/wiki/Q181479"
+  },
+  "Nice_Côte_d'Azur_Airport": {
+    "iata": "NCE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Nice Côte d'Azur Airport",
+    "wikidata_id": "Q821557",
+    "source_url": "https://www.wikidata.org/wiki/Q821557"
+  },
+  "Louisville_Muhammad_Ali_International_Airport": {
+    "iata": "SDF",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Louisville Muhammad Ali International Airport",
+    "wikidata_id": "Q1199087",
+    "source_url": "https://www.wikidata.org/wiki/Q1199087"
+  },
+  "Halifax_Stanfield_International_Airport": {
+    "iata": "YHZ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Halifax Stanfield International Airport",
+    "wikidata_id": "Q1345785",
+    "source_url": "https://www.wikidata.org/wiki/Q1345785"
+  },
+  "Mykonos_Airport": {
+    "iata": "JMK",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Mykonos Airport",
+    "wikidata_id": "Q1432110",
+    "source_url": "https://www.wikidata.org/wiki/Q1432110"
+  },
+  "Santorini_International_Airport": {
+    "iata": "JTR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Santorini International Airport",
+    "wikidata_id": "Q1432775",
+    "source_url": "https://www.wikidata.org/wiki/Q1432775"
+  },
+  "Bologna_Guglielmo_Marconi_Airport": {
+    "iata": "BLQ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bologna Guglielmo Marconi Airport",
+    "wikidata_id": "Q389241",
+    "source_url": "https://www.wikidata.org/wiki/Q389241"
+  },
+  "Bucharest_Henri_Coandă_International_Airport": {
+    "iata": "OTP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bucharest Henri Coandă International Airport",
+    "wikidata_id": "Q257631",
+    "source_url": "https://www.wikidata.org/wiki/Q257631"
+  },
+  "Fortaleza_International_Airport": {
+    "iata": "FOR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Fortaleza Airport",
+    "wikidata_id": "Q2074717",
+    "source_url": "https://www.wikidata.org/wiki/Q2074717"
+  },
+  "Hannover_Airport": {
+    "iata": "HAJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Hannover Airport",
+    "wikidata_id": "Q170169",
+    "source_url": "https://www.wikidata.org/wiki/Q170169"
+  },
+  "Lomé–Tokoin_Airport": {
+    "iata": "LFW",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Lomé–Tokoin International Airport",
+    "wikidata_id": "Q1431925",
+    "source_url": "https://www.wikidata.org/wiki/Q1431925"
+  },
+  "Marrakesh_Menara_Airport": {
+    "iata": "RAK",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Marrakesh Menara Airport",
+    "wikidata_id": "Q429304",
+    "source_url": "https://www.wikidata.org/wiki/Q429304"
+  },
+  "Milan–Linate": {
+    "iata": "LIN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Milan Linate Airport",
+    "wikidata_id": "Q828386",
+    "source_url": "https://www.wikidata.org/wiki/Q828386"
+  },
+  "Montréal–Trudeau": {
+    "iata": "YUL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Montréal–Trudeau International Airport",
+    "wikidata_id": "Q736627",
+    "source_url": "https://www.wikidata.org/wiki/Q736627"
+  },
+  "Pointe_Noire_Airport": {
+    "iata": "PNR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Agostinho-Neto International Airport",
+    "wikidata_id": "Q1432398",
+    "source_url": "https://www.wikidata.org/wiki/Q1432398"
+  },
+  "Porto_Airport": {
+    "iata": "OPO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Porto Airport",
+    "wikidata_id": "Q943743",
+    "source_url": "https://www.wikidata.org/wiki/Q943743"
+  },
+  "Rabat–Salé_Airport": {
+    "iata": "RBA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Rabat–Salé Airport",
+    "wikidata_id": "Q1432573",
+    "source_url": "https://www.wikidata.org/wiki/Q1432573"
+  },
+  "Rio_de_Janeiro–Galeão": {
+    "iata": "GIG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Rio de Janeiro/Galeão International Airport",
+    "wikidata_id": "Q733998",
+    "source_url": "https://www.wikidata.org/wiki/Q733998"
+  },
+  "Salvador_Bahia_Airport": {
+    "iata": "SSA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Salvador Bahia Airport",
+    "wikidata_id": "Q926029",
+    "source_url": "https://www.wikidata.org/wiki/Q926029"
+  },
+  "Tokyo–Haneda": {
+    "iata": "HND",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Haneda Airport",
+    "wikidata_id": "Q204853",
+    "source_url": "https://www.wikidata.org/wiki/Q204853"
+  },
+  "Toulouse–Blagnac_Airport": {
+    "iata": "TLS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Toulouse–Blagnac Airport",
+    "wikidata_id": "Q372615",
+    "source_url": "https://www.wikidata.org/wiki/Q372615"
+  },
+  "Djerba–Zarzis_International_Airport": {
+    "iata": "DJE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Djerba–Zarzis International Airport",
+    "wikidata_id": "Q1425537",
+    "source_url": "https://www.wikidata.org/wiki/Q1425537"
+  },
+  "Velana_International_Airport": {
+    "iata": "MLE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Velana International Airport",
+    "wikidata_id": "Q29104",
+    "source_url": "https://www.wikidata.org/wiki/Q29104"
+  },
+  "Québec_City_Jean_Lesage_International_Airport": {
+    "iata": "YQB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Québec City Jean Lesage International Airport",
+    "wikidata_id": "Q794549",
+    "source_url": "https://www.wikidata.org/wiki/Q794549"
+  },
+  "Santorini_(Thira)_International_Airport": {
+    "iata": "JTR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Santorini International Airport",
+    "wikidata_id": "Q1432775",
+    "source_url": "https://www.wikidata.org/wiki/Q1432775"
+  },
+  "Verona_Villafranca_Airport": {
+    "iata": "VRN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Verona Villafranca Airport",
+    "wikidata_id": "Q1433197",
+    "source_url": "https://www.wikidata.org/wiki/Q1433197"
+  },
+  "Zanzibar_Airport": {
+    "iata": "ZNZ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Abeid Amani Karume International Airport",
+    "wikidata_id": "Q1393401",
+    "source_url": "https://www.wikidata.org/wiki/Q1393401"
+  },
+  "Ahmedabad_Airport": {
+    "iata": "AMD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ahmedabad Airport",
+    "wikidata_id": "Q401700",
+    "source_url": "https://www.wikidata.org/wiki/Q401700"
+  },
+  "Netaji_Subhas_Chandra_Bose_International_Airport": {
+    "iata": "CCU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Netaji Subhas Chandra Bose International Airport",
+    "wikidata_id": "Q388535",
+    "source_url": "https://www.wikidata.org/wiki/Q388535"
+  },
+  "Techo_International_Airport": {
+    "iata": "KTI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Techo International Airport",
+    "wikidata_id": "Q106616277",
+    "source_url": "https://www.wikidata.org/wiki/Q106616277"
+  },
+  "Taipei–Taoyuan": {
+    "iata": "TPE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Taoyuan International Airport",
+    "wikidata_id": "Q44856",
+    "source_url": "https://www.wikidata.org/wiki/Q44856"
+  },
+  "Auckland_Airport": {
+    "iata": "AKL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Auckland Airport",
+    "wikidata_id": "Q45938",
+    "source_url": "https://www.wikidata.org/wiki/Q45938"
+  },
+  "Amsterdam_Airport": {
+    "iata": "AMS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Amsterdam Airport Schiphol",
+    "wikidata_id": "Q9694",
+    "source_url": "https://www.wikidata.org/wiki/Q9694"
+  },
+  "Athens_Airport": {
+    "iata": "ATH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Athens International Airport",
+    "wikidata_id": "Q211734",
+    "source_url": "https://www.wikidata.org/wiki/Q211734"
+  },
+  "Bastia_Airport": {
+    "iata": "BIA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bastia–Poretta Airport",
+    "wikidata_id": "Q1430951",
+    "source_url": "https://www.wikidata.org/wiki/Q1430951"
+  },
+  "Berlin_Airport": {
+    "iata": "BER",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Berlin Brandenburg Airport",
+    "wikidata_id": "Q160556",
+    "source_url": "https://www.wikidata.org/wiki/Q160556"
+  },
+  "Cairo_Airport": {
+    "iata": "CAI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cairo International Airport",
+    "wikidata_id": "Q461793",
+    "source_url": "https://www.wikidata.org/wiki/Q461793"
+  },
+  "Cape_Town_Airport": {
+    "iata": "CPT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cape Town International Airport",
+    "wikidata_id": "Q854130",
+    "source_url": "https://www.wikidata.org/wiki/Q854130"
+  },
+  "Cluj-Napoca_Airport": {
+    "iata": "CLJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cluj International Airport",
+    "wikidata_id": "Q1068685",
+    "source_url": "https://www.wikidata.org/wiki/Q1068685"
+  },
+  "Debrecen_Airport": {
+    "iata": "DEB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Debrecen International Airport",
+    "wikidata_id": "Q903138",
+    "source_url": "https://www.wikidata.org/wiki/Q903138"
+  },
+  "Delhi_Airport": {
+    "iata": "DEL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Indira Gandhi International Airport",
+    "wikidata_id": "Q821275",
+    "source_url": "https://www.wikidata.org/wiki/Q821275"
+  },
+  "Denver_Airport": {
+    "iata": "DEN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Denver International Airport",
+    "wikidata_id": "Q330015",
+    "source_url": "https://www.wikidata.org/wiki/Q330015"
+  },
+  "Hanover_Airport": {
+    "iata": "HAJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Hannover Airport",
+    "wikidata_id": "Q170169",
+    "source_url": "https://www.wikidata.org/wiki/Q170169"
+  },
+  "London-Heathrow_Airport": {
+    "iata": "LHR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Heathrow Airport",
+    "wikidata_id": "Q8691",
+    "source_url": "https://www.wikidata.org/wiki/Q8691"
+  },
+  "Luxembourg_Airport": {
+    "iata": "LUX",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Luxembourg Airport",
+    "wikidata_id": "Q872186",
+    "source_url": "https://www.wikidata.org/wiki/Q872186"
+  },
+  "Madrid_Airport": {
+    "iata": "MAD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Madrid–Barajas Airport",
+    "wikidata_id": "Q166276",
+    "source_url": "https://www.wikidata.org/wiki/Q166276"
+  },
+  "Milan-Linate_Airport": {
+    "iata": "LIN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Milan Linate Airport",
+    "wikidata_id": "Q828386",
+    "source_url": "https://www.wikidata.org/wiki/Q828386"
+  },
+  "Mexico_City_Airport": {
+    "iata": "MEX",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Mexico City International Airport",
+    "wikidata_id": "Q860559",
+    "source_url": "https://www.wikidata.org/wiki/Q860559"
+  },
+  "Montreal_Airport": {
+    "iata": "YUL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Montréal–Trudeau International Airport",
+    "wikidata_id": "Q736627",
+    "source_url": "https://www.wikidata.org/wiki/Q736627"
+  },
+  "Nantes_Airport": {
+    "iata": "NTE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Nantes Atlantique Airport",
+    "wikidata_id": "Q1432144",
+    "source_url": "https://www.wikidata.org/wiki/Q1432144"
+  },
+  "New_York_JFK_Airport": {
+    "iata": "JFK",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "John F. Kennedy International Airport",
+    "wikidata_id": "Q8685",
+    "source_url": "https://www.wikidata.org/wiki/Q8685"
+  },
+  "Nice_Airport": {
+    "iata": "NCE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Nice Côte d'Azur Airport",
+    "wikidata_id": "Q821557",
+    "source_url": "https://www.wikidata.org/wiki/Q821557"
+  },
+  "Olbia_Airport": {
+    "iata": "OLB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Olbia Costa Smeralda Airport",
+    "wikidata_id": "Q1432236",
+    "source_url": "https://www.wikidata.org/wiki/Q1432236"
+  },
+  "Oslo_Airport": {
+    "iata": "OSL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Oslo Airport, Gardermoen",
+    "wikidata_id": "Q210559",
+    "source_url": "https://www.wikidata.org/wiki/Q210559"
+  },
+  "Prague_Airport": {
+    "iata": "PRG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Václav Havel Airport Prague",
+    "wikidata_id": "Q99172",
+    "source_url": "https://www.wikidata.org/wiki/Q99172"
+  },
+  "Rhodes_Airport": {
+    "iata": "RHO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Rhodes International Airport",
+    "wikidata_id": "Q833555",
+    "source_url": "https://www.wikidata.org/wiki/Q833555"
+  },
+  "San_Francisco_Airport": {
+    "iata": "SFO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "San Francisco International Airport",
+    "wikidata_id": "Q8688",
+    "source_url": "https://www.wikidata.org/wiki/Q8688"
+  },
+  "Sibiu_Airport": {
+    "iata": "SBZ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Sibiu International Airport",
+    "wikidata_id": "Q946418",
+    "source_url": "https://www.wikidata.org/wiki/Q946418"
+  },
+  "Singapore_Airport": {
+    "iata": "SIN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Changi Airport",
+    "wikidata_id": "Q32159",
+    "source_url": "https://www.wikidata.org/wiki/Q32159"
+  },
+  "Toulouse_Airport": {
+    "iata": "TLS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Toulouse–Blagnac Airport",
+    "wikidata_id": "Q372615",
+    "source_url": "https://www.wikidata.org/wiki/Q372615"
+  },
+  "Tunis_Airport": {
+    "iata": "TUN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Tunis–Carthage International Airport",
+    "wikidata_id": "Q1141214",
+    "source_url": "https://www.wikidata.org/wiki/Q1141214"
+  },
+  "Vancouver_Airport": {
+    "iata": "YVR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Vancouver International Airport",
+    "wikidata_id": "Q321224",
+    "source_url": "https://www.wikidata.org/wiki/Q321224"
+  },
+  "Cagliari_Airport": {
+    "iata": "CAG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cagliari Elmas Airport",
+    "wikidata_id": "Q139983",
+    "source_url": "https://www.wikidata.org/wiki/Q139983"
+  },
+  "Corfu_Airport": {
+    "iata": "CFU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Corfu International Airport",
+    "wikidata_id": "Q1144233",
+    "source_url": "https://www.wikidata.org/wiki/Q1144233"
+  },
+  "Ljubljana_Airport": {
+    "iata": "LJU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ljubljana Airport",
+    "wikidata_id": "Q1109558",
+    "source_url": "https://www.wikidata.org/wiki/Q1109558"
+  },
+  "Lyon_Airport": {
+    "iata": "LYS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Lyon–Saint-Exupéry Airport",
+    "wikidata_id": "Q1547",
+    "source_url": "https://www.wikidata.org/wiki/Q1547"
+  },
+  "Alicante_Airport": {
+    "iata": "ALC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Alicante–Elche Miguel Hernández Airport",
+    "wikidata_id": "Q849314",
+    "source_url": "https://www.wikidata.org/wiki/Q849314"
+  },
+  "Bucharest_Airport": {
+    "iata": "OTP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bucharest Henri Coandă International Airport",
+    "wikidata_id": "Q257631",
+    "source_url": "https://www.wikidata.org/wiki/Q257631"
+  },
+  "Naples_Airport": {
+    "iata": "NAP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Naples International Airport",
+    "wikidata_id": "Q849383",
+    "source_url": "https://www.wikidata.org/wiki/Q849383"
+  },
+  "Timișoara_Airport": {
+    "iata": "TSR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Timișoara Traian Vuia International Airport",
+    "wikidata_id": "Q1417736",
+    "source_url": "https://www.wikidata.org/wiki/Q1417736"
+  },
+  "Lanzhou_Zhongchuan_International_Airport": {
+    "iata": "LHW",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Lanzhou Zhongchuan International Airport",
+    "wikidata_id": "Q3234734",
+    "source_url": "https://www.wikidata.org/wiki/Q3234734"
+  },
+  "Lijiang_Sanyi_International_Airport": {
+    "iata": "LJG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Lijiang Sanyi International Airport",
+    "wikidata_id": "Q1431877",
+    "source_url": "https://www.wikidata.org/wiki/Q1431877"
+  },
+  "Linyi_Shubuling_Airport": {
+    "iata": "LYI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Linyi Qiyang International Airport",
+    "wikidata_id": "Q3272822",
+    "source_url": "https://www.wikidata.org/wiki/Q3272822"
+  },
+  "Haneda_Airport": {
+    "iata": "HND",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Haneda Airport",
+    "wikidata_id": "Q204853",
+    "source_url": "https://www.wikidata.org/wiki/Q204853"
+  },
+  "Ulanhot_Airport": {
+    "iata": "HLH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ulanhot Yilelite Airport",
+    "wikidata_id": "Q3500235",
+    "source_url": "https://www.wikidata.org/wiki/Q3500235"
+  },
+  "Nanping_Wuyishan_Airport": {
+    "iata": "WUS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Wuyishan Airport",
+    "wikidata_id": "Q2668990",
+    "source_url": "https://www.wikidata.org/wiki/Q2668990"
+  },
+  "Yanji_Chaoyangchuan_International_Airport": {
+    "iata": "YNJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Yanji Chaoyangchuan International Airport",
+    "wikidata_id": "Q1192253",
+    "source_url": "https://www.wikidata.org/wiki/Q1192253"
+  },
+  "Zhuhai_Sanzao_Airport": {
+    "iata": "ZUH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Zhuhai Jinwan Airport",
+    "wikidata_id": "Q2733031",
+    "source_url": "https://www.wikidata.org/wiki/Q2733031"
+  },
+  "Jiamusi_Airport": {
+    "iata": "JMU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Jiamusi Songjiang International Airport",
+    "wikidata_id": "Q2661353",
+    "source_url": "https://www.wikidata.org/wiki/Q2661353"
+  },
+  "Jinggangshan_Airport": {
+    "iata": "JGS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ji'an Jinggangshan Airport",
+    "wikidata_id": "Q1000018",
+    "source_url": "https://www.wikidata.org/wiki/Q1000018"
+  },
+  "Qiqihar_Sanjiazi_Airport": {
+    "iata": "NDG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Qiqihar Sanjiazi Airport",
+    "wikidata_id": "Q3267548",
+    "source_url": "https://www.wikidata.org/wiki/Q3267548"
+  },
+  "Xishuangbanna_Gasa_Airport": {
+    "iata": "JHG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Xishuangbanna Gasa International Airport",
+    "wikidata_id": "Q3234757",
+    "source_url": "https://www.wikidata.org/wiki/Q3234757"
+  },
+  "Brunei_Airport": {
+    "iata": "BWN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Brunei International Airport",
+    "wikidata_id": "Q1148514",
+    "source_url": "https://www.wikidata.org/wiki/Q1148514"
+  },
+  "Changzhou_Benniu_Airport": {
+    "iata": "CZX",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Changzhou Benniu International Airport",
+    "wikidata_id": "Q1837451",
+    "source_url": "https://www.wikidata.org/wiki/Q1837451"
+  },
+  "Cat_Bi_International_Airport": {
+    "iata": "HPH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cat Bi International Airport",
+    "wikidata_id": "Q1425356",
+    "source_url": "https://www.wikidata.org/wiki/Q1425356"
+  },
+  "Jiaxing_Nanhu_Airport": {
+    "iata": "JNH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Jiaxing Nanhu Airport",
+    "wikidata_id": "Q2900666",
+    "source_url": "https://www.wikidata.org/wiki/Q2900666"
+  },
+  "Linyi_Qiyang_International_Airport": {
+    "iata": "LYI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Linyi Qiyang International Airport",
+    "wikidata_id": "Q3272822",
+    "source_url": "https://www.wikidata.org/wiki/Q3272822"
+  },
+  "Mianyang_Nanjiao_Airport": {
+    "iata": "MIG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Mianyang Nanjiao Airport",
+    "wikidata_id": "Q3756119",
+    "source_url": "https://www.wikidata.org/wiki/Q3756119"
+  },
+  "Taizhou_Luqiao_Airport": {
+    "iata": "HYN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Taizhou Luqiao Airport",
+    "wikidata_id": "Q1014276",
+    "source_url": "https://www.wikidata.org/wiki/Q1014276"
+  },
+  "Urumqi_Diwopu_International_Airport": {
+    "iata": "URC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ürümqi Tianshan International Airport",
+    "wikidata_id": "Q765650",
+    "source_url": "https://www.wikidata.org/wiki/Q765650"
+  },
+  "Yangzhou_Taizhou_International_Airport": {
+    "iata": "YTY",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Yangzhou Taizhou International Airport",
+    "wikidata_id": "Q4503750",
+    "source_url": "https://www.wikidata.org/wiki/Q4503750"
+  },
+  "Yuncheng_Guangong_Airport": {
+    "iata": "YCU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Yuncheng Yanhu International Airport",
+    "wikidata_id": "Q1017617",
+    "source_url": "https://www.wikidata.org/wiki/Q1017617"
+  },
+  "Curaçao_International_Airport": {
+    "iata": "CUR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Curaçao International Airport",
+    "wikidata_id": "Q1431168",
+    "source_url": "https://www.wikidata.org/wiki/Q1431168"
+  },
+  "Licenciado_Gustavo_Díaz_Ordaz_International_Airport": {
+    "iata": "PVR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Licenciado Gustavo Díaz Ordaz International Airport",
+    "wikidata_id": "Q2666312",
+    "source_url": "https://www.wikidata.org/wiki/Q2666312"
+  },
+  "Santo_Domingo–Las_Américas": {
+    "iata": "SDQ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Las Américas International Airport",
+    "wikidata_id": "Q1062676",
+    "source_url": "https://www.wikidata.org/wiki/Q1062676"
+  },
+  "Glasgow_Airport": {
+    "iata": "GLA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Glasgow Airport",
+    "wikidata_id": "Q8721",
+    "source_url": "https://www.wikidata.org/wiki/Q8721"
+  },
+  "John_Paul_II_Ponta_Delgada_Airport": {
+    "iata": "PDL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "John Paul II Ponta Delgada Airport",
+    "wikidata_id": "Q1432424",
+    "source_url": "https://www.wikidata.org/wiki/Q1432424"
+  },
+  "Santiago–Rosalía_de_Castro_Airport": {
+    "iata": "SCQ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Santiago–Rosalía de Castro Airport",
+    "wikidata_id": "Q1432777",
+    "source_url": "https://www.wikidata.org/wiki/Q1432777"
+  },
+  "Lajes_Airport": {
+    "iata": "TER",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Lajes Airport",
+    "wikidata_id": "Q3571734",
+    "source_url": "https://www.wikidata.org/wiki/Q3571734"
+  },
+  "Northwest_Arkansas_National_Airport": {
+    "iata": "XNA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Northwest Arkansas National Airport",
+    "wikidata_id": "Q388563",
+    "source_url": "https://www.wikidata.org/wiki/Q388563"
+  },
+  "Chinggis_Khaan_International_Airport": {
+    "iata": "UBN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Chinggis Khaan International Airport",
+    "wikidata_id": "Q14697701",
+    "source_url": "https://www.wikidata.org/wiki/Q14697701"
+  },
+  "Taichung_International_Airport": {
+    "iata": "RMQ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Taichung International Airport",
+    "wikidata_id": "Q374558",
+    "source_url": "https://www.wikidata.org/wiki/Q374558"
+  },
+  "Zhangjiajie_Hehua_International_Airport": {
+    "iata": "DYG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Zhangjiajie Hehua International Airport",
+    "wikidata_id": "Q1134280",
+    "source_url": "https://www.wikidata.org/wiki/Q1134280"
+  },
+  "Avram_Iancu_Cluj_International_Airport": {
+    "iata": "CLJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cluj International Airport",
+    "wikidata_id": "Q1068685",
+    "source_url": "https://www.wikidata.org/wiki/Q1068685"
+  },
+  "Johannesburg–O.R._Tambo": {
+    "iata": "JNB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "O. R. Tambo International Airport",
+    "wikidata_id": "Q821750",
+    "source_url": "https://www.wikidata.org/wiki/Q821750"
+  },
+  "Montreal–Trudeau": {
+    "iata": "YUL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Montréal–Trudeau International Airport",
+    "wikidata_id": "Q736627",
+    "source_url": "https://www.wikidata.org/wiki/Q736627"
+  },
+  "São_Paulo-Guarulhos": {
+    "iata": "GRU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "São Paulo/Guarulhos International Airport",
+    "wikidata_id": "Q385406",
+    "source_url": "https://www.wikidata.org/wiki/Q385406"
+  },
+  "David_Ben_Gurion_Airport": {
+    "iata": "TLV",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ben Gurion Airport",
+    "wikidata_id": "Q181479",
+    "source_url": "https://www.wikidata.org/wiki/Q181479"
+  },
+  "Vilnius_Airport": {
+    "iata": "VNO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Vilnius Airport",
+    "wikidata_id": "Q847711",
+    "source_url": "https://www.wikidata.org/wiki/Q847711"
+  },
+  "Wrocław_Airport": {
+    "iata": "WRO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Wrocław Airport",
+    "wikidata_id": "Q1107152",
+    "source_url": "https://www.wikidata.org/wiki/Q1107152"
+  },
+  "Alicante–Elche_Airport": {
+    "iata": "ALC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Alicante–Elche Miguel Hernández Airport",
+    "wikidata_id": "Q849314",
+    "source_url": "https://www.wikidata.org/wiki/Q849314"
+  },
+  "Aristides_Pereira_International_Airport": {
+    "iata": "BVC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Aristides Pereira International Airport",
+    "wikidata_id": "Q1430965",
+    "source_url": "https://www.wikidata.org/wiki/Q1430965"
+  },
+  "Fortaleza_Airport": {
+    "iata": "FOR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Fortaleza Airport",
+    "wikidata_id": "Q2074717",
+    "source_url": "https://www.wikidata.org/wiki/Q2074717"
+  },
+  "Florence_Airport,_Peretola": {
+    "iata": "FLR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Florence Airport",
+    "wikidata_id": "Q707731",
+    "source_url": "https://www.wikidata.org/wiki/Q707731"
+  },
+  "Paris_Orly_Airport": {
+    "iata": "ORY",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Orly Airport",
+    "wikidata_id": "Q223416",
+    "source_url": "https://www.wikidata.org/wiki/Q223416"
+  },
+  "Santa_Maria_Airport_(Azores)": {
+    "iata": "SMA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Santa Maria Airport (Azores)",
+    "wikidata_id": "Q1432755",
+    "source_url": "https://www.wikidata.org/wiki/Q1432755"
+  },
+  "Appleton_International_Airport": {
+    "iata": "ATW",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Appleton International Airport",
+    "wikidata_id": "Q3294586",
+    "source_url": "https://www.wikidata.org/wiki/Q3294586"
+  },
+  "Birmingham–Shuttlesworth_International_Airport": {
+    "iata": "BHM",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Birmingham–Shuttlesworth International Airport",
+    "wikidata_id": "Q865724",
+    "source_url": "https://www.wikidata.org/wiki/Q865724"
+  },
+  "Eastern_Iowa_Airport": {
+    "iata": "CID",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Eastern Iowa Airport",
+    "wikidata_id": "Q1431066",
+    "source_url": "https://www.wikidata.org/wiki/Q1431066"
+  },
+  "Chicago–Midway": {
+    "iata": "MDW",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Midway International Airport",
+    "wikidata_id": "Q1061437",
+    "source_url": "https://www.wikidata.org/wiki/Q1061437"
+  },
+  "Green_Bay–Austin_Straubel_International_Airport": {
+    "iata": "GRB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Green Bay–Austin Straubel International Airport",
+    "wikidata_id": "Q2876031",
+    "source_url": "https://www.wikidata.org/wiki/Q2876031"
+  },
+  "Guadalajara_International_Airport": {
+    "iata": "GDL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Guadalajara International Airport",
+    "wikidata_id": "Q932025",
+    "source_url": "https://www.wikidata.org/wiki/Q932025"
+  },
+  "Houston–Hobby": {
+    "iata": "HOU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "William P. Hobby Airport",
+    "wikidata_id": "Q771340",
+    "source_url": "https://www.wikidata.org/wiki/Q771340"
+  },
+  "Jackson–Medgar_Wiley_Evers_International_Airport": {
+    "iata": "JAN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Jackson–Medgar Wiley Evers International Airport",
+    "wikidata_id": "Q1025454",
+    "source_url": "https://www.wikidata.org/wiki/Q1025454"
+  },
+  "Clinton_National_Airport": {
+    "iata": "LIT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Clinton National Airport",
+    "wikidata_id": "Q868994",
+    "source_url": "https://www.wikidata.org/wiki/Q868994"
+  },
+  "New_York–LaGuardia": {
+    "iata": "LGA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "LaGuardia Airport",
+    "wikidata_id": "Q319654",
+    "source_url": "https://www.wikidata.org/wiki/Q319654"
+  },
+  "OKC_Will_Rogers_International_Airport": {
+    "iata": "OKC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "OKC Will Rogers International Airport",
+    "wikidata_id": "Q1499872",
+    "source_url": "https://www.wikidata.org/wiki/Q1499872"
+  },
+  "Ontario_International_Airport": {
+    "iata": "ONT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ontario International Airport",
+    "wikidata_id": "Q949831",
+    "source_url": "https://www.wikidata.org/wiki/Q949831"
+  },
+  "Rhode_Island_T._F._Green_International_Airport": {
+    "iata": "PVD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Rhode Island T. F. Green International Airport",
+    "wikidata_id": "Q787782",
+    "source_url": "https://www.wikidata.org/wiki/Q787782"
+  },
+  "Tallahassee_International_Airport": {
+    "iata": "TLH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Tallahassee International Airport",
+    "wikidata_id": "Q1432990",
+    "source_url": "https://www.wikidata.org/wiki/Q1432990"
+  },
+  "Accra_International_Airport": {
+    "iata": "ACC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Accra International Airport",
+    "wikidata_id": "Q177689",
+    "source_url": "https://www.wikidata.org/wiki/Q177689"
+  },
+  "Columbus_Airport_(Georgia)": {
+    "iata": "CSG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Columbus Airport (Georgia)",
+    "wikidata_id": "Q1655133",
+    "source_url": "https://www.wikidata.org/wiki/Q1655133"
+  },
+  "Quad_Cities_International_Airport": {
+    "iata": "MLI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Quad Cities International Airport",
+    "wikidata_id": "Q1629309",
+    "source_url": "https://www.wikidata.org/wiki/Q1629309"
+  },
+  "Monroe_Regional_Airport_(Louisiana)": {
+    "iata": "MLU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Monroe Regional Airport (Louisiana)",
+    "wikidata_id": "Q452290",
+    "source_url": "https://www.wikidata.org/wiki/Q452290"
+  },
+  "South_Bend_International_Airport": {
+    "iata": "SBN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "South Bend International Airport",
+    "wikidata_id": "Q7566309",
+    "source_url": "https://www.wikidata.org/wiki/Q7566309"
+  },
+  "Erik_Nielsen_Whitehorse_International_Airport": {
+    "iata": "YXY",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Erik Nielsen Whitehorse International Airport",
+    "wikidata_id": "Q1433251",
+    "source_url": "https://www.wikidata.org/wiki/Q1433251"
+  },
+  "West_Kootenay_Regional_Airport": {
+    "iata": "YCG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "West Kootenay Regional Airport",
+    "wikidata_id": "Q3912571",
+    "source_url": "https://www.wikidata.org/wiki/Q3912571"
+  },
+  "Northwest_Regional_Airport_Terrace-Kitimat": {
+    "iata": "YXT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Northwest Regional Airport Terrace-Kitimat",
+    "wikidata_id": "Q1433034",
+    "source_url": "https://www.wikidata.org/wiki/Q1433034"
+  },
+  "Aksu_Airport": {
+    "iata": "AKU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Aksu Hongqipo Airport",
+    "wikidata_id": "Q1006478",
+    "source_url": "https://www.wikidata.org/wiki/Q1006478"
+  },
+  "Altay_Airport": {
+    "iata": "AAT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Altay Xuedu Airport",
+    "wikidata_id": "Q1266681",
+    "source_url": "https://www.wikidata.org/wiki/Q1266681"
+  },
+  "Dunhuang_Mogao_International_Airport": {
+    "iata": "DNH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Dunhuang Mogao International Airport",
+    "wikidata_id": "Q1154516",
+    "source_url": "https://www.wikidata.org/wiki/Q1154516"
+  },
+  "Guiyang_Longdongbao_International_Airport": {
+    "iata": "KWE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Guiyang Longdongbao International Airport",
+    "wikidata_id": "Q3243613",
+    "source_url": "https://www.wikidata.org/wiki/Q3243613"
+  },
+  "Huai'an_Lianshui_Airport": {
+    "iata": "HIA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Huai'an Lianshui International Airport",
+    "wikidata_id": "Q3206675",
+    "source_url": "https://www.wikidata.org/wiki/Q3206675"
+  },
+  "Weihai_Dashuipo_Airport": {
+    "iata": "WEH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Weihai Dashuipo International Airport",
+    "wikidata_id": "Q1192247",
+    "source_url": "https://www.wikidata.org/wiki/Q1192247"
+  },
+  "Kristiansand_Airport": {
+    "iata": "KRS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kristiansand Airport",
+    "wikidata_id": "Q1431790",
+    "source_url": "https://www.wikidata.org/wiki/Q1431790"
+  },
+  "Kasos_Island_Public_Airport": {
+    "iata": "KSJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kasos Island Public Airport",
+    "wikidata_id": "Q3307142",
+    "source_url": "https://www.wikidata.org/wiki/Q3307142"
+  },
+  "FAP_Captain_José_Abelardo_Quiñones_González_International_Airport": {
+    "iata": "CIX",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "FAP Captain José Abelardo Quiñones González International Airport",
+    "wikidata_id": "Q3275990",
+    "source_url": "https://www.wikidata.org/wiki/Q3275990"
+  },
+  "Eloy_Alfaro_International_Airport": {
+    "iata": "MEC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Eloy Alfaro International Airport",
+    "wikidata_id": "Q1444671",
+    "source_url": "https://www.wikidata.org/wiki/Q1444671"
+  },
+  "Santiago_Mariño_Caribbean_International_Airport": {
+    "iata": "PMV",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Santiago Mariño Caribbean International Airport",
+    "wikidata_id": "Q1655978",
+    "source_url": "https://www.wikidata.org/wiki/Q1655978"
+  },
+  "Salgado_Filho_Porto_Alegre_International_Airport": {
+    "iata": "POA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Salgado Filho Porto Alegre International Airport",
+    "wikidata_id": "Q1432702",
+    "source_url": "https://www.wikidata.org/wiki/Q1432702"
+  },
+  "Rosario_–_Islas_Malvinas_International_Airport": {
+    "iata": "ROS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Rosario – Islas Malvinas International Airport",
+    "wikidata_id": "Q1432622",
+    "source_url": "https://www.wikidata.org/wiki/Q1432622"
+  },
+  "Teniente_General_Benjamín_Matienzo_International": {
+    "iata": "TUC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Teniente General Benjamín Matienzo International Airport",
+    "wikidata_id": "Q1432711",
+    "source_url": "https://www.wikidata.org/wiki/Q1432711"
+  },
+  "Monterey_Regional_Airport": {
+    "iata": "MRY",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Monterey Regional Airport",
+    "wikidata_id": "Q3612524",
+    "source_url": "https://www.wikidata.org/wiki/Q3612524"
+  },
+  "Bydgoszcz_Airport": {
+    "iata": "BZG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bydgoszcz Airport",
+    "wikidata_id": "Q1407275",
+    "source_url": "https://www.wikidata.org/wiki/Q1407275"
+  },
+  "Katowice_Airport": {
+    "iata": "KTW",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Katowice Airport",
+    "wikidata_id": "Q1162558",
+    "source_url": "https://www.wikidata.org/wiki/Q1162558"
+  },
+  "Leoš_Janáček_Airport_Ostrava": {
+    "iata": "OSR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Leoš Janáček Airport Ostrava",
+    "wikidata_id": "Q922954",
+    "source_url": "https://www.wikidata.org/wiki/Q922954"
+  },
+  "Stavanger_Airport": {
+    "iata": "SVG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Stavanger Airport",
+    "wikidata_id": "Q1355258",
+    "source_url": "https://www.wikidata.org/wiki/Q1355258"
+  },
+  "Solidarity_Szczecin–Goleniów_Airport": {
+    "iata": "SZZ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Solidarity Szczecin–Goleniów Airport",
+    "wikidata_id": "Q1432917",
+    "source_url": "https://www.wikidata.org/wiki/Q1432917"
+  },
+  "Skopje_International_Airport": {
+    "iata": "SKP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Skopje International Airport",
+    "wikidata_id": "Q1142389",
+    "source_url": "https://www.wikidata.org/wiki/Q1142389"
+  },
+  "Hazrat_Shahjalal_International_Airport": {
+    "iata": "DAC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Hazrat Shahjalal International Airport",
+    "wikidata_id": "Q30603",
+    "source_url": "https://www.wikidata.org/wiki/Q30603"
+  },
+  "Prince_Nayef_Bin_Abdulaziz_Regional_Airport": {
+    "iata": "ELQ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Prince Naif bin Abdulaziz International Airport",
+    "wikidata_id": "Q2672934",
+    "source_url": "https://www.wikidata.org/wiki/Q2672934"
+  },
+  "Juba_International_Airport": {
+    "iata": "JUB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Juba International Airport",
+    "wikidata_id": "Q1122958",
+    "source_url": "https://www.wikidata.org/wiki/Q1122958"
+  },
+  "Murtala_Mohammed_International_Airport": {
+    "iata": "LOS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Murtala Muhammed International Airport",
+    "wikidata_id": "Q1043631",
+    "source_url": "https://www.wikidata.org/wiki/Q1043631"
+  },
+  "Prince_Mohammad_Bin_Abdulaziz_International_Airport": {
+    "iata": "MED",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Prince Mohammad bin Abdulaziz International Airport",
+    "wikidata_id": "Q1205940",
+    "source_url": "https://www.wikidata.org/wiki/Q1205940"
+  },
+  "Moscow_Domodedovo_Airport": {
+    "iata": "DME",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Moscow Domodedovo Airport",
+    "wikidata_id": "Q186614",
+    "source_url": "https://www.wikidata.org/wiki/Q186614"
+  },
+  "Muscat_International_Airport": {
+    "iata": "MCT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Muscat International Airport",
+    "wikidata_id": "Q1133357",
+    "source_url": "https://www.wikidata.org/wiki/Q1133357"
+  },
+  "Taif_International_Airport": {
+    "iata": "TIF",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Taif International Airport",
+    "wikidata_id": "Q2876136",
+    "source_url": "https://www.wikidata.org/wiki/Q2876136"
+  },
+  "Capitán_de_Corbeta_Carlos_A._Curbelo_International_Airport": {
+    "iata": "PDP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Capitán de Corbeta Carlos A. Curbelo International Airport",
+    "wikidata_id": "Q9071",
+    "source_url": "https://www.wikidata.org/wiki/Q9071"
+  },
+  "Dali_Fengyi_Airport": {
+    "iata": "DLU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Dali Fengyi Airport",
+    "wikidata_id": "Q1119549",
+    "source_url": "https://www.wikidata.org/wiki/Q1119549"
+  },
+  "Kashgar_Airport": {
+    "iata": "KHG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kashgar Laining International Airport",
+    "wikidata_id": "Q2579951",
+    "source_url": "https://www.wikidata.org/wiki/Q2579951"
+  },
+  "Mudanjiang_Hailang_Airport": {
+    "iata": "MDG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Mudanjiang Hailang International Airport",
+    "wikidata_id": "Q1209229",
+    "source_url": "https://www.wikidata.org/wiki/Q1209229"
+  },
+  "Nanchong_Gaoping_Airport": {
+    "iata": "NAO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Nanchong Gaoping Airport",
+    "wikidata_id": "Q3756136",
+    "source_url": "https://www.wikidata.org/wiki/Q3756136"
+  },
+  "Aba_Hongyuan_Airport": {
+    "iata": "AHJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ngawa Hongyuan Airport",
+    "wikidata_id": "Q3206610",
+    "source_url": "https://www.wikidata.org/wiki/Q3206610"
+  },
+  "Hotan_Kungang_Airport": {
+    "iata": "HTN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Hotan Kungang Airport",
+    "wikidata_id": "Q2983967",
+    "source_url": "https://www.wikidata.org/wiki/Q2983967"
+  },
+  "Linyi_Qiyang_Airport": {
+    "iata": "LYI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Linyi Qiyang International Airport",
+    "wikidata_id": "Q3272822",
+    "source_url": "https://www.wikidata.org/wiki/Q3272822"
+  },
+  "Nantong_Xingdong_International_Airport": {
+    "iata": "NTG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Nantong Xingdong International Airport",
+    "wikidata_id": "Q860300",
+    "source_url": "https://www.wikidata.org/wiki/Q860300"
+  },
+  "Huizhou_Pingtan_Airport": {
+    "iata": "HUZ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Huizhou Pingtan Airport",
+    "wikidata_id": "Q3085214",
+    "source_url": "https://www.wikidata.org/wiki/Q3085214"
+  },
+  "Lincang_Boshang_Airport": {
+    "iata": "LNJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Lincang Boshang Airport",
+    "wikidata_id": "Q991730",
+    "source_url": "https://www.wikidata.org/wiki/Q991730"
+  },
+  "Toulouse-Blagnac_Airport": {
+    "iata": "TLS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Toulouse–Blagnac Airport",
+    "wikidata_id": "Q372615",
+    "source_url": "https://www.wikidata.org/wiki/Q372615"
+  },
+  "Patrick_Leahy_Burlington_International_Airport": {
+    "iata": "BTV",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Patrick Leahy Burlington International Airport",
+    "wikidata_id": "Q2750047",
+    "source_url": "https://www.wikidata.org/wiki/Q2750047"
+  },
+  "North_Central_West_Virginia_Airport": {
+    "iata": "CKB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "North Central West Virginia Airport",
+    "wikidata_id": "Q7054774",
+    "source_url": "https://www.wikidata.org/wiki/Q7054774"
+  },
+  "Ithaca_Tompkins_International_Airport": {
+    "iata": "ITH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ithaca Tompkins International Airport",
+    "wikidata_id": "Q1675277",
+    "source_url": "https://www.wikidata.org/wiki/Q1675277"
+  },
+  "Greater_Rochester_Airport": {
+    "iata": "ROC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Greater Rochester International Airport",
+    "wikidata_id": "Q3914227",
+    "source_url": "https://www.wikidata.org/wiki/Q3914227"
+  },
+  "Baoshan_Yunduan_Airport": {
+    "iata": "BSD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Baoshan Yunrui Airport",
+    "wikidata_id": "Q986556",
+    "source_url": "https://www.wikidata.org/wiki/Q986556"
+  },
+  "Dêqên_Shangri-La_Airport": {
+    "iata": "DIG",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Diqing Shangri-La Airport",
+    "wikidata_id": "Q1579838",
+    "source_url": "https://www.wikidata.org/wiki/Q1579838"
+  },
+  "Zhaotong_Airport": {
+    "iata": "ZAT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Zhaotong Airport",
+    "wikidata_id": "Q3756103",
+    "source_url": "https://www.wikidata.org/wiki/Q3756103"
+  },
+  "Minneapolis–Saint_Paul_Airport": {
+    "iata": "MSP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Minneapolis–Saint Paul International Airport",
+    "wikidata_id": "Q875749",
+    "source_url": "https://www.wikidata.org/wiki/Q875749"
+  },
+  "Misawa_Airport": {
+    "iata": "MSJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Misawa Airport",
+    "wikidata_id": "Q3566938",
+    "source_url": "https://www.wikidata.org/wiki/Q3566938"
+  },
+  "Nemuro_Nakashibetsu_Airport": {
+    "iata": "SHB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Nemuro Nakashibetsu Airport",
+    "wikidata_id": "Q1432123",
+    "source_url": "https://www.wikidata.org/wiki/Q1432123"
+  },
+  "Yonago_Kitaro_Airport": {
+    "iata": "YGJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Yonago Kitaro Airport",
+    "wikidata_id": "Q1141913",
+    "source_url": "https://www.wikidata.org/wiki/Q1141913"
+  },
+  "Tokachi–Obihiro_Airport": {
+    "iata": "OBO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Tokachi–Obihiro Airport",
+    "wikidata_id": "Q1332254",
+    "source_url": "https://www.wikidata.org/wiki/Q1332254"
+  },
+  "Akron–Canton_Airport": {
+    "iata": "CAK",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Akron–Canton Airport",
+    "wikidata_id": "Q954097",
+    "source_url": "https://www.wikidata.org/wiki/Q954097"
+  },
+  "Salina_Regional_Airport": {
+    "iata": "SLN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Salina Regional Airport",
+    "wikidata_id": "Q7404634",
+    "source_url": "https://www.wikidata.org/wiki/Q7404634"
+  },
+  "Querétaro_Intercontinental_Airport": {
+    "iata": "QRO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Querétaro Intercontinental Airport",
+    "wikidata_id": "Q1932794",
+    "source_url": "https://www.wikidata.org/wiki/Q1932794"
+  },
+  "La_Crosse_Regional_Airport": {
+    "iata": "LSE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "La Crosse Regional Airport",
+    "wikidata_id": "Q369185",
+    "source_url": "https://www.wikidata.org/wiki/Q369185"
+  },
+  "Cape_Cod_Gateway_Airport": {
+    "iata": "HYA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cape Cod Gateway Airport",
+    "wikidata_id": "Q2788470",
+    "source_url": "https://www.wikidata.org/wiki/Q2788470"
+  },
+  "Port_Bouet_Airport": {
+    "iata": "ABJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Félix-Houphouët-Boigny International Airport",
+    "wikidata_id": "Q1165280",
+    "source_url": "https://www.wikidata.org/wiki/Q1165280"
+  },
+  "Debre_Markos_Airport": {
+    "iata": "DBM",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Debre Markos Airport",
+    "wikidata_id": "Q2875819",
+    "source_url": "https://www.wikidata.org/wiki/Q2875819"
+  },
+  "Freetown_International_Airport": {
+    "iata": "FNA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Freetown International Airport",
+    "wikidata_id": "Q1453722",
+    "source_url": "https://www.wikidata.org/wiki/Q1453722"
+  },
+  "Geneva_International_Airport": {
+    "iata": "GVA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Geneva Airport",
+    "wikidata_id": "Q289972",
+    "source_url": "https://www.wikidata.org/wiki/Q289972"
+  },
+  "Robert_Gabriel_Mugabe_International_Airport": {
+    "iata": "HRE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Robert Gabriel Mugabe International Airport",
+    "wikidata_id": "Q760897",
+    "source_url": "https://www.wikidata.org/wiki/Q760897"
+  },
+  "Hargeisa_Airport": {
+    "iata": "HGA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Hargeisa Airport",
+    "wikidata_id": "Q15564",
+    "source_url": "https://www.wikidata.org/wiki/Q15564"
+  },
+  "King_Abdullah_International_Airport": {
+    "iata": "GIZ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "King Abdullah International Airport",
+    "wikidata_id": "Q2672950",
+    "source_url": "https://www.wikidata.org/wiki/Q2672950"
+  },
+  "Jinka_Airport": {
+    "iata": "BCO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Jinka Airport",
+    "wikidata_id": "Q2875788",
+    "source_url": "https://www.wikidata.org/wiki/Q2875788"
+  },
+  "Kigali_Airport": {
+    "iata": "KGL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kigali International Airport",
+    "wikidata_id": "Q1322696",
+    "source_url": "https://www.wikidata.org/wiki/Q1322696"
+  },
+  "Kilimanjaro_Airport": {
+    "iata": "JRO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kilimanjaro International Airport",
+    "wikidata_id": "Q1365099",
+    "source_url": "https://www.wikidata.org/wiki/Q1365099"
+  },
+  "Lilongwe_International_Airport": {
+    "iata": "LLW",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kamuzu International Airport",
+    "wikidata_id": "Q721780",
+    "source_url": "https://www.wikidata.org/wiki/Q721780"
+  },
+  "Lomé-Tokoin_Airport": {
+    "iata": "LFW",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Lomé–Tokoin International Airport",
+    "wikidata_id": "Q1431925",
+    "source_url": "https://www.wikidata.org/wiki/Q1431925"
+  },
+  "Lusaka_International_Airport": {
+    "iata": "LUN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kenneth Kaunda International Airport",
+    "wikidata_id": "Q332302",
+    "source_url": "https://www.wikidata.org/wiki/Q332302"
+  },
+  "Moscow–Domodedovo": {
+    "iata": "DME",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Moscow Domodedovo Airport",
+    "wikidata_id": "Q186614",
+    "source_url": "https://www.wikidata.org/wiki/Q186614"
+  },
+  "Paris–Orly": {
+    "iata": "ORY",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Orly Airport",
+    "wikidata_id": "Q223416",
+    "source_url": "https://www.wikidata.org/wiki/Q223416"
+  },
+  "Rome-Fiumicino": {
+    "iata": "FCO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Rome Fiumicino Airport",
+    "wikidata_id": "Q19101",
+    "source_url": "https://www.wikidata.org/wiki/Q19101"
+  },
+  "Roman_Tmetuchl_International_Airport": {
+    "iata": "ROR",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Roman Tmetuchl International Airport",
+    "wikidata_id": "Q1147092",
+    "source_url": "https://www.wikidata.org/wiki/Q1147092"
+  },
+  "Ezeiza_International_Airport": {
+    "iata": "EZE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ezeiza International Airport",
+    "wikidata_id": "Q384788",
+    "source_url": "https://www.wikidata.org/wiki/Q384788"
+  },
+  "Ciudad_Juárez_International_Airport": {
+    "iata": "CJS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ciudad Juárez International Airport",
+    "wikidata_id": "Q2233076",
+    "source_url": "https://www.wikidata.org/wiki/Q2233076"
+  },
+  "Culiacán_International_Airport": {
+    "iata": "CUL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Culiacán International Airport",
+    "wikidata_id": "Q2231716",
+    "source_url": "https://www.wikidata.org/wiki/Q2231716"
+  },
+  "Bajío_International_Airport": {
+    "iata": "BJX",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bajío International Airport",
+    "wikidata_id": "Q1431200",
+    "source_url": "https://www.wikidata.org/wiki/Q1431200"
+  },
+  "Mérida_International_Airport": {
+    "iata": "MID",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Mérida International Airport",
+    "wikidata_id": "Q1432118",
+    "source_url": "https://www.wikidata.org/wiki/Q1432118"
+  },
+  "Mexicali_International_Airport": {
+    "iata": "MXL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Mexicali International Airport",
+    "wikidata_id": "Q2493883",
+    "source_url": "https://www.wikidata.org/wiki/Q2493883"
+  },
+  "Oaxaca_International_Airport": {
+    "iata": "OAX",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Oaxaca International Airport",
+    "wikidata_id": "Q1432218",
+    "source_url": "https://www.wikidata.org/wiki/Q1432218"
+  },
+  "San_Luis_Potosí_International_Airport": {
+    "iata": "SLP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "San Luis Potosí International Airport",
+    "wikidata_id": "Q1932826",
+    "source_url": "https://www.wikidata.org/wiki/Q1932826"
+  },
+  "Cairns_Airport": {
+    "iata": "CNS",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Cairns Airport",
+    "wikidata_id": "Q474632",
+    "source_url": "https://www.wikidata.org/wiki/Q474632"
+  },
+  "Josep_Tarradellas_Barcelona–El_Prat_Airport": {
+    "iata": "BCN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Josep Tarradellas Barcelona–El Prat Airport",
+    "wikidata_id": "Q56973",
+    "source_url": "https://www.wikidata.org/wiki/Q56973"
+  },
+  "Dulles_International_Airport": {
+    "iata": "IAD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Dulles International Airport",
+    "wikidata_id": "Q466835",
+    "source_url": "https://www.wikidata.org/wiki/Q466835"
+  },
+  "Milan_Malpensa_Airport": {
+    "iata": "MXP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Milan Malpensa Airport",
+    "wikidata_id": "Q60910",
+    "source_url": "https://www.wikidata.org/wiki/Q60910"
+  },
+  "Milwaukee_Mitchell_International_Airport": {
+    "iata": "MKE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Milwaukee Mitchell International Airport",
+    "wikidata_id": "Q537950",
+    "source_url": "https://www.wikidata.org/wiki/Q537950"
+  },
+  "Dr._António_Agostinho_Neto_International_Airport": {
+    "iata": "NBJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Dr. António Agostinho Neto International Airport",
+    "wikidata_id": "Q541858",
+    "source_url": "https://www.wikidata.org/wiki/Q541858"
+  },
+  "Milan–Malpensa": {
+    "iata": "MXP",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Milan Malpensa Airport",
+    "wikidata_id": "Q60910",
+    "source_url": "https://www.wikidata.org/wiki/Q60910"
+  },
+  "Turin_Airport": {
+    "iata": "TRN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Turin Airport",
+    "wikidata_id": "Q528184",
+    "source_url": "https://www.wikidata.org/wiki/Q528184"
+  },
+  "Washington–Dulles": {
+    "iata": "IAD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Dulles International Airport",
+    "wikidata_id": "Q466835",
+    "source_url": "https://www.wikidata.org/wiki/Q466835"
+  },
+  "Barcelona_Airport": {
+    "iata": "BCN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Josep Tarradellas Barcelona–El Prat Airport",
+    "wikidata_id": "Q56973",
+    "source_url": "https://www.wikidata.org/wiki/Q56973"
+  },
+  "Bordeaux_Airport": {
+    "iata": "BOD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bordeaux–Mérignac Airport",
+    "wikidata_id": "Q612731",
+    "source_url": "https://www.wikidata.org/wiki/Q612731"
+  },
+  "Budapest_Airport": {
+    "iata": "BUD",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Budapest Ferenc Liszt International Airport",
+    "wikidata_id": "Q500945",
+    "source_url": "https://www.wikidata.org/wiki/Q500945"
+  },
+  "Charlotte_Airport": {
+    "iata": "CLT",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Charlotte Douglas International Airport",
+    "wikidata_id": "Q597649",
+    "source_url": "https://www.wikidata.org/wiki/Q597649"
+  },
+  "Riyadh_Airport": {
+    "iata": "RUH",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "King Khalid International Airport",
+    "wikidata_id": "Q47157",
+    "source_url": "https://www.wikidata.org/wiki/Q47157"
+  },
+  "Bergen_Airport": {
+    "iata": "BGO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Bergen Airport, Flesland",
+    "wikidata_id": "Q619980",
+    "source_url": "https://www.wikidata.org/wiki/Q619980"
+  },
+  "Biarritz_Airport": {
+    "iata": "BIQ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Biarritz Pays Basque Airport",
+    "wikidata_id": "Q620101",
+    "source_url": "https://www.wikidata.org/wiki/Q620101"
+  },
+  "Catania_Airport": {
+    "iata": "CTA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Catania–Fontanarossa Airport",
+    "wikidata_id": "Q540273",
+    "source_url": "https://www.wikidata.org/wiki/Q540273"
+  },
+  "Yancheng_Nanyang_Airport": {
+    "iata": "YNZ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Yancheng Nanyang International Airport",
+    "wikidata_id": "Q5918581",
+    "source_url": "https://www.wikidata.org/wiki/Q5918581"
+  },
+  "Zhanjiang_Wuchuan_International_Airport": {
+    "iata": "ZHA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Zhanjiang Wuchuan International Airport",
+    "wikidata_id": "Q56705156",
+    "source_url": "https://www.wikidata.org/wiki/Q56705156"
+  },
+  "Palermo_Airport": {
+    "iata": "PMO",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Palermo Airport",
+    "wikidata_id": "Q630645",
+    "source_url": "https://www.wikidata.org/wiki/Q630645"
+  },
+  "Daegu_International_Airport": {
+    "iata": "TAE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Daegu International Airport",
+    "wikidata_id": "Q483254",
+    "source_url": "https://www.wikidata.org/wiki/Q483254"
+  },
+  "Dr._Antonio_Agostinho_Neto_International_Airport": {
+    "iata": "NBJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Dr. António Agostinho Neto International Airport",
+    "wikidata_id": "Q541858",
+    "source_url": "https://www.wikidata.org/wiki/Q541858"
+  },
+  "Wuchuan_Airport": {
+    "iata": "ZHA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Zhanjiang Wuchuan International Airport",
+    "wikidata_id": "Q56705156",
+    "source_url": "https://www.wikidata.org/wiki/Q56705156"
+  },
+  "Santa_Barbara_Municipal_Airport": {
+    "iata": "SBA",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Santa Barbara Municipal Airport",
+    "wikidata_id": "Q515748",
+    "source_url": "https://www.wikidata.org/wiki/Q515748"
+  },
+  "İzmir_Adnan_Menderes_Airport": {
+    "iata": "ADB",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "İzmir Adnan Menderes Airport",
+    "wikidata_id": "Q504382",
+    "source_url": "https://www.wikidata.org/wiki/Q504382"
+  },
+  "State_College_Regional_Airport": {
+    "iata": "SCE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "State College Regional Airport",
+    "wikidata_id": "Q5969271",
+    "source_url": "https://www.wikidata.org/wiki/Q5969271"
+  },
+  "Biarritz_Pays_Basque_Airport": {
+    "iata": "BIQ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Biarritz Pays Basque Airport",
+    "wikidata_id": "Q620101",
+    "source_url": "https://www.wikidata.org/wiki/Q620101"
+  },
+  "Cristiano_Ronaldo_International_Airport": {
+    "iata": "FNC",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Madeira Airport",
+    "wikidata_id": "Q639161",
+    "source_url": "https://www.wikidata.org/wiki/Q639161"
+  },
+  "Kitakyushu_Airport": {
+    "iata": "KKJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kitakyushu Airport",
+    "wikidata_id": "Q594223",
+    "source_url": "https://www.wikidata.org/wiki/Q594223"
+  },
+  "Capital_Region_International_Airport": {
+    "iata": "LAN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Capital Region International Airport",
+    "wikidata_id": "Q597590",
+    "source_url": "https://www.wikidata.org/wiki/Q597590"
+  },
+  "Combolcha_Airport": {
+    "iata": "DSE",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kombolcha Airport",
+    "wikidata_id": "Q5150939",
+    "source_url": "https://www.wikidata.org/wiki/Q5150939"
+  },
+  "Alula_Aba_Airport": {
+    "iata": "MQX",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Alula Aba Nega Airport",
+    "wikidata_id": "Q4737322",
+    "source_url": "https://www.wikidata.org/wiki/Q4737322"
+  },
+  "Honolulu_International_Airport": {
+    "iata": "HNL",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Daniel K. Inouye International Airport",
+    "wikidata_id": "Q531178",
+    "source_url": "https://www.wikidata.org/wiki/Q531178"
+  },
+  "Felipe_Ángeles_International_Airport": {
+    "iata": "NLU",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Felipe Ángeles International Airport",
+    "wikidata_id": "Q5721568",
+    "source_url": "https://www.wikidata.org/wiki/Q5721568"
+  },
+  "Almería_Airport": {
+    "iata": "LEI",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Almería Airport",
+    "wikidata_id": "Q632277",
+    "source_url": "https://www.wikidata.org/wiki/Q632277"
+  },
+  "Kirkuk_Airport": {
+    "iata": "KIK",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Kirkuk International Airport",
+    "wikidata_id": "Q6415856",
+    "source_url": "https://www.wikidata.org/wiki/Q6415856"
+  },
+  "Nakhchivan_International_Airport": {
+    "iata": "NAJ",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Nakhchivan International Airport",
+    "wikidata_id": "Q619376",
+    "source_url": "https://www.wikidata.org/wiki/Q619376"
+  },
+  "Ahmed_Ben_Bella_Airport": {
+    "iata": "ORN",
+    "method": "Wikipedia page identity and Wikidata IATA airport code (P238)",
+    "canonical": "Ahmed Ben Bella Airport",
+    "wikidata_id": "Q637028",
+    "source_url": "https://www.wikidata.org/wiki/Q637028"
+  },
+  "Ballina_Byron_Gateway_Airport": {
+    "iata": "BNK",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Ballina Byron Gateway Airport",
+    "wikidata_id": "Q17443",
+    "source_url": "https://www.wikidata.org/wiki/Q17443"
+  },
+  "Baotou_Donghe_International_Airport": {
+    "iata": "BAV",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Baotou Donghe International Airport",
+    "wikidata_id": "Q1930670",
+    "source_url": "https://www.wikidata.org/wiki/Q1930670"
+  },
+  "Campeche_International_Airport": {
+    "iata": "CPE",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Campeche International Airport",
+    "wikidata_id": "Q1932879",
+    "source_url": "https://www.wikidata.org/wiki/Q1932879"
+  },
+  "David_Ben_Gurion_International_Airport": {
+    "iata": "TLV",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Ben Gurion Airport",
+    "wikidata_id": "Q181479",
+    "source_url": "https://www.wikidata.org/wiki/Q181479"
+  },
+  "Devi_Ahilya_Bai_Holkar_Airport": {
+    "iata": "IDR",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Devi Ahilya Bai Holkar Airport",
+    "wikidata_id": "Q1658243",
+    "source_url": "https://www.wikidata.org/wiki/Q1658243"
+  },
+  "Jiayuguan_Jiuquan_Airport": {
+    "iata": "JGN",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Jiayuguan Jiuquan Airport",
+    "wikidata_id": "Q1937403",
+    "source_url": "https://www.wikidata.org/wiki/Q1937403"
+  },
+  "Karamay_Guhai_Airport": {
+    "iata": "KRY",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Karamay Guhai Airport",
+    "wikidata_id": "Q2630505",
+    "source_url": "https://www.wikidata.org/wiki/Q2630505"
+  },
+  "Minatitlán_International_Airport": {
+    "iata": "MTT",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Minatitlán International Airport",
+    "wikidata_id": "Q1927565",
+    "source_url": "https://www.wikidata.org/wiki/Q1927565"
+  },
+  "Tepic_International_Airport": {
+    "iata": "TPQ",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Tepic International Airport",
+    "wikidata_id": "Q2231675",
+    "source_url": "https://www.wikidata.org/wiki/Q2231675"
+  },
+  "Timmins_Victor_M._Power_Airport": {
+    "iata": "YTS",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Timmins Victor M. Power Airport",
+    "wikidata_id": "Q2235247",
+    "source_url": "https://www.wikidata.org/wiki/Q2235247"
+  },
+  "Abha_Regional_Airport": {
+    "iata": "AHB",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Abha International Airport",
+    "wikidata_id": "Q2743319",
+    "source_url": "https://www.wikidata.org/wiki/Q2743319"
+  },
+  "Athens_International_Airport_Eleftherios_Venizelos": {
+    "iata": "ATH",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Athens International Airport",
+    "wikidata_id": "Q211734",
+    "source_url": "https://www.wikidata.org/wiki/Q211734"
+  },
+  "Bucharest_Otopeni_Airport": {
+    "iata": "OTP",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Bucharest Henri Coandă International Airport",
+    "wikidata_id": "Q257631",
+    "source_url": "https://www.wikidata.org/wiki/Q257631"
+  },
+  "Chaudhary_Charan_Singh_International_Airport": {
+    "iata": "LKO",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381873132",
+    "canonical": "Chaudhary_Charan_Singh_International_Airport"
+  },
+  "Chicago_O'Hare_International_Airport": {
+    "iata": "ORD",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "O'Hare International Airport",
+    "wikidata_id": "Q213717",
+    "source_url": "https://www.wikidata.org/wiki/Q213717"
+  },
+  "Greater_Moncton_Roméo_LeBlanc_International_Airport": {
+    "iata": "YQM",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382150110",
+    "canonical": "Greater_Moncton_Roméo_LeBlanc_International_Airport"
+  },
+  "Moscow_Vnukovo_Airport": {
+    "iata": "VKO",
+    "method": "Wikipedia identity and Wikidata IATA code P238",
+    "canonical": "Vnukovo International Airport",
+    "wikidata_id": "Q273462",
+    "source_url": "https://www.wikidata.org/wiki/Q273462"
+  },
+  "Skiathos_International_Airport": {
+    "iata": "JSI",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381758895",
+    "canonical": "Skiathos_International_Airport"
+  },
+  "Xining_Caojiapu_International_Airport": {
+    "iata": "XNN",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380073833",
+    "canonical": "Xining_Caojiapu_International_Airport"
+  },
+  "Yanbu_Airport": {
+    "iata": "YNB",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363072861",
+    "canonical": "Yanbu_Airport"
+  },
+  "Adisoemarmo_International_Airport": {
+    "iata": "SOC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1362957546",
+    "source_revision": 1362957546
+  },
+  "Agadir_Airport": {
+    "iata": "AGA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381080420",
+    "source_revision": 1381080420
+  },
+  "Agadir–Al_Massira_Airport": {
+    "iata": "AGA",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381080420",
+    "canonical": "Agadir–Al Massira Airport"
+  },
+  "Al-Jawf_Domestic_Airport": {
+    "iata": "AJF",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371388657",
+    "source_revision": 1371388657
+  },
+  "Al_Qaisumah/Hafr_Al_Batin_Airport": {
+    "iata": "AQI",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1370850899",
+    "source_revision": 1370850899
+  },
+  "Alpes–Isère_Airport": {
+    "iata": "GNB",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379433276",
+    "source_revision": 1379433276
+  },
+  "Amasya_Merzifon_Airport": {
+    "iata": "MZH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377532712",
+    "source_revision": 1377532712
+  },
+  "Aminu_Kano_International_Airport": {
+    "iata": "KAN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363056468",
+    "source_revision": 1363056468
+  },
+  "Andorra–La_Seu_d'Urgell_Airport": {
+    "iata": "LEU",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381575435",
+    "source_revision": 1381575435
+  },
+  "Ankara_Esenboğa_Airport": {
+    "iata": "ESB",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380611465",
+    "source_revision": 1380611465
+  },
+  "Aqtau_International_Airport": {
+    "iata": "SCO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375731862",
+    "source_revision": "1375731862"
+  },
+  "Aşgabat_International_Airport": {
+    "iata": "ASB",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378383758",
+    "source_revision": "1378383758"
+  },
+  "Bacha_Khan_International_Airport": {
+    "iata": "PEW",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376354124",
+    "source_revision": "1376354124"
+  },
+  "Baia_Mare_Airport": {
+    "iata": "BAY",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381363942",
+    "source_revision": "1381363942"
+  },
+  "Baise_Bama_Airport": {
+    "iata": "AEB",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374495901",
+    "source_revision": "1374495901"
+  },
+  "Baishan_Changbaishan_Airport": {
+    "iata": "NBS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375694848",
+    "source_revision": "1375694848"
+  },
+  "Barcelona–El_Prat_Josep_Tarradellas_Airport": {
+    "iata": "BCN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381614908",
+    "source_revision": "1381614908"
+  },
+  "Basel_Airport": {
+    "iata": "BSL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379743603",
+    "source_revision": "1379743603"
+  },
+  "Basrah_International_Airport": {
+    "iata": "BSR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363016760",
+    "source_revision": "1363016760"
+  },
+  "Belfast_City_Airport": {
+    "iata": "BHD",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382142009",
+    "source_revision": "1382142009"
+  },
+  "Bendigo_Airport_(Victoria)": {
+    "iata": "BXG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380017105",
+    "source_revision": "1380017105"
+  },
+  "Bole_International_Airport": {
+    "iata": "ADD",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380012454",
+    "source_revision": "1380012454"
+  },
+  "Boston_Logan_International_Airport": {
+    "iata": "BOS",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382084277",
+    "canonical": "Boston_Logan_International_Airport"
+  },
+  "Broome_Airport": {
+    "iata": "BME",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1362939274",
+    "source_revision": "1362939274"
+  },
+  "Canyonlands_Regional_Airport": {
+    "iata": "CNY",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377825306",
+    "source_revision": "1377825306"
+  },
+  "Casper–Natrona_County_International_Airport": {
+    "iata": "CPR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374408634",
+    "source_revision": "1374408634"
+  },
+  "Cesária_Évora_Airport": {
+    "iata": "VXE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381742202",
+    "source_revision": "1381742202"
+  },
+  "Chania_Airport": {
+    "iata": "CHQ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382055555",
+    "source_revision": "1382055555"
+  },
+  "Chu_Lai_International_Airport": {
+    "iata": "VCL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380705276",
+    "source_revision": "1380705276"
+  },
+  "Cluj-Napoca_International_Airport": {
+    "iata": "CLJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381728454",
+    "source_revision": "1381728454"
+  },
+  "Coastal_Carolina_Regional_Airport": {
+    "iata": "EWN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380107115",
+    "source_revision": "1380107115"
+  },
+  "Cocos_(Keeling)_Islands_Airport": {
+    "iata": "CCK",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380954755",
+    "source_revision": "1380954755"
+  },
+  "Coimbatore_International_Airport": {
+    "iata": "CJB",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380018219",
+    "canonical": "Coimbatore_International_Airport"
+  },
+  "Colima_Airport": {
+    "iata": "CLQ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369331181",
+    "source_revision": "1369331181"
+  },
+  "Conakry_International_Airport": {
+    "iata": "CKY",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379527927",
+    "canonical": "Conakry_International_Airport"
+  },
+  "Dandong_Langtou_Airport": {
+    "iata": "DDG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377843642",
+    "source_revision": "1377843642"
+  },
+  "Daniel_Oduber_Quirós_International_Airport": {
+    "iata": "LIR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379745163",
+    "source_revision": "1379745163"
+  },
+  "Darwin_Airport": {
+    "iata": "DRW",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382102391",
+    "source_revision": "1382102391"
+  },
+  "Daxing'anling_Oroqen_Airport": {
+    "iata": "JGD",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363030858",
+    "source_revision": "1363030858"
+  },
+  "Deer_Lake_Regional_Airport": {
+    "iata": "YDF",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1370734413",
+    "canonical": "Deer_Lake_Regional_Airport"
+  },
+  "Dehong_Mangshi_International_Airport": {
+    "iata": "LUM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379667210",
+    "source_revision": "1379667210"
+  },
+  "Dehradun_Airport": {
+    "iata": "DED",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369387065",
+    "source_revision": "1369387065"
+  },
+  "Denizli_Çardak_Airport": {
+    "iata": "DNZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1365883738",
+    "source_revision": "1365883738"
+  },
+  "Dubbo_Regional_Airport": {
+    "iata": "DBO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381614150",
+    "source_revision": "1381614150"
+  },
+  "Esenboğa_Airport": {
+    "iata": "ESB",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380611465",
+    "source_revision": "1380611465"
+  },
+  "Faro_Airport": {
+    "iata": "FAO",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380199339",
+    "canonical": "Faro Airport"
+  },
+  "Fredericton_International_Airport": {
+    "iata": "YFC",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377070636",
+    "canonical": "Fredericton_International_Airport"
+  },
+  "Gago_Coutinho_Airport": {
+    "iata": "FAO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380199339",
+    "source_revision": "1380199339"
+  },
+  "Gladstone_Airport": {
+    "iata": "GLT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368849160",
+    "source_revision": "1368849160"
+  },
+  "Hassan_I_Airport": {
+    "iata": "EUN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371388020",
+    "source_revision": "1371388020"
+  },
+  "Hosea_Kutako_International_Airport": {
+    "iata": "WDH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379268471",
+    "source_revision": "1379268471"
+  },
+  "Kalgoorlie_Airport": {
+    "iata": "KGI",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378654962",
+    "source_revision": "1378654962"
+  },
+  "Kefalonia_Airport": {
+    "iata": "EFL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381272687",
+    "source_revision": "1381272687"
+  },
+  "Kefalonia_International_Airport": {
+    "iata": "EFL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381272687",
+    "source_revision": "1381272687"
+  },
+  "King_Hussein_International_Airport": {
+    "iata": "AQJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381297821",
+    "source_revision": 1381297821
+  },
+  "Komodo_International_Airport": {
+    "iata": "LBJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380405789",
+    "source_revision": 1380405789
+  },
+  "Kozhikode_International_Airport": {
+    "iata": "CCJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382053146",
+    "source_revision": 1382053146
+  },
+  "Kushok_Bakula_Rimpochee_Airport": {
+    "iata": "IXL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380527893",
+    "source_revision": "1380527893"
+  },
+  "Learmonth_Airport": {
+    "iata": "LEA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363053043",
+    "source_revision": "1363053043"
+  },
+  "Leeds_Bradford_Airport": {
+    "iata": "LBA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380770979",
+    "source_revision": "1380770979"
+  },
+  "Liberal_Mid-America_Regional_Airport": {
+    "iata": "LBL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363053621",
+    "source_revision": "1363053621"
+  },
+  "Los_Mochis_International_Airport": {
+    "iata": "LMM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1364308752",
+    "source_revision": 1364308752
+  },
+  "Léon-Mba_International_Airport": {
+    "iata": "LBV",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371270050",
+    "source_revision": "1371270050"
+  },
+  "Matamoros_International_Airport": {
+    "iata": "MAM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381009499",
+    "source_revision": "1381009499"
+  },
+  "Mutiara_SIS_Al-Jufrie_Airport": {
+    "iata": "PLW",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380948130",
+    "source_revision": "1380948130"
+  },
+  "Naples_Airport_(Florida)": {
+    "iata": "APF",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378530722",
+    "source_revision": "1378530722"
+  },
+  "Narita_Airport": {
+    "iata": "NRT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381828145",
+    "source_revision": "1381828145"
+  },
+  "Neom_Airport": {
+    "iata": "NUM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363065895",
+    "source_revision": "1363065895"
+  },
+  "Newcastle_Airport_(New_South_Wales)": {
+    "iata": "NTL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369973027",
+    "source_revision": "1369973027"
+  },
+  "Ohrid_St._Paul_the_Apostle_Airport": {
+    "iata": "OHD",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374147039",
+    "source_revision": "1374147039"
+  },
+  "Palmerola_International_Airport": {
+    "iata": "XPL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1365676858",
+    "source_revision": "1365676858"
+  },
+  "Paris_Charles_de_Gaulle_International_Airport": {
+    "iata": "CDG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381922157",
+    "source_revision": "1381922157"
+  },
+  "Pensacola_International_Airport": {
+    "iata": "PNS",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381455550",
+    "canonical": "Pensacola International Airport"
+  },
+  "Pleiku_Airport": {
+    "iata": "PXU",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380704709",
+    "source_revision": "1380704709"
+  },
+  "Port_Harcourt_Airport": {
+    "iata": "PHC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379050767",
+    "source_revision": "1379050767"
+  },
+  "Pristina_International_Airport_Adem_Jashari": {
+    "iata": "PRN",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382126016",
+    "canonical": "Pristina_International_Airport_Adem_Jashari"
+  },
+  "Qamdo_Bamda_Airport": {
+    "iata": "BPX",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381841031",
+    "source_revision": "1381841031"
+  },
+  "Queen_Beatrix_International": {
+    "iata": "AUA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381724985",
+    "source_revision": "1381724985"
+  },
+  "Salalah_International_Airport": {
+    "iata": "SLL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381778625",
+    "source_revision": "1381778625"
+  },
+  "Shaheed_Bhagat_Singh_International_Airport": {
+    "iata": "IXC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381611562",
+    "source_revision": "1381611562"
+  },
+  "Sulaymaniyah_International_Airport": {
+    "iata": "ISU",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381489089",
+    "source_revision": "1381489089"
+  },
+  "Sultan_Ahmad_Shah_Airport": {
+    "iata": "KUA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380177398",
+    "source_revision": "1380177398"
+  },
+  "Sultan_Mahmud_Badaruddin_II_International_Airport": {
+    "iata": "PLM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382122285",
+    "source_revision": "1382122285"
+  },
+  "Tabuk_Regional_Airport": {
+    "iata": "TUU",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379191193",
+    "canonical": "Prince Sultan bin Abdulaziz Airport"
+  },
+  "Tamworth_Regional_Airport": {
+    "iata": "TMW",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368916696",
+    "source_revision": "1368916696"
+  },
+  "Taoyuan_Airport": {
+    "iata": "TPE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381259864",
+    "source_revision": "1381259864"
+  },
+  "Toronto_Pearson": {
+    "iata": "YYZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382159342",
+    "source_revision": "1382159342"
+  },
+  "Torreón_International_Airport": {
+    "iata": "TRC",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381033466",
+    "canonical": "Torreón_International_Airport"
+  },
+  "Trieste_Airport": {
+    "iata": "TRS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382111862",
+    "source_revision": "1382111862"
+  },
+  "Tuxtla_Gutiérrez_International_Airport": {
+    "iata": "TGZ",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373318605",
+    "canonical": "Tuxtla_Gutiérrez_International_Airport"
+  },
+  "Vaclav_Havel_Airport": {
+    "iata": "PRG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379550910",
+    "source_revision": "1379550910"
+  },
+  "Warsaw_Chopin_Airport": {
+    "iata": "WAW",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381729006",
+    "canonical": "Warsaw Chopin Airport"
+  },
+  "Washington–National": {
+    "iata": "DCA",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377492849",
+    "canonical": "Ronald Reagan Washington National Airport"
+  },
+  "Wichita_Falls_Regional_Airport": {
+    "iata": "SPS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380850685",
+    "source_revision": "1380850685"
+  },
+  "Zacatecas_International_Airport": {
+    "iata": "ZCL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379209423",
+    "source_revision": "1379209423"
+  },
+  "Taiwan_Taoyuan_International_Airport": {
+    "iata": "TPE",
+    "method": "Wikipedia redirect to verified canonical airport identity",
+    "canonical": "Taoyuan International Airport",
+    "source_url": "https://en.wikipedia.org/wiki/Taiwan_Taoyuan_International_Airport"
+  },
+  "Sulaimaniyah_International_Airport": {
+    "iata": "ISU",
+    "method": "Wikipedia redirect to verified canonical airport identity",
+    "canonical": "Jalal Talabani International Airport",
+    "source_url": "https://en.wikipedia.org/wiki/Sulaimaniyah_International_Airport"
+  },
+  "Warsaw–Chopin": {
+    "iata": "WAW",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381729006",
+    "canonical": "Warsaw Chopin Airport"
+  },
+  "Kephalonia_International_Airport": {
+    "iata": "EFL",
+    "method": "Wikipedia redirect to verified canonical airport identity",
+    "canonical": "Kefalonia International Airport",
+    "source_url": "https://en.wikipedia.org/wiki/Kephalonia_International_Airport"
+  },
+  "Detroit_Metropolitan_Wayne_County_Airport": {
+    "iata": "DTW",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377272312",
+    "canonical": "Detroit Metropolitan Airport"
+  },
+  "Marseille_Airport": {
+    "iata": "MRS",
+    "method": "Wikipedia redirect to verified canonical airport identity",
+    "canonical": "Marseille Provence Airport",
+    "source_url": "https://en.wikipedia.org/wiki/Marseille_Airport"
+  },
+  "Malta_Airport": {
+    "iata": "MLA",
+    "method": "Wikipedia redirect to verified canonical airport identity",
+    "canonical": "Malta International Airport",
+    "source_url": "https://en.wikipedia.org/wiki/Malta_Airport"
+  },
+  "Newark_Airport": {
+    "iata": "EWR",
+    "method": "Wikipedia redirect to verified canonical airport identity",
+    "canonical": "Newark Liberty International Airport",
+    "source_url": "https://en.wikipedia.org/wiki/Newark_Airport"
+  },
+  "Ulaanbaatar_Airport": {
+    "iata": "UBN",
+    "method": "Wikipedia redirect to verified canonical airport identity",
+    "canonical": "Chinggis Khaan International Airport",
+    "source_url": "https://en.wikipedia.org/wiki/Ulaanbaatar_Airport"
+  },
+  "Paris–Charles_de_Gaulle": {
+    "iata": "CDG",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381922157",
+    "canonical": "Paris Charles de Gaulle Airport"
+  },
+  "Palma_de_Mallorca_Airport": {
+    "iata": "PMI",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376623819",
+    "canonical": "Palma de Mallorca Airport"
+  },
+  "Zayed_International_Airport": {
+    "iata": "AUH",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382111123",
+    "canonical": "Zayed International Airport"
+  },
+  "Maurice_Bishop_International_Airport": {
+    "iata": "GND",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382137624",
+    "canonical": "Maurice Bishop International Airport"
+  },
+  "Oakland_San_Francisco_Bay_Airport": {
+    "iata": "OAK",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379833099",
+    "canonical": "Oakland_San_Francisco_Bay_Airport"
+  },
+  "Midland_International_Air_and_Space_Port": {
+    "iata": "MAF",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371360681",
+    "canonical": "Midland_International_Air_and_Space_Port"
+  },
+  "Thiruvananthapuram_International_Airport": {
+    "iata": "TRV",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378620676",
+    "canonical": "Thiruvananthapuram_International_Airport"
+  },
+  "Songshan_Airport": {
+    "iata": "TSA",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382178567",
+    "canonical": "Songshan_Airport"
+  },
+  "Paris_Charles_de_Gaulle_Airport": {
+    "iata": "CDG",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381922157",
+    "canonical": "Paris_Charles_de_Gaulle_Airport"
+  },
+  "Trondheim_Airport": {
+    "iata": "TRD",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381560609",
+    "canonical": "Trondheim_Airport"
+  },
+  "Veracruz_International_Airport": {
+    "iata": "VER",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380087776",
+    "canonical": "Veracruz_International_Airport"
+  },
+  "Tampico_International_Airport": {
+    "iata": "TAM",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381033493",
+    "canonical": "Tampico_International_Airport"
+  },
+  "Monastir_Habib_Bourguiba_International_Airport": {
+    "iata": "MIR",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1367698762",
+    "canonical": "Monastir_Habib_Bourguiba_International_Airport"
+  },
+  "Ivato_International_Airport": {
+    "iata": "TNR",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371146564",
+    "canonical": "Ivato_International_Airport"
+  },
+  "Melbourne_Orlando_International_Airport": {
+    "iata": "MLB",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380063399",
+    "canonical": "Melbourne_Orlando_International_Airport"
+  },
+  "Ha'il_Regional_Airport": {
+    "iata": "HAS",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371388647",
+    "canonical": "Ha'il_Regional_Airport"
+  },
+  "Missoula_Montana_Airport": {
+    "iata": "MSO",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368789170",
+    "canonical": "Missoula Montana Airport"
+  },
+  "Münster_Osnabrück_Airport": {
+    "iata": "FMO",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379745301",
+    "canonical": "Münster Osnabrück Airport"
+  },
+  "JA_Douglas_McCurdy_Sydney_Airport": {
+    "iata": "YQY",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1364013379",
+    "canonical": "JA Douglas McCurdy Sydney Airport"
+  },
+  "Windsor_International_Airport": {
+    "iata": "YQG",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1367337796",
+    "canonical": "Windsor_International_Airport"
+  },
+  "Fort_McMurray_International_Airport": {
+    "iata": "YMM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382075115",
+    "source_revision": "1382075115",
+    "latitude": 56.65333,
+    "longitude": -111.22333,
+    "metadata_distance_km": 0.081
+  },
+  "International_Airport_Irkutsk": {
+    "iata": "IKT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381863149",
+    "source_revision": "1381863149",
+    "latitude": 52.26806,
+    "longitude": 104.38889,
+    "metadata_distance_km": 0.478
+  },
+  "Pyongyang_International_Airport": {
+    "iata": "FNJ",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377840953",
+    "canonical": "Pyongyang_International_Airport"
+  },
+  "Yuncheng_Yanhu_International_Airport": {
+    "iata": "YCU",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381572492",
+    "canonical": "Yuncheng_Yanhu_International_Airport"
+  },
+  "Raja_Bhoj_Airport": {
+    "iata": "BHO",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378860283",
+    "canonical": "Raja_Bhoj_Airport"
+  },
+  "Maharana_Pratap_Airport": {
+    "iata": "UDR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380079781",
+    "source_revision": "1380079781",
+    "latitude": 24.617556,
+    "longitude": 73.89444,
+    "metadata_distance_km": 0.169
+  },
+  "Sri_Guru_Ram_Das_Ji_International_Airport": {
+    "iata": "ATQ",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379744483",
+    "canonical": "Sri_Guru_Ram_Das_Ji_International_Airport"
+  },
+  "Srinagar_International_Airport": {
+    "iata": "SXR",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380378545",
+    "canonical": "Srinagar_International_Airport"
+  },
+  "Martín_Miguel_de_Güemes_International_Airport": {
+    "iata": "SLA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378259655",
+    "source_revision": "1378259655",
+    "latitude": -24.84444,
+    "longitude": -65.47861,
+    "metadata_distance_km": 1.496
+  },
+  "Trapani–Birgi_Airport": {
+    "iata": "TPS",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380729497",
+    "canonical": "Trapani–Birgi_Airport"
+  },
+  "Praia_Airport": {
+    "iata": "RAI",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1370233408",
+    "source_revision": "1370233408",
+    "latitude": 14.9242,
+    "longitude": -23.4939,
+    "metadata_distance_km": 2.124
+  },
+  "Isparta_Süleyman_Demirel_Airport": {
+    "iata": "ISE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363045002",
+    "source_revision": "1363045002",
+    "latitude": 37.865,
+    "longitude": 30.38194,
+    "metadata_distance_km": 1.598
+  },
+  "Kars_Harakani_Airport": {
+    "iata": "KSY",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1367409951",
+    "source_revision": "1367409951",
+    "latitude": 40.5622222,
+    "longitude": 43.1150028,
+    "metadata_distance_km": 0.003
+  },
+  "Erkilet_International_Airport": {
+    "iata": "ASR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368125923",
+    "source_revision": "1368125923",
+    "latitude": 38.77028,
+    "longitude": 35.49528,
+    "metadata_distance_km": 0.017
+  },
+  "Malatya_Airport": {
+    "iata": "MLX",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1366475737",
+    "source_revision": "1366475737",
+    "latitude": 38.43528,
+    "longitude": 38.09083,
+    "metadata_distance_km": 0.015
+  },
+  "Samarkand_International_Airport": {
+    "iata": "SKD",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382093195",
+    "canonical": "Samarkand_International_Airport"
+  },
+  "Samsun-Çarşamba_Airport": {
+    "iata": "SZF",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376322283",
+    "canonical": "Samsun-Çarşamba_Airport"
+  },
+  "Timișoara_Traian_Vuia_International_Airport": {
+    "iata": "TSR",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373991273",
+    "canonical": "Timișoara_Traian_Vuia_International_Airport"
+  },
+  "Turkistan_Airport": {
+    "iata": "HSA",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382050110",
+    "canonical": "Turkistan_Airport"
+  },
+  "Urgench_International_Airport": {
+    "iata": "UGC",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381050489",
+    "canonical": "Urgench_International_Airport"
+  },
+  "Van_Airport": {
+    "iata": "VAN",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363085167",
+    "canonical": "Van_Airport"
+  },
+  "Kearney_Regional_Airport": {
+    "iata": "EAR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1366692496",
+    "source_revision": "1366692496",
+    "latitude": 40.72694,
+    "longitude": -99.00667,
+    "metadata_distance_km": 0.013
+  },
+  "Peoria_International_Airport": {
+    "iata": "PIA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1366696514",
+    "source_revision": "1366696514",
+    "latitude": 40.66417,
+    "longitude": -89.69333,
+    "metadata_distance_km": 0.069
+  },
+  "Redding_Regional_Airport": {
+    "iata": "RDD",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381064540",
+    "canonical": "Redding_Regional_Airport"
+  },
+  "Southwest_Wyoming_Regional_Airport": {
+    "iata": "RKS",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374365330",
+    "canonical": "Southwest_Wyoming_Regional_Airport"
+  },
+  "Morelia_International_Airport": {
+    "iata": "MLM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372782659",
+    "source_revision": "1372782659",
+    "latitude": 19.85,
+    "longitude": -101.02556,
+    "metadata_distance_km": 0.059
+  },
+  "Puebla_International_Airport": {
+    "iata": "PBC",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371905310",
+    "canonical": "Puebla_International_Airport"
+  },
+  "Teniente_General_Benjamín_Matienzo_International_Airport": {
+    "iata": "TUC",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378089685",
+    "canonical": "Teniente_General_Benjamín_Matienzo_International_Airport"
+  },
+  "Tijuana_International_Airport": {
+    "iata": "TIJ",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381010031",
+    "canonical": "Tijuana_International_Airport"
+  },
+  "Durango_International_Airport": {
+    "iata": "DGO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372323275",
+    "source_revision": "1372323275",
+    "latitude": 24.12417,
+    "longitude": -104.53139,
+    "metadata_distance_km": 0.379
+  },
+  "General_Francisco_Mujica_International_Airport": {
+    "iata": "MLM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372782659",
+    "source_revision": "1372782659",
+    "latitude": 19.85,
+    "longitude": -101.02556,
+    "metadata_distance_km": 0.059
+  },
+  "Nuevo_Laredo_International_Airport": {
+    "iata": "NLD",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381009969",
+    "source_revision": "1381009969",
+    "latitude": 27.44389,
+    "longitude": -99.57056,
+    "metadata_distance_km": 0.006
+  },
+  "Tenerife_North–Ciudad_de_La_Laguna_Airport": {
+    "iata": "TFN",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375981917",
+    "canonical": "Tenerife_North–Ciudad_de_La_Laguna_Airport"
+  },
+  "Meizhou_Meixian_Airport": {
+    "iata": "MXZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373004127",
+    "source_revision": "1373004127",
+    "latitude": 24.26639,
+    "longitude": 116.10444,
+    "metadata_distance_km": 0.744
+  },
+  "Ordos_Ejin_Horo_International_Airport": {
+    "iata": "DSN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381844087",
+    "source_revision": "1381844087",
+    "latitude": 39.49389,
+    "longitude": 109.86222,
+    "metadata_distance_km": 0.203
+  },
+  "Qionghai_Bo'ao_International_Airport": {
+    "iata": "BAR",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381844414",
+    "canonical": "Qionghai_Bo'ao_International_Airport"
+  },
+  "Wanzhou_Wuqiao_Airport": {
+    "iata": "WXN",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378431096",
+    "canonical": "Wanzhou_Wuqiao_Airport"
+  },
+  "Tacheng_Qianquan_Airport": {
+    "iata": "TCG",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363081568",
+    "canonical": "Tacheng_Qianquan_Airport"
+  },
+  "Gimhae_Airport": {
+    "iata": "PUS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382076548",
+    "source_revision": "1382076548",
+    "latitude": 35.17944,
+    "longitude": 128.93833,
+    "metadata_distance_km": 0.03
+  },
+  "Zhoushan_Putuoshan_Airport": {
+    "iata": "HSN",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382034155",
+    "canonical": "Zhoushan_Putuoshan_Airport"
+  },
+  "Worcester_Regional_Airport": {
+    "iata": "ORH",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379726307",
+    "canonical": "Worcester_Regional_Airport"
+  },
+  "Sultan_Aji_Muhammad_Sulaiman_Sepinggan_Airport": {
+    "iata": "BPN",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377666203",
+    "canonical": "Sultan_Aji_Muhammad_Sulaiman_Sepinggan_Airport"
+  },
+  "Radin_Inten_II_Airport": {
+    "iata": "TKG",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382122390",
+    "canonical": "Radin_Inten_II_Airport"
+  },
+  "Syamsudin_Noor_International_Airport": {
+    "iata": "BDJ",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376276911",
+    "canonical": "Syamsudin_Noor_International_Airport"
+  },
+  "Depati_Amir_Airport": {
+    "iata": "PGK",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377031796",
+    "source_revision": "1377031796",
+    "latitude": -2.16194,
+    "longitude": 106.13889,
+    "metadata_distance_km": 0.031
+  },
+  "Dien_Bien_Airport": {
+    "iata": "DIN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363032631",
+    "source_revision": "1363032631",
+    "latitude": 21.39722,
+    "longitude": 103.00778,
+    "metadata_distance_km": 0.039
+  },
+  "Djalaluddin_Airport": {
+    "iata": "GTO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378800253",
+    "source_revision": "1378800253",
+    "latitude": 0.63722,
+    "longitude": 122.849861,
+    "metadata_distance_km": 0.019
+  },
+  "Exeter_Airport": {
+    "iata": "EXT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381893054",
+    "source_revision": "1381893054",
+    "latitude": 50.73444,
+    "longitude": -3.41389,
+    "metadata_distance_km": 0.021
+  },
+  "Funchal_Airport": {
+    "iata": "FNC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381764099",
+    "source_revision": "1381764099",
+    "latitude": 32.69417,
+    "longitude": -16.77806,
+    "metadata_distance_km": 0.518
+  },
+  "Gibraltar_International_Airport": {
+    "iata": "GIB",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380216816",
+    "source_revision": "1380216816",
+    "latitude": 36.15111,
+    "longitude": -5.34972,
+    "metadata_distance_km": 0.063
+  },
+  "Haluoleo_Airport": {
+    "iata": "KDI",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368627611",
+    "source_revision": "1368627611",
+    "latitude": -4.0816083,
+    "longitude": 122.4182306,
+    "metadata_distance_km": 0.026
+  },
+  "Hang_Nadim_International_Airport": {
+    "iata": "BTH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382122645",
+    "source_revision": "1382122645",
+    "latitude": 1.12083,
+    "longitude": 104.11861,
+    "metadata_distance_km": 0.049
+  },
+  "Haugesund_Airport": {
+    "iata": "HAU",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378560649",
+    "source_revision": "1378560649",
+    "latitude": 59.34333,
+    "longitude": 5.2125,
+    "metadata_distance_km": 0.321
+  },
+  "Husein_Sastranegara_Airport": {
+    "iata": "BDO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382122164",
+    "source_revision": "1382122164",
+    "latitude": -6.90056,
+    "longitude": 107.57639,
+    "metadata_distance_km": 0.044
+  },
+  "Ibrahim_Nasir_International_Airport": {
+    "iata": "MLE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379478394",
+    "source_revision": "1379478394",
+    "latitude": 4.19167,
+    "longitude": 73.52889,
+    "metadata_distance_km": 0.029
+  },
+  "Jenderal_Ahmad_Yani_International_Airport": {
+    "iata": "SRG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381010668",
+    "source_revision": "1381010668",
+    "latitude": -6.97139,
+    "longitude": 110.37417,
+    "metadata_distance_km": 0.126
+  },
+  "John_Paul_II_International_Airport_Kraków–Balice": {
+    "iata": "KRK",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379191260",
+    "source_revision": "1379191260",
+    "latitude": 50.07778,
+    "longitude": 19.78472,
+    "metadata_distance_km": 0.01
+  },
+  "Labasa_Airport": {
+    "iata": "LBS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371389834",
+    "source_revision": "1371389834",
+    "latitude": -16.46667,
+    "longitude": 179.33972,
+    "metadata_distance_km": 0.03
+  },
+  "Lennart_Meri_Tallinn_Airport": {
+    "iata": "TLL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381613629",
+    "source_revision": "1381613629",
+    "latitude": 59.41333,
+    "longitude": 24.8325,
+    "metadata_distance_km": 0.012
+  },
+  "Leonardo_Da_Vinci_International_Airport": {
+    "iata": "FCO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381897802",
+    "source_revision": "1381897802",
+    "latitude": 41.80028,
+    "longitude": 12.23889,
+    "metadata_distance_km": 1.185
+  },
+  "Livingstone_Airport": {
+    "iata": "LVI",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363802367",
+    "source_revision": "1363802367",
+    "latitude": -17.82167,
+    "longitude": 25.82222,
+    "metadata_distance_km": 0.273
+  },
+  "London_Gatwick_Airport": {
+    "iata": "LGW",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382116267",
+    "source_revision": "1382116267",
+    "latitude": 51.14806,
+    "longitude": -0.19028,
+    "metadata_distance_km": 0.326
+  },
+  "Madurai_International_Airport": {
+    "iata": "IXM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379069818",
+    "source_revision": "1379069818",
+    "latitude": 9.83361,
+    "longitude": 78.08944,
+    "metadata_distance_km": 0.445
+  },
+  "McCarran_International_Airport": {
+    "iata": "LAS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381962205",
+    "source_revision": "1381962205",
+    "latitude": 36.08,
+    "longitude": -115.15222,
+    "metadata_distance_km": 0.375
+  },
+  "Minneapolis-St._Paul_International_Airport": {
+    "iata": "MSP",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382182967",
+    "source_revision": "1382182967",
+    "latitude": 44.88194,
+    "longitude": -93.22167,
+    "metadata_distance_km": 0.207
+  },
+  "Montreal–Pierre_Elliott_Trudeau_International_Airport": {
+    "iata": "YUL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382139161",
+    "source_revision": "1382139161",
+    "latitude": 45.47056,
+    "longitude": -73.74083,
+    "metadata_distance_km": 0.324
+  },
+  "Montréal-Pierre_Elliott_Trudeau_International_Airport": {
+    "iata": "YUL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382139161",
+    "source_revision": "1382139161",
+    "latitude": 45.47056,
+    "longitude": -73.74083,
+    "metadata_distance_km": 0.324
+  },
+  "Mopah_Airport": {
+    "iata": "MKQ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380103727",
+    "source_revision": "1380103727",
+    "latitude": -8.52028,
+    "longitude": 140.41833,
+    "metadata_distance_km": 0.429
+  },
+  "Munich_International_Airport": {
+    "iata": "MUC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382185301",
+    "source_revision": "1382185301",
+    "latitude": 48.35389,
+    "longitude": 11.78611,
+    "metadata_distance_km": 0.01
+  },
+  "Prague_Václav_Havel_Airport": {
+    "iata": "PRG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379550910",
+    "source_revision": "1379550910",
+    "latitude": 50.1018,
+    "longitude": 14.2632,
+    "metadata_distance_km": 0.256
+  },
+  "Prince_Abdul_Majeed_bin_Abdul_Aziz_Domestic_Airport": {
+    "iata": "ULH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373011586",
+    "source_revision": "1373011586",
+    "latitude": 26.48333,
+    "longitude": 38.11694,
+    "metadata_distance_km": 0.035
+  },
+  "Prince_Abdul_Majeed_bin_Abdulaziz_Domestic_Airport": {
+    "iata": "ULH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373011586",
+    "source_revision": "1373011586",
+    "latitude": 26.48333,
+    "longitude": 38.11694,
+    "metadata_distance_km": 0.035
+  },
+  "Fuyang_Airport": {
+    "iata": "FUG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363704753",
+    "source_revision": "1363704753",
+    "latitude": 32.88194,
+    "longitude": 115.73444,
+    "metadata_distance_km": 0.025,
+    "note": "Historical Part 1 closed in 2004; Part 2 reopened on 13 November 2007. Current airport coordinates match FUG metadata."
+  },
+  "Prince_Abdul_Majeed_bin_Abdulaziz_International_Airport": {
+    "iata": "ULH",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373011586",
+    "canonical": "Prince_Abdul_Majeed_bin_Abdulaziz_International_Airport"
+  },
+  "Rimini_Fellini_Airport": {
+    "iata": "RMI",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381879892",
+    "canonical": "Rimini_Fellini_Airport"
+  },
+  "Rotuma_Airport": {
+    "iata": "RTA",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363075378",
+    "canonical": "Rotuma_Airport"
+  },
+  "Sabiha_Gökçen_International_Airport": {
+    "iata": "SAW",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381998815",
+    "canonical": "Sabiha_Gökçen_International_Airport"
+  },
+  "Salisbury_Regional_Airport": {
+    "iata": "SBY",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369317380",
+    "canonical": "Salisbury_Regional_Airport"
+  },
+  "Salisbury–Ocean_City–Wicomico_Regional_Airport": {
+    "iata": "SBY",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369317380",
+    "canonical": "Salisbury–Ocean_City–Wicomico_Regional_Airport"
+  },
+  "Sam_Ratulangi_International_Airport": {
+    "iata": "MDC",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382188477",
+    "canonical": "Sam_Ratulangi_International_Airport"
+  },
+  "San_Pablo_Airport": {
+    "iata": "SVQ",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381477610",
+    "canonical": "San_Pablo_Airport"
+  },
+  "Sanya_Airport": {
+    "iata": "SYX",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381300124",
+    "canonical": "Sanya_Airport"
+  },
+  "Suceava_International_Airport": {
+    "iata": "SCV",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371360488",
+    "canonical": "Suceava_International_Airport"
+  },
+  "Sultan_Syarif_Kasim_II_International_Airport": {
+    "iata": "PKU",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378756652",
+    "canonical": "Sultan_Syarif_Kasim_II_International_Airport"
+  },
+  "Sundsvall–Timrå_Airport": {
+    "iata": "SDL",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363081086",
+    "canonical": "Sundsvall–Timrå_Airport"
+  },
+  "Supadio_International_Airport": {
+    "iata": "PNK",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377666959",
+    "canonical": "Supadio_International_Airport"
+  },
+  "Svalbard_Airport": {
+    "iata": "LYR",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369032778",
+    "canonical": "Svalbard_Airport"
+  },
+  "Sälen/Scandinavian_Mountains_Airport": {
+    "iata": "SCR",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374487510",
+    "canonical": "Sälen/Scandinavian_Mountains_Airport"
+  },
+  "Tirana_International_Airport": {
+    "iata": "TIA",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381868699",
+    "canonical": "Tirana_International_Airport"
+  },
+  "Tuy_Hoa_Airport": {
+    "iata": "TBB",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372380882",
+    "canonical": "Tuy_Hoa_Airport"
+  },
+  "Vero_Beach_Regional_Airport": {
+    "iata": "VRB",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379929883",
+    "canonical": "Vero_Beach_Regional_Airport"
+  },
+  "Vunisea_Airport": {
+    "iata": "KDV",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363086706",
+    "canonical": "Vunisea_Airport"
+  },
+  "Xiaoshan_Airport": {
+    "iata": "HGH",
+    "method": "Wikipedia airport infobox explicit IATA identifier",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381150919",
+    "canonical": "Xiaoshan_Airport"
+  }
+}
