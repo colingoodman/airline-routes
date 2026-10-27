@@ -67,3 +67,8 @@ export function routeBounds(points,paths,center=0) {
  for(const path of paths)for(const [lat,lon] of path){const x=lon+360*Math.round((middle-lon)/360);south=Math.min(south,lat);north=Math.max(north,lat);west=Math.min(west,x);east=Math.max(east,x);}
  return [[south,west],[north,east]];
 }
+export function canonicalAirportIds(airports,ids) {
+ const lookup=new Map();
+ for(const airport of airports){lookup.set(airport.id,airport.id);for(const former of airport.former_iata_codes||[])lookup.set(former,airport.id);}
+ return ids.map(id=>lookup.get(id)).filter(Boolean);
+}

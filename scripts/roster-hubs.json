@@ -1939,6 +1939,2088 @@
       ],
       "focus_cities": [],
       "membership_source_url": "https://www.oneworld.com/members"
+    },
+    {
+      "id": "EK",
+      "name": "Emirates",
+      "alliance": "nonaligned",
+      "wikipedia": "Emirates (airline)",
+      "hubs": [
+        {
+          "iata": "DXB",
+          "wikipedia": "Dubai_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381409470",
+          "source_revision": 1381409470
+        }
+      ],
+      "service_brands": [
+        "Emirates"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381409470",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "EY",
+      "name": "Etihad Airways",
+      "alliance": "nonaligned",
+      "wikipedia": "Etihad Airways",
+      "hubs": [
+        {
+          "iata": "AUH",
+          "wikipedia": "Abu_Dhabi_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380746437",
+          "source_revision": 1380746437
+        }
+      ],
+      "service_brands": [
+        "Etihad Airways"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1380746437",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "B6",
+      "name": "JetBlue",
+      "alliance": "nonaligned",
+      "wikipedia": "JetBlue",
+      "hubs": [
+        {
+          "iata": "BOS",
+          "wikipedia": "Logan_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+          "source_revision": 1382151811
+        },
+        {
+          "iata": "FLL",
+          "wikipedia": "Fort_Lauderdale–Hollywood_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+          "source_revision": 1382151811
+        },
+        {
+          "iata": "LAX",
+          "wikipedia": "Los_Angeles_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+          "source_revision": 1382151811
+        },
+        {
+          "iata": "JFK",
+          "wikipedia": "John_F._Kennedy_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+          "source_revision": 1382151811
+        },
+        {
+          "iata": "MCO",
+          "wikipedia": "Orlando_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+          "source_revision": 1382151811
+        },
+        {
+          "iata": "SJU",
+          "wikipedia": "Luis_Muñoz_Marín_International_Airport",
+          "kind": "focus_city",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+          "source_revision": 1382151811
+        }
+      ],
+      "service_brands": [
+        "JetBlue",
+        "JetBlue Airways"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "WN",
+      "name": "Southwest Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Southwest Airlines",
+      "hubs": [
+        {
+          "iata": "ATL",
+          "wikipedia": "Hartsfield–Jackson_Atlanta_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "AUS",
+          "wikipedia": "Austin-Bergstrom_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "BWI",
+          "wikipedia": "Baltimore/Washington_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "MDW",
+          "wikipedia": "Midway_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "DAL",
+          "wikipedia": "Dallas_Love_Field",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "DEN",
+          "wikipedia": "Denver_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "HOU",
+          "wikipedia": "William_P._Hobby_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "LAS",
+          "wikipedia": "Harry_Reid_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "LAX",
+          "wikipedia": "Los_Angeles_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "BNA",
+          "wikipedia": "Nashville_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "OAK",
+          "wikipedia": "Oakland_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "MCO",
+          "wikipedia": "Orlando_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        },
+        {
+          "iata": "PHX",
+          "wikipedia": "Phoenix_Sky_Harbor_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+          "source_revision": 1380782241
+        }
+      ],
+      "service_brands": [
+        "Southwest Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "DE",
+      "name": "Condor",
+      "alliance": "nonaligned",
+      "wikipedia": "Condor (airline)",
+      "hubs": [
+        {
+          "iata": "BER",
+          "wikipedia": "Berlin_Brandenburg_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+          "source_revision": 1381383486
+        },
+        {
+          "iata": "DUS",
+          "wikipedia": "Düsseldorf_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+          "source_revision": 1381383486
+        },
+        {
+          "iata": "FRA",
+          "wikipedia": "Frankfurt_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+          "source_revision": 1381383486
+        },
+        {
+          "iata": "HAM",
+          "wikipedia": "Hamburg_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+          "source_revision": 1381383486
+        },
+        {
+          "iata": "MUC",
+          "wikipedia": "Munich_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+          "source_revision": 1381383486
+        },
+        {
+          "iata": "STR",
+          "wikipedia": "Stuttgart_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+          "source_revision": 1381383486
+        },
+        {
+          "iata": "ZRH",
+          "wikipedia": "Zurich_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+          "source_revision": 1381383486
+        }
+      ],
+      "service_brands": [
+        "Condor",
+        "Condor (airline)"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "LY",
+      "name": "El Al",
+      "alliance": "nonaligned",
+      "wikipedia": "El Al",
+      "hubs": [
+        {
+          "iata": "TLV",
+          "wikipedia": "Ben_Gurion_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382135514",
+          "source_revision": 1382135514
+        }
+      ],
+      "service_brands": [
+        "El Al"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382135514",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "6E",
+      "name": "IndiGo",
+      "alliance": "nonaligned",
+      "wikipedia": "IndiGo",
+      "hubs": [
+        {
+          "iata": "DEL",
+          "wikipedia": "Indira_Gandhi_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+          "source_revision": 1382054959
+        },
+        {
+          "iata": "BLR",
+          "wikipedia": "Kempegowda_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+          "source_revision": 1382054959
+        },
+        {
+          "iata": "MAA",
+          "wikipedia": "Chennai_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+          "source_revision": 1382054959
+        },
+        {
+          "iata": "HYD",
+          "wikipedia": "Rajiv_Gandhi_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+          "source_revision": 1382054959
+        },
+        {
+          "iata": "CCU",
+          "wikipedia": "Netaji_Subhash_Chandra_Bose_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+          "source_revision": 1382054959
+        },
+        {
+          "iata": "BOM",
+          "wikipedia": "Chhatrapati_Shivaji_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+          "source_revision": 1382054959
+        },
+        {
+          "iata": "COK",
+          "wikipedia": "Cochin_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+          "source_revision": 1382054959
+        }
+      ],
+      "service_brands": [
+        "IndiGo"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "Delhi primary hub from infobox, plus Bengaluru, Chennai, Hyderabad, Kolkata, Mumbai, and Kochi explicitly identified as additional bases in the Network section.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "LA",
+      "name": "LATAM Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "LATAM Airlines Group",
+      "hubs": [
+        {
+          "iata": "SCL",
+          "wikipedia": "Comodoro_Arturo_Merino_Benítez_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380994062",
+          "source_revision": 1380994062
+        },
+        {
+          "iata": "BSB",
+          "wikipedia": "Brasília_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382092254",
+          "source_revision": 1382092254
+        },
+        {
+          "iata": "FOR",
+          "wikipedia": "Pinto_Martins_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382092254",
+          "source_revision": 1382092254
+        },
+        {
+          "iata": "CGH",
+          "wikipedia": "Congonhas-São_Paulo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382092254",
+          "source_revision": 1382092254
+        },
+        {
+          "iata": "GRU",
+          "wikipedia": "São_Paulo-Guarulhos_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382092254",
+          "source_revision": 1382092254
+        },
+        {
+          "iata": "LIM",
+          "wikipedia": "Jorge_Chávez_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378762797",
+          "source_revision": 1378762797
+        },
+        {
+          "iata": "BOG",
+          "wikipedia": "El_Dorado_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381376526",
+          "source_revision": 1381376526
+        },
+        {
+          "iata": "GYE",
+          "wikipedia": "José_Joaquín_de_Olmedo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378762017",
+          "source_revision": 1378762017
+        },
+        {
+          "iata": "UIO",
+          "wikipedia": "Mariscal_Sucre_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378762017",
+          "source_revision": 1378762017
+        }
+      ],
+      "service_brands": [
+        "LATAM",
+        "LATAM Airlines",
+        "LATAM Airlines Brasil",
+        "LATAM Brasil",
+        "LATAM Airlines Chile",
+        "LATAM Chile",
+        "LATAM Airlines Colombia",
+        "LATAM Colombia",
+        "LATAM Airlines Ecuador",
+        "LATAM Ecuador",
+        "LATAM Airlines Perú",
+        "LATAM Airlines Peru",
+        "LATAM Perú",
+        "LATAM Peru"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381072000",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances. LATAM exited oneworld in 2020; LA is a stable group brand identifier, not a promise of one operating carrier/code on every service.",
+      "hub_selection_note": "LATAM group brand: union of explicitly listed primary hubs of current LATAM Chile, Brasil, Peru, Colombia, and Ecuador operating airlines; subsidiary source revisions retained per hub. Focus cities excluded.",
+      "focus_cities": [],
+      "entity_scope": "airline_group"
+    },
+    {
+      "id": "WS",
+      "name": "WestJet",
+      "alliance": "nonaligned",
+      "wikipedia": "WestJet",
+      "hubs": [
+        {
+          "iata": "YYC",
+          "wikipedia": "Calgary_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380619089",
+          "source_revision": 1380619089
+        },
+        {
+          "iata": "YYZ",
+          "wikipedia": "Toronto_Pearson_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380619089",
+          "source_revision": 1380619089
+        },
+        {
+          "iata": "YVR",
+          "wikipedia": "Vancouver_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380619089",
+          "source_revision": 1380619089
+        }
+      ],
+      "service_brands": [
+        "WestJet",
+        "WestJet Encore"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1380619089",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "KC",
+      "name": "Air Astana",
+      "alliance": "nonaligned",
+      "wikipedia": "Air Astana",
+      "hubs": [
+        {
+          "iata": "ALA",
+          "wikipedia": "Almaty_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379957949",
+          "source_revision": 1379957949
+        },
+        {
+          "iata": "NQZ",
+          "wikipedia": "Nursultan_Nazarbayev_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379957949",
+          "source_revision": 1379957949
+        }
+      ],
+      "service_brands": [
+        "Air Astana"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1379957949",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "EI",
+      "name": "Aer Lingus",
+      "alliance": "nonaligned",
+      "wikipedia": "Aer Lingus",
+      "hubs": [
+        {
+          "iata": "DUB",
+          "wikipedia": "Dublin_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381407527",
+          "source_revision": 1381407527
+        }
+      ],
+      "service_brands": [
+        "Aer Lingus",
+        "Aer Lingus Regional"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381407527",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances. Former oneworld member; current airline is not listed in the alliance roster.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "FI",
+      "name": "Icelandair",
+      "alliance": "nonaligned",
+      "wikipedia": "Icelandair",
+      "hubs": [
+        {
+          "iata": "KEF",
+          "wikipedia": "Keflavík_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379115769",
+          "source_revision": 1379115769
+        },
+        {
+          "iata": "RKV",
+          "wikipedia": "Reykjavík_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379115769",
+          "source_revision": 1379115769
+        }
+      ],
+      "service_brands": [
+        "Icelandair"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1379115769",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "JU",
+      "name": "Air Serbia",
+      "alliance": "nonaligned",
+      "wikipedia": "Air Serbia",
+      "hubs": [
+        {
+          "iata": "BEG",
+          "wikipedia": "Belgrade_Nikola_Tesla_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381289136",
+          "source_revision": 1381289136
+        }
+      ],
+      "service_brands": [
+        "Air Serbia"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381289136",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "BT",
+      "name": "airBaltic",
+      "alliance": "nonaligned",
+      "wikipedia": "AirBaltic",
+      "hubs": [
+        {
+          "iata": "RIX",
+          "wikipedia": "Riga_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380688559",
+          "source_revision": 1380688559
+        },
+        {
+          "iata": "TLL",
+          "wikipedia": "Tallinn_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380688559",
+          "source_revision": 1380688559
+        },
+        {
+          "iata": "VNO",
+          "wikipedia": "Vilnius_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380688559",
+          "source_revision": 1380688559
+        }
+      ],
+      "service_brands": [
+        "airBaltic",
+        "AirBaltic"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1380688559",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "VA",
+      "name": "Virgin Australia",
+      "alliance": "nonaligned",
+      "wikipedia": "Virgin Australia",
+      "hubs": [
+        {
+          "iata": "BNE",
+          "wikipedia": "Brisbane_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382110752",
+          "source_revision": 1382110752
+        },
+        {
+          "iata": "MEL",
+          "wikipedia": "Melbourne_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382110752",
+          "source_revision": 1382110752
+        },
+        {
+          "iata": "SYD",
+          "wikipedia": "Sydney_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382110752",
+          "source_revision": 1382110752
+        },
+        {
+          "iata": "ADL",
+          "wikipedia": "Adelaide_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382110752",
+          "source_revision": 1382110752
+        },
+        {
+          "iata": "PER",
+          "wikipedia": "Perth_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382110752",
+          "source_revision": 1382110752
+        }
+      ],
+      "service_brands": [
+        "Virgin Australia",
+        "Virgin Australia Regional Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382110752",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "PD",
+      "name": "Porter Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Porter Airlines",
+      "hubs": [
+        {
+          "iata": "YOW",
+          "wikipedia": "Ottawa_Macdonald–Cartier_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379151746",
+          "source_revision": 1379151746
+        },
+        {
+          "iata": "YTZ",
+          "wikipedia": "Billy_Bishop_Toronto_City_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379151746",
+          "source_revision": 1379151746
+        },
+        {
+          "iata": "YYZ",
+          "wikipedia": "Toronto_Pearson_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379151746",
+          "source_revision": 1379151746
+        }
+      ],
+      "service_brands": [
+        "Porter Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1379151746",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "TS",
+      "name": "Air Transat",
+      "alliance": "nonaligned",
+      "wikipedia": "Air Transat",
+      "hubs": [
+        {
+          "iata": "YUL",
+          "wikipedia": "Montréal–Trudeau_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378201712",
+          "source_revision": 1378201712
+        },
+        {
+          "iata": "YYZ",
+          "wikipedia": "Toronto_Pearson_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378201712",
+          "source_revision": 1378201712
+        }
+      ],
+      "service_brands": [
+        "Air Transat"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1378201712",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "F9",
+      "name": "Frontier Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Frontier Airlines",
+      "hubs": [
+        {
+          "iata": "ATL",
+          "wikipedia": "Hartsfield–Jackson_Atlanta_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "MDW",
+          "wikipedia": "Midway_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "ORD",
+          "wikipedia": "O'Hare_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "CVG",
+          "wikipedia": "Cincinnati/Northern_Kentucky_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "CLE",
+          "wikipedia": "Cleveland_Hopkins_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "DFW",
+          "wikipedia": "Dallas/Fort_Worth_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "DEN",
+          "wikipedia": "Denver_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "LAS",
+          "wikipedia": "Harry_Reid_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "MIA",
+          "wikipedia": "Miami_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "MCO",
+          "wikipedia": "Orlando_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "PHL",
+          "wikipedia": "Philadelphia_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "PHX",
+          "wikipedia": "Phoenix_Sky_Harbor_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "SJU",
+          "wikipedia": "Luis_Muñoz_Marín_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "TPA",
+          "wikipedia": "Tampa_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        },
+        {
+          "iata": "TTN",
+          "wikipedia": "Trenton-Mercer_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+          "source_revision": 1382052774
+        }
+      ],
+      "service_brands": [
+        "Frontier Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "G4",
+      "name": "Allegiant Air",
+      "alliance": "nonaligned",
+      "wikipedia": "Allegiant Air",
+      "hubs": [
+        {
+          "iata": "ABE",
+          "wikipedia": "Lehigh_Valley_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "ATW",
+          "wikipedia": "Outagamie_County_Regional_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "AVL",
+          "wikipedia": "Asheville_Regional_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "BLI",
+          "wikipedia": "Bellingham_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012,
+          "note": "Operating base listed as ending November 2026; included as active on the 27 October 2026 snapshot."
+        },
+        {
+          "iata": "CVG",
+          "wikipedia": "Cincinnati/Northern_Kentucky_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "VPS",
+          "wikipedia": "Destin–Fort_Walton_Beach_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "DSM",
+          "wikipedia": "Des_Moines_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "FNT",
+          "wikipedia": "Bishop_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "FLL",
+          "wikipedia": "Fort_Lauderdale–Hollywood_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "GRR",
+          "wikipedia": "Gerald_R._Ford_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "IND",
+          "wikipedia": "Indianapolis_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "TYS",
+          "wikipedia": "McGhee_Tyson_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "LAS",
+          "wikipedia": "Harry_Reid_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "BNA",
+          "wikipedia": "Nashville_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "SFB",
+          "wikipedia": "Orlando_Sanford_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "AZA",
+          "wikipedia": "Phoenix–Mesa_Gateway_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "PIT",
+          "wikipedia": "Pittsburgh_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "PVU",
+          "wikipedia": "Provo_Municipal_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "PGD",
+          "wikipedia": "Punta_Gorda_Airport_(Florida)",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "SRQ",
+          "wikipedia": "Sarasota-Bradenton_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        },
+        {
+          "iata": "SAV",
+          "wikipedia": "Savannah/Hilton_Head_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012,
+          "note": "Operating base listed as ending November 2026; included as active on the 27 October 2026 snapshot."
+        },
+        {
+          "iata": "PIE",
+          "wikipedia": "St._Petersburg-Clearwater_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+          "source_revision": 1381718012
+        }
+      ],
+      "service_brands": [
+        "Allegiant Air"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "AD",
+      "name": "Azul Brazilian Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Azul Brazilian Airlines",
+      "hubs": [
+        {
+          "iata": "CNF",
+          "wikipedia": "Belo_Horizonte_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377829775",
+          "source_revision": 1377829775
+        },
+        {
+          "iata": "VCP",
+          "wikipedia": "Viracopos-Campinas_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377829775",
+          "source_revision": 1377829775
+        },
+        {
+          "iata": "REC",
+          "wikipedia": "Recife/Guararapes–Gilberto_Freyre_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377829775",
+          "source_revision": 1377829775
+        }
+      ],
+      "service_brands": [
+        "Azul Brazilian Airlines",
+        "Azul Linhas Aéreas Brasileiras",
+        "Azul",
+        "Azul Conecta"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1377829775",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "G3",
+      "name": "GOL Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Gol Transportes Aéreos",
+      "hubs": [
+        {
+          "iata": "BSB",
+          "wikipedia": "Brasília_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381846763",
+          "source_revision": 1381846763
+        },
+        {
+          "iata": "GIG",
+          "wikipedia": "Rio_de_Janeiro-Galeão_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381846763",
+          "source_revision": 1381846763
+        },
+        {
+          "iata": "CGH",
+          "wikipedia": "Congonhas-São_Paulo_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381846763",
+          "source_revision": 1381846763
+        },
+        {
+          "iata": "GRU",
+          "wikipedia": "São_Paulo-Guarulhos_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381846763",
+          "source_revision": 1381846763
+        }
+      ],
+      "service_brands": [
+        "Gol Transportes Aéreos",
+        "GOL Linhas Aéreas Inteligentes",
+        "GOL Airlines",
+        "Gol Linhas Aéreas"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381846763",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "FZ",
+      "name": "flydubai",
+      "alliance": "nonaligned",
+      "wikipedia": "Flydubai",
+      "hubs": [
+        {
+          "iata": "DXB",
+          "wikipedia": "Dubai_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382053025",
+          "source_revision": 1382053025
+        }
+      ],
+      "service_brands": [
+        "Flydubai",
+        "flydubai"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382053025",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "G9",
+      "name": "Air Arabia",
+      "alliance": "nonaligned",
+      "wikipedia": "Air Arabia",
+      "hubs": [
+        {
+          "iata": "AUH",
+          "wikipedia": "Abu_Dhabi_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379047733",
+          "source_revision": 1379047733
+        },
+        {
+          "iata": "RKT",
+          "wikipedia": "Ras_Al_Khaimah_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379047733",
+          "source_revision": 1379047733
+        },
+        {
+          "iata": "SHJ",
+          "wikipedia": "Sharjah_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379047733",
+          "source_revision": 1379047733
+        }
+      ],
+      "service_brands": [
+        "Air Arabia",
+        "Air Arabia Abu Dhabi"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1379047733",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances. G9 is a stable Air Arabia group brand identifier; listed Abu Dhabi services retain the Air Arabia Abu Dhabi source brand.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline_group"
+    },
+    {
+      "id": "XY",
+      "name": "flynas",
+      "alliance": "nonaligned",
+      "wikipedia": "Flynas",
+      "hubs": [
+        {
+          "iata": "AHB",
+          "wikipedia": "Abha_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379765863",
+          "source_revision": 1379765863
+        },
+        {
+          "iata": "DMM",
+          "wikipedia": "King_Fahd_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379765863",
+          "source_revision": 1379765863
+        },
+        {
+          "iata": "JED",
+          "wikipedia": "King_Abdulaziz_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379765863",
+          "source_revision": 1379765863
+        },
+        {
+          "iata": "MED",
+          "wikipedia": "Prince_Mohammad_Bin_Abdulaziz_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379765863",
+          "source_revision": 1379765863
+        },
+        {
+          "iata": "RUH",
+          "wikipedia": "King_Khalid_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379765863",
+          "source_revision": 1379765863
+        }
+      ],
+      "service_brands": [
+        "flynas",
+        "Flynas"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1379765863",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "PC",
+      "name": "Pegasus Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Pegasus Airlines",
+      "hubs": [
+        {
+          "iata": "COV",
+          "wikipedia": "Çukurova_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "ESB",
+          "wikipedia": "Esenboğa_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "AYT",
+          "wikipedia": "Antalya_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "BJV",
+          "wikipedia": "Milas-Bodrum_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "DLM",
+          "wikipedia": "Dalaman_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "ECN",
+          "wikipedia": "Ercan_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "IST",
+          "wikipedia": "Istanbul_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "SAW",
+          "wikipedia": "Istanbul_Sabiha_Gökçen_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "ADB",
+          "wikipedia": "Adnan_Menderes_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "ASR",
+          "wikipedia": "Erkilet_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "SZF",
+          "wikipedia": "Çarşamba_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        },
+        {
+          "iata": "TZX",
+          "wikipedia": "Trabzon_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+          "source_revision": 1382079574
+        }
+      ],
+      "service_brands": [
+        "Pegasus Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "DY",
+      "name": "Norwegian Air Shuttle",
+      "alliance": "nonaligned",
+      "wikipedia": "Norwegian Air Shuttle",
+      "hubs": [
+        {
+          "iata": "ALC",
+          "wikipedia": "Alicante–Elche_Miguel_Hernández_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "BCN",
+          "wikipedia": "Barcelona–El_Prat_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376,
+          "seasonal": true,
+          "note": "Seasonal operating base, explicitly labeled in the airline article."
+        },
+        {
+          "iata": "BGO",
+          "wikipedia": "Bergen_Airport,_Flesland",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "CPH",
+          "wikipedia": "Copenhagen_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "HEL",
+          "wikipedia": "Helsinki_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "LPA",
+          "wikipedia": "Gran_Canaria_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "AGP",
+          "wikipedia": "Málaga_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "OSL",
+          "wikipedia": "Oslo_Airport,_Gardermoen",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "PMI",
+          "wikipedia": "Son_Sant_Joan_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376,
+          "seasonal": true,
+          "note": "Seasonal operating base, explicitly labeled in the airline article."
+        },
+        {
+          "iata": "RIX",
+          "wikipedia": "Riga_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        },
+        {
+          "iata": "ARN",
+          "wikipedia": "Stockholm-Arlanda_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+          "source_revision": 1382085376
+        }
+      ],
+      "service_brands": [
+        "Norwegian Air Shuttle",
+        "Norwegian Air Sweden",
+        "Norwegian Air Sweden AOC"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline_group"
+    },
+    {
+      "id": "FR",
+      "name": "Ryanair",
+      "alliance": "nonaligned",
+      "wikipedia": "Ryanair",
+      "hubs": [
+        {
+          "iata": "DUB",
+          "wikipedia": "Dublin_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381990980",
+          "source_revision": 1381990980
+        },
+        {
+          "iata": "STN",
+          "wikipedia": "London_Stansted_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381990980",
+          "source_revision": 1381990980
+        },
+        {
+          "iata": "BGY",
+          "wikipedia": "Orio_al_Serio_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381990980",
+          "source_revision": 1381990980
+        }
+      ],
+      "service_brands": [
+        "Ryanair",
+        "Ryanair UK",
+        "Malta Air",
+        "Buzz",
+        "Lauda Europe"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381990980",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "The airline article explicitly identifies Dublin, London Stansted, and Milan Bergamo as primary operational bases.",
+      "focus_cities": [],
+      "entity_scope": "airline_group"
+    },
+    {
+      "id": "U2",
+      "name": "easyJet",
+      "alliance": "nonaligned",
+      "wikipedia": "EasyJet",
+      "hubs": [
+        {
+          "iata": "LGW",
+          "wikipedia": "Gatwick_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381918046",
+          "source_revision": 1381918046
+        }
+      ],
+      "service_brands": [
+        "EasyJet",
+        "easyJet",
+        "EasyJet UK",
+        "EasyJet Europe",
+        "EasyJet Switzerland"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381918046",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "The airline article explicitly identifies London Gatwick as the largest base; the other operating bases are not promoted to major hubs.",
+      "focus_cities": [],
+      "entity_scope": "airline_group"
+    },
+    {
+      "id": "W6",
+      "name": "Wizz Air",
+      "alliance": "nonaligned",
+      "wikipedia": "Wizz Air",
+      "hubs": [
+        {
+          "iata": "BUD",
+          "wikipedia": "Budapest_Ferenc_Liszt_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376543812",
+          "source_revision": 1376543812
+        },
+        {
+          "iata": "OTP",
+          "wikipedia": "Henri_Coandă_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376543812",
+          "source_revision": 1376543812
+        },
+        {
+          "iata": "LTN",
+          "wikipedia": "Luton_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376543812",
+          "source_revision": 1376543812
+        }
+      ],
+      "service_brands": [
+        "Wizz Air",
+        "Wizz Air Malta",
+        "Wizz Air UK"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1376543812",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "The airline article explicitly identifies Budapest, Bucharest Otopeni, and London Luton as its largest bases.",
+      "focus_cities": [],
+      "entity_scope": "airline_group"
+    },
+    {
+      "id": "AK",
+      "name": "AirAsia",
+      "alliance": "nonaligned",
+      "wikipedia": "AirAsia",
+      "hubs": [
+        {
+          "iata": "JHB",
+          "wikipedia": "Senai_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381486751",
+          "source_revision": 1381486751
+        },
+        {
+          "iata": "BKI",
+          "wikipedia": "Kota_Kinabalu_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381486751",
+          "source_revision": 1381486751
+        },
+        {
+          "iata": "KUL",
+          "wikipedia": "Kuala_Lumpur_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381486751",
+          "source_revision": 1381486751
+        },
+        {
+          "iata": "KCH",
+          "wikipedia": "Kuching_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381486751",
+          "source_revision": 1381486751
+        },
+        {
+          "iata": "PEN",
+          "wikipedia": "Penang_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381486751",
+          "source_revision": 1381486751
+        }
+      ],
+      "service_brands": [
+        "AirAsia"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381486751",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances. AK covers the Malaysian AirAsia airline and its named bases, not an inferred union of all AirAsia-branded carriers.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "TR",
+      "name": "Scoot",
+      "alliance": "nonaligned",
+      "wikipedia": "Scoot",
+      "hubs": [
+        {
+          "iata": "SIN",
+          "wikipedia": "Singapore_Changi_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380820318",
+          "source_revision": 1380820318
+        }
+      ],
+      "service_brands": [
+        "Scoot"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1380820318",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "JQ",
+      "name": "Jetstar",
+      "alliance": "nonaligned",
+      "wikipedia": "Jetstar",
+      "hubs": [
+        {
+          "iata": "ADL",
+          "wikipedia": "Adelaide_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "AKL",
+          "wikipedia": "Auckland_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "BNE",
+          "wikipedia": "Brisbane_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "CNS",
+          "wikipedia": "Cairns_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "CHC",
+          "wikipedia": "Christchurch_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "DPS",
+          "wikipedia": "Ngurah_Rai_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "OOL",
+          "wikipedia": "Gold_Coast_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "MEL",
+          "wikipedia": "Melbourne_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "PER",
+          "wikipedia": "Perth_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        },
+        {
+          "iata": "SYD",
+          "wikipedia": "Sydney_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+          "source_revision": 1381933305
+        }
+      ],
+      "service_brands": [
+        "Jetstar",
+        "Jetstar Airways"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "5J",
+      "name": "Cebu Pacific",
+      "alliance": "nonaligned",
+      "wikipedia": "Cebu Pacific",
+      "hubs": [
+        {
+          "iata": "CEB",
+          "wikipedia": "Mactan-Cebu_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379348527",
+          "source_revision": 1379348527
+        },
+        {
+          "iata": "CRK",
+          "wikipedia": "Clark_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379348527",
+          "source_revision": 1379348527
+        },
+        {
+          "iata": "DVO",
+          "wikipedia": "Francisco_Bangoy_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379348527",
+          "source_revision": 1379348527
+        },
+        {
+          "iata": "ILO",
+          "wikipedia": "Iloilo_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379348527",
+          "source_revision": 1379348527
+        },
+        {
+          "iata": "MNL",
+          "wikipedia": "Ninoy_Aquino_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379348527",
+          "source_revision": 1379348527
+        }
+      ],
+      "service_brands": [
+        "Cebu Pacific",
+        "Cebgo"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1379348527",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "VJ",
+      "name": "VietJet Air",
+      "alliance": "nonaligned",
+      "wikipedia": "VietJet Air",
+      "hubs": [
+        {
+          "iata": "DAD",
+          "wikipedia": "Da_Nang_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380186044",
+          "source_revision": 1380186044
+        },
+        {
+          "iata": "HPH",
+          "wikipedia": "Cat_Bi_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380186044",
+          "source_revision": 1380186044
+        },
+        {
+          "iata": "HAN",
+          "wikipedia": "Noi_Bai_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380186044",
+          "source_revision": 1380186044
+        },
+        {
+          "iata": "SGN",
+          "wikipedia": "Tan_Son_Nhat_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380186044",
+          "source_revision": 1380186044
+        },
+        {
+          "iata": "CXR",
+          "wikipedia": "Cam_Ranh_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380186044",
+          "source_revision": 1380186044
+        }
+      ],
+      "service_brands": [
+        "VietJet Air",
+        "Vietjet Air"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1380186044",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "HU",
+      "name": "Hainan Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Hainan Airlines",
+      "hubs": [
+        {
+          "iata": "PEK",
+          "wikipedia": "Beijing_Capital_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381691572",
+          "source_revision": 1381691572
+        },
+        {
+          "iata": "CKG",
+          "wikipedia": "Chongqing_Jiangbei_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381691572",
+          "source_revision": 1381691572
+        },
+        {
+          "iata": "HAK",
+          "wikipedia": "Haikou_Meilan_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381691572",
+          "source_revision": 1381691572
+        },
+        {
+          "iata": "SZX",
+          "wikipedia": "Shenzhen_Bao'an_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381691572",
+          "source_revision": 1381691572
+        },
+        {
+          "iata": "XIY",
+          "wikipedia": "Xi'an_Xianyang_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381691572",
+          "source_revision": 1381691572
+        }
+      ],
+      "service_brands": [
+        "Hainan Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381691572",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "CZ",
+      "name": "China Southern Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "China Southern Airlines",
+      "hubs": [
+        {
+          "iata": "PKX",
+          "wikipedia": "Beijing_Daxing_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        },
+        {
+          "iata": "CAN",
+          "wikipedia": "Guangzhou_Baiyun_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        },
+        {
+          "iata": "SZX",
+          "wikipedia": "Shenzhen_Bao'an_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        },
+        {
+          "iata": "CKG",
+          "wikipedia": "Chongqing_Jiangbei_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        },
+        {
+          "iata": "PVG",
+          "wikipedia": "Shanghai_Pudong_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        },
+        {
+          "iata": "URC",
+          "wikipedia": "Ürümqi_Tianshan_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        },
+        {
+          "iata": "WUH",
+          "wikipedia": "Wuhan_Tianhe_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        },
+        {
+          "iata": "CGO",
+          "wikipedia": "Zhengzhou_Xinzheng_International_Airport",
+          "kind": "secondary_hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+          "source_revision": 1381975132
+        }
+      ],
+      "service_brands": [
+        "China Southern Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances. Former SkyTeam member (2007–2018); historical membership is not treated as current.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "3U",
+      "name": "Sichuan Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Sichuan Airlines",
+      "hubs": [
+        {
+          "iata": "CTU",
+          "wikipedia": "Chengdu_Shuangliu_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380842589",
+          "source_revision": 1380842589
+        },
+        {
+          "iata": "TFU",
+          "wikipedia": "Chengdu_Tianfu_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380842589",
+          "source_revision": 1380842589
+        },
+        {
+          "iata": "CKG",
+          "wikipedia": "Chongqing_Jiangbei_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380842589",
+          "source_revision": 1380842589
+        },
+        {
+          "iata": "KMG",
+          "wikipedia": "Kunming_Changshui_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380842589",
+          "source_revision": 1380842589
+        }
+      ],
+      "service_brands": [
+        "Sichuan Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1380842589",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "HX",
+      "name": "Hong Kong Airlines",
+      "alliance": "nonaligned",
+      "wikipedia": "Hong Kong Airlines",
+      "hubs": [
+        {
+          "iata": "HKG",
+          "wikipedia": "Hong_Kong_International_Airport",
+          "kind": "hub",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377443936",
+          "source_revision": 1377443936
+        }
+      ],
+      "service_brands": [
+        "Hong Kong Airlines"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1377443936",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "VY",
+      "name": "Vueling",
+      "alliance": "nonaligned",
+      "wikipedia": "Vueling",
+      "hubs": [
+        {
+          "iata": "BCN",
+          "wikipedia": "Barcelona–El_Prat_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382022151",
+          "source_revision": 1382022151
+        },
+        {
+          "iata": "FCO",
+          "wikipedia": "Rome_Fiumicino_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382022151",
+          "source_revision": 1382022151
+        }
+      ],
+      "service_brands": [
+        "Vueling"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1382022151",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "The airline infobox explicitly labels Barcelona as main operating base and Rome Fiumicino as secondary operating base.",
+      "focus_cities": [],
+      "entity_scope": "airline"
+    },
+    {
+      "id": "XQ",
+      "name": "SunExpress",
+      "alliance": "nonaligned",
+      "wikipedia": "SunExpress",
+      "hubs": [
+        {
+          "iata": "AYT",
+          "wikipedia": "Antalya_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381160228",
+          "source_revision": 1381160228
+        },
+        {
+          "iata": "ADB",
+          "wikipedia": "Adnan_Menderes_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381160228",
+          "source_revision": 1381160228
+        },
+        {
+          "iata": "ESB",
+          "wikipedia": "Esenboğa_International_Airport",
+          "kind": "operating_base",
+          "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381160228",
+          "source_revision": 1381160228
+        }
+      ],
+      "service_brands": [
+        "SunExpress"
+      ],
+      "membership_source_url": "https://en.wikipedia.org/w/index.php?oldid=1381160228",
+      "classification_note": "Outside Star Alliance, SkyTeam, and oneworld as of 2026-10-27; bilateral codeshares, ownership ties, and minor regional groupings do not establish membership in the three global alliances.",
+      "hub_selection_note": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+      "focus_cities": [],
+      "entity_scope": "airline"
     }
   ],
   "unmatched": [],
@@ -1953,5 +4035,14 @@
       "name": "S7 Airlines",
       "alliance": "oneworld"
     }
+  ],
+  "notes": [
+    "Non-aligned is a curated set of 40 major airline brands outside the three global alliances, not a claim to enumerate every independent airline worldwide.",
+    "Alaska Airlines remains in oneworld and is not duplicated under Non-aligned.",
+    "For point-to-point airlines, explicitly identified major operating bases or focus cities are retained as their actual role rather than mislabeled as hubs.",
+    "LATAM, easyJet, Ryanair, and Wizz Air are represented as explicitly enumerated operating-brand groups where relevant; individual source service brands remain visible.",
+    "Selection is source-defined: Ryanair primary bases, Wizz Air largest bases, easyJet largest base, Vueling main/secondary bases; for carriers without such narrowing labels, all current infobox operating bases are included.",
+    "Condor Münster/Osnabrück base begins 2 November 2026, after snapshot, so is excluded as a current origin.",
+    "Alexandria is normalized to current IATA ALY (formerly HBE), effective 16 September 2026, using an explicit Aegean code-change bulletin; original Borg El Arab coordinates retained."
   ]
 }

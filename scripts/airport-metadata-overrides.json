@@ -1,0 +1,44 @@
+{
+  "HBE": {
+    "ourairports_id": "3180",
+    "iata_code": "ALY",
+    "icao_code": "HEAX",
+    "name": "Alexandria International Airport",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Alexandria_International_Airport_(Egypt)",
+    "effective_on": "2026-09-16",
+    "source_url": "https://www.aegeanhub.com/fr/booking-process-and-sales/newsletter/",
+    "source_title": "Airport Code Change – Alexandria International Airport (HBE → ALY), 10 August 2026",
+    "note": "Aegean's trade bulletin confirms ALY for flights on or after 16 September 2026. Retain the physical Borg El Arab airport coordinates from OurAirports row 3180; do not substitute the closed El Nouzha airport that formerly used ALY.",
+    "previous_iata": "HBE"
+  },
+  "VEPU": {
+    "ourairports_id": "26518",
+    "iata_code": "PXN",
+    "icao_code": "VEPU",
+    "name": "Purnea Airport",
+    "municipality": "Purnia",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Purnia_Airport",
+    "verified_on": "2026-10-27",
+    "source_url": "https://www.goindigo.in/airport-directory/india/purnea-pxn.html",
+    "source_title": "Purnea Airport (PXN) – IndiGo airport directory",
+    "supporting_source_urls": [
+      "https://en.wikipedia.org/w/index.php?oldid=1366865186"
+    ],
+    "note": "OurAirports row 26518 (VEPU) identifies the correct physical airport and coordinates but omits its IATA code. Populate PXN and confirm existing ICAO VEPU using the reviewed sources. No former IATA code or assignment effective date is asserted; verified_on records the research date."
+  },
+  "XP-0003": {
+    "ourairports_id": "32745",
+    "iata_code": "XYI",
+    "icao_code": "ZJYX",
+    "name": "Yongxing Dao (Woody Island) Air Base",
+    "municipality": "Woody Island",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Sansha_Yongxing_Airport",
+    "verified_on": "2026-10-27",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380079301",
+    "source_title": "Sansha Yongxing Airport – Wikipedia airport infobox",
+    "supporting_source_urls": [
+      "https://en.wikipedia.org/w/index.php?oldid=1380079301"
+    ],
+    "note": "OurAirports row 32745 (XP-0003) already identifies this physical airport and its position but has blank IATA and ICAO fields. Fill only the missing identifiers from the reviewed source; no former IATA code is asserted. No assignment effective date was verified; verified_on records the research date. Pinned Wikipedia infobox evidence: https://en.wikipedia.org/w/index.php?oldid=1380079301"
+  }
+}

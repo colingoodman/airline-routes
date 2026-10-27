@@ -117,6 +117,19 @@ def route_status(note, seasonal=False, struck=False):
   if not change_date or change_date<=TODAY.isoformat():status='suspended_or_ended'
  return status,change_date
 
+def apply_metadata_overrides(rows,corrections,as_of):
+ result=[]
+ for row in rows:
+  r=dict(row)
+  for old,entry in corrections.items():
+   if str(row.get('id'))==str(entry['ourairports_id']) and entry.get('effective_on',entry.get('verified_on','9999-12-31'))<=as_of.isoformat():
+    r.update({k:entry[k] for k in ['iata_code','icao_code','name','wikipedia_link'] if k in entry})
+    previous=entry.get('previous_iata') or row.get('iata_code','')
+    if previous and previous!=r['iata_code']:r['_former_iata_code']=previous
+    r['_original_wikipedia_link']=row.get('wikipedia_link','');r['_metadata_override']=entry
+  result.append(r)
+ return result
+
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--work',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--as-of',default='2026-10-27');args=ap.parse_args()
  global TODAY
@@ -124,8 +137,15 @@ def main():
  w=args.work;cache=w/'airports-cache';cache.mkdir(exist_ok=True)
  roster=json.loads((w/'roster-hubs.json').read_text()); airlines=roster['airlines']
  rows=list(csv.DictReader((w/'ourairports.csv').open()))
+ corrections_path=Path(__file__).with_name('airport-metadata-overrides.json')
+ corrections=json.loads(corrections_path.read_text()) if corrections_path.exists() else {}
+ rows=apply_metadata_overrides(rows,corrections,TODAY)
  bycode={r['iata_code']:r for r in rows if r['iata_code'] and r['type']!='closed'}
+ for r in rows:
+  if r.get('_former_iata_code'):bycode[r['_former_iata_code']]=r
  bytitle={norm(r['wikipedia_link'].split('/wiki/')[-1]):r for r in rows if r['wikipedia_link'] and r['iata_code'] and r['type']!='closed'}
+ for r in rows:
+  if r.get('_original_wikipedia_link'):bytitle[norm(r['_original_wikipedia_link'].split('/wiki/')[-1])]=r
  overrides=json.loads((w/'airport-overrides.json').read_text()) if (w/'airport-overrides.json').exists() else {}
  for t,code in overrides.items():
   if code in bycode: bytitle[norm(t)]=bycode[code]
@@ -138,17 +158,25 @@ def main():
   code=r['iata_code']
   if code not in airports:
    airports[code]={'id':code,'iata':code,'icao':r.get('icao_code') or r['ident'],'name':r['name'],'city':r['municipality'],'country':r['iso_country'],'latitude':float(r['latitude_deg']),'longitude':float(r['longitude_deg']),'wikipedia_url':r['wikipedia_link'],'source_id':'airports'}
+  if r.get('_metadata_override'):
+   ev=r['_metadata_override']
+   if r.get('_former_iata_code'):airports[code]['former_iata_codes']=[r['_former_iata_code']]
+   airports[code]['identifier_source_id']=source(ev['source_url'],'airport_metadata_correction',source_title=ev.get('source_title','Reviewed airport identifiers'),note=ev['note'],**({'effective_on':ev['effective_on']} if ev.get('effective_on') else {'verified_on':ev['verified_on']}))
+   if ev.get('effective_on'):airports[code]['identifier_effective_on']=ev['effective_on']
+   else:airports[code]['identifier_verified_on']=ev['verified_on']
+   if ev.get('supporting_source_urls'):airports[code]['supporting_identifier_source_ids']=[source(u,'airport_identity') for u in ev['supporting_source_urls']]
   return code
  routes=[];hubs=[];issues=[];excluded=[];out_airlines=[]
  for a in airlines:
-  airlineid=a['id']; aliases={norm(x) for x in BRANDS.get(airlineid,[a['name']])}|{norm(a['wikipedia']),norm(a['name'])}
-  ms=source(a['membership_source_url'],'alliance_membership')
-  out_airlines.append({'id':airlineid,'name':a['name'],'alliance_id':a['alliance'],**({'identity_note':'HA is a stable Hawaiian brand identifier. The current airline infobox lists AS/ASA following operational integration with Alaska; alliance membership is retained as a separate brand.'} if airlineid=='HA' else {}),'wikipedia_url':'https://en.wikipedia.org/wiki/'+quote(a['wikipedia']),'membership_source_id':ms,'service_brands':BRANDS.get(airlineid,[a['name']])})
+  airlineid=a['id']; brands=a.get('service_brands') or BRANDS.get(airlineid,[a['name']]); aliases={norm(x) for x in brands}|{norm(a['wikipedia']),norm(a['name'])}
+  ms=source(a['membership_source_url'],'alliance_nonmembership' if a['alliance']=='nonaligned' else 'alliance_membership')
+  classification_sources=[ms]+[source(u,'alliance_membership') for u in ['https://www.staralliance.com/en/members','https://www.skyteam.com/en/about/our-members','https://www.oneworld.com/members']] if a['alliance']=='nonaligned' else [ms]
+  out_airlines.append({'id':airlineid,'name':a['name'],'alliance_id':a['alliance'],**({'identity_note':'HA is a stable Hawaiian brand identifier. The current airline infobox lists AS/ASA following operational integration with Alaska; alliance membership is retained as a separate brand.'} if airlineid=='HA' else {}),'wikipedia_url':'https://en.wikipedia.org/wiki/'+quote(a['wikipedia']),'membership_source_id':ms,'classification_source_ids':classification_sources,**({'hub_selection_note':a['hub_selection_note']} if a.get('hub_selection_note') else {}),'service_brands':brands,**({'classification_note':a['classification_note']} if a.get('classification_note') else {}),**({'entity_scope':a['entity_scope']} if a.get('entity_scope') else {})})
   for h in a['hubs']:
    r=bycode.get(h['iata'])
    if not r: issues.append({'kind':'unknown_hub_code','airline_id':airlineid,'hub':h});continue
    origin=airport(r);hs=source('https://en.wikipedia.org/w/index.php?oldid='+str(h['source_revision']) if h.get('source_revision') else h.get('source_url','https://en.wikipedia.org/wiki/'+quote(a['wikipedia'])),'airline_hubs')
-   hub={'airline_id':airlineid,'airport_id':origin,'kind':h.get('kind','hub'),'source_id':hs,'coverage':'pending','route_count':0};hubs.append(hub)
+   hub={'airline_id':airlineid,'airport_id':origin,'kind':h.get('kind','hub'),'source_id':hs,'coverage':'pending','route_count':0,**({'note':h['note']} if h.get('note') else {}),**({'seasonal':True} if h.get('seasonal') else {})};hubs.append(hub)
    try:
     fetch_title=r['wikipedia_link'].split('/wiki/')[-1] if r['wikipedia_link'] else h['wikipedia']
     page=fetch(fetch_title,cache)
@@ -210,7 +238,7 @@ def main():
   alias_sid=source(ev_url,'airport_identity')
   airport_aliases.append({'wikipedia_title':wiki,'airport_id':code,'method':ev.get('method','Reviewed airport identifier'),'source_id':alias_sid,**({'wikidata_id':ev['wikidata_id']} if ev.get('wikidata_id') else {})})
  sources.append({'id':'airports','url':'https://ourairports.com/data/','download_url':'https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv','kind':'airport_metadata','license':'Public domain','retrieved_on':TODAY.isoformat(),'sha256':hashlib.sha256((w/'ourairports.csv').read_bytes()).hexdigest()})
- data={'schema_version':1,'as_of':TODAY.isoformat(),'scope':{'membership':'Active full alliance members; connecting partners and suspended members excluded from map.','hubs':'Wikipedia airline infobox hubs, with secondary passenger hubs where explicitly recorded; no inferred all-to-all routes.','routes':'Passenger destination entries in each hub airport Wikipedia table, matched to the airline or explicitly enumerated service brands. Airport table entries are source-listed services, not independently verified nonstop flight schedules.','seasonality':'Seasonal services included and labeled; future and suspended/ended entries are separate. Undated listed entries reflect the retrieved page, not a guarantee of operation on as_of.','coverage':'Coverage status means the source table was parsed. It does not certify the source is exhaustive or up to date. See issues for every unresolved entry.','direction':'Records are hub-origin services. A route listed at both hubs appears in both directions; no reciprocal service is invented.'},'alliances':[{'id':'star','name':'Star Alliance','color':'#d89614'},{'id':'skyteam','name':'SkyTeam','color':'#2474d2'},{'id':'oneworld','name':'oneworld','color':'#bd4294'}],'airlines':out_airlines,'airports':sorted(airports.values(),key=lambda x:x['id']),'hubs':hubs,'routes':routes,'excluded_routes':excluded,'sources':sources,'issues':issues,'airport_aliases':airport_aliases,'membership_notes':roster.get('notes',[]),'suspended_members':roster.get('suspended',[])}
+ data={'schema_version':1,'as_of':TODAY.isoformat(),'scope':{'membership':'Active full members of Star Alliance, SkyTeam, and oneworld, plus a curated set of 40 major carriers outside those three global alliances. Non-aligned is a category, not a fourth alliance. Connecting partners and suspended members are not treated as active full members. Alaska remains in oneworld.','hubs':'Wikipedia airline infobox hubs and secondary passenger hubs; primary operating bases or focus cities are used for point-to-point carriers without hubs. Every relationship preserves its source-defined kind; no inferred all-to-all routes.','routes':'Passenger destination entries in each selected hub or base airport Wikipedia table, matched to the airline or explicitly enumerated service brands. Airport table entries are source-listed services, not independently verified nonstop flight schedules.','seasonality':'Seasonal services included and labeled; future and suspended/ended entries are separate. Undated listed entries reflect the retrieved page, not a guarantee of operation on as_of.','coverage':'Coverage status means the source table was parsed. It does not certify the source is exhaustive or up to date. See issues for every unresolved entry.','direction':'Records are hub-origin services. A route listed at both hubs appears in both directions; no reciprocal service is invented.'},'alliances':[{'id':'star','name':'Star Alliance','color':'#d89614','kind':'alliance'},{'id':'skyteam','name':'SkyTeam','color':'#2474d2','kind':'alliance'},{'id':'oneworld','name':'oneworld','color':'#bd4294','kind':'alliance'},{'id':'nonaligned','name':'Non-aligned','color':'#12856f','kind':'category','description':'Curated major carriers outside Star Alliance, SkyTeam, and oneworld.'}],'airlines':out_airlines,'airports':sorted(airports.values(),key=lambda x:x['id']),'hubs':hubs,'routes':routes,'excluded_routes':excluded,'sources':sources,'issues':issues,'airport_aliases':airport_aliases,'membership_notes':roster.get('notes',[]),'suspended_members':roster.get('suspended',[])}
  args.out.parent.mkdir(parents=True,exist_ok=True);args.out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
  (w/'collection-summary.json').write_text(json.dumps({'airlines':len(airlines),'hubs':len(hubs),'routes':len(routes),'airports':len(airports),'issues':len(issues)},indent=2))
  print((w/'collection-summary.json').read_text(),flush=True)

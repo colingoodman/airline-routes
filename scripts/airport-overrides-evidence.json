@@ -4107,5 +4107,2090 @@
     "method": "Wikipedia airport infobox explicit IATA identifier",
     "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381150919",
     "canonical": "Xiaoshan_Airport"
+  },
+  "São_Paulo–Congonhas_Airport": {
+    "iata": "CGH",
+    "method": "Explicit airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380942900",
+    "source_revision": 1380942900,
+    "wikipedia": "São Paulo–Congonhas Airport"
+  },
+  "St._Pete–Clearwater_International_Airport": {
+    "iata": "PIE",
+    "method": "Explicit airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381262493",
+    "source_revision": 1381262493,
+    "wikipedia": "St. Pete–Clearwater International Airport"
+  },
+  "Viracopos_International_Airport": {
+    "iata": "VCP",
+    "method": "Explicit airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379794767",
+    "source_revision": 1379794767,
+    "wikipedia": "Viracopos International Airport"
+  },
+  "Las_Palmas_Airport": {
+    "iata": "LPA",
+    "method": "Explicit airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379744783",
+    "source_revision": 1379744783,
+    "wikipedia": "Las Palmas Airport"
+  },
+  "Milan_Bergamo_Airport": {
+    "iata": "BGY",
+    "method": "Explicit airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377671270",
+    "source_revision": 1377671270,
+    "wikipedia": "Milan Bergamo Airport"
+  },
+  "London_Luton_Airport": {
+    "iata": "LTN",
+    "method": "Explicit airport infobox IATA",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382145764",
+    "source_revision": 1382145764,
+    "wikipedia": "London Luton Airport"
+  },
+  "Adampur_Airport": {
+    "iata": "AIP",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369310077",
+    "source_revision": "1369310077",
+    "latitude": 31.43306,
+    "longitude": 75.76056,
+    "metadata_distance_km": 0.186,
+    "canonical": "Adampur_Airport"
+  },
+  "Addis_Ababa_Airport": {
+    "iata": "ADD",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380012454",
+    "source_revision": "1380012454",
+    "latitude": 8.97778,
+    "longitude": 38.79944,
+    "metadata_distance_km": 0.02,
+    "canonical": "Addis_Ababa_Airport"
+  },
+  "Adler-Sochi_International_Airport": {
+    "iata": "AER",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381048117",
+    "source_revision": "1381048117",
+    "latitude": 43.45,
+    "longitude": 39.95667,
+    "metadata_distance_km": 0.012,
+    "canonical": "Adler-Sochi_International_Airport"
+  },
+  "Agatti_Airport": {
+    "iata": "AGX",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378840026",
+    "source_revision": "1378840026",
+    "latitude": 10.82806,
+    "longitude": 72.17889,
+    "metadata_distance_km": 0.578,
+    "canonical": "Agatti_Airport"
+  },
+  "Ajaccio_Napoleon_Bonaparte_Airport": {
+    "iata": "AJA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377452873",
+    "source_revision": "1377452873",
+    "latitude": 41.92389,
+    "longitude": 8.8025,
+    "metadata_distance_km": 0.047,
+    "canonical": "Ajaccio_Napoleon_Bonaparte_Airport"
+  },
+  "Aktau_International_Airport": {
+    "iata": "SCO",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375731862",
+    "source_revision": "1375731862",
+    "latitude": 43.86,
+    "longitude": 51.09194,
+    "metadata_distance_km": 0.087,
+    "canonical": "Aktau_International_Airport"
+  },
+  "Aktion_International_Airport": {
+    "iata": "PVK",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381774756",
+    "source_revision": "1381774756",
+    "latitude": 38.92556,
+    "longitude": 20.76528,
+    "metadata_distance_km": 0.007,
+    "canonical": "Aktion_International_Airport"
+  },
+  "Aktobe_International_Airport": {
+    "iata": "AKX",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379731819",
+    "source_revision": "1379731819",
+    "latitude": 50.24583,
+    "longitude": 57.20667,
+    "metadata_distance_km": 0.311,
+    "canonical": "Aktobe_International_Airport"
+  },
+  "Amman_Airport": {
+    "iata": "AMM",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376359076",
+    "source_revision": "1376359076",
+    "latitude": 31.7225,
+    "longitude": 35.99333,
+    "metadata_distance_km": 0.017,
+    "canonical": "Amman_Airport"
+  },
+  "Amman_City_Airport": {
+    "iata": "ADJ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380610708",
+    "source_revision": "1380610708",
+    "latitude": 31.9725,
+    "longitude": 35.99139,
+    "metadata_distance_km": 0.03,
+    "canonical": "Amman_City_Airport"
+  },
+  "Amsterdam_Schiphol_Airport": {
+    "iata": "AMS",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376679923",
+    "source_revision": "1376679923",
+    "latitude": 52.3,
+    "longitude": 4.765,
+    "metadata_distance_km": 0.959,
+    "canonical": "Amsterdam_Schiphol_Airport"
+  },
+  "Ancona_Airport": {
+    "iata": "AOI",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1370852571",
+    "source_revision": "1370852571",
+    "latitude": 43.61611,
+    "longitude": 13.36222,
+    "metadata_distance_km": 0.022,
+    "canonical": "Ancona_Airport"
+  },
+  "Ankara_Airport": {
+    "iata": "ESB",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380611465",
+    "source_revision": "1380611465",
+    "latitude": 40.12806,
+    "longitude": 32.995,
+    "metadata_distance_km": 0.009,
+    "canonical": "Ankara_Airport"
+  },
+  "Aracaju_Airport": {
+    "iata": "AJU",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380468923",
+    "source_revision": "1380468923",
+    "latitude": -10.98528,
+    "longitude": -37.07333,
+    "metadata_distance_km": 0.157,
+    "canonical": "Aracaju_Airport"
+  },
+  "Araripina_Airport": {
+    "iata": "JAW",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1364670614",
+    "source_revision": "1364670614",
+    "latitude": -7.58639,
+    "longitude": -40.53528,
+    "metadata_distance_km": 0.017,
+    "canonical": "Araripina_Airport"
+  },
+  "Atlanta_International_Airport": {
+    "iata": "ATL",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381843002",
+    "source_revision": "1381843002",
+    "latitude": 33.63667,
+    "longitude": -84.42806,
+    "metadata_distance_km": 0.005,
+    "canonical": "Atlanta_International_Airport"
+  },
+  "Ayodhya_International_Airport": {
+    "iata": "AYJ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380733894",
+    "source_revision": "1380733894",
+    "latitude": 26.7480337,
+    "longitude": 82.1507812,
+    "metadata_distance_km": 1.28,
+    "canonical": "Ayodhya_International_Airport"
+  },
+  "Baku_International_Airport": {
+    "iata": "GYD",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380981601",
+    "source_revision": "1380981601",
+    "latitude": 40.4675,
+    "longitude": 50.04667,
+    "metadata_distance_km": 0.689,
+    "canonical": "Baku_International_Airport"
+  },
+  "Baltimore/Washington_International_Thurgood_Marshall_Airport": {
+    "iata": "BWI",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382178657",
+    "source_revision": "1382178657",
+    "latitude": 39.17528,
+    "longitude": -76.66833,
+    "metadata_distance_km": 0.014,
+    "canonical": "Baltimore/Washington_International_Thurgood_Marshall_Airport"
+  },
+  "Baneasa_Airport": {
+    "iata": "BBU",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373866396",
+    "source_revision": "1373866396",
+    "latitude": 44.50361,
+    "longitude": 26.10361,
+    "metadata_distance_km": 0.075,
+    "canonical": "Baneasa_Airport"
+  },
+  "Bangkok–Don_Mueang": {
+    "iata": "DMK",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381907482",
+    "source_revision": "1381907482",
+    "latitude": 13.9125,
+    "longitude": 100.60667,
+    "metadata_distance_km": 0.038,
+    "canonical": "Bangkok–Don_Mueang"
+  },
+  "Bareilly_Airport": {
+    "iata": "BEK",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373928964",
+    "source_revision": "1373928964",
+    "latitude": 28.42222,
+    "longitude": 79.45083,
+    "metadata_distance_km": 0.014,
+    "canonical": "Bareilly_Airport"
+  },
+  "Beauvais-Tillé_Airport": {
+    "iata": "BVA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372229628",
+    "source_revision": "1372229628",
+    "latitude": 49.45444,
+    "longitude": 2.11278,
+    "metadata_distance_km": 0.005,
+    "canonical": "Beauvais-Tillé_Airport"
+  },
+  "Beauvais–Tillé_Airport": {
+    "iata": "BVA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372229628",
+    "source_revision": "1372229628",
+    "latitude": 49.45444,
+    "longitude": 2.11278,
+    "metadata_distance_km": 0.005,
+    "canonical": "Beauvais–Tillé_Airport"
+  },
+  "Beirut_Airport": {
+    "iata": "BEY",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382095159",
+    "source_revision": "1382095159",
+    "latitude": 33.82111,
+    "longitude": 35.48833,
+    "metadata_distance_km": 0.164,
+    "canonical": "Beirut_Airport"
+  },
+  "Belfast–International": {
+    "iata": "BFS",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382126810",
+    "source_revision": "1382126810",
+    "latitude": 54.6575,
+    "longitude": -6.21583,
+    "metadata_distance_km": 0.0,
+    "canonical": "Belfast–International"
+  },
+  "Bergamo_Airport": {
+    "iata": "BGY",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377671270",
+    "source_revision": "1377671270",
+    "latitude": 45.66889,
+    "longitude": 9.70028,
+    "metadata_distance_km": 0.668,
+    "canonical": "Bergamo_Airport"
+  },
+  "Brandon_Municipal_Airport": {
+    "iata": "YBR",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1362807004",
+    "source_revision": "1362807004",
+    "latitude": 49.91,
+    "longitude": -99.95222,
+    "metadata_distance_km": 0.023,
+    "canonical": "Brandon_Municipal_Airport"
+  },
+  "Bratislava_Airport": {
+    "iata": "BTS",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382046700",
+    "source_revision": "1382046700",
+    "latitude": 48.17,
+    "longitude": 17.21278,
+    "metadata_distance_km": 0.023,
+    "canonical": "Bratislava_Airport"
+  },
+  "Brive_Airport": {
+    "iata": "BVE",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363215423",
+    "source_revision": "1363215423",
+    "latitude": 45.03972,
+    "longitude": 1.48556,
+    "metadata_distance_km": 0.0,
+    "canonical": "Brive_Airport"
+  },
+  "Brno_Airport": {
+    "iata": "BRQ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1362939181",
+    "source_revision": "1362939181",
+    "latitude": 49.15139,
+    "longitude": 16.69444,
+    "metadata_distance_km": 0.036,
+    "canonical": "Brno_Airport"
+  },
+  "Budapest_Liszt_Ferenc_International_Airport": {
+    "iata": "BUD",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382144077",
+    "source_revision": "1382144077",
+    "latitude": 47.43944,
+    "longitude": 19.26194,
+    "metadata_distance_km": 1.03,
+    "canonical": "Budapest_Liszt_Ferenc_International_Airport"
+  },
+  "Burqin_Kanas_Airport": {
+    "iata": "KJI",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363023387",
+    "source_revision": "1363023387",
+    "latitude": 48.22111,
+    "longitude": 86.99806,
+    "metadata_distance_km": 0.208,
+    "canonical": "Burqin_Kanas_Airport"
+  },
+  "Busselton_Margaret_River_Airport": {
+    "iata": "BQB",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377012900",
+    "source_revision": "1377012900",
+    "latitude": -33.68722,
+    "longitude": 115.40028,
+    "metadata_distance_km": 0.0,
+    "canonical": "Busselton_Margaret_River_Airport"
+  },
+  "Béziers_Cap_d'Agde_Airport": {
+    "iata": "BZR",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363023580",
+    "source_revision": "1363023580",
+    "latitude": 43.32333,
+    "longitude": 3.35333,
+    "metadata_distance_km": 0.05,
+    "canonical": "Béziers_Cap_d'Agde_Airport"
+  },
+  "Can_Tho_Airport": {
+    "iata": "VCA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374870274",
+    "source_revision": "1374870274",
+    "latitude": 10.08528,
+    "longitude": 105.71194,
+    "metadata_distance_km": 0.351,
+    "canonical": "Can_Tho_Airport"
+  },
+  "Carcassonne_Airport": {
+    "iata": "CCF",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379517589",
+    "source_revision": "1379517589",
+    "latitude": 43.21583,
+    "longitude": 2.30861,
+    "metadata_distance_km": 0.187,
+    "canonical": "Carcassonne_Airport"
+  },
+  "Carthage_Airport": {
+    "iata": "TUN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1365358910",
+    "source_revision": "1365358910",
+    "latitude": 36.85111,
+    "longitude": 10.22722,
+    "metadata_distance_km": 0.012,
+    "canonical": "Carthage_Airport"
+  },
+  "Cerro_Moreno_International_Airport": {
+    "iata": "ANF",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381099488",
+    "source_revision": "1381099488",
+    "latitude": -23.44444,
+    "longitude": -70.445,
+    "metadata_distance_km": 0.096,
+    "canonical": "Cerro_Moreno_International_Airport"
+  },
+  "Chaudhary_Charan_Singh_Airport": {
+    "iata": "LKO",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381873132",
+    "source_revision": "1381873132",
+    "latitude": 26.76056,
+    "longitude": 80.89028,
+    "metadata_distance_km": 0.098,
+    "canonical": "Chaudhary_Charan_Singh_Airport"
+  },
+  "Chongqing_Xiannvshan_Airport": {
+    "iata": "CQW",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363027806",
+    "source_revision": "1363027806",
+    "latitude": 29.46583,
+    "longitude": 107.69222,
+    "metadata_distance_km": 0.141,
+    "canonical": "Chongqing_Xiannvshan_Airport"
+  },
+  "Colombo-Bandaranaike": {
+    "iata": "CMB",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381690066",
+    "source_revision": "1381690066",
+    "latitude": 7.18111,
+    "longitude": 79.88361,
+    "metadata_distance_km": 0.067,
+    "canonical": "Colombo-Bandaranaike"
+  },
+  "Comte._Ariston_Pessoa_Regional_Airport": {
+    "iata": "JJD",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1364673036",
+    "source_revision": "1364673036",
+    "latitude": -2.90667,
+    "longitude": -40.35806,
+    "metadata_distance_km": 0.085,
+    "canonical": "Comte._Ariston_Pessoa_Regional_Airport"
+  },
+  "Concord–Padgett_Regional_Airport": {
+    "iata": "USA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381023390",
+    "source_revision": "1381023390",
+    "latitude": 35.38778,
+    "longitude": -80.70917,
+    "metadata_distance_km": 0.007,
+    "canonical": "Concord–Padgett_Regional_Airport"
+  },
+  "Congonhas-São_Paulo_Airport": {
+    "iata": "CGH",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380942900",
+    "source_revision": "1380942900",
+    "latitude": -23.62611,
+    "longitude": -46.65639,
+    "metadata_distance_km": 0.251,
+    "canonical": "Congonhas-São_Paulo_Airport"
+  },
+  "Cyril_E._King_International_Airport": {
+    "iata": "STT",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380101255",
+    "source_revision": "1380101255",
+    "latitude": 18.33722,
+    "longitude": -64.97333,
+    "metadata_distance_km": 0.414,
+    "canonical": "Cyril_E._King_International_Airport"
+  },
+  "Davao_International_Airport": {
+    "iata": "DVO",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381907199",
+    "source_revision": "1381907199",
+    "latitude": 7.12528,
+    "longitude": 125.64583,
+    "metadata_distance_km": 0.033,
+    "canonical": "Davao_International_Airport"
+  },
+  "Divinópolis_Airport": {
+    "iata": "DIQ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375251737",
+    "source_revision": "1375251737",
+    "latitude": -20.18194,
+    "longitude": -44.87,
+    "metadata_distance_km": 0.167,
+    "canonical": "Divinópolis_Airport"
+  },
+  "Djibouti_International_Airport": {
+    "iata": "JIB",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375698027",
+    "source_revision": "1375698027",
+    "latitude": 11.5462583,
+    "longitude": 43.1592056,
+    "metadata_distance_km": 0.12,
+    "canonical": "Djibouti_International_Airport"
+  },
+  "Donyi_Polo_Airport": {
+    "iata": "HGI",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376817893",
+    "source_revision": "1376817893",
+    "latitude": 26.97,
+    "longitude": 93.66472,
+    "metadata_distance_km": 2.594,
+    "canonical": "Donyi_Polo_Airport"
+  },
+  "Donyi_Polo_Airport,_Itanagar": {
+    "iata": "HGI",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376817893",
+    "source_revision": "1376817893",
+    "latitude": 26.97,
+    "longitude": 93.66472,
+    "metadata_distance_km": 2.594,
+    "canonical": "Donyi_Polo_Airport,_Itanagar"
+  },
+  "East_Kimberley_Regional_Airport": {
+    "iata": "KNX",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363034579",
+    "source_revision": "1363034579",
+    "latitude": -15.77806,
+    "longitude": 128.7075,
+    "metadata_distance_km": 0.053,
+    "canonical": "East_Kimberley_Regional_Airport"
+  },
+  "Ercan_Airport": {
+    "iata": "ECN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380197697",
+    "source_revision": "1380197697",
+    "latitude": 35.15972,
+    "longitude": 33.5,
+    "metadata_distance_km": 0.997,
+    "canonical": "Ercan_Airport"
+  },
+  "Erfurt–Weimar_Airport": {
+    "iata": "ERF",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1367187654",
+    "source_revision": "1367187654",
+    "latitude": 50.97972,
+    "longitude": 10.95806,
+    "metadata_distance_km": 0.245,
+    "canonical": "Erfurt–Weimar_Airport"
+  },
+  "FAP_Captain_David_Abensur_Rengifo_International_Airport": {
+    "iata": "PCL",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381751462",
+    "source_revision": "1381751462",
+    "latitude": -8.37778,
+    "longitude": -74.57417,
+    "metadata_distance_km": 0.048,
+    "canonical": "FAP_Captain_David_Abensur_Rengifo_International_Airport"
+  },
+  "Federico_García_Lorca_Granada_Airport": {
+    "iata": "GRX",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381819342",
+    "source_revision": "1381819342",
+    "latitude": 37.18861,
+    "longitude": -3.77722,
+    "metadata_distance_km": 0.016,
+    "canonical": "Federico_García_Lorca_Granada_Airport"
+  },
+  "Fes–Saïss_Airport": {
+    "iata": "FEZ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371379861",
+    "source_revision": "1371379861",
+    "latitude": 33.92722,
+    "longitude": -4.97806,
+    "metadata_distance_km": 0.013,
+    "canonical": "Fes–Saïss_Airport"
+  },
+  "Fort_Lauderdale_International_Airport": {
+    "iata": "FLL",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382148738",
+    "source_revision": "1382148738",
+    "latitude": 26.0725,
+    "longitude": -80.15278,
+    "metadata_distance_km": 0.013,
+    "canonical": "Fort_Lauderdale_International_Airport"
+  },
+  "Francisco_B._Reyes_Airport": {
+    "iata": "USU",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372386100",
+    "source_revision": "1372386100",
+    "latitude": 12.12139,
+    "longitude": 120.1,
+    "metadata_distance_km": 0.102,
+    "canonical": "Francisco_B._Reyes_Airport"
+  },
+  "Francisco_de_Sá_Carneiro_Airport": {
+    "iata": "OPO",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380199309",
+    "source_revision": "1380199309",
+    "latitude": 41.23556,
+    "longitude": -8.67806,
+    "metadata_distance_km": 1.422,
+    "canonical": "Francisco_de_Sá_Carneiro_Airport"
+  },
+  "Fès–Saïs_Airport": {
+    "iata": "FEZ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371379861",
+    "source_revision": "1371379861",
+    "latitude": 33.92722,
+    "longitude": -4.97806,
+    "metadata_distance_km": 0.013,
+    "canonical": "Fès–Saïs_Airport"
+  },
+  "Fès–Saïss_Airport": {
+    "iata": "FEZ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371379861",
+    "source_revision": "1371379861",
+    "latitude": 33.92722,
+    "longitude": -4.97806,
+    "metadata_distance_km": 0.013,
+    "canonical": "Fès–Saïss_Airport"
+  },
+  "Gautam_Buddha_Airport": {
+    "iata": "BWA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371389669",
+    "source_revision": "1371389669",
+    "latitude": 27.50556,
+    "longitude": 83.41611,
+    "metadata_distance_km": 0.574,
+    "canonical": "Gautam_Buddha_Airport"
+  },
+  "Gaziantep_Oğuzeli_Airport": {
+    "iata": "GZT",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372560804",
+    "source_revision": "1372560804",
+    "latitude": 36.94778,
+    "longitude": 37.47889,
+    "metadata_distance_km": 0.067,
+    "canonical": "Gaziantep_Oğuzeli_Airport"
+  },
+  "Gdańsk_Airport": {
+    "iata": "GDN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380741425",
+    "source_revision": "1380741425",
+    "latitude": 54.3775,
+    "longitude": 18.46611,
+    "metadata_distance_km": 0.013,
+    "canonical": "Gdańsk_Airport"
+  },
+  "Genoa_Airport": {
+    "iata": "GOA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381018868",
+    "source_revision": "1381018868",
+    "latitude": 44.41333,
+    "longitude": 8.8375,
+    "metadata_distance_km": 0.294,
+    "canonical": "Genoa_Airport"
+  },
+  "George_Enescu_International_Airport": {
+    "iata": "BCM",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363039195",
+    "source_revision": "1363039195",
+    "latitude": 46.52194,
+    "longitude": 26.91028,
+    "metadata_distance_km": 0.005,
+    "canonical": "George_Enescu_International_Airport"
+  },
+  "Goa_International_Airport": {
+    "iata": "GOI",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381869994",
+    "source_revision": "1381869994",
+    "latitude": 15.38083,
+    "longitude": 73.83139,
+    "metadata_distance_km": 0.225,
+    "canonical": "Goa_International_Airport"
+  },
+  "Goiânia_International_Airport": {
+    "iata": "GYN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380578899",
+    "source_revision": "1380578899",
+    "latitude": -16.6325,
+    "longitude": -49.22111,
+    "metadata_distance_km": 0.071,
+    "canonical": "Goiânia_International_Airport"
+  },
+  "Gothenburg_Landvetter_Airport": {
+    "iata": "GOT",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382055519",
+    "source_revision": "1382055519",
+    "latitude": 57.66,
+    "longitude": 12.29111,
+    "metadata_distance_km": 0.741,
+    "canonical": "Gothenburg_Landvetter_Airport"
+  },
+  "Guangyuan_Panlong_Airport": {
+    "iata": "GYS",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380075946",
+    "source_revision": "1380075946",
+    "latitude": 32.39111,
+    "longitude": 105.70194,
+    "metadata_distance_km": 0.698,
+    "canonical": "Guangyuan_Panlong_Airport"
+  },
+  "Guarulhos_International_Airport": {
+    "iata": "GRU",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381724833",
+    "source_revision": "1381724833",
+    "latitude": -23.43556,
+    "longitude": -46.47306,
+    "metadata_distance_km": 0.572,
+    "canonical": "Guarulhos_International_Airport"
+  },
+  "Gulf_Shores_International_Airport": {
+    "iata": "GUF",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379929258",
+    "source_revision": "1379929258",
+    "latitude": 30.28972,
+    "longitude": -87.67167,
+    "metadata_distance_km": 0.088,
+    "canonical": "Gulf_Shores_International_Airport"
+  },
+  "Gumrak_Airport": {
+    "iata": "VOG",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382090482",
+    "source_revision": "1382090482",
+    "latitude": 48.78167,
+    "longitude": 44.34667,
+    "metadata_distance_km": 0.549,
+    "canonical": "Gumrak_Airport"
+  },
+  "Hahn_Airport": {
+    "iata": "HHN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379408045",
+    "source_revision": "1379408045",
+    "latitude": 49.94833,
+    "longitude": 7.26417,
+    "metadata_distance_km": 0.281,
+    "canonical": "Hahn_Airport"
+  },
+  "Hanoi_Airport": {
+    "iata": "HAN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382050814",
+    "source_revision": "1382050814",
+    "latitude": 21.21389,
+    "longitude": 105.80306,
+    "metadata_distance_km": 0.91,
+    "canonical": "Hanoi_Airport"
+  },
+  "Heraklion_Airport": {
+    "iata": "HER",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381559148",
+    "source_revision": "1381559148",
+    "latitude": 35.33972,
+    "longitude": 25.18028,
+    "metadata_distance_km": 0.003,
+    "canonical": "Heraklion_Airport"
+  },
+  "Hong_Kong_Airport": {
+    "iata": "HKG",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079096",
+    "source_revision": "1382079096",
+    "latitude": 22.30889,
+    "longitude": 113.91444,
+    "metadata_distance_km": 0.331,
+    "canonical": "Hong_Kong_Airport"
+  },
+  "Houston_Hobby_Airport": {
+    "iata": "HOU",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378393954",
+    "source_revision": "1378393954",
+    "latitude": 29.64556,
+    "longitude": -95.27889,
+    "metadata_distance_km": 0.202,
+    "canonical": "Houston_Hobby_Airport"
+  },
+  "Huaraz_Airport": {
+    "iata": "ATA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363028928",
+    "source_revision": "1363028928",
+    "latitude": -9.34722,
+    "longitude": -77.59861,
+    "metadata_distance_km": 0.034,
+    "canonical": "Huaraz_Airport"
+  },
+  "Ireland_West_Airport": {
+    "iata": "NOC",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382057632",
+    "source_revision": "1382057632",
+    "latitude": 53.91028,
+    "longitude": -8.81861,
+    "metadata_distance_km": 0.107,
+    "canonical": "Ireland_West_Airport"
+  },
+  "Irkutsk_International_Airport": {
+    "iata": "IKT",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381863149",
+    "source_revision": "1381863149",
+    "latitude": 52.26806,
+    "longitude": 104.38889,
+    "metadata_distance_km": 0.478,
+    "canonical": "Irkutsk_International_Airport"
+  },
+  "Istanbul–Sabiha_Gökçen": {
+    "iata": "SAW",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381998815",
+    "source_revision": "1381998815",
+    "latitude": 40.89833,
+    "longitude": 29.30917,
+    "metadata_distance_km": 0.03,
+    "canonical": "Istanbul–Sabiha_Gökçen"
+  },
+  "Jieyang_Airport": {
+    "iata": "SWA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381148230",
+    "source_revision": "1381148230",
+    "latitude": 23.5525,
+    "longitude": 116.50583,
+    "metadata_distance_km": 0.264,
+    "canonical": "Jieyang_Airport"
+  },
+  "John_C._Munro_Hamilton_International_Airport": {
+    "iata": "YHM",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382150187",
+    "source_revision": "1382150187",
+    "latitude": 43.17361,
+    "longitude": -79.935,
+    "metadata_distance_km": 0.52,
+    "canonical": "John_C._Munro_Hamilton_International_Airport"
+  },
+  "Karlsruhe/Baden-Baden_Airport": {
+    "iata": "FKB",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380538831",
+    "source_revision": "1380538831",
+    "latitude": 48.77944,
+    "longitude": 8.08056,
+    "metadata_distance_km": 0.006,
+    "canonical": "Karlsruhe/Baden-Baden_Airport"
+  },
+  "Kayseri_Airport": {
+    "iata": "ASR",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368125923",
+    "source_revision": "1368125923",
+    "latitude": 38.77028,
+    "longitude": 35.49528,
+    "metadata_distance_km": 0.017,
+    "canonical": "Kayseri_Airport"
+  },
+  "Kish_International_Airport": {
+    "iata": "KIH",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363958276",
+    "source_revision": "1363958276",
+    "latitude": 26.5261556,
+    "longitude": 53.9802111,
+    "metadata_distance_km": 0.085,
+    "canonical": "Kish_International_Airport"
+  },
+  "Kitchener/Waterloo": {
+    "iata": "YKF",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372869785",
+    "source_revision": "1372869785",
+    "latitude": 43.46083,
+    "longitude": -80.37861,
+    "metadata_distance_km": 0.003,
+    "canonical": "Kitchener/Waterloo"
+  },
+  "Knevichi_Airport": {
+    "iata": "VVO",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381298432",
+    "source_revision": "1381298432",
+    "latitude": 43.39917,
+    "longitude": 132.15139,
+    "metadata_distance_km": 0.416,
+    "canonical": "Knevichi_Airport"
+  },
+  "Koltsovo_International_Airport": {
+    "iata": "SVX",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382089927",
+    "source_revision": "1382089927",
+    "latitude": 56.74139,
+    "longitude": 60.80361,
+    "metadata_distance_km": 0.198,
+    "canonical": "Koltsovo_International_Airport"
+  },
+  "Korla_Airport": {
+    "iata": "KRL",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380007347",
+    "source_revision": "1380007347",
+    "latitude": 41.61639,
+    "longitude": 86.14306,
+    "metadata_distance_km": 0.244,
+    "canonical": "Korla_Airport"
+  },
+  "Kostanay_Airport": {
+    "iata": "KSN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380689627",
+    "source_revision": "1380689627",
+    "latitude": 53.20694,
+    "longitude": 63.55028,
+    "metadata_distance_km": 0.004,
+    "canonical": "Kostanay_Airport"
+  },
+  "Krakow_Airport": {
+    "iata": "KRK",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379191260",
+    "source_revision": "1379191260",
+    "latitude": 50.07778,
+    "longitude": 19.78472,
+    "metadata_distance_km": 0.01,
+    "canonical": "Krakow_Airport"
+  },
+  "Krasnodar_International_Airport": {
+    "iata": "KRR",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382088950",
+    "source_revision": "1382088950",
+    "latitude": 45.03472,
+    "longitude": 39.17056,
+    "metadata_distance_km": 0.289,
+    "canonical": "Krasnodar_International_Airport"
+  },
+  "La_Araucanía_Airport": {
+    "iata": "ZCO",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1366435329",
+    "source_revision": "1366435329",
+    "latitude": -38.925,
+    "longitude": -72.65139,
+    "metadata_distance_km": 0.101,
+    "canonical": "La_Araucanía_Airport"
+  },
+  "Laguindingan_Airport": {
+    "iata": "CGY",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381833335",
+    "source_revision": "1381833335",
+    "latitude": 8.6125,
+    "longitude": 124.45722,
+    "metadata_distance_km": 0.086,
+    "canonical": "Laguindingan_Airport"
+  },
+  "Lamezia_Terme_Airport": {
+    "iata": "SUF",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1367514244",
+    "source_revision": "1367514244",
+    "latitude": 38.90528,
+    "longitude": 16.24222,
+    "metadata_distance_km": 0.344,
+    "canonical": "Lamezia_Terme_Airport"
+  },
+  "Larestan_Ayatollah_Ayatollahi_International_Airport": {
+    "iata": "LRR",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363052459",
+    "source_revision": "1363052459",
+    "latitude": 27.67306,
+    "longitude": 54.38139,
+    "metadata_distance_km": 0.262,
+    "canonical": "Larestan_Ayatollah_Ayatollahi_International_Airport"
+  },
+  "Las_Vegas_International_Airport": {
+    "iata": "LAS",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381962205",
+    "source_revision": "1381962205",
+    "latitude": 36.08,
+    "longitude": -115.15222,
+    "metadata_distance_km": 0.375,
+    "canonical": "Las_Vegas_International_Airport"
+  },
+  "Lhasa_Gonggar_International_Airport": {
+    "iata": "LXA",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373003063",
+    "source_revision": "1373003063",
+    "latitude": 29.29778,
+    "longitude": 90.91194,
+    "metadata_distance_km": 0.025,
+    "canonical": "Lhasa_Gonggar_International_Airport"
+  },
+  "Lianyungang_Airport": {
+    "iata": "LYG",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381847420",
+    "source_revision": "1381847420",
+    "latitude": 34.41306,
+    "longitude": 119.17722,
+    "metadata_distance_km": 0.197,
+    "canonical": "Lianyungang_Airport"
+  },
+  "Lien_Khuong_International_Airport": {
+    "iata": "DLI",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379055027",
+    "source_revision": "1379055027",
+    "latitude": 11.75056,
+    "longitude": 108.37361,
+    "metadata_distance_km": 0.72,
+    "canonical": "Lien_Khuong_International_Airport"
+  },
+  "Linfen_Yaodu_Airport": {
+    "iata": "LFQ",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1364299095",
+    "source_revision": "1364299095",
+    "latitude": 36.13167,
+    "longitude": 111.65806,
+    "metadata_distance_km": 1.515,
+    "canonical": "Linfen_Yaodu_Airport"
+  },
+  "Linhares_Regional_Airport": {
+    "iata": "LHN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363780131",
+    "source_revision": "1363780131",
+    "latitude": -19.35528,
+    "longitude": -40.07139,
+    "metadata_distance_km": 0.014,
+    "canonical": "Linhares_Regional_Airport"
+  },
+  "London–Luton": {
+    "iata": "LTN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382145764",
+    "source_revision": "1382145764",
+    "latitude": 51.87472,
+    "longitude": -0.36833,
+    "metadata_distance_km": 0.002,
+    "canonical": "London–Luton"
+  },
+  "London–Stansted": {
+    "iata": "STN",
+    "method": "Wikipedia airport infobox explicit IATA code with metadata coordinate check",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381604730",
+    "source_revision": "1381604730",
+    "latitude": 51.885,
+    "longitude": 0.235,
+    "metadata_distance_km": 0.0,
+    "canonical": "London–Stansted"
+  },
+  "Borg_El_Arab_International_Airport": {
+    "iata": "ALY",
+    "method": "Airport identity and effective IATA code change verified against Aegean trade bulletin; original physical airport retained",
+    "source_url": "https://www.aegeanhub.com/fr/booking-process-and-sales/newsletter/",
+    "canonical": "Alexandria International Airport (Egypt)",
+    "effective_on": "2026-09-16"
+  },
+  "Longdongbao_Airport": {
+    "iata": "KWE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381328638",
+    "source_revision": "1381328638",
+    "latitude": 26.53861,
+    "longitude": 106.80083,
+    "metadata_distance_km": 0.476
+  },
+  "Longnan_Chengxian_Airport": {
+    "iata": "LNL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369478081",
+    "source_revision": "1369478081",
+    "latitude": 33.788,
+    "longitude": 105.797,
+    "metadata_distance_km": 0.68
+  },
+  "Maharaja_Bir_Bikram_Airport": {
+    "iata": "IXA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375842308",
+    "source_revision": "1375842308",
+    "latitude": 23.89,
+    "longitude": 91.24222,
+    "metadata_distance_km": 0.381
+  },
+  "Maharishi_Valmiki_International_Airport": {
+    "iata": "AYJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380733894",
+    "source_revision": "1380733894",
+    "latitude": 26.7480337,
+    "longitude": 82.1507812,
+    "metadata_distance_km": 1.28
+  },
+  "Malatya_Erhaç_Airport": {
+    "iata": "MLX",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1366475737",
+    "source_revision": "1366475737",
+    "latitude": 38.43528,
+    "longitude": 38.09083,
+    "metadata_distance_km": 0.015
+  },
+  "Maringá_Regional_Airport": {
+    "iata": "MGF",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371770876",
+    "source_revision": "1371770876",
+    "latitude": -23.47639,
+    "longitude": -52.01778,
+    "metadata_distance_km": 0.167
+  },
+  "Mariscal_Lamar_Airport": {
+    "iata": "CUE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381020602",
+    "source_revision": "1381020602",
+    "latitude": -2.88944,
+    "longitude": -78.98472,
+    "metadata_distance_km": 0.036
+  },
+  "Marsa_Matruh_International_Airport": {
+    "iata": "MUH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1364480985",
+    "source_revision": "1364480985",
+    "latitude": 31.325,
+    "longitude": 27.22222,
+    "metadata_distance_km": 0.077
+  },
+  "Mashhad_Shahid_Hasheminejad_International_Airport": {
+    "iata": "MHD",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380611315",
+    "source_revision": "1380611315",
+    "latitude": 36.235,
+    "longitude": 59.64083,
+    "metadata_distance_km": 0.191
+  },
+  "Mercedita_International_Airport": {
+    "iata": "PSE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378815632",
+    "source_revision": "1378815632",
+    "latitude": 18.00833,
+    "longitude": -66.56306,
+    "metadata_distance_km": 0.007
+  },
+  "Mesa_Gateway_Airport": {
+    "iata": "AZA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1375239296",
+    "source_revision": "1375239296",
+    "latitude": 33.30778,
+    "longitude": -111.65556,
+    "metadata_distance_km": 0.052
+  },
+  "MidAmerica_St._Louis_Airport": {
+    "iata": "BLV",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380063844",
+    "source_revision": "1380063844",
+    "latitude": 38.54528,
+    "longitude": -89.83528,
+    "metadata_distance_km": 0.011
+  },
+  "Milwaukee_International_Airport": {
+    "iata": "MKE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381436610",
+    "source_revision": "1381436610",
+    "latitude": 42.942889,
+    "longitude": -87.91444,
+    "metadata_distance_km": 1.529
+  },
+  "Moises_R._Espinosa_Airport": {
+    "iata": "MBT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379630960",
+    "source_revision": "1379630960",
+    "latitude": 12.36944,
+    "longitude": 123.62917,
+    "metadata_distance_km": 0.104
+  },
+  "Moncton_Airport": {
+    "iata": "YQM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382208644",
+    "source_revision": "1382208644",
+    "latitude": 46.11611,
+    "longitude": -64.67861,
+    "metadata_distance_km": 0.343
+  },
+  "Montpellier_Airport": {
+    "iata": "MPL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379746204",
+    "source_revision": "1379746204",
+    "latitude": 43.57639,
+    "longitude": 3.96306,
+    "metadata_distance_km": 0.022
+  },
+  "Montreal_Metropolitan_Airport": {
+    "iata": "YHU",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382075226",
+    "source_revision": "1382075226",
+    "latitude": 45.51806,
+    "longitude": -73.41694,
+    "metadata_distance_km": 0.062
+  },
+  "Moscow–Vnukovo": {
+    "iata": "VKO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381235997",
+    "source_revision": "1381235997",
+    "latitude": 55.59611,
+    "longitude": 37.2675,
+    "metadata_distance_km": 0.636
+  },
+  "Mostar_Airport": {
+    "iata": "OMO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374034675",
+    "source_revision": "1374034675",
+    "latitude": 43.28278,
+    "longitude": 17.84583,
+    "metadata_distance_km": 0.039
+  },
+  "Mustai_Karim_Ufa_International_Airport": {
+    "iata": "UFA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382090846",
+    "source_revision": "1382090846",
+    "latitude": 54.56361,
+    "longitude": 55.88028,
+    "metadata_distance_km": 0.778
+  },
+  "Mutiara_SIS_Al-Jufrie_International_Airport": {
+    "iata": "PLW",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380948130",
+    "source_revision": "1380948130",
+    "latitude": -0.91861,
+    "longitude": 119.90972,
+    "metadata_distance_km": 0.267
+  },
+  "Mykonos_International_Airport": {
+    "iata": "JMK",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378524657",
+    "source_revision": "1378524657",
+    "latitude": 37.4351278,
+    "longitude": 25.3481028,
+    "metadata_distance_km": 0.003
+  },
+  "Nagpur_Airport": {
+    "iata": "NAG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381872743",
+    "source_revision": "1381872743",
+    "latitude": 21.09222,
+    "longitude": 79.04722,
+    "metadata_distance_km": 0.003
+  },
+  "New_Orleans_Airport": {
+    "iata": "MSY",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381275768",
+    "source_revision": "1381275768",
+    "latitude": 29.99333,
+    "longitude": -90.25806,
+    "metadata_distance_km": 0.637
+  },
+  "Newark_International_Airport": {
+    "iata": "EWR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381182468",
+    "source_revision": "1381182468",
+    "latitude": 40.6925,
+    "longitude": -74.16861,
+    "metadata_distance_km": 0.381
+  },
+  "Noida_Airport": {
+    "iata": "DXN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381445557",
+    "source_revision": "1381445557",
+    "latitude": 28.17,
+    "longitude": 77.61,
+    "metadata_distance_km": 1.112
+  },
+  "Nyingchi_Mainling_Airport": {
+    "iata": "LZY",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372532767",
+    "source_revision": "1372532767",
+    "latitude": 29.30333,
+    "longitude": 94.33528,
+    "metadata_distance_km": 0.004
+  },
+  "Nîmes–Alès–Camargue–Cévennes_Airport": {
+    "iata": "FNI",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379503275",
+    "source_revision": "1379503275",
+    "latitude": 43.7575,
+    "longitude": 4.41639,
+    "metadata_distance_km": 0.011
+  },
+  "Ontario_Airport": {
+    "iata": "ONT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381394975",
+    "source_revision": "1381394975",
+    "latitude": 34.05611,
+    "longitude": -117.60111,
+    "metadata_distance_km": 0.016
+  },
+  "Oskemen_Airport": {
+    "iata": "UKK",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368837661",
+    "source_revision": "1368837661",
+    "latitude": 50.03611,
+    "longitude": 82.49417,
+    "metadata_distance_km": 0.18
+  },
+  "Oslo_Gardermoen_Airport": {
+    "iata": "OSL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382111288",
+    "source_revision": "1382111288",
+    "latitude": 60.20278,
+    "longitude": 11.08389,
+    "metadata_distance_km": 1.344
+  },
+  "Ozamiz_Airport": {
+    "iata": "OZC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369442489",
+    "source_revision": "1369442489",
+    "latitude": 8.178525,
+    "longitude": 123.8413861,
+    "metadata_distance_km": 0.068
+  },
+  "Panglao_International_Airport": {
+    "iata": "TAG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382192672",
+    "source_revision": "1382192672",
+    "latitude": 9.567,
+    "longitude": 123.775,
+    "metadata_distance_km": 0.858
+  },
+  "Patna_Airport": {
+    "iata": "PAT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381609831",
+    "source_revision": "1381609831",
+    "latitude": 25.59139,
+    "longitude": 85.08917,
+    "metadata_distance_km": 0.118
+  },
+  "Patos_Airport": {
+    "iata": "JPO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1364670371",
+    "source_revision": "1364670371",
+    "latitude": -7.03778,
+    "longitude": -37.2575,
+    "metadata_distance_km": 0.665
+  },
+  "Patras_Araxos_Airport": {
+    "iata": "GPA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1367339261",
+    "source_revision": "1367339261",
+    "latitude": 38.15111,
+    "longitude": 21.42556,
+    "metadata_distance_km": 0.004
+  },
+  "Penang_Airport": {
+    "iata": "PEN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382076808",
+    "source_revision": "1382076808",
+    "latitude": 5.297139,
+    "longitude": 100.2768639,
+    "metadata_distance_km": 0.12
+  },
+  "Pisa_Airport": {
+    "iata": "PSA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368021485",
+    "source_revision": "1368021485",
+    "latitude": 43.68389,
+    "longitude": 10.3925,
+    "metadata_distance_km": 0.016
+  },
+  "Planalto_Serrano_Regional_Airport": {
+    "iata": "EEA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379091673",
+    "source_revision": "1379091673",
+    "latitude": -27.63417,
+    "longitude": -50.35833,
+    "metadata_distance_km": 0.009
+  },
+  "Plovdiv_Airport": {
+    "iata": "PDV",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381295996",
+    "source_revision": "1381295996",
+    "latitude": 42.06778,
+    "longitude": 24.86472,
+    "metadata_distance_km": 1.149
+  },
+  "Port_Moresby_International_Airport": {
+    "iata": "POM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378507266",
+    "source_revision": "1378507266",
+    "latitude": -9.44333,
+    "longitude": 147.22,
+    "metadata_distance_km": 0.006
+  },
+  "Porto_Velho_Airport": {
+    "iata": "PVH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381073036",
+    "source_revision": "1381073036",
+    "latitude": -8.71361,
+    "longitude": -63.90278,
+    "metadata_distance_km": 0.571
+  },
+  "Portsmouth_International_Airport_at_Pease": {
+    "iata": "PSM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381446915",
+    "source_revision": "1381446915",
+    "latitude": 43.07806,
+    "longitude": -70.82333,
+    "metadata_distance_km": 0.018
+  },
+  "Puerto_Princesa_International_Airport": {
+    "iata": "PPS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1370341836",
+    "source_revision": "1370341836",
+    "latitude": 9.74194,
+    "longitude": 118.75889,
+    "metadata_distance_km": 0.027
+  },
+  "Qassim_Regional_Airport": {
+    "iata": "ELQ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381870051",
+    "source_revision": "1381870051",
+    "latitude": 26.30278,
+    "longitude": 43.77389,
+    "metadata_distance_km": 0.051
+  },
+  "Qeshm_Airport": {
+    "iata": "GSM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374048451",
+    "source_revision": "1374048451",
+    "latitude": 26.7546389,
+    "longitude": 55.9023528,
+    "metadata_distance_km": 0.0
+  },
+  "Rabat_Airport": {
+    "iata": "RBA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377436873",
+    "source_revision": "1377436873",
+    "latitude": 34.05139,
+    "longitude": -6.75139,
+    "metadata_distance_km": 0.017
+  },
+  "Rajmata_Vijaya_Raje_Scindia_Airport": {
+    "iata": "GWL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1373030029",
+    "source_revision": "1373030029",
+    "latitude": 26.29333,
+    "longitude": 78.22778,
+    "metadata_distance_km": 0.004
+  },
+  "Ranchi_Airport": {
+    "iata": "IXR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381872074",
+    "source_revision": "1381872074",
+    "latitude": 23.31417,
+    "longitude": 85.32167,
+    "metadata_distance_km": 0.015
+  },
+  "Rarotonga_Airport": {
+    "iata": "RAR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363074260",
+    "source_revision": "1363074260",
+    "latitude": -21.20278,
+    "longitude": -159.80556,
+    "metadata_distance_km": 0.046
+  },
+  "Recife/Guararapes_International_Airport": {
+    "iata": "REC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380638597",
+    "source_revision": "1380638597",
+    "latitude": -8.12639,
+    "longitude": -34.92278,
+    "metadata_distance_km": 0.122
+  },
+  "Región_de_Murcia_International_Airport": {
+    "iata": "RMU",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381225643",
+    "source_revision": "1381225643",
+    "latitude": 37.802583,
+    "longitude": -1.125389,
+    "metadata_distance_km": 0.054
+  },
+  "Rimini_Airport": {
+    "iata": "RMI",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381879892",
+    "source_revision": "1381879892",
+    "latitude": 44.01944,
+    "longitude": 12.60944,
+    "metadata_distance_km": 0.23
+  },
+  "Rome_Ciampino_Airport": {
+    "iata": "CIA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378314047",
+    "source_revision": "1378314047",
+    "latitude": 41.79944,
+    "longitude": 12.59722,
+    "metadata_distance_km": 0.173
+  },
+  "Sabiha_Gökçen_Airport": {
+    "iata": "SAW",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381998815",
+    "source_revision": "1381998815",
+    "latitude": 40.89833,
+    "longitude": 29.30917,
+    "metadata_distance_km": 0.03
+  },
+  "Salerno_Airport": {
+    "iata": "QSR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381729069",
+    "source_revision": "1381729069",
+    "latitude": 40.62,
+    "longitude": 14.9125,
+    "metadata_distance_km": 0.111
+  },
+  "Sandefjord_Airport": {
+    "iata": "TRF",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381452982",
+    "source_revision": "1381452982",
+    "latitude": 59.18667,
+    "longitude": 10.25861,
+    "metadata_distance_km": 0.003
+  },
+  "Sanford_International_Airport": {
+    "iata": "SFB",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377975604",
+    "source_revision": "1377975604",
+    "latitude": 28.77778,
+    "longitude": -81.2375,
+    "metadata_distance_km": 0.48
+  },
+  "Santarém_Airport": {
+    "iata": "STM",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1372811452",
+    "source_revision": "1372811452",
+    "latitude": -2.42472,
+    "longitude": -54.78583,
+    "metadata_distance_km": 0.843
+  },
+  "Sarajevo_Airport": {
+    "iata": "SJJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379766192",
+    "source_revision": "1379766192",
+    "latitude": 43.82472,
+    "longitude": 18.33139,
+    "metadata_distance_km": 0.016
+  },
+  "Sarasota_International_Airport": {
+    "iata": "SRQ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380634679",
+    "source_revision": "1380634679",
+    "latitude": 27.39556,
+    "longitude": -82.55444,
+    "metadata_distance_km": 0.104
+  },
+  "Sayak_Airport": {
+    "iata": "IAO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380200791",
+    "source_revision": "1380200791",
+    "latitude": 9.85889,
+    "longitude": 126.01389,
+    "metadata_distance_km": 0.026
+  },
+  "Scarlett_Martínez_International_Airport": {
+    "iata": "RIH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379372297",
+    "source_revision": "1379372297",
+    "latitude": 8.37583,
+    "longitude": -80.12778,
+    "metadata_distance_km": 0.014
+  },
+  "Shahjalal_Airport": {
+    "iata": "DAC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382192997",
+    "source_revision": "1382192997",
+    "latitude": 23.84278,
+    "longitude": 90.40056,
+    "metadata_distance_km": 0.289
+  },
+  "Shahjalal_International_Airport": {
+    "iata": "DAC",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382192997",
+    "source_revision": "1382192997",
+    "latitude": 23.84278,
+    "longitude": 90.40056,
+    "metadata_distance_km": 0.289
+  },
+  "Sharjah_Airport": {
+    "iata": "SHJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381580243",
+    "source_revision": "1381580243",
+    "latitude": 25.32917,
+    "longitude": 55.51611,
+    "metadata_distance_km": 0.127
+  },
+  "Sheikh_ul-Alam_International_Airport": {
+    "iata": "SXR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380378545",
+    "source_revision": "1380378545",
+    "latitude": 33.987139,
+    "longitude": 74.77425,
+    "metadata_distance_km": 0.006
+  },
+  "Shimoga_Airport": {
+    "iata": "RQY",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376866028",
+    "source_revision": "1376866028",
+    "latitude": 13.85472,
+    "longitude": 75.61056,
+    "metadata_distance_km": 0.969
+  },
+  "Shiraz_Shahid_Dastgheib_International_Airport": {
+    "iata": "SYZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380611377",
+    "source_revision": "1380611377",
+    "latitude": 29.53917,
+    "longitude": 52.59,
+    "metadata_distance_km": 0.019
+  },
+  "Shota_Rustaveli_Tbilisi_International_Airport": {
+    "iata": "TBS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381610288",
+    "source_revision": "1381610288",
+    "latitude": 41.66917,
+    "longitude": 44.95472,
+    "metadata_distance_km": 0.004
+  },
+  "Shymkent_International_Airport": {
+    "iata": "CIT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374488465",
+    "source_revision": "1374488465",
+    "latitude": 42.365,
+    "longitude": 69.47611,
+    "metadata_distance_km": 0.039
+  },
+  "Sihanouk_International_Airport": {
+    "iata": "KOS",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380616379",
+    "source_revision": "1380616379",
+    "latitude": 10.58,
+    "longitude": 103.63694,
+    "metadata_distance_km": 1.177
+  },
+  "Skopje_\"Alexander_the_Great\"_Airport": {
+    "iata": "SKP",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381882456",
+    "source_revision": "1381882456",
+    "latitude": 41.96111,
+    "longitude": 21.62694,
+    "metadata_distance_km": 0.493
+  },
+  "Stansted_Airport": {
+    "iata": "STN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381604730",
+    "source_revision": "1381604730",
+    "latitude": 51.885,
+    "longitude": 0.235,
+    "metadata_distance_km": 0.0
+  },
+  "Strigino_International_Airport": {
+    "iata": "GOJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363080699",
+    "source_revision": "1363080699",
+    "latitude": 56.23,
+    "longitude": 43.78667,
+    "metadata_distance_km": 0.309
+  },
+  "Suceava_Ștefan_cel_Mare_International_Airport": {
+    "iata": "SCV",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371360488",
+    "source_revision": "1371360488",
+    "latitude": 47.6875,
+    "longitude": 26.35417,
+    "metadata_distance_km": 0.005
+  },
+  "Suvarnabhumi_International_Airport": {
+    "iata": "BKK",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382118187",
+    "source_revision": "1382118187",
+    "latitude": 13.6925,
+    "longitude": 100.75,
+    "metadata_distance_km": 1.308
+  },
+  "Swami_Vivekananda_International_Airport": {
+    "iata": "RPR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381988744",
+    "source_revision": "1381988744",
+    "latitude": 21.18139,
+    "longitude": 81.74056,
+    "metadata_distance_km": 0.213
+  },
+  "São_José_dos_Campos_Airport": {
+    "iata": "SJK",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378842814",
+    "source_revision": "1378842814",
+    "latitude": -23.22889,
+    "longitude": -45.87111,
+    "metadata_distance_km": 0.983
+  },
+  "Tabriz_Shahid_Madani_International_Airport": {
+    "iata": "TBZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380611153",
+    "source_revision": "1380611153",
+    "latitude": 38.13389,
+    "longitude": 46.235,
+    "metadata_distance_km": 0.001
+  },
+  "Tallinn_International_Airport": {
+    "iata": "TLL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381613629",
+    "source_revision": "1381613629",
+    "latitude": 59.41333,
+    "longitude": 24.8325,
+    "metadata_distance_km": 0.012
+  },
+  "Tangier_Airport": {
+    "iata": "TNG",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378401456",
+    "source_revision": "1378401456",
+    "latitude": 35.72694,
+    "longitude": -5.91694,
+    "metadata_distance_km": 0.672
+  },
+  "Tashkurgan_Khunjerab_Airport": {
+    "iata": "HQL",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363082141",
+    "source_revision": "1363082141",
+    "latitude": 37.66271,
+    "longitude": 75.29227,
+    "metadata_distance_km": 0.336
+  },
+  "Tehran_Imam_Khomeini_International_Airport": {
+    "iata": "IKA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381167765",
+    "source_revision": "1381167765",
+    "latitude": 35.41611,
+    "longitude": 51.15222,
+    "metadata_distance_km": 0.002
+  },
+  "Thoothukudi_Airport": {
+    "iata": "TCR",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376789080",
+    "source_revision": "1376789080",
+    "latitude": 8.72417,
+    "longitude": 78.02583,
+    "metadata_distance_km": 0.008
+  },
+  "Tirana_Airport": {
+    "iata": "TIA",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381868699",
+    "source_revision": "1381868699",
+    "latitude": 41.41472,
+    "longitude": 19.72056,
+    "metadata_distance_km": 0.004
+  },
+  "Tiruchirapalli_Airport": {
+    "iata": "TRZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381295270",
+    "source_revision": "1381295270",
+    "latitude": 10.76556,
+    "longitude": 78.715,
+    "metadata_distance_km": 0.42
+  },
+  "Tomsk_Kamov_Airport": {
+    "iata": "TOF",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374857284",
+    "source_revision": "1374857284",
+    "latitude": 56.38667,
+    "longitude": 85.21056,
+    "metadata_distance_km": 0.722
+  },
+  "Tours_Airport": {
+    "iata": "TUF",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378655624",
+    "source_revision": "1378655624",
+    "latitude": 47.43194,
+    "longitude": 0.72306,
+    "metadata_distance_km": 0.343
+  },
+  "Ulanhot_Yileleeteuk_Airport": {
+    "iata": "HLH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381270633",
+    "source_revision": "1381270633",
+    "latitude": 46.19667,
+    "longitude": 122.005,
+    "metadata_distance_km": 0.296
+  },
+  "Van_Ferit_Melen_Airport": {
+    "iata": "VAN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363085167",
+    "source_revision": "1363085167",
+    "latitude": 38.46833,
+    "longitude": 43.33222,
+    "metadata_distance_km": 0.016
+  },
+  "Venice_Airport": {
+    "iata": "VCE",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382148110",
+    "source_revision": "1382148110",
+    "latitude": 45.50528,
+    "longitude": 12.35194,
+    "metadata_distance_km": 0.004
+  },
+  "Vinh_International_Airport": {
+    "iata": "VII",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380565728",
+    "source_revision": "1380565728",
+    "latitude": 18.736725,
+    "longitude": 105.6708806,
+    "metadata_distance_km": 0.098
+  },
+  "Växjö-Kronoberg_Airport": {
+    "iata": "VXO",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1369167775",
+    "source_revision": "1369167775",
+    "latitude": 56.92889,
+    "longitude": 14.72778,
+    "metadata_distance_km": 0.027
+  },
+  "Weeze_Airport": {
+    "iata": "NRN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382055510",
+    "source_revision": "1382055510",
+    "latitude": 51.6025,
+    "longitude": 6.14222,
+    "metadata_distance_km": 0.144
+  },
+  "Wenshan_Yanshan_Airport": {
+    "iata": "WNH",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363087368",
+    "source_revision": "1363087368",
+    "latitude": 23.56361,
+    "longitude": 104.33361,
+    "metadata_distance_km": 1.016
+  },
+  "Wenzhou_Yongqiang_International_Airport": {
+    "iata": "WNZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381843424",
+    "source_revision": "1381843424",
+    "latitude": 27.91194,
+    "longitude": 120.85194,
+    "metadata_distance_km": 0.214
+  },
+  "West_Angelas_Airport": {
+    "iata": "WLP",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1363087398",
+    "source_revision": "1363087398",
+    "latitude": -23.13556,
+    "longitude": 118.70722,
+    "metadata_distance_km": 0.001
+  },
+  "Whitsunday_Coast_Airport": {
+    "iata": "PPP",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1371680629",
+    "source_revision": "1371680629",
+    "latitude": -20.495,
+    "longitude": 148.55167,
+    "metadata_distance_km": 0.21
+  },
+  "Xuzhou_Guanyin_International_Airport": {
+    "iata": "XUZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374493114",
+    "source_revision": "1374493114",
+    "latitude": 34.059056,
+    "longitude": 117.55528,
+    "metadata_distance_km": 0.0
+  },
+  "Yanji_Airport": {
+    "iata": "YNJ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381842100",
+    "source_revision": "1381842100",
+    "latitude": 42.88278,
+    "longitude": 129.45111,
+    "metadata_distance_km": 0.009
+  },
+  "Yerevan_Airport": {
+    "iata": "EVN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381538696",
+    "source_revision": "1381538696",
+    "latitude": 40.14722,
+    "longitude": 44.39583,
+    "metadata_distance_km": 0.259
+  },
+  "Zanzibar_International_Airport": {
+    "iata": "ZNZ",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381765211",
+    "source_revision": "1381765211",
+    "latitude": -6.22222,
+    "longitude": 39.225,
+    "metadata_distance_km": 0.025
+  },
+  "Zhoushan_Airport": {
+    "iata": "HSN",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382034155",
+    "source_revision": "1382034155",
+    "latitude": 29.93417,
+    "longitude": 122.36222,
+    "metadata_distance_km": 0.034
+  },
+  "Şymkent_International_Airport": {
+    "iata": "CIT",
+    "method": "Wikipedia airport infobox explicit IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1374488465",
+    "source_revision": "1374488465",
+    "latitude": 42.365,
+    "longitude": 69.47611,
+    "metadata_distance_km": 0.039
+  },
+  "Purnea_Airport": {
+    "iata": "PXN",
+    "method": "Wikipedia airport infobox explicit IATA and ICAO; position independently matches existing OurAirports record without an IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1366865186",
+    "source_revision": 1366865186,
+    "latitude": 25.75972,
+    "longitude": 87.41,
+    "metadata_distance_km": 0.013,
+    "matched_ourairports_ident": "VEPU",
+    "official_iata_source_url": "https://www.goindigo.in/airport-directory/india/purnea-pxn.html"
+  },
+  "Yongxing_Island_Airport": {
+    "iata": "XYI",
+    "method": "Wikipedia airport infobox explicit IATA and ICAO; position independently matches existing OurAirports record without an IATA code",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380079301",
+    "source_revision": 1380079301,
+    "latitude": 16.83361,
+    "longitude": 112.345,
+    "metadata_distance_km": 0.139,
+    "matched_ourairports_ident": "XP-0003"
   }
 }

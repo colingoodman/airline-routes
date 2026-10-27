@@ -1,0 +1,2589 @@
+{
+  "EK": {
+    "name": "Emirates",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381409470",
+    "source_revision": 1381409470,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Dubai",
+        "links": [
+          {
+            "label": "Dubai",
+            "wikipedia": "Dubai_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "EY": {
+    "name": "Etihad Airways",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380746437",
+    "source_revision": 1380746437,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Zayed International Airport",
+        "links": [
+          {
+            "label": "Zayed International Airport",
+            "wikipedia": "Zayed_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "B6": {
+    "name": "JetBlue",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382151811",
+    "source_revision": 1382151811,
+    "fields": [
+      {
+        "field": "Focus cities",
+        "text": "Boston Fort Lauderdale Los Angeles New York–JFK Orlando San Juan",
+        "links": [
+          {
+            "label": "Boston",
+            "wikipedia": "Logan_International_Airport"
+          },
+          {
+            "label": "Fort Lauderdale",
+            "wikipedia": "Fort_Lauderdale–Hollywood_International_Airport"
+          },
+          {
+            "label": "Los Angeles",
+            "wikipedia": "Los_Angeles_International_Airport"
+          },
+          {
+            "label": "New York–JFK",
+            "wikipedia": "John_F._Kennedy_International_Airport"
+          },
+          {
+            "label": "Orlando",
+            "wikipedia": "Orlando_International_Airport"
+          },
+          {
+            "label": "San Juan",
+            "wikipedia": "Luis_Muñoz_Marín_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "WN": {
+    "name": "Southwest Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380782241",
+    "source_revision": 1380782241,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Atlanta Austin [ 1 ] Baltimore Chicago–Midway Dallas–Love Denver Houston–Hobby Las Vegas Los Angeles Nashville Oakland Orlando Phoenix–Sky Harbor",
+        "links": [
+          {
+            "label": "Atlanta",
+            "wikipedia": "Hartsfield–Jackson_Atlanta_International_Airport"
+          },
+          {
+            "label": "Austin",
+            "wikipedia": "Austin–Bergstrom_International_Airport"
+          },
+          {
+            "label": "Baltimore",
+            "wikipedia": "Baltimore/Washington_International_Airport"
+          },
+          {
+            "label": "Chicago–Midway",
+            "wikipedia": "Midway_International_Airport"
+          },
+          {
+            "label": "Dallas–Love",
+            "wikipedia": "Dallas_Love_Field"
+          },
+          {
+            "label": "Denver",
+            "wikipedia": "Denver_International_Airport"
+          },
+          {
+            "label": "Houston–Hobby",
+            "wikipedia": "William_P._Hobby_Airport"
+          },
+          {
+            "label": "Las Vegas",
+            "wikipedia": "Harry_Reid_International_Airport"
+          },
+          {
+            "label": "Los Angeles",
+            "wikipedia": "Los_Angeles_International_Airport"
+          },
+          {
+            "label": "Nashville",
+            "wikipedia": "Nashville_International_Airport"
+          },
+          {
+            "label": "Oakland",
+            "wikipedia": "Oakland_San_Francisco_Bay_Airport"
+          },
+          {
+            "label": "Orlando",
+            "wikipedia": "Orlando_International_Airport"
+          },
+          {
+            "label": "Phoenix–Sky Harbor",
+            "wikipedia": "Phoenix_Sky_Harbor_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "DE": {
+    "name": "Condor",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381383486",
+    "source_revision": 1381383486,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Berlin Brandenburg Düsseldorf Frankfurt Hamburg Munich Münster/Osnabrück (begins 2 November 2026) [ 2 ] Stuttgart Zurich",
+        "links": [
+          {
+            "label": "Berlin Brandenburg",
+            "wikipedia": "Berlin_Brandenburg_Airport"
+          },
+          {
+            "label": "Düsseldorf",
+            "wikipedia": "Düsseldorf_Airport"
+          },
+          {
+            "label": "Frankfurt",
+            "wikipedia": "Frankfurt_Airport"
+          },
+          {
+            "label": "Hamburg",
+            "wikipedia": "Hamburg_Airport"
+          },
+          {
+            "label": "Munich",
+            "wikipedia": "Munich_Airport"
+          },
+          {
+            "label": "Münster/Osnabrück",
+            "wikipedia": "Münster_Osnabrück_Airport"
+          },
+          {
+            "label": "Stuttgart",
+            "wikipedia": "Stuttgart_Airport"
+          },
+          {
+            "label": "Zurich",
+            "wikipedia": "Zurich_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "LY": {
+    "name": "El Al",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382135514",
+    "source_revision": 1382135514,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Ben Gurion Airport",
+        "links": [
+          {
+            "label": "Ben Gurion Airport",
+            "wikipedia": "Ben_Gurion_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "6E": {
+    "name": "IndiGo",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382054959",
+    "source_revision": 1382054959,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Delhi",
+        "links": [
+          {
+            "label": "Delhi",
+            "wikipedia": "Indira_Gandhi_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "Delhi primary hub from infobox, plus Bengaluru, Chennai, Hyderabad, Kolkata, Mumbai, and Kochi explicitly identified as additional bases in the Network section.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "LA": {
+    "name": "LATAM Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381072000",
+    "source_revision": 1381072000,
+    "fields": [],
+    "scope": "LATAM group brand: union of explicitly listed primary hubs of current LATAM Chile, Brasil, Peru, Colombia, and Ecuador operating airlines; subsidiary source revisions retained per hub. Focus cities excluded.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "WS": {
+    "name": "WestJet",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380619089",
+    "source_revision": 1380619089,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Calgary [ 4 ] Toronto–Pearson Vancouver",
+        "links": [
+          {
+            "label": "Calgary",
+            "wikipedia": "Calgary_International_Airport"
+          },
+          {
+            "label": "Toronto–Pearson",
+            "wikipedia": "Toronto_Pearson_International_Airport"
+          },
+          {
+            "label": "Vancouver",
+            "wikipedia": "Vancouver_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Edmonton Halifax Montréal–Trudeau St. John's Winnipeg",
+        "links": [
+          {
+            "label": "Edmonton",
+            "wikipedia": "Edmonton_International_Airport"
+          },
+          {
+            "label": "Halifax",
+            "wikipedia": "Halifax_Stanfield_International_Airport"
+          },
+          {
+            "label": "Montréal–Trudeau",
+            "wikipedia": "Montréal-Trudeau_International_Airport"
+          },
+          {
+            "label": "St. John's",
+            "wikipedia": "St._John's_International_Airport"
+          },
+          {
+            "label": "Winnipeg",
+            "wikipedia": "Winnipeg_James_Armstrong_Richardson_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "KC": {
+    "name": "Air Astana",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379957949",
+    "source_revision": 1379957949,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Almaty Astana",
+        "links": [
+          {
+            "label": "Almaty",
+            "wikipedia": "Almaty_International_Airport"
+          },
+          {
+            "label": "Astana",
+            "wikipedia": "Nursultan_Nazarbayev_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "EI": {
+    "name": "Aer Lingus",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381407527",
+    "source_revision": 1381407527,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Dublin Airport",
+        "links": [
+          {
+            "label": "Dublin Airport",
+            "wikipedia": "Dublin_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Cork Airport [ 1 ]",
+        "links": [
+          {
+            "label": "Cork Airport",
+            "wikipedia": "Cork_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "FI": {
+    "name": "Icelandair",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379115769",
+    "source_revision": 1379115769,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Keflavík International Airport Reykjavik Airport",
+        "links": [
+          {
+            "label": "Keflavík International Airport",
+            "wikipedia": "Keflavík_International_Airport"
+          },
+          {
+            "label": "Reykjavik Airport",
+            "wikipedia": "Reykjavik_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Reykjavík",
+        "links": [
+          {
+            "label": "Reykjavík",
+            "wikipedia": "Reykjavík"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "JU": {
+    "name": "Air Serbia",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381289136",
+    "source_revision": 1381289136,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Belgrade",
+        "links": [
+          {
+            "label": "Belgrade",
+            "wikipedia": "Belgrade_Nikola_Tesla_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Niš Kraljevo",
+        "links": [
+          {
+            "label": "Niš",
+            "wikipedia": "Niš_Constantine_the_Great_Airport"
+          },
+          {
+            "label": "Kraljevo",
+            "wikipedia": "Morava_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "BT": {
+    "name": "airBaltic",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380688559",
+    "source_revision": 1380688559,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Riga",
+        "links": [
+          {
+            "label": "Riga",
+            "wikipedia": "Riga_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Secondary hubs",
+        "text": "Tallinn Vilnius",
+        "links": [
+          {
+            "label": "Tallinn",
+            "wikipedia": "Tallinn_Airport"
+          },
+          {
+            "label": "Vilnius",
+            "wikipedia": "Vilnius_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Gran Canaria",
+        "links": [
+          {
+            "label": "Gran Canaria",
+            "wikipedia": "Gran_Canaria_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "VA": {
+    "name": "Virgin Australia",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382110752",
+    "source_revision": 1382110752,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Brisbane Melbourne Sydney",
+        "links": [
+          {
+            "label": "Brisbane",
+            "wikipedia": "Brisbane_Airport"
+          },
+          {
+            "label": "Melbourne",
+            "wikipedia": "Melbourne_Airport"
+          },
+          {
+            "label": "Sydney",
+            "wikipedia": "Sydney_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Secondary hubs",
+        "text": "Adelaide Perth",
+        "links": [
+          {
+            "label": "Adelaide",
+            "wikipedia": "Adelaide_Airport"
+          },
+          {
+            "label": "Perth",
+            "wikipedia": "Perth_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Denpasar Gold Coast",
+        "links": [
+          {
+            "label": "Denpasar",
+            "wikipedia": "I_Gusti_Ngurah_Rai_International_Airport"
+          },
+          {
+            "label": "Gold Coast",
+            "wikipedia": "Gold_Coast_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "PD": {
+    "name": "Porter Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379151746",
+    "source_revision": 1379151746,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Ottawa Toronto–Billy Bishop Toronto–Pearson [ 7 ]",
+        "links": [
+          {
+            "label": "Ottawa",
+            "wikipedia": "Ottawa_Macdonald–Cartier_International_Airport"
+          },
+          {
+            "label": "Toronto–Billy Bishop",
+            "wikipedia": "Billy_Bishop_Toronto_City_Airport"
+          },
+          {
+            "label": "Toronto–Pearson",
+            "wikipedia": "Toronto–Pearson"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Halifax Montréal–Trudeau",
+        "links": [
+          {
+            "label": "Halifax",
+            "wikipedia": "Halifax_Stanfield_International_Airport"
+          },
+          {
+            "label": "Montréal–Trudeau",
+            "wikipedia": "Montréal–Trudeau"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "TS": {
+    "name": "Air Transat",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1378201712",
+    "source_revision": 1378201712,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Montréal–Trudeau Toronto–Pearson",
+        "links": [
+          {
+            "label": "Montréal–Trudeau",
+            "wikipedia": "Montréal–Trudeau_International_Airport"
+          },
+          {
+            "label": "Toronto–Pearson",
+            "wikipedia": "Toronto_Pearson_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Ottawa [ 1 ] Québec City",
+        "links": [
+          {
+            "label": "Ottawa",
+            "wikipedia": "Ottawa_Macdonald–Cartier_International_Airport"
+          },
+          {
+            "label": "Québec City",
+            "wikipedia": "Québec_City_Jean_Lesage_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "F9": {
+    "name": "Frontier Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382052774",
+    "source_revision": 1382052774,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Atlanta [ 5 ] Chicago–Midway [ 6 ] Chicago–O'Hare [ 6 ] Cincinnati [ 7 ] Cleveland [ 8 ] Dallas/Fort Worth [ 9 ] Denver Las Vegas [ 10 ] Miami [ 11 ] Orlando [ 12 ] Philadelphia [ 13 ] Phoenix–Sky Harbor [ 14 ] San Juan [ 15 ] Tampa [ 16 ] Trenton [ 17 ]",
+        "links": [
+          {
+            "label": "Atlanta",
+            "wikipedia": "Hartsfield–Jackson_Atlanta_International_Airport"
+          },
+          {
+            "label": "Chicago–Midway",
+            "wikipedia": "Midway_International_Airport"
+          },
+          {
+            "label": "Chicago–O'Hare",
+            "wikipedia": "O'Hare_International_Airport"
+          },
+          {
+            "label": "Cincinnati",
+            "wikipedia": "Cincinnati/Northern_Kentucky_International_Airport"
+          },
+          {
+            "label": "Cleveland",
+            "wikipedia": "Cleveland_Hopkins_International_Airport"
+          },
+          {
+            "label": "Dallas/Fort Worth",
+            "wikipedia": "Dallas_Fort_Worth_International_Airport"
+          },
+          {
+            "label": "Denver",
+            "wikipedia": "Denver_International_Airport"
+          },
+          {
+            "label": "Las Vegas",
+            "wikipedia": "Harry_Reid_International_Airport"
+          },
+          {
+            "label": "Miami",
+            "wikipedia": "Miami_International_Airport"
+          },
+          {
+            "label": "Orlando",
+            "wikipedia": "Orlando_International_Airport"
+          },
+          {
+            "label": "Philadelphia",
+            "wikipedia": "Philadelphia_International_Airport"
+          },
+          {
+            "label": "Phoenix–Sky Harbor",
+            "wikipedia": "Phoenix_Sky_Harbor_International_Airport"
+          },
+          {
+            "label": "San Juan",
+            "wikipedia": "Luis_Muñoz_Marín_International_Airport"
+          },
+          {
+            "label": "Tampa",
+            "wikipedia": "Tampa_International_Airport"
+          },
+          {
+            "label": "Trenton",
+            "wikipedia": "Trenton_Mercer_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "G4": {
+    "name": "Allegiant Air",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381718012",
+    "source_revision": 1381718012,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Allentown Appleton Asheville Bellingham (ends November 2026) [ 3 ] Cincinnati Destin/Fort Walton Beach Des Moines Flint Fort Lauderdale Grand Rapids Indianapolis Knoxville Las Vegas Nashville Orlando/Sanford Phoenix/Mesa Pittsburgh Provo Punta Gorda Sarasota Savannah (ends November 2026) [ 4 ] St. Petersburg/Clearwater",
+        "links": [
+          {
+            "label": "Allentown",
+            "wikipedia": "Lehigh_Valley_International_Airport"
+          },
+          {
+            "label": "Appleton",
+            "wikipedia": "Appleton_International_Airport"
+          },
+          {
+            "label": "Asheville",
+            "wikipedia": "Asheville_Regional_Airport"
+          },
+          {
+            "label": "Bellingham",
+            "wikipedia": "Bellingham_International_Airport"
+          },
+          {
+            "label": "Cincinnati",
+            "wikipedia": "Cincinnati/Northern_Kentucky_International_Airport"
+          },
+          {
+            "label": "Destin/Fort Walton Beach",
+            "wikipedia": "Destin–Fort_Walton_Beach_Airport"
+          },
+          {
+            "label": "Des Moines",
+            "wikipedia": "Des_Moines_International_Airport"
+          },
+          {
+            "label": "Flint",
+            "wikipedia": "Bishop_International_Airport"
+          },
+          {
+            "label": "Fort Lauderdale",
+            "wikipedia": "Fort_Lauderdale–Hollywood_International_Airport"
+          },
+          {
+            "label": "Grand Rapids",
+            "wikipedia": "Gerald_R._Ford_International_Airport"
+          },
+          {
+            "label": "Indianapolis",
+            "wikipedia": "Indianapolis_International_Airport"
+          },
+          {
+            "label": "Knoxville",
+            "wikipedia": "McGhee_Tyson_Airport"
+          },
+          {
+            "label": "Las Vegas",
+            "wikipedia": "Harry_Reid_International_Airport"
+          },
+          {
+            "label": "Nashville",
+            "wikipedia": "Nashville_International_Airport"
+          },
+          {
+            "label": "Orlando/Sanford",
+            "wikipedia": "Orlando_Sanford_International_Airport"
+          },
+          {
+            "label": "Phoenix/Mesa",
+            "wikipedia": "Phoenix–Mesa_Gateway_Airport"
+          },
+          {
+            "label": "Pittsburgh",
+            "wikipedia": "Pittsburgh_International_Airport"
+          },
+          {
+            "label": "Provo",
+            "wikipedia": "Provo_Municipal_Airport"
+          },
+          {
+            "label": "Punta Gorda",
+            "wikipedia": "Punta_Gorda_Airport_(Florida)"
+          },
+          {
+            "label": "Sarasota",
+            "wikipedia": "Sarasota–Bradenton_International_Airport"
+          },
+          {
+            "label": "Savannah",
+            "wikipedia": "Savannah/Hilton_Head_International_Airport"
+          },
+          {
+            "label": "St. Petersburg/Clearwater",
+            "wikipedia": "St._Pete–Clearwater_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "AD": {
+    "name": "Azul Brazilian Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377829775",
+    "source_revision": 1377829775,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Belo Horizonte [ 2 ] Campinas [ 2 ] Recife [ 3 ]",
+        "links": [
+          {
+            "label": "Belo Horizonte",
+            "wikipedia": "Belo_Horizonte_International_Airport"
+          },
+          {
+            "label": "Campinas",
+            "wikipedia": "Viracopos_International_Airport"
+          },
+          {
+            "label": "Recife",
+            "wikipedia": "Recife/Guararapes–Gilberto_Freyre_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Cuiabá [ citation needed ] Curitiba [ citation needed ]",
+        "links": [
+          {
+            "label": "Cuiabá",
+            "wikipedia": "Marechal_Rondon_International_Airport"
+          },
+          {
+            "label": "citation needed",
+            "wikipedia": "Wikipedia:Citation_needed"
+          },
+          {
+            "label": "Curitiba",
+            "wikipedia": "Afonso_Pena_International_Airport"
+          },
+          {
+            "label": "citation needed",
+            "wikipedia": "Wikipedia:Citation_needed"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "G3": {
+    "name": "GOL Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381846763",
+    "source_revision": 1381846763,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Brasília Rio de Janeiro–Galeão São Paulo–Congonhas São Paulo–Guarulhos",
+        "links": [
+          {
+            "label": "Brasília",
+            "wikipedia": "Brasília_International_Airport"
+          },
+          {
+            "label": "Rio de Janeiro–Galeão",
+            "wikipedia": "Rio_de_Janeiro/Galeão_International_Airport"
+          },
+          {
+            "label": "São Paulo–Congonhas",
+            "wikipedia": "São_Paulo–Congonhas_Airport"
+          },
+          {
+            "label": "São Paulo–Guarulhos",
+            "wikipedia": "São_Paulo/Guarulhos_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Fortaleza Rio de Janeiro–Santos Dumont Salvador da Bahia",
+        "links": [
+          {
+            "label": "Fortaleza",
+            "wikipedia": "Fortaleza_Airport"
+          },
+          {
+            "label": "Rio de Janeiro–Santos Dumont",
+            "wikipedia": "Santos_Dumont_Airport"
+          },
+          {
+            "label": "Salvador da Bahia",
+            "wikipedia": "Salvador_Bahia_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "FZ": {
+    "name": "flydubai",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382053025",
+    "source_revision": 1382053025,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Dubai",
+        "links": [
+          {
+            "label": "Dubai",
+            "wikipedia": "Dubai_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "G9": {
+    "name": "Air Arabia",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379047733",
+    "source_revision": 1379047733,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Abu Dhabi Ras Al Khaimah Sharjah",
+        "links": [
+          {
+            "label": "Abu Dhabi",
+            "wikipedia": "Zayed_International_Airport"
+          },
+          {
+            "label": "Ras Al Khaimah",
+            "wikipedia": "Ras_Al_Khaimah_International_Airport"
+          },
+          {
+            "label": "Sharjah",
+            "wikipedia": "Sharjah_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "XY": {
+    "name": "flynas",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379765863",
+    "source_revision": 1379765863,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Abha [ 1 ] Dammam Jeddah Medinah Riyadh",
+        "links": [
+          {
+            "label": "Abha",
+            "wikipedia": "Abha_International_Airport"
+          },
+          {
+            "label": "Dammam",
+            "wikipedia": "King_Fahd_International_Airport"
+          },
+          {
+            "label": "Jeddah",
+            "wikipedia": "King_Abdulaziz_International_Airport"
+          },
+          {
+            "label": "Medinah",
+            "wikipedia": "Prince_Mohammad_bin_Abdulaziz_Airport"
+          },
+          {
+            "label": "Riyadh",
+            "wikipedia": "King_Khalid_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "PC": {
+    "name": "Pegasus Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382079574",
+    "source_revision": 1382079574,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Adana/Mersin Ankara Antalya Bodrum Dalaman Ercan Istanbul Istanbul–Sabiha Gökçen İzmir Kayseri Samsun Trabzon",
+        "links": [
+          {
+            "label": "Adana/Mersin",
+            "wikipedia": "Çukurova_International_Airport"
+          },
+          {
+            "label": "Ankara",
+            "wikipedia": "Ankara_Esenboğa_Airport"
+          },
+          {
+            "label": "Antalya",
+            "wikipedia": "Antalya_Airport"
+          },
+          {
+            "label": "Bodrum",
+            "wikipedia": "Milas–Bodrum_Airport"
+          },
+          {
+            "label": "Dalaman",
+            "wikipedia": "Dalaman_Airport"
+          },
+          {
+            "label": "Ercan",
+            "wikipedia": "Ercan_International_Airport"
+          },
+          {
+            "label": "Istanbul",
+            "wikipedia": "Istanbul_Airport"
+          },
+          {
+            "label": "Istanbul–Sabiha Gökçen",
+            "wikipedia": "Sabiha_Gökçen_International_Airport"
+          },
+          {
+            "label": "İzmir",
+            "wikipedia": "İzmir_Adnan_Menderes_Airport"
+          },
+          {
+            "label": "Kayseri",
+            "wikipedia": "Erkilet_International_Airport"
+          },
+          {
+            "label": "Samsun",
+            "wikipedia": "Samsun-Çarşamba_Airport"
+          },
+          {
+            "label": "Trabzon",
+            "wikipedia": "Trabzon_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "DY": {
+    "name": "Norwegian Air Shuttle",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382085376",
+    "source_revision": 1382085376,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Alicante Barcelona (seasonal base) Bergen Copenhagen Helsinki Las Palmas Málaga Oslo Palma de Mallorca (seasonal base) Riga Stockholm–Arlanda",
+        "links": [
+          {
+            "label": "Alicante",
+            "wikipedia": "Alicante–Elche_Miguel_Hernández_Airport"
+          },
+          {
+            "label": "Barcelona",
+            "wikipedia": "Barcelona-El_Prat_Airport"
+          },
+          {
+            "label": "Bergen",
+            "wikipedia": "Bergen_Airport,_Flesland"
+          },
+          {
+            "label": "Copenhagen",
+            "wikipedia": "Copenhagen_Airport"
+          },
+          {
+            "label": "Helsinki",
+            "wikipedia": "Helsinki_Airport"
+          },
+          {
+            "label": "Las Palmas",
+            "wikipedia": "Las_Palmas_Airport"
+          },
+          {
+            "label": "Málaga",
+            "wikipedia": "Málaga_Airport"
+          },
+          {
+            "label": "Oslo",
+            "wikipedia": "Oslo_Airport,_Gardermoen"
+          },
+          {
+            "label": "Palma de Mallorca",
+            "wikipedia": "Palma_de_Mallorca_Airport"
+          },
+          {
+            "label": "Riga",
+            "wikipedia": "Riga_International_Airport"
+          },
+          {
+            "label": "Stockholm–Arlanda",
+            "wikipedia": "Stockholm_Arlanda_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "FR": {
+    "name": "Ryanair",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381990980",
+    "source_revision": 1381990980,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "List of bases Agadir Alicante Athens Barcelona Bari Beauvais Belfast–International Bergamo Berlin (ends 24 October 2026) [ 1 ] Birmingham Bologna Bournemouth Bratislava Brindisi Bristol Bucharest–Otopeni Budapest Cagliari Catania Chania Charleroi Cologne/Bonn Copenhagen Corfu Cork Dublin (headquarters) Dubrovnik East Midlands Edinburgh Faro Fes Gdańsk Girona Glasgow–Prestwick Gothenburg Hahn Ibiza Karlsruhe/Baden-Baden Katowice Kaunas Kraków Lamezia Terme Leeds/Bradford Lisbon Liverpool London–Luton London–Stansted (largest base) Madrid Málaga Malta Manchester Marrakesh Marseille Memmingen Milan–Malpensa Naples Newcastle upon Tyne Nuremberg Palermo Palma de Mallorca Paphos Pisa Pescara Ponta Delgada Poznań Prague Porto Rabat Reggio Calabria Rhodes Riga Rome–Ciampino Rome–Fiumicino Shannon Seville Santiago de Compostela Sofia Stockholm–Arlanda Tangier Tenerife–South Thessaloniki (ends 25 October 2026) [ 2 ] Tirana Toulouse Trapani Treviso Trieste Turin Valencia Vienna Venice Vilnius Warsaw–Modlin Wrocław Weeze Zadar Zagreb",
+        "links": [
+          {
+            "label": "Agadir",
+            "wikipedia": "Agadir–Al_Massira_Airport"
+          },
+          {
+            "label": "Alicante",
+            "wikipedia": "Alicante–Elche_Miguel_Hernández_Airport"
+          },
+          {
+            "label": "Athens",
+            "wikipedia": "Athens_International_Airport"
+          },
+          {
+            "label": "Barcelona",
+            "wikipedia": "Josep_Tarradellas_Barcelona-El_Prat_Airport"
+          },
+          {
+            "label": "Bari",
+            "wikipedia": "Bari_Airport"
+          },
+          {
+            "label": "Beauvais",
+            "wikipedia": "Beauvais–Tillé_Airport"
+          },
+          {
+            "label": "Belfast–International",
+            "wikipedia": "Belfast–International"
+          },
+          {
+            "label": "Bergamo",
+            "wikipedia": "Milan_Bergamo_Airport"
+          },
+          {
+            "label": "Berlin",
+            "wikipedia": "Berlin_Brandenburg_Airport"
+          },
+          {
+            "label": "Birmingham",
+            "wikipedia": "Birmingham_Airport"
+          },
+          {
+            "label": "Bologna",
+            "wikipedia": "Bologna_Guglielmo_Marconi_Airport"
+          },
+          {
+            "label": "Bournemouth",
+            "wikipedia": "Bournemouth_Airport"
+          },
+          {
+            "label": "Bratislava",
+            "wikipedia": "Bratislava_Airport"
+          },
+          {
+            "label": "Brindisi",
+            "wikipedia": "Brindisi_Airport"
+          },
+          {
+            "label": "Bristol",
+            "wikipedia": "Bristol_Airport"
+          },
+          {
+            "label": "Bucharest–Otopeni",
+            "wikipedia": "Bucharest_Henri_Coandă_International_Airport"
+          },
+          {
+            "label": "Budapest",
+            "wikipedia": "Budapest_Ferenc_Liszt_International_Airport"
+          },
+          {
+            "label": "Cagliari",
+            "wikipedia": "Cagliari_Elmas_Airport"
+          },
+          {
+            "label": "Catania",
+            "wikipedia": "Catania-Fontanarossa_Airport"
+          },
+          {
+            "label": "Chania",
+            "wikipedia": "Chania_International_Airport"
+          },
+          {
+            "label": "Charleroi",
+            "wikipedia": "Brussels_South_Charleroi_Airport"
+          },
+          {
+            "label": "Cologne/Bonn",
+            "wikipedia": "Cologne_Bonn_Airport"
+          },
+          {
+            "label": "Copenhagen",
+            "wikipedia": "Copenhagen_Airport"
+          },
+          {
+            "label": "Corfu",
+            "wikipedia": "Corfu_International_Airport"
+          },
+          {
+            "label": "Cork",
+            "wikipedia": "Cork_Airport"
+          },
+          {
+            "label": "Dublin",
+            "wikipedia": "Dublin_Airport"
+          },
+          {
+            "label": "Dubrovnik",
+            "wikipedia": "Dubrovnik_Airport"
+          },
+          {
+            "label": "East Midlands",
+            "wikipedia": "East_Midlands_Airport"
+          },
+          {
+            "label": "Edinburgh",
+            "wikipedia": "Edinburgh_Airport"
+          },
+          {
+            "label": "Faro",
+            "wikipedia": "Faro_Airport"
+          },
+          {
+            "label": "Fes",
+            "wikipedia": "Fes–Saïss_Airport"
+          },
+          {
+            "label": "Gdańsk",
+            "wikipedia": "Gdańsk_Lech_Wałęsa_Airport"
+          },
+          {
+            "label": "Girona",
+            "wikipedia": "Girona_Airport"
+          },
+          {
+            "label": "Glasgow–Prestwick",
+            "wikipedia": "Glasgow_Prestwick_Airport"
+          },
+          {
+            "label": "Gothenburg",
+            "wikipedia": "Göteborg_Landvetter_Airport"
+          },
+          {
+            "label": "Hahn",
+            "wikipedia": "Hahn_Airport"
+          },
+          {
+            "label": "Ibiza",
+            "wikipedia": "Ibiza_Airport"
+          },
+          {
+            "label": "Karlsruhe/Baden-Baden",
+            "wikipedia": "Baden_Airpark"
+          },
+          {
+            "label": "Katowice",
+            "wikipedia": "Katowice_Airport"
+          },
+          {
+            "label": "Kaunas",
+            "wikipedia": "Kaunas_Airport"
+          },
+          {
+            "label": "Kraków",
+            "wikipedia": "Kraków_John_Paul_II_International_Airport"
+          },
+          {
+            "label": "Lamezia Terme",
+            "wikipedia": "Lamezia_Terme_International_Airport"
+          },
+          {
+            "label": "Leeds/Bradford",
+            "wikipedia": "Leeds_Bradford_Airport"
+          },
+          {
+            "label": "Lisbon",
+            "wikipedia": "Lisbon_Airport"
+          },
+          {
+            "label": "Liverpool",
+            "wikipedia": "Liverpool_John_Lennon_Airport"
+          },
+          {
+            "label": "London–Luton",
+            "wikipedia": "London–Luton"
+          },
+          {
+            "label": "London–Stansted",
+            "wikipedia": "London–Stansted"
+          },
+          {
+            "label": "Madrid",
+            "wikipedia": "Madrid-Barajas_Airport"
+          },
+          {
+            "label": "Málaga",
+            "wikipedia": "Málaga_Airport"
+          },
+          {
+            "label": "Malta",
+            "wikipedia": "Malta_International_Airport"
+          },
+          {
+            "label": "Manchester",
+            "wikipedia": "Manchester_Airport"
+          },
+          {
+            "label": "Marrakesh",
+            "wikipedia": "Marrakesh_Menara_Airport"
+          },
+          {
+            "label": "Marseille",
+            "wikipedia": "Marseille_Provence_Airport"
+          },
+          {
+            "label": "Memmingen",
+            "wikipedia": "Memmingen_Airport"
+          },
+          {
+            "label": "Milan–Malpensa",
+            "wikipedia": "Milan–Malpensa"
+          },
+          {
+            "label": "Naples",
+            "wikipedia": "Naples_International_Airport"
+          },
+          {
+            "label": "Newcastle upon Tyne",
+            "wikipedia": "Newcastle_International_Airport"
+          },
+          {
+            "label": "Nuremberg",
+            "wikipedia": "Nuremberg_Airport"
+          },
+          {
+            "label": "Palermo",
+            "wikipedia": "Palermo_Airport"
+          },
+          {
+            "label": "Palma de Mallorca",
+            "wikipedia": "Palma_de_Mallorca_Airport"
+          },
+          {
+            "label": "Paphos",
+            "wikipedia": "Paphos_International_Airport"
+          },
+          {
+            "label": "Pisa",
+            "wikipedia": "Pisa_International_Airport"
+          },
+          {
+            "label": "Pescara",
+            "wikipedia": "Pescara_Airport"
+          },
+          {
+            "label": "Ponta Delgada",
+            "wikipedia": "John_Paul_II_Ponta_Delgada_Airport"
+          },
+          {
+            "label": "Poznań",
+            "wikipedia": "Poznań–Ławica_Airport"
+          },
+          {
+            "label": "Prague",
+            "wikipedia": "Václav_Havel_Airport_Prague"
+          },
+          {
+            "label": "Porto",
+            "wikipedia": "Porto_Airport"
+          },
+          {
+            "label": "Rabat",
+            "wikipedia": "Rabat-Salé_Airport"
+          },
+          {
+            "label": "Reggio Calabria",
+            "wikipedia": "Reggio_Calabria_Airport"
+          },
+          {
+            "label": "Rhodes",
+            "wikipedia": "Rhodes_International_Airport"
+          },
+          {
+            "label": "Riga",
+            "wikipedia": "Riga_International_Airport"
+          },
+          {
+            "label": "Rome–Ciampino",
+            "wikipedia": "Rome–Ciampino"
+          },
+          {
+            "label": "Rome–Fiumicino",
+            "wikipedia": "Rome–Fiumicino"
+          },
+          {
+            "label": "Shannon",
+            "wikipedia": "Shannon_Airport"
+          },
+          {
+            "label": "Seville",
+            "wikipedia": "San_Pablo_Airport"
+          },
+          {
+            "label": "Santiago de Compostela",
+            "wikipedia": "Santiago–Rosalía_de_Castro_Airport"
+          },
+          {
+            "label": "Sofia",
+            "wikipedia": "Sofia_Airport"
+          },
+          {
+            "label": "Stockholm–Arlanda",
+            "wikipedia": "Stockholm–Arlanda"
+          },
+          {
+            "label": "Tangier",
+            "wikipedia": "Tangier_Ibn_Battouta_Airport"
+          },
+          {
+            "label": "Tenerife–South",
+            "wikipedia": "Tenerife-South_Airport"
+          },
+          {
+            "label": "Thessaloniki",
+            "wikipedia": "Thessaloniki_Airport"
+          },
+          {
+            "label": "Tirana",
+            "wikipedia": "Tirana_International_Airport_Nënë_Tereza"
+          },
+          {
+            "label": "Toulouse",
+            "wikipedia": "Toulouse-Blagnac_Airport"
+          },
+          {
+            "label": "Trapani",
+            "wikipedia": "Trapani–Birgi_Airport"
+          },
+          {
+            "label": "Treviso",
+            "wikipedia": "Treviso_Airport"
+          },
+          {
+            "label": "Trieste",
+            "wikipedia": "Trieste_Airport"
+          },
+          {
+            "label": "Turin",
+            "wikipedia": "Turin_Airport"
+          },
+          {
+            "label": "Valencia",
+            "wikipedia": "Valencia_Airport"
+          },
+          {
+            "label": "Vienna",
+            "wikipedia": "Vienna_International_Airport"
+          },
+          {
+            "label": "Venice",
+            "wikipedia": "Venice_Marco_Polo_Airport"
+          },
+          {
+            "label": "Vilnius",
+            "wikipedia": "Vilnius_Airport"
+          },
+          {
+            "label": "Warsaw–Modlin",
+            "wikipedia": "Warsaw_Modlin_Airport"
+          },
+          {
+            "label": "Wrocław",
+            "wikipedia": "Copernicus_Airport_Wrocław"
+          },
+          {
+            "label": "Weeze",
+            "wikipedia": "Weeze_Airport"
+          },
+          {
+            "label": "Zadar",
+            "wikipedia": "Zadar_Airport"
+          },
+          {
+            "label": "Zagreb",
+            "wikipedia": "Zagreb_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "The airline article explicitly identifies Dublin, London Stansted, and Milan Bergamo as primary operational bases.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "U2": {
+    "name": "easyJet",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381918046",
+    "source_revision": 1381918046,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "List of bases Alicante (seasonal) Amsterdam Barcelona Basel/Mulhouse Belfast–International Berlin Brandenburg Birmingham Bordeaux Bristol Edinburgh Faro (seasonal) Geneva Glasgow Lisbon Liverpool London–Gatwick London–Luton London—Southend Lyon Málaga (seasonal) Manchester Marrakesh Milan–Malpensa Milan–Linate Nantes Naples Newcastle Upon Tyne Nice Palma de Mallorca (seasonal) Paris–Charles de Gaulle Paris–Orly Porto Rome–Fiumicino",
+        "links": [
+          {
+            "label": "Alicante",
+            "wikipedia": "Alicante–Elche_Miguel_Hernández_Airport"
+          },
+          {
+            "label": "Amsterdam",
+            "wikipedia": "Amsterdam_Airport_Schiphol"
+          },
+          {
+            "label": "Barcelona",
+            "wikipedia": "Josep_Tarradellas_Barcelona–El_Prat_Airport"
+          },
+          {
+            "label": "Basel/Mulhouse",
+            "wikipedia": "EuroAirport_Basel_Mulhouse_Freiburg"
+          },
+          {
+            "label": "Belfast–International",
+            "wikipedia": "Belfast–International"
+          },
+          {
+            "label": "Berlin Brandenburg",
+            "wikipedia": "Berlin_Brandenburg_Airport"
+          },
+          {
+            "label": "Birmingham",
+            "wikipedia": "Birmingham_Airport"
+          },
+          {
+            "label": "Bordeaux",
+            "wikipedia": "Bordeaux–Mérignac_Airport"
+          },
+          {
+            "label": "Bristol",
+            "wikipedia": "Bristol_Airport"
+          },
+          {
+            "label": "Edinburgh",
+            "wikipedia": "Edinburgh_Airport"
+          },
+          {
+            "label": "Faro",
+            "wikipedia": "Gago_Coutinho_Airport"
+          },
+          {
+            "label": "Geneva",
+            "wikipedia": "Geneva_Airport"
+          },
+          {
+            "label": "Glasgow",
+            "wikipedia": "Glasgow_Airport"
+          },
+          {
+            "label": "Lisbon",
+            "wikipedia": "Humberto_Delgado_Airport"
+          },
+          {
+            "label": "Liverpool",
+            "wikipedia": "Liverpool_John_Lennon_Airport"
+          },
+          {
+            "label": "London–Gatwick",
+            "wikipedia": "London–Gatwick"
+          },
+          {
+            "label": "London–Luton",
+            "wikipedia": "London–Luton"
+          },
+          {
+            "label": "London—Southend",
+            "wikipedia": "London_Southend_Airport"
+          },
+          {
+            "label": "Lyon",
+            "wikipedia": "Lyon–Saint-Exupéry_Airport"
+          },
+          {
+            "label": "Málaga",
+            "wikipedia": "Málaga_Airport"
+          },
+          {
+            "label": "Manchester",
+            "wikipedia": "Manchester_Airport"
+          },
+          {
+            "label": "Marrakesh",
+            "wikipedia": "Marrakesh_Menara_Airport"
+          },
+          {
+            "label": "Milan–Malpensa",
+            "wikipedia": "Milan–Malpensa"
+          },
+          {
+            "label": "Milan–Linate",
+            "wikipedia": "Milan–Linate"
+          },
+          {
+            "label": "Nantes",
+            "wikipedia": "Nantes_Atlantique_Airport"
+          },
+          {
+            "label": "Naples",
+            "wikipedia": "Naples_International_Airport"
+          },
+          {
+            "label": "Newcastle Upon Tyne",
+            "wikipedia": "Newcastle_International_Airport"
+          },
+          {
+            "label": "Nice",
+            "wikipedia": "Nice_Côte_d'Azur_Airport"
+          },
+          {
+            "label": "Palma de Mallorca",
+            "wikipedia": "Palma_de_Mallorca_Airport"
+          },
+          {
+            "label": "Paris–Charles de Gaulle",
+            "wikipedia": "Paris–Charles_de_Gaulle"
+          },
+          {
+            "label": "Paris–Orly",
+            "wikipedia": "Paris–Orly"
+          },
+          {
+            "label": "Porto",
+            "wikipedia": "Francisco_Sá_Carneiro_Airport"
+          },
+          {
+            "label": "Rome–Fiumicino",
+            "wikipedia": "Rome–Fiumicino"
+          }
+        ]
+      }
+    ],
+    "scope": "The airline article explicitly identifies London Gatwick as the largest base; the other operating bases are not promoted to major hubs.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "W6": {
+    "name": "Wizz Air",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1376543812",
+    "source_revision": 1376543812,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "List of bases [ 1 ] Belgrade Brașov (begins 18 December 2026) [ 2 ] Bratislava [ 3 ] Bucharest–Băneasa [ 4 ] Bucharest–Otopeni Budapest Catania Chișinău Cluj-Napoca Craiova Gdańsk Iași Katowice Kraków Kutaisi Larnaca London–Gatwick London–Luton Madrid (begins 3 November 2026) [ 5 ] Milan–Malpensa Naples Palermo Podgorica [ 6 ] Pristina (begins 16 November 2026) [ 7 ] Rome–Fiumicino Santiago de Compostela (begins 1 February 2027) [ 8 ] Sibiu Skopje Sofia Suceava Târgu Mureş Timișoara Tirana Turin Tuzla [ 9 ] Valencia (begins 2 November 2026) [ 5 ] Varna Venice Vilnius Warsaw–Chopin Warsaw–Modlin Wrocław Yerevan",
+        "links": [
+          {
+            "label": "Belgrade",
+            "wikipedia": "Belgrade_Nikola_Tesla_Airport"
+          },
+          {
+            "label": "Brașov",
+            "wikipedia": "Brașov-Ghimbav_International_Airport"
+          },
+          {
+            "label": "Bratislava",
+            "wikipedia": "Bratislava_Airport"
+          },
+          {
+            "label": "Bucharest–Băneasa",
+            "wikipedia": "Aurel_Vlaicu_International_Airport"
+          },
+          {
+            "label": "Bucharest–Otopeni",
+            "wikipedia": "Bucharest_Henri_Coandă_International_Airport"
+          },
+          {
+            "label": "Budapest",
+            "wikipedia": "Budapest_Ferenc_Liszt_International_Airport"
+          },
+          {
+            "label": "Catania",
+            "wikipedia": "Catania–Fontanarossa_Airport"
+          },
+          {
+            "label": "Chișinău",
+            "wikipedia": "Chișinău_International_Airport"
+          },
+          {
+            "label": "Cluj-Napoca",
+            "wikipedia": "Cluj-Napoca_International_Airport"
+          },
+          {
+            "label": "Craiova",
+            "wikipedia": "Craiova_International_Airport"
+          },
+          {
+            "label": "Gdańsk",
+            "wikipedia": "Gdańsk_Lech_Wałęsa_Airport"
+          },
+          {
+            "label": "Iași",
+            "wikipedia": "Iași_International_Airport"
+          },
+          {
+            "label": "Katowice",
+            "wikipedia": "Katowice_Airport"
+          },
+          {
+            "label": "Kraków",
+            "wikipedia": "Kraków_John_Paul_II_International_Airport"
+          },
+          {
+            "label": "Kutaisi",
+            "wikipedia": "David_the_Builder_Kutaisi_International_Airport"
+          },
+          {
+            "label": "Larnaca",
+            "wikipedia": "Larnaca_International_Airport"
+          },
+          {
+            "label": "London–Gatwick",
+            "wikipedia": "London–Gatwick"
+          },
+          {
+            "label": "London–Luton",
+            "wikipedia": "London–Luton"
+          },
+          {
+            "label": "Madrid",
+            "wikipedia": "Madrid–Barajas_Airport"
+          },
+          {
+            "label": "Milan–Malpensa",
+            "wikipedia": "Milan–Malpensa"
+          },
+          {
+            "label": "Naples",
+            "wikipedia": "Naples_International_Airport"
+          },
+          {
+            "label": "Palermo",
+            "wikipedia": "Palermo_Airport"
+          },
+          {
+            "label": "Podgorica",
+            "wikipedia": "Podgorica_Airport"
+          },
+          {
+            "label": "Pristina",
+            "wikipedia": "Pristina_International_Airport"
+          },
+          {
+            "label": "Rome–Fiumicino",
+            "wikipedia": "Rome–Fiumicino"
+          },
+          {
+            "label": "Santiago de Compostela",
+            "wikipedia": "Santiago–Rosalía_de_Castro_Airport"
+          },
+          {
+            "label": "Sibiu",
+            "wikipedia": "Sibiu_International_Airport"
+          },
+          {
+            "label": "Skopje",
+            "wikipedia": "Skopje_International_Airport"
+          },
+          {
+            "label": "Sofia",
+            "wikipedia": "Vasil_Levski_Sofia_Airport"
+          },
+          {
+            "label": "Suceava",
+            "wikipedia": "Suceava_International_Airport"
+          },
+          {
+            "label": "Târgu Mureş",
+            "wikipedia": "Târgu_Mureş_International_Airport"
+          },
+          {
+            "label": "Timișoara",
+            "wikipedia": "Timișoara_Traian_Vuia_International_Airport"
+          },
+          {
+            "label": "Tirana",
+            "wikipedia": "Tirana_International_Airport_Nënë_Tereza"
+          },
+          {
+            "label": "Turin",
+            "wikipedia": "Turin-Caselle_Airport"
+          },
+          {
+            "label": "Tuzla",
+            "wikipedia": "Tuzla_International_Airport"
+          },
+          {
+            "label": "Valencia",
+            "wikipedia": "Valencia_Airport"
+          },
+          {
+            "label": "Varna",
+            "wikipedia": "Varna_Airport"
+          },
+          {
+            "label": "Venice",
+            "wikipedia": "Venice_Marco_Polo_Airport"
+          },
+          {
+            "label": "Vilnius",
+            "wikipedia": "Vilnius_Airport"
+          },
+          {
+            "label": "Warsaw–Chopin",
+            "wikipedia": "Warsaw–Chopin"
+          },
+          {
+            "label": "Warsaw–Modlin",
+            "wikipedia": "Warsaw_Modlin_Airport"
+          },
+          {
+            "label": "Wrocław",
+            "wikipedia": "Copernicus_Airport_Wrocław"
+          },
+          {
+            "label": "Yerevan",
+            "wikipedia": "Zvartnots_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "The airline article explicitly identifies Budapest, Bucharest Otopeni, and London Luton as its largest bases.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "AK": {
+    "name": "AirAsia",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381486751",
+    "source_revision": 1381486751,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Johor Bahru Kota Kinabalu Kuala Lumpur ( T2 ) Kuching Penang",
+        "links": [
+          {
+            "label": "Johor Bahru",
+            "wikipedia": "Senai_International_Airport"
+          },
+          {
+            "label": "Kota Kinabalu",
+            "wikipedia": "Kota_Kinabalu_International_Airport"
+          },
+          {
+            "label": "Kuala Lumpur",
+            "wikipedia": "Kuala_Lumpur_International_Airport"
+          },
+          {
+            "label": "T2",
+            "wikipedia": "KLIA2"
+          },
+          {
+            "label": "Kuching",
+            "wikipedia": "Kuching_International_Airport"
+          },
+          {
+            "label": "Penang",
+            "wikipedia": "Penang_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "TR": {
+    "name": "Scoot",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380820318",
+    "source_revision": 1380820318,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Changi Airport",
+        "links": [
+          {
+            "label": "Changi Airport",
+            "wikipedia": "Changi_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Taoyuan International Airport",
+        "links": [
+          {
+            "label": "Taoyuan International Airport",
+            "wikipedia": "Taoyuan_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "JQ": {
+    "name": "Jetstar",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381933305",
+    "source_revision": 1381933305,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Adelaide Auckland Brisbane Cairns Christchurch Denpasar Gold Coast Melbourne Perth Sydney",
+        "links": [
+          {
+            "label": "Adelaide",
+            "wikipedia": "Adelaide_Airport"
+          },
+          {
+            "label": "Auckland",
+            "wikipedia": "Auckland_Airport"
+          },
+          {
+            "label": "Brisbane",
+            "wikipedia": "Brisbane_Airport"
+          },
+          {
+            "label": "Cairns",
+            "wikipedia": "Cairns_Airport"
+          },
+          {
+            "label": "Christchurch",
+            "wikipedia": "Christchurch_Airport"
+          },
+          {
+            "label": "Denpasar",
+            "wikipedia": "Ngurah_Rai_International_Airport"
+          },
+          {
+            "label": "Gold Coast",
+            "wikipedia": "Gold_Coast_Airport"
+          },
+          {
+            "label": "Melbourne",
+            "wikipedia": "Melbourne_Airport"
+          },
+          {
+            "label": "Perth",
+            "wikipedia": "Perth_Airport"
+          },
+          {
+            "label": "Sydney",
+            "wikipedia": "Sydney_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "5J": {
+    "name": "Cebu Pacific",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1379348527",
+    "source_revision": 1379348527,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Cebu Clark Davao Iloilo Manila",
+        "links": [
+          {
+            "label": "Cebu",
+            "wikipedia": "Mactan–Cebu_International_Airport"
+          },
+          {
+            "label": "Clark",
+            "wikipedia": "Clark_International_Airport"
+          },
+          {
+            "label": "Davao",
+            "wikipedia": "Francisco_Bangoy_International_Airport"
+          },
+          {
+            "label": "Iloilo",
+            "wikipedia": "Iloilo_International_Airport"
+          },
+          {
+            "label": "Manila",
+            "wikipedia": "Ninoy_Aquino_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "VJ": {
+    "name": "VietJet Air",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380186044",
+    "source_revision": 1380186044,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Da Nang Hai Phong Hanoi Ho Chi Minh City Nha Trang",
+        "links": [
+          {
+            "label": "Da Nang",
+            "wikipedia": "Da_Nang_International_Airport"
+          },
+          {
+            "label": "Hai Phong",
+            "wikipedia": "Cat_Bi_International_Airport"
+          },
+          {
+            "label": "Hanoi",
+            "wikipedia": "Noi_Bai_International_Airport"
+          },
+          {
+            "label": "Ho Chi Minh City",
+            "wikipedia": "Tan_Son_Nhat_International_Airport"
+          },
+          {
+            "label": "Nha Trang",
+            "wikipedia": "Cam_Ranh_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "HU": {
+    "name": "Hainan Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381691572",
+    "source_revision": 1381691572,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Beijing–Capital Chongqing Haikou Shenzhen Xi'an",
+        "links": [
+          {
+            "label": "Beijing–Capital",
+            "wikipedia": "Beijing_Capital_International_Airport"
+          },
+          {
+            "label": "Chongqing",
+            "wikipedia": "Chongqing_Jiangbei_International_Airport"
+          },
+          {
+            "label": "Haikou",
+            "wikipedia": "Haikou_Meilan_International_Airport"
+          },
+          {
+            "label": "Shenzhen",
+            "wikipedia": "Shenzhen_Bao'an_International_Airport"
+          },
+          {
+            "label": "Xi'an",
+            "wikipedia": "Xi'an_Xianyang_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Changsha Guangzhou Lanzhou Sanya Shanghai-Pudong Taiyuan Ürümqi",
+        "links": [
+          {
+            "label": "Changsha",
+            "wikipedia": "Changsha_Huanghua_International_Airport"
+          },
+          {
+            "label": "Guangzhou",
+            "wikipedia": "Guangzhou_Baiyun_International_Airport"
+          },
+          {
+            "label": "Lanzhou",
+            "wikipedia": "Lanzhou_Zhongchuan_International_Airport"
+          },
+          {
+            "label": "Sanya",
+            "wikipedia": "Sanya_Phoenix_International_Airport"
+          },
+          {
+            "label": "Shanghai-Pudong",
+            "wikipedia": "Shanghai_Pudong_International_Airport"
+          },
+          {
+            "label": "Taiyuan",
+            "wikipedia": "Taiyuan_Wusu_International_Airport"
+          },
+          {
+            "label": "Ürümqi",
+            "wikipedia": "Ürümqi_Diwopu_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "CZ": {
+    "name": "China Southern Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381975132",
+    "source_revision": 1381975132,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Beijing–Daxing Guangzhou Shenzhen",
+        "links": [
+          {
+            "label": "Beijing–Daxing",
+            "wikipedia": "Beijing_Daxing_International_Airport"
+          },
+          {
+            "label": "Guangzhou",
+            "wikipedia": "Guangzhou_Baiyun_International_Airport"
+          },
+          {
+            "label": "Shenzhen",
+            "wikipedia": "Shenzhen_Bao'an_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Secondary hubs",
+        "text": "Chongqing Shanghai–Pudong Ürümqi Wuhan Zhengzhou",
+        "links": [
+          {
+            "label": "Chongqing",
+            "wikipedia": "Chongqing_Jiangbei_International_Airport"
+          },
+          {
+            "label": "Shanghai–Pudong",
+            "wikipedia": "Shanghai_Pudong_International_Airport"
+          },
+          {
+            "label": "Ürümqi",
+            "wikipedia": "Ürümqi_Diwopu_International_Airport"
+          },
+          {
+            "label": "Wuhan",
+            "wikipedia": "Wuhan_Tianhe_International_Airport"
+          },
+          {
+            "label": "Zhengzhou",
+            "wikipedia": "Zhengzhou_Xinzheng_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Bangkok–Suvarnabhumi Changchun Changsha Chengdu–Tianfu Dalian Guiyang Haikou Hangzhou Harbin Jieyang Kunming Nanning Sanya Seoul–Incheon Shenyang Xi'an Zhuhai",
+        "links": [
+          {
+            "label": "Bangkok–Suvarnabhumi",
+            "wikipedia": "Suvarnabhumi_Airport"
+          },
+          {
+            "label": "Changchun",
+            "wikipedia": "Changchun_Longjia_International_Airport"
+          },
+          {
+            "label": "Changsha",
+            "wikipedia": "Changsha_Huanghua_International_Airport"
+          },
+          {
+            "label": "Chengdu–Tianfu",
+            "wikipedia": "Chengdu_Tianfu_International_Airport"
+          },
+          {
+            "label": "Dalian",
+            "wikipedia": "Dalian_Zhoushuizi_International_Airport"
+          },
+          {
+            "label": "Guiyang",
+            "wikipedia": "Guiyang_Longdongbao_International_Airport"
+          },
+          {
+            "label": "Haikou",
+            "wikipedia": "Haikou_Meilan_International_Airport"
+          },
+          {
+            "label": "Hangzhou",
+            "wikipedia": "Hangzhou_Xiaoshan_International_Airport"
+          },
+          {
+            "label": "Harbin",
+            "wikipedia": "Harbin_Taiping_International_Airport"
+          },
+          {
+            "label": "Jieyang",
+            "wikipedia": "Jieyang_Chaoshan_International_Airport"
+          },
+          {
+            "label": "Kunming",
+            "wikipedia": "Kunming_Changshui_International_Airport"
+          },
+          {
+            "label": "Nanning",
+            "wikipedia": "Nanning_Wuxu_International_Airport"
+          },
+          {
+            "label": "Sanya",
+            "wikipedia": "Sanya_Phoenix_International_Airport"
+          },
+          {
+            "label": "Seoul–Incheon",
+            "wikipedia": "Incheon_International_Airport"
+          },
+          {
+            "label": "Shenyang",
+            "wikipedia": "Shenyang_Taoxian_International_Airport"
+          },
+          {
+            "label": "Xi'an",
+            "wikipedia": "Xi'an_Xianyang_International_Airport"
+          },
+          {
+            "label": "Zhuhai",
+            "wikipedia": "Zhuhai_Jinwan_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Alliance",
+        "text": "SkyTeam (2007–2018)",
+        "links": [
+          {
+            "label": "SkyTeam",
+            "wikipedia": "SkyTeam"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [
+      "SkyTeam (2007–2018)"
+    ],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "3U": {
+    "name": "Sichuan Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1380842589",
+    "source_revision": 1380842589,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Chengdu–Shuangliu Chengdu–Tianfu Chongqing Kunming",
+        "links": [
+          {
+            "label": "Chengdu–Shuangliu",
+            "wikipedia": "Chengdu_Shuangliu_International_Airport"
+          },
+          {
+            "label": "Chengdu–Tianfu",
+            "wikipedia": "Chengdu_Tianfu_International_Airport"
+          },
+          {
+            "label": "Chongqing",
+            "wikipedia": "Chongqing_Jiangbei_International_Airport"
+          },
+          {
+            "label": "Kunming",
+            "wikipedia": "Kunming_Changshui_International_Airport"
+          }
+        ]
+      },
+      {
+        "field": "Focus cities",
+        "text": "Beijing–Capital Harbin Hangzhou Lhasa Nanning Sanya Xi'an",
+        "links": [
+          {
+            "label": "Beijing–Capital",
+            "wikipedia": "Beijing_Capital_International_Airport"
+          },
+          {
+            "label": "Harbin",
+            "wikipedia": "Harbin_Taiping_International_Airport"
+          },
+          {
+            "label": "Hangzhou",
+            "wikipedia": "Hangzhou_Xiaoshan_International_Airport"
+          },
+          {
+            "label": "Lhasa",
+            "wikipedia": "Lhasa_Gonggar_Airport"
+          },
+          {
+            "label": "Nanning",
+            "wikipedia": "Nanning_Wuxu_International_Airport"
+          },
+          {
+            "label": "Sanya",
+            "wikipedia": "Sanya_Phoenix_International_Airport"
+          },
+          {
+            "label": "Xi'an",
+            "wikipedia": "Xi'an_Xianyang_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "HX": {
+    "name": "Hong Kong Airlines",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1377443936",
+    "source_revision": 1377443936,
+    "fields": [
+      {
+        "field": "Hubs",
+        "text": "Hong Kong International Airport",
+        "links": [
+          {
+            "label": "Hong Kong International Airport",
+            "wikipedia": "Hong_Kong_International_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "VY": {
+    "name": "Vueling",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382022151",
+    "source_revision": 1382022151,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "List of bases Alicante Amsterdam Barcelona (main) Bilbao Florence Gran Canaria Ibiza London–Gatwick Málaga Palma de Mallorca Paris–Orly Rome–Fiumicino (secondary) Santiago de Compostela Seville Tenerife–North Valencia",
+        "links": [
+          {
+            "label": "Alicante",
+            "wikipedia": "Alicante–Elche_Miguel_Hernández_Airport"
+          },
+          {
+            "label": "Amsterdam",
+            "wikipedia": "Schiphol_Airport"
+          },
+          {
+            "label": "Barcelona",
+            "wikipedia": "Josep_Tarradellas_Barcelona–El_Prat_Airport"
+          },
+          {
+            "label": "Bilbao",
+            "wikipedia": "Bilbao_Airport"
+          },
+          {
+            "label": "Florence",
+            "wikipedia": "Florence_Airport"
+          },
+          {
+            "label": "Gran Canaria",
+            "wikipedia": "Gran_Canaria_Airport"
+          },
+          {
+            "label": "Ibiza",
+            "wikipedia": "Ibiza_Airport"
+          },
+          {
+            "label": "London–Gatwick",
+            "wikipedia": "Gatwick_Airport"
+          },
+          {
+            "label": "Málaga",
+            "wikipedia": "Málaga_Airport"
+          },
+          {
+            "label": "Palma de Mallorca",
+            "wikipedia": "Palma_de_Mallorca_Airport"
+          },
+          {
+            "label": "Paris–Orly",
+            "wikipedia": "Orly_Airport"
+          },
+          {
+            "label": "Rome–Fiumicino",
+            "wikipedia": "Leonardo_da_Vinci–Fiumicino_Airport"
+          },
+          {
+            "label": "Santiago de Compostela",
+            "wikipedia": "Santiago–Rosalía_de_Castro_Airport"
+          },
+          {
+            "label": "Seville",
+            "wikipedia": "Seville_Airport"
+          },
+          {
+            "label": "Tenerife–North",
+            "wikipedia": "Tenerife_North–Ciudad_de_La_Laguna_Airport"
+          },
+          {
+            "label": "Valencia",
+            "wikipedia": "Valencia_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "The airline infobox explicitly labels Barcelona as main operating base and Rome Fiumicino as secondary operating base.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  },
+  "XQ": {
+    "name": "SunExpress",
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1381160228",
+    "source_revision": 1381160228,
+    "fields": [
+      {
+        "field": "Operating bases",
+        "text": "Antalya İzmir Ankara",
+        "links": [
+          {
+            "label": "Antalya",
+            "wikipedia": "Antalya_Airport"
+          },
+          {
+            "label": "İzmir",
+            "wikipedia": "Izmir_Adnan_Menderes_Airport"
+          },
+          {
+            "label": "Ankara",
+            "wikipedia": "Ankara_Esenboğa_Airport"
+          }
+        ]
+      }
+    ],
+    "scope": "All explicitly listed primary and secondary hubs. Where no hub is named, use the explicitly listed operating bases; if those are absent, use focus cities.",
+    "alliance_infobox": [],
+    "official_membership_directories": [
+      "https://www.staralliance.com/en/members",
+      "https://www.skyteam.com/en/about/our-members",
+      "https://www.oneworld.com/members"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {filterRoutes,visibleHubs,greatCircle,uniqueConnections,worldOffsets,shiftedPaths,fitPositions,routeBounds} from '../web/model.mjs';
+import {filterRoutes,visibleHubs,greatCircle,uniqueConnections,worldOffsets,shiftedPaths,fitPositions,routeBounds,canonicalAirportIds} from '../web/model.mjs';
 const data={airlines:[{id:'UA',alliance_id:'star'},{id:'AF',alliance_id:'skyteam'}],airports:[],alliances:[],hubs:[{airline_id:'UA',airport_id:'DEN'},{airline_id:'AF',airport_id:'CDG'}],routes:[{airline_id:'UA',hub_airport_id:'DEN',destination_airport_id:'MCI',status:'listed',service_type:'scheduled'},{airline_id:'UA',hub_airport_id:'DEN',destination_airport_id:'FRA',status:'seasonal',service_type:'scheduled'},{airline_id:'AF',hub_airport_id:'CDG',destination_airport_id:'JFK',status:'listed',service_type:'scheduled'},{airline_id:'AF',hub_airport_id:'CDG',destination_airport_id:'NCE',status:'listed',service_type:'charter'}]};
 const state=()=>({alliances:new Set(['star','skyteam']),airlines:new Set(),airports:new Set(),seasonal:true,charter:false});
 test('alliance, airline and destination filters compose without adding routes',()=>{const s=state();s.alliances=new Set(['star']);assert.equal(filterRoutes(data,s).length,2);s.airlines.add('AF');assert.equal(filterRoutes(data,s).length,0);s.airlines=new Set(['UA']);s.airports.add('MCI');assert.deepEqual(filterRoutes(data,s),[data.routes[0]]);});
@@ -39,4 +39,17 @@ test('fit bounds include the northern arc, not only the endpoint airports',()=>{
  assert.ok(bounds[1][0]>60);
  assert.ok(bounds[1][1]-bounds[0][1]<180);
  for(const path of paths)for(const [lat,lon] of path){const x=lon+360*Math.round((180-lon)/360);assert.ok(lat>=bounds[0][0]&&lat<=bounds[1][0]);assert.ok(x>=bounds[0][1]&&x<=bounds[1][1]);}
+});
+
+test('the non-aligned category filters independently and composes with airports',()=>{
+ const expanded={...data,alliances:[{id:'star'},{id:'skyteam'},{id:'oneworld'},{id:'nonaligned'}],airlines:[...data.airlines,{id:'EK',alliance_id:'nonaligned'}],hubs:[...data.hubs,{airline_id:'EK',airport_id:'DXB',kind:'hub'}],routes:[...data.routes,{airline_id:'EK',hub_airport_id:'DXB',destination_airport_id:'LHR',status:'listed',service_type:'scheduled'}]};
+ const s=state();s.alliances=new Set(expanded.alliances.map(a=>a.id));assert.equal(filterRoutes(expanded,s).length,4);
+ s.alliances=new Set(['nonaligned']);assert.deepEqual(filterRoutes(expanded,s).map(r=>r.airline_id),['EK']);assert.equal(visibleHubs(expanded,s)[0].airport_id,'DXB');
+ s.airports.add('LHR');assert.equal(filterRoutes(expanded,s).length,1);s.airlines.add('UA');assert.equal(filterRoutes(expanded,s).length,0);
+});
+
+test('bookmarked former airport codes resolve to the current physical-airport identifier',()=>{
+ const airports=[{id:'ALY',former_iata_codes:['HBE']},{id:'CAI'}];
+ assert.deepEqual(canonicalAirportIds(airports,['HBE','CAI','BOGUS']),['ALY','CAI']);
+ assert.deepEqual(canonicalAirportIds(airports,['ALY']),['ALY']);
 });

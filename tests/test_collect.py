@@ -21,6 +21,17 @@ class ParsingTests(unittest.TestCase):
   self.assertFalse(c.passenger_table(s.select_one('#past')));self.assertTrue(c.passenger_table(s.select_one('#now')));self.assertFalse(c.passenger_table(s.select_one('#cargo')))
  def test_dates_support_both_wikipedia_orders(self):
   self.assertEqual(c.date_in('begins November 1, 2026'),'2026-11-01');self.assertEqual(c.date_in('ends 27 October 2026'),'2026-10-27');self.assertEqual(c.date_in('resumes seasonally'),None)
+ def test_code_migration_preserves_the_physical_airport_and_effective_date(self):
+  import datetime
+  rows=[{'id':'3180','iata_code':'HBE','latitude_deg':'30.93'},{'id':'3179','iata_code':'ALY','type':'closed','latitude_deg':'31.18'}]
+  entries={'HBE':{'ourairports_id':'3180','iata_code':'ALY','effective_on':'2026-09-16','previous_iata':'HBE'}}
+  before=c.apply_metadata_overrides(rows,entries,datetime.date(2026,9,15));self.assertEqual(before[0]['iata_code'],'HBE')
+  after=c.apply_metadata_overrides(rows,entries,datetime.date(2026,10,27));self.assertEqual(after[0]['iata_code'],'ALY');self.assertEqual(after[0]['latitude_deg'],'30.93');self.assertEqual(after[0]['_former_iata_code'],'HBE');self.assertEqual(after[1],rows[1]);self.assertEqual(rows[0]['iata_code'],'HBE')
+ def test_missing_airport_code_enrichment_does_not_invent_a_former_iata(self):
+  import datetime
+  rows=[{'id':'26518','iata_code':'','icao_code':'VEPU','latitude_deg':'25.75'}]
+  entries={'VEPU':{'ourairports_id':'26518','iata_code':'PXN','verified_on':'2026-10-27'}}
+  result=c.apply_metadata_overrides(rows,entries,datetime.date(2026,10,27))[0];self.assertEqual(result['iata_code'],'PXN');self.assertNotIn('_former_iata_code',result);self.assertEqual(result['latitude_deg'],'25.75');self.assertEqual(result['icao_code'],'VEPU')
  def test_unicode_redirect_comparison(self):
   self.assertEqual(c.norm('Montr%C3%A9al%E2%80%93Trudeau_International_Airport'),c.norm('Montreal-Trudeau International Airport'))
 if __name__=='__main__':unittest.main()
