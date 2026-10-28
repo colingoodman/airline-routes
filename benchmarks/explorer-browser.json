@@ -1,0 +1,498 @@
+{
+  "date": "2026-10-28",
+  "method": "Three alternating navigations in one Chromium tab; local HTTP, 1280x720, DPR 1, no CPU/network throttling. Application instrumentation, not Core Web Vitals. Before: 439d841.",
+  "samples": [
+    {
+      "version": "before",
+      "sample": 1,
+      "metrics": {
+        "data": {
+          "count": 1,
+          "last_ms": 27.7,
+          "max_ms": 27.7,
+          "samples": [
+            27.7
+          ]
+        },
+        "airlineChoices": {
+          "count": 1,
+          "last_ms": 1.5,
+          "max_ms": 1.5,
+          "samples": [
+            1.5
+          ]
+        },
+        "layers": {
+          "count": 1,
+          "last_ms": 0,
+          "max_ms": 0,
+          "samples": [
+            0
+          ],
+          "routes": 0,
+          "pins": 7009
+        },
+        "pins": {
+          "count": 1,
+          "last_ms": 19.3,
+          "max_ms": 19.3,
+          "samples": [
+            19.3
+          ]
+        },
+        "map": {
+          "count": 1,
+          "last_ms": 146.5,
+          "max_ms": 146.5,
+          "samples": [
+            146.5
+          ]
+        },
+        "update": {
+          "count": 1,
+          "last_ms": 162.7,
+          "max_ms": 162.7,
+          "samples": [
+            162.7
+          ]
+        },
+        "routeDraw": {
+          "count": 1,
+          "last_ms": 143.3,
+          "max_ms": 143.3,
+          "samples": [
+            143.3
+          ],
+          "pieces": 70111,
+          "vertices": 238048,
+          "segments": 153022,
+          "batches": 10,
+          "canvas_pixels": 2824192
+        },
+        "ready": {
+          "count": 1,
+          "last_ms": 505.4,
+          "max_ms": 505.4,
+          "samples": [
+            505.4
+          ],
+          "canvas_pixels": 4234496
+        }
+      },
+      "width": 1280,
+      "height": 720,
+      "dpr": 1,
+      "counts": "30,248 connections · 562 airlines · 699 hubs/bases · 3318 airports"
+    },
+    {
+      "version": "after",
+      "sample": 1,
+      "metrics": {
+        "data": {
+          "count": 1,
+          "last_ms": 17.3,
+          "max_ms": 17.3,
+          "samples": [
+            17.3
+          ]
+        },
+        "airlineChoices": {
+          "count": 1,
+          "last_ms": 1.5,
+          "max_ms": 1.5,
+          "samples": [
+            1.5
+          ]
+        },
+        "layers": {
+          "count": 1,
+          "last_ms": 0,
+          "max_ms": 0,
+          "samples": [
+            0
+          ],
+          "routes": 0,
+          "pins": 7009
+        },
+        "pins": {
+          "count": 1,
+          "last_ms": 22.5,
+          "max_ms": 22.5,
+          "samples": [
+            22.5
+          ]
+        },
+        "map": {
+          "count": 1,
+          "last_ms": 129.4,
+          "max_ms": 129.4,
+          "samples": [
+            129.4
+          ]
+        },
+        "update": {
+          "count": 1,
+          "last_ms": 163,
+          "max_ms": 163,
+          "samples": [
+            163
+          ]
+        },
+        "routeDraw": {
+          "count": 1,
+          "last_ms": 102,
+          "max_ms": 102,
+          "samples": [
+            102
+          ],
+          "pieces": 70111,
+          "vertices": 238048,
+          "segments": 153022,
+          "batches": 10,
+          "canvas_pixels": 2824192
+        },
+        "ready": {
+          "count": 1,
+          "last_ms": 392.9,
+          "max_ms": 392.9,
+          "samples": [
+            392.9
+          ],
+          "canvas_pixels": 4234496
+        }
+      },
+      "width": 1280,
+      "height": 720,
+      "dpr": 1,
+      "counts": "30,248 connections · 562 airlines · 699 hubs/bases · 3318 airports"
+    },
+    {
+      "version": "before",
+      "sample": 2,
+      "metrics": {
+        "data": {
+          "count": 1,
+          "last_ms": 12.9,
+          "max_ms": 12.9,
+          "samples": [
+            12.9
+          ]
+        },
+        "airlineChoices": {
+          "count": 1,
+          "last_ms": 1.4,
+          "max_ms": 1.4,
+          "samples": [
+            1.4
+          ]
+        },
+        "layers": {
+          "count": 1,
+          "last_ms": 0,
+          "max_ms": 0,
+          "samples": [
+            0
+          ],
+          "routes": 0,
+          "pins": 7009
+        },
+        "pins": {
+          "count": 1,
+          "last_ms": 18.1,
+          "max_ms": 18.1,
+          "samples": [
+            18.1
+          ]
+        },
+        "map": {
+          "count": 1,
+          "last_ms": 125.9,
+          "max_ms": 125.9,
+          "samples": [
+            125.9
+          ]
+        },
+        "update": {
+          "count": 1,
+          "last_ms": 142.1,
+          "max_ms": 142.1,
+          "samples": [
+            142.1
+          ]
+        },
+        "routeDraw": {
+          "count": 1,
+          "last_ms": 100.4,
+          "max_ms": 100.4,
+          "samples": [
+            100.4
+          ],
+          "pieces": 70111,
+          "vertices": 238048,
+          "segments": 153022,
+          "batches": 10,
+          "canvas_pixels": 2824192
+        },
+        "ready": {
+          "count": 1,
+          "last_ms": 383,
+          "max_ms": 383,
+          "samples": [
+            383
+          ],
+          "canvas_pixels": 4234496
+        }
+      },
+      "width": 1280,
+      "height": 720,
+      "dpr": 1,
+      "counts": "30,248 connections · 562 airlines · 699 hubs/bases · 3318 airports"
+    },
+    {
+      "version": "after",
+      "sample": 2,
+      "metrics": {
+        "data": {
+          "count": 1,
+          "last_ms": 13,
+          "max_ms": 13,
+          "samples": [
+            13
+          ]
+        },
+        "airlineChoices": {
+          "count": 1,
+          "last_ms": 1.6,
+          "max_ms": 1.6,
+          "samples": [
+            1.6
+          ]
+        },
+        "layers": {
+          "count": 1,
+          "last_ms": 0,
+          "max_ms": 0,
+          "samples": [
+            0
+          ],
+          "routes": 0,
+          "pins": 7009
+        },
+        "pins": {
+          "count": 1,
+          "last_ms": 24.7,
+          "max_ms": 24.7,
+          "samples": [
+            24.7
+          ]
+        },
+        "map": {
+          "count": 1,
+          "last_ms": 145.2,
+          "max_ms": 145.2,
+          "samples": [
+            145.2
+          ]
+        },
+        "update": {
+          "count": 1,
+          "last_ms": 183.9,
+          "max_ms": 183.9,
+          "samples": [
+            183.9
+          ]
+        },
+        "routeDraw": {
+          "count": 1,
+          "last_ms": 108.8,
+          "max_ms": 108.8,
+          "samples": [
+            108.8
+          ],
+          "pieces": 70111,
+          "vertices": 238048,
+          "segments": 153022,
+          "batches": 10,
+          "canvas_pixels": 2824192
+        },
+        "ready": {
+          "count": 1,
+          "last_ms": 471.5,
+          "max_ms": 471.5,
+          "samples": [
+            471.5
+          ],
+          "canvas_pixels": 4234496
+        }
+      },
+      "width": 1280,
+      "height": 720,
+      "dpr": 1,
+      "counts": "30,248 connections · 562 airlines · 699 hubs/bases · 3318 airports"
+    },
+    {
+      "version": "before",
+      "sample": 3,
+      "metrics": {
+        "data": {
+          "count": 1,
+          "last_ms": 13.5,
+          "max_ms": 13.5,
+          "samples": [
+            13.5
+          ]
+        },
+        "airlineChoices": {
+          "count": 1,
+          "last_ms": 1.3,
+          "max_ms": 1.3,
+          "samples": [
+            1.3
+          ]
+        },
+        "layers": {
+          "count": 1,
+          "last_ms": 0,
+          "max_ms": 0,
+          "samples": [
+            0
+          ],
+          "routes": 0,
+          "pins": 7009
+        },
+        "pins": {
+          "count": 1,
+          "last_ms": 19.5,
+          "max_ms": 19.5,
+          "samples": [
+            19.5
+          ]
+        },
+        "map": {
+          "count": 1,
+          "last_ms": 129.6,
+          "max_ms": 129.6,
+          "samples": [
+            129.6
+          ]
+        },
+        "update": {
+          "count": 1,
+          "last_ms": 145.1,
+          "max_ms": 145.1,
+          "samples": [
+            145.1
+          ]
+        },
+        "routeDraw": {
+          "count": 1,
+          "last_ms": 103,
+          "max_ms": 103,
+          "samples": [
+            103
+          ],
+          "pieces": 70111,
+          "vertices": 238048,
+          "segments": 153022,
+          "batches": 10,
+          "canvas_pixels": 2824192
+        },
+        "ready": {
+          "count": 1,
+          "last_ms": 445.3,
+          "max_ms": 445.3,
+          "samples": [
+            445.3
+          ],
+          "canvas_pixels": 4234496
+        }
+      },
+      "width": 1280,
+      "height": 720,
+      "dpr": 1,
+      "counts": "30,248 connections · 562 airlines · 699 hubs/bases · 3318 airports"
+    },
+    {
+      "version": "after",
+      "sample": 3,
+      "metrics": {
+        "data": {
+          "count": 1,
+          "last_ms": 12.9,
+          "max_ms": 12.9,
+          "samples": [
+            12.9
+          ]
+        },
+        "airlineChoices": {
+          "count": 1,
+          "last_ms": 1.5,
+          "max_ms": 1.5,
+          "samples": [
+            1.5
+          ]
+        },
+        "layers": {
+          "count": 1,
+          "last_ms": 0,
+          "max_ms": 0,
+          "samples": [
+            0
+          ],
+          "routes": 0,
+          "pins": 7009
+        },
+        "pins": {
+          "count": 1,
+          "last_ms": 22.5,
+          "max_ms": 22.5,
+          "samples": [
+            22.5
+          ]
+        },
+        "map": {
+          "count": 1,
+          "last_ms": 134,
+          "max_ms": 134,
+          "samples": [
+            134
+          ]
+        },
+        "update": {
+          "count": 1,
+          "last_ms": 171.1,
+          "max_ms": 171.1,
+          "samples": [
+            171.1
+          ]
+        },
+        "routeDraw": {
+          "count": 1,
+          "last_ms": 109.9,
+          "max_ms": 109.9,
+          "samples": [
+            109.9
+          ],
+          "pieces": 70111,
+          "vertices": 238048,
+          "segments": 153022,
+          "batches": 10,
+          "canvas_pixels": 2824192
+        },
+        "ready": {
+          "count": 1,
+          "last_ms": 500.4,
+          "max_ms": 500.4,
+          "samples": [
+            500.4
+          ],
+          "canvas_pixels": 4234496
+        }
+      },
+      "width": 1280,
+      "height": 720,
+      "dpr": 1,
+      "counts": "30,248 connections · 562 airlines · 699 hubs/bases · 3318 airports"
+    }
+  ]
+}

@@ -42,3 +42,6 @@ test('comparison uses unordered physical airport pairs and preserves every sourc
 test('partial or identical comparison selections retain ordinary filter semantics',()=>{
  const s=defaultExplorerState(located);s.compareA='UA';assert.equal(compareNetworks(located,s).active,false);s.compareB='UA';assert.equal(compareNetworks(located,s).active,false);s.airlines.add('AF');assert.equal(compareNetworks(located,s).routes.length,0);
 });
+
+test('between mode requires two airports even with an empty selection',()=>{const s=defaultExplorerState(data);s.airportMode='between';assert.equal(filterRoutes(data,s).length,0);s.airports.add('DEN');assert.equal(filterRoutes(data,s).length,0);s.airports.add('NRT');assert.equal(filterRoutes(data,s).length,1);});
+test('evidence sorting and all geographic/comparison settings survive URL restoration',()=>{const s=defaultExplorerState(located);Object.assign(s,{evidenceSort:'distance',view:'evidence',geoMode:'both',colorBy:'airline',labels:'on',unit:'mi',compareA:'UA',compareB:'AF',focus:'DEN',minKm:1609.344,maxKm:12000});s.countries=new Set(['US','JP']);s.regions=new Set(['AS','NA']);s.compareShow=new Set(['shared']);assert.deepEqual(restoreExplorerState(located,explorerParams(s,located)),s);});

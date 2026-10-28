@@ -1,0 +1,61 @@
+{
+  "environment": {
+    "node": "v22.23.1",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "payload": {
+    "canonical_bytes": 15994246,
+    "runtime_bytes": 2734905,
+    "runtime_gzip_bytes": 716353
+  },
+  "routes": 32648,
+  "connections": 30248,
+  "measurements": [
+    {
+      "name": "filter default",
+      "median_ms": 0.93,
+      "p90_ms": 1.21
+    },
+    {
+      "name": "filter low-cost",
+      "median_ms": 1.56,
+      "p90_ms": 2.36
+    },
+    {
+      "name": "airline search eligibility",
+      "median_ms": 1.4,
+      "p90_ms": 1.83
+    },
+    {
+      "name": "typed hub selection",
+      "median_ms": 1.81,
+      "p90_ms": 2.06
+    },
+    {
+      "name": "group connections",
+      "median_ms": 10.32,
+      "p90_ms": 13.21
+    },
+    {
+      "name": "destinations worldwide",
+      "median_ms": 7.77,
+      "p90_ms": 10.09
+    },
+    {
+      "name": "destinations NRT",
+      "median_ms": 0.5,
+      "p90_ms": 0.97
+    },
+    {
+      "name": "geography and distance",
+      "median_ms": 3.64,
+      "p90_ms": 4.31
+    },
+    {
+      "name": "comparison UA vs NH",
+      "median_ms": 1.23,
+      "p90_ms": 1.77
+    }
+  ]
+}

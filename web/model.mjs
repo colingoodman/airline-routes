@@ -93,26 +93,26 @@ export function canonicalAirportIds(airports,ids) {
 
 // Airport modes describe source-record endpoints, not independently verified flight direction.
 export function airportMatches(route,state){
- const ids=state.airports;if(!ids.size)return true;
+ const ids=state.airports;if(state.airportMode==='between'&&ids.size<2)return false;if(!ids.size)return true;
  const hub=ids.has(route.hub_airport_id),destination=ids.has(route.destination_airport_id);
  return state.airportMode==='between'?ids.size>=2&&hub&&destination:state.airportMode==='hub'?hub:hub||destination;
 }
 export function defaultExplorerState(data){
- return {alliances:new Set(data.alliances.map(a=>a.id)),airlines:new Set(),airports:new Set(),airportMode:'touches',seasonal:true,charter:false,lowCost:'all',regional:false,focus:'',colorBy:'alliance',labels:'auto',airlineSort:'name',destinationSort:'name',view:'destinations',countries:new Set(),regions:new Set(),geoMode:'either',minKm:0,maxKm:20020,unit:'km',compareA:'',compareB:'',compareShow:new Set(['shared','a','b'])};
+ return {alliances:new Set(data.alliances.map(a=>a.id)),airlines:new Set(),airports:new Set(),airportMode:'touches',seasonal:true,charter:false,lowCost:'all',regional:false,focus:'',colorBy:'alliance',labels:'auto',airlineSort:'name',destinationSort:'name',evidenceSort:'airline',view:'destinations',countries:new Set(),regions:new Set(),geoMode:'either',minKm:0,maxKm:20020,unit:'km',compareA:'',compareB:'',compareShow:new Set(['shared','a','b'])};
 }
 export function explorerParams(state,data){
  const p=new URLSearchParams();
  for(const key of ['alliances','airlines','airports','countries','regions','compareShow']){
   const ids=[...state[key]].sort();if(key==='alliances'?ids.length!==data.alliances.length:key==='compareShow'?ids.join(',')!=='a,b,shared':ids.length)p.set(key,ids.join(','));
  }
- for(const [key,param,def] of [['airportMode','airport_mode','touches'],['focus','focus',''],['colorBy','color','alliance'],['labels','labels','auto'],['airlineSort','airline_sort','name'],['destinationSort','destination_sort','name'],['view','view','destinations'],['geoMode','geo_mode','either'],['unit','unit','km'],['compareA','compare_a',''],['compareB','compare_b','']])if(state[key]!==def)p.set(param,state[key]);
+ for(const [key,param,def] of [['airportMode','airport_mode','touches'],['focus','focus',''],['colorBy','color','alliance'],['labels','labels','auto'],['airlineSort','airline_sort','name'],['destinationSort','destination_sort','name'],['evidenceSort','evidence_sort','airline'],['view','view','destinations'],['geoMode','geo_mode','either'],['unit','unit','km'],['compareA','compare_a',''],['compareB','compare_b','']])if(state[key]!==def)p.set(param,state[key]);
  if(!state.seasonal)p.set('seasonal','0');if(state.charter)p.set('charter','1');if(state.lowCost!=='all')p.set('low_cost',state.lowCost);if(state.regional)p.set('regional','1');if(state.minKm)p.set('min_km',state.minKm);if(state.maxKm!==20020)p.set('max_km',state.maxKm);return p;
 }
 export function restoreExplorerState(data,query){
  const s=defaultExplorerState(data),p=new URLSearchParams(query);
  for(const [key,valid] of [['alliances',data.alliances.map(a=>a.id)],['airlines',data.airlines.map(a=>a.id)],['countries',data.airports.map(a=>a.country)],['regions',['AF','AN','AS','EU','NA','OC','SA','unknown']],['compareShow',['shared','a','b']]])if(p.has(key)){const allowed=new Set(valid);s[key]=new Set(p.get(key).split(',').filter(x=>allowed.has(x)));}
  if(p.has('airports'))s.airports=new Set(canonicalAirportIds(data.airports,p.get('airports').split(',')));
- for(const [key,param,allowed] of [['airportMode','airport_mode',['touches','between','hub']],['colorBy','color',['alliance','airline']],['labels','labels',['off','auto','on']],['airlineSort','airline_sort',['name','destinations','hubs']],['destinationSort','destination_sort',['name','code','country','distance','airlines']],['view','view',['destinations','evidence']],['geoMode','geo_mode',['either','both','hub','destination']],['unit','unit',['km','mi']]])if(allowed.includes(p.get(param)))s[key]=p.get(param);
+ for(const [key,param,allowed] of [['airportMode','airport_mode',['touches','between','hub']],['colorBy','color',['alliance','airline']],['labels','labels',['off','auto','on']],['airlineSort','airline_sort',['name','destinations','hubs']],['destinationSort','destination_sort',['name','code','country','distance','airlines']],['evidenceSort','evidence_sort',['airline','hub','destination','distance']],['view','view',['destinations','evidence']],['geoMode','geo_mode',['either','both','hub','destination']],['unit','unit',['km','mi']]])if(allowed.includes(p.get(param)))s[key]=p.get(param);
  const airports=new Set(data.airports.map(a=>a.id)),airlines=new Set(data.airlines.map(a=>a.id));if(airports.has(p.get('focus')))s.focus=p.get('focus');for(const key of ['compareA','compareB']){const id=p.get(key==='compareA'?'compare_a':'compare_b');if(airlines.has(id))s[key]=id;}
  s.seasonal=p.get('seasonal')!=='0';s.charter=p.get('charter')==='1';s.regional=p.get('regional')==='1';if(['yes','no','unknown'].includes(p.get('low_cost')))s.lowCost=p.get('low_cost');
  for(const [key,param] of [['minKm','min_km'],['maxKm','max_km']])if(p.has(param)&&Number.isFinite(Number(p.get(param))))s[key]=Math.max(0,Math.min(20020,Number(p.get(param))));if(s.minKm>s.maxKm)[s.minKm,s.maxKm]=[s.maxKm,s.minKm];return s;
