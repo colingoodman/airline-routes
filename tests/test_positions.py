@@ -189,7 +189,7 @@ class PositionTests(unittest.TestCase):
     def test_attempt_is_persisted_before_interrupted_network_io(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
-            def interrupt():
+            def interrupt(*_):
                 ledger=json.loads((root/'request-ledger.json').read_text())
                 self.assertEqual(ledger['days'][NOW.date().isoformat()],1)
                 manifest=json.loads(next((root/'sessions').glob('*/manifest.json')).read_text())

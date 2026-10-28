@@ -91,6 +91,9 @@ coverage. The checked sampler is `scripts/position_research.py`.
 
 ### Capture and replay contract
 
+These are the original adsb.lol experiment limits; the longer adsb.fi experiment
+below has a separately bounded provider profile.
+
 - Fixed OSL region; 1–60 samples, at least 20 seconds apart; 180 attempts/UTC day.
   The earlier access probe is seeded into the persistent attempt ledger once.
   A single lock prevents overlapping runs. Attempts are persisted before network IO.
@@ -346,3 +349,40 @@ feeder software, registered accounts, requested keys or contacted providers.
 The new research establishes promising request budgets and one alternative's
 bounded accessibility. It does not prove a 24-hour service, create a live map,
 resolve flight numbers/routes or change the existing 500/day adsb.lol sampler.
+
+## adsb.fi longer regional test
+
+The next bounded experiment is a one-hour session on the existing droplet:
+180 samples, at least 20 seconds apart, using the documented v3 public endpoint
+within 50 nautical miles of OSL. This is a single private research run, not a
+24-hour service or a public aircraft display.
+
+The sampler now has explicit provider profiles. adsb.fi uses its own endpoint,
+attribution, ledger and default state directory. Its documentation states a
+1-request/second limit but no daily allowance, and our probes returned no quota
+headers. Missing quota headers are therefore accepted only for this documented
+profile. A **self-imposed 360-attempt cap**, conservatively including the previous
+UTC day, bounds research use; it is not a claimed provider daily entitlement.
+Any stricter observed headers are retained and honored. The original adsb.lol
+profile keeps its 60-sample, 180-attempt, quota-header-dependent limits.
+
+The adsb.fi session has a 65-minute hard runtime budget, a 4 MiB response limit,
+15-second request deadline and 128 MiB state budget. The transient droplet unit
+adds a 64 MiB RAM cap, 64 MiB swap cap and 25% CPU quota. Failed requests are
+counted before IO, stop the run and halt same-day attempts without retries or
+provider switching. The prior droplet access probe is seeded into the new ledger.
+No recurring position timer or Mac background job is installed.
+
+Run the checked provider profile manually in its isolated droplet environment:
+
+```sh
+PYTHONPATH=/opt/airplanes-refresh/repo/scripts python3 /path/to/position_research.py capture \
+  --provider adsb.fi --work /var/lib/airplanes-position-research-adsbfi \
+  --samples 180 --interval 20
+```
+
+Implementation checks include a simulated complete 180-response session with no
+quota headers, correct source attribution in capture and replay, provider ledger
+isolation, stricter-header persistence, legacy adsb.lol safeguards and request /
+runtime ceilings. Live results and independent replay checks will be recorded
+after the session finishes.

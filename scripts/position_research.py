@@ -18,13 +18,22 @@ from rebuild import ROOT, write_json
 from refresh_runner import locked, size_bytes
 
 URL = 'https://api.adsb.lol/v2/point/60.193901/11.1004/50'
+PROVIDERS = {
+    'adsb.lol': {'url':URL,'max_samples':60,'max_seconds':1500,'day_cap':180,
+                 'default_rate':'4, 4;w=1, 60;w=60, 500;w=86400',
+                 'attribution':{'text':'adsb.lol','url':'https://www.adsb.lol/','license':'ODbL-1.0'}},
+    'adsb.fi': {'url':'https://opendata.adsb.fi/api/v3/lat/60.193901/lon/11.1004/dist/50',
+                'max_samples':180,'max_seconds':3900,'day_cap':360,'default_rate':None,
+                'attribution':{'text':'adsb.fi','url':'https://adsb.fi/','license':None,
+                               'terms_url':'https://github.com/adsbfi/opendata/blob/main/README.md',
+                               'use':'personal, non-commercial; attribution required'}},
+}
 REGION = {'airport':'OSL','latitude':60.193901,'longitude':11.1004,'radius_nm':50}
 MAX_RESPONSE = 4*1024*1024
 TIMEOUT = 15
 MAX_DISK = 128*1024*1024
 DAY_CAP = 180
 MIN_INTERVAL = 20
-MAX_SESSION_SECONDS = 1500
 POLICY = {'stale_after_seconds':60,'future_tolerance_seconds':5,
           'trail_gap_seconds':120,'jump_speed_knots':1400,'jump_tolerance_nm':1}
 
@@ -133,7 +142,7 @@ def report(frames,manifest):
         disappearances+=len(last_ids-ids);reappearances+=len((ids-last_ids)&all_ids)
         all_ids|=ids;last_ids=ids
     attempts=manifest['attempts'];latencies=[a['latency_seconds'] for a in attempts if a.get('status')=='captured']
-    return {'schema_version':1,'provider':'adsb.lol','region':REGION,'policy':POLICY,
+    return {'schema_version':1,'provider':manifest.get('provider','adsb.lol'),'region':REGION,'policy':POLICY,
             'started_at':manifest['started_at'],'finished_at':manifest.get('finished_at'),
             'capture_code_sha256':manifest['code_sha256'],'analysis_code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             'attempts':len(attempts),'successful_responses':len(frames),'http_statuses':dict(Counter(str(a.get('http_status','no_response')) for a in attempts)),
@@ -160,11 +169,11 @@ class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self,*args):return None
 
 
-def fetch():
+def fetch(url=URL):
     def timeout(*_):raise TimeoutError('15-second total request deadline exceeded')
     old=signal.signal(signal.SIGALRM,timeout);signal.setitimer(signal.ITIMER_REAL,TIMEOUT)
     try:
-        with build_opener(NoRedirect).open(Request(URL,headers={'User-Agent':'AllianceRouteMap-research/1.0 (https://github.com/colingoodman/airline-routes)','Accept':'application/json'}),timeout=TIMEOUT) as response:
+        with build_opener(NoRedirect).open(Request(url,headers={'User-Agent':'AllianceRouteMap-research/1.0 (https://github.com/colingoodman/airline-routes)','Accept':'application/json'}),timeout=TIMEOUT) as response:
             body=response.read(MAX_RESPONSE+1)
             if len(body)>MAX_RESPONSE:raise ValueError('Response exceeds 4 MiB')
             headers={k.lower():v for k,v in response.headers.items() if k.lower() in ('x-ratelimit-limit','x-ratelimit-remaining','x-ratelimit-reset','retry-after','date','content-type')}
@@ -173,14 +182,25 @@ def fetch():
         signal.setitimer(signal.ITIMER_REAL,0);signal.signal(signal.SIGALRM,old)
 
 
-def rate_policy(header):
+def rate_policy(header,day_cap=DAY_CAP,require_daily=True):
     limits={}
     for count,window in re.findall(r'(\d+)\s*;\s*w=(\d+)',header or ''):
         count,window=int(count),int(window)
         if count<=0 or window<=0:raise ValueError('Invalid provider rate policy')
         limits[window]=min(count,limits.get(window,count))
-    if 86400 not in limits:raise ValueError('Provider daily allowance is missing or unrecognized')
-    return min(DAY_CAP,limits[86400]*4//5),max([MIN_INTERVAL]+[window/count for window,count in limits.items() if window!=86400])
+    if require_daily and 86400 not in limits:raise ValueError('Provider daily allowance is missing or unrecognized')
+    if not limits:raise ValueError('Provider allowance is unrecognized')
+    cap=min(day_cap,limits[86400]*4//5) if 86400 in limits else day_cap
+    return cap,max([MIN_INTERVAL]+[window/count for window,count in limits.items() if window!=86400])
+
+
+def provider_policy(ledger,provider):
+    profile=PROVIDERS[provider];header=ledger.get('rate_limit',profile['default_rate'])
+    if provider=='adsb.fi' and header is None:
+        # Published 1 request/second; retain our slower 20-second research cadence
+        # and self-imposed cap. No daily provider entitlement is inferred.
+        return profile['day_cap'],MIN_INTERVAL
+    return rate_policy(header,day_cap=profile['day_cap'],require_daily=provider=='adsb.lol')
 
 
 def safe_work(path):
@@ -197,11 +217,11 @@ def bounded_json(path,value,work):
     write_json(path,value)
 
 
-def seed_ledger(work,ledger):
+def seed_ledger(work,ledger,url=URL):
     seeded=set(ledger.get('access_probes',[]))
     for path in (work/'access').rglob('*manifest.json'):
         d=json.loads(path.read_text());key=d.get('started_at')
-        if d.get('url')!=URL or not key or key in seeded:continue
+        if d.get('url')!=url or not key or key in seeded:continue
         day=timestamp(key).date().isoformat();ledger.setdefault('days',{})[day]=ledger.setdefault('days',{}).get(day,0)+1;seeded.add(key)
     ledger['access_probes']=sorted(seeded)
 
@@ -217,49 +237,60 @@ def budget_used(ledger,now):
 
 
 def capture(args):
-    if not 1<=args.samples<=60 or not number(args.interval) or not 20<=args.interval<=120:
-        raise ValueError('Use 1–60 samples, 20–120 seconds apart')
-    if (args.samples-1)*args.interval+TIMEOUT>MAX_SESSION_SECONDS:
-        raise ValueError('Requested session exceeds the 25-minute runtime budget')
-    work=safe_work(args.work);lock=locked(work)
+    provider=getattr(args,'provider','adsb.lol')
+    if provider not in PROVIDERS:raise ValueError('Unknown position provider')
+    profile=PROVIDERS[provider]
+    if not 1<=args.samples<=profile['max_samples'] or not number(args.interval) or not 20<=args.interval<=120:
+        raise ValueError('Sample count or 20–120-second interval exceeds provider research limits')
+    if (args.samples-1)*args.interval+TIMEOUT>profile['max_seconds']:
+        raise ValueError('Requested session exceeds the provider runtime budget')
+    default=ROOT/'work'/('position-research' if provider=='adsb.lol' else 'position-research-adsbfi')
+    work=safe_work(args.work or default);lock=locked(work)
     if lock is None:raise ValueError('Position research already running')
     session=None;manifest=None;frames=[];previous={};started_clock=time.monotonic();last_clock=None
     try:
         ledger_file=work/'request-ledger.json';ledger=json.loads(ledger_file.read_text()) if ledger_file.exists() else {'days':{}}
-        seed_ledger(work,ledger)
+        if ledger_file.exists() and ledger.get('provider','adsb.lol')!=provider:
+            raise ValueError('Research ledger belongs to another provider; use a separate state directory')
+        if ledger.get('url',profile['url'])!=profile['url']:raise ValueError('Research ledger endpoint changed')
+        ledger.update(provider=provider,url=profile['url'])
+        seed_ledger(work,ledger,profile['url'])
         now=utcnow();day=now.date().isoformat()
-        cap,interval=rate_policy(ledger.get('rate_limit','4, 4;w=1, 60;w=60, 500;w=86400'))
+        cap,interval=provider_policy(ledger,provider)
         if ledger.get('halted_day')==day:raise ValueError('Provider access halted for this UTC day; inspect earlier failure')
         if budget_used(ledger,now)+args.samples>cap:raise ValueError('Daily request budget exhausted before session')
         if ledger.get('last_attempt_at') and (now-timestamp(ledger['last_attempt_at'])).total_seconds()<max(args.interval,interval):
             raise ValueError('Minimum request interval has not elapsed')
         if size_bytes(work)+MAX_RESPONSE*3>MAX_DISK:raise ValueError('Research disk reserve exhausted before session')
         session=work/'sessions'/now.strftime('%Y%m%dT%H%M%S%fZ');session.mkdir(parents=True)
-        manifest={'schema_version':1,'provider':'adsb.lol','url':URL,'region':REGION,'started_at':now.isoformat(),'status':'collecting',
+        manifest={'schema_version':1,'provider':provider,'url':profile['url'],'region':REGION,'started_at':now.isoformat(),'status':'collecting',
                   'code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                   'support_code_sha256':{name:hashlib.sha256(Path(sys.modules[name].__file__).read_bytes()).hexdigest() for name in ('rebuild','refresh_runner')},
                   'requested_samples':args.samples,
-                  'requested_interval_seconds':args.interval,'attempts':[],'attribution':{'text':'adsb.lol','url':'https://www.adsb.lol/','license':'ODbL-1.0'}}
+                  'requested_interval_seconds':args.interval,'max_session_seconds':profile['max_seconds'],
+                  'research_daily_attempt_cap':profile['day_cap'],
+                  'rate_limit_basis':'documented 1 request/second; local cap only' if provider=='adsb.fi' else 'observed provider quota headers',
+                  'attempts':[],'attribution':profile['attribution']}
         bounded_json(session/'manifest.json',manifest,work)
         for index in range(args.samples):
-            now=utcnow();day=now.date().isoformat();cap,min_interval=rate_policy(ledger.get('rate_limit','4, 4;w=1, 60;w=60, 500;w=86400'))
+            now=utcnow();day=now.date().isoformat();cap,min_interval=provider_policy(ledger,provider)
             if ledger.get('last_attempt_at'):
                 remaining=max(args.interval,min_interval)-(now-timestamp(ledger['last_attempt_at'])).total_seconds()
                 if last_clock is not None:remaining=max(remaining,max(args.interval,min_interval)-(time.monotonic()-last_clock))
-                if time.monotonic()-started_clock+max(0,remaining)+TIMEOUT>MAX_SESSION_SECONDS:
+                if time.monotonic()-started_clock+max(0,remaining)+TIMEOUT>profile['max_seconds']:
                     raise ValueError('Session runtime budget exhausted')
                 if remaining>0:time.sleep(remaining)
             now=utcnow();day=now.date().isoformat()
             if budget_used(ledger,now)>=cap:raise ValueError('Daily request budget exhausted')
             if size_bytes(work)+MAX_RESPONSE*3>MAX_DISK:raise ValueError('Research disk reserve exhausted')
-            if time.monotonic()-started_clock+TIMEOUT>MAX_SESSION_SECONDS:raise ValueError('Session runtime budget exhausted')
+            if time.monotonic()-started_clock+TIMEOUT>profile['max_seconds']:raise ValueError('Session runtime budget exhausted')
             last_clock=time.monotonic()
             ledger['days'][day]=ledger['days'].get(day,0)+1;ledger['last_attempt_at']=now.isoformat()
             bounded_json(ledger_file,ledger,work)
             attempt={'index':index,'requested_at':now.isoformat(),'status':'attempted'};manifest['attempts'].append(attempt)
             bounded_json(session/'manifest.json',manifest,work);clock=time.monotonic()
             try:
-                body,headers,status=fetch();fetched=utcnow().isoformat()
+                body,headers,status=fetch(profile['url']);fetched=utcnow().isoformat()
                 attempt.update(captured_at=fetched,latency_seconds=round(time.monotonic()-clock,6),headers=headers,http_status=status,bytes=len(body),sha256=hashlib.sha256(body).hexdigest())
                 # Retain malformed source bytes too, without treating them as a valid frame.
                 (session/f'{index:03d}.json').write_bytes(body)
@@ -267,9 +298,12 @@ def capture(args):
                 bounded_json(session/f'{index:03d}.normalized.json',frame,work)
                 for p in frame['positions']:previous[p['aircraft_id']]=p
                 frames.append(frame);attempt['status']='captured'
-                # A changed or absent allowance ends this session rather than guessing.
-                cap,min_interval=rate_policy(headers.get('x-ratelimit-limit'))
-                ledger['rate_limit']=headers['x-ratelimit-limit'];bounded_json(ledger_file,ledger,work)
+                # adsb.fi publishes its rate but does not return quota headers.
+                # Preserve any stricter observed policy if a later response omits it.
+                observed=headers.get('x-ratelimit-limit')
+                if provider=='adsb.lol' or observed is not None:ledger['rate_limit']=observed
+                cap,min_interval=provider_policy(ledger,provider)
+                bounded_json(ledger_file,ledger,work)
                 if budget_used(ledger,now)>cap:raise ValueError('Observed provider allowance is below the research budget')
             except BaseException as error:
                 attempt.update(status='captured' if attempt['status']=='captured' else 'failed',error=str(error),latency_seconds=round(time.monotonic()-clock,6))
@@ -295,7 +329,8 @@ def capture(args):
 
 def replay(session,output=None):
     manifest=json.loads((session/'manifest.json').read_text());frames=[];previous={}
-    if manifest.get('schema_version')!=1 or manifest.get('url')!=URL or manifest.get('region')!=REGION:
+    provider=manifest.get('provider','adsb.lol')
+    if manifest.get('schema_version')!=1 or provider not in PROVIDERS or manifest.get('url')!=PROVIDERS[provider]['url'] or manifest.get('region')!=REGION:
         raise ValueError('Unexpected capture identity')
     for index,attempt in enumerate(manifest['attempts']):
         if attempt['index']!=index:raise ValueError('Unexpected capture sequence')
@@ -320,14 +355,15 @@ def replay(session,output=None):
         bounded_json(output/'positions.json',{'schema_version':1,'kind':'offline_replay',
                      'source_session':str(session.resolve()),'source_manifest_sha256':hashlib.sha256((session/'manifest.json').read_bytes()).hexdigest(),
                      'capture_code_sha256':manifest['code_sha256'],'analysis_code_sha256':result['analysis_code_sha256'],
-                     'source_capture_status':manifest['status'],'region':REGION,'snapshots':frames},work)
+                     'source_capture_status':manifest['status'],'provider':provider,
+                     'attribution':manifest.get('attribution',PROVIDERS[provider]['attribution']),'region':REGION,'snapshots':frames},work)
         bounded_json(output/'report.json',result,work)
     return result
 
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest='command',required=True)
-    p=sub.add_parser('capture');p.add_argument('--work',type=Path,default=ROOT/'work/position-research');p.add_argument('--samples',type=int,default=60);p.add_argument('--interval',type=float,default=20)
+    p=sub.add_parser('capture');p.add_argument('--provider',choices=PROVIDERS,default='adsb.lol');p.add_argument('--work',type=Path);p.add_argument('--samples',type=int,default=60);p.add_argument('--interval',type=float,default=20)
     p=sub.add_parser('replay');p.add_argument('session',type=Path);p.add_argument('--out',type=Path,help='New private directory for one normalized positions.json and report')
     args=parser.parse_args();result=capture(args) if args.command=='capture' else replay(args.session,args.out)
     print(json.dumps(result,indent=2,allow_nan=False))
