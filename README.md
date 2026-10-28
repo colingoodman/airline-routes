@@ -2,7 +2,7 @@
 
 A local interactive map and one normalized JSON dataset of worldwide passenger airline networks. The snapshot date is **27 October 2026**.
 
-See [ROADMAP.md](ROADMAP.md) for the proposed zero-cost automatic refresh pipeline and investigation of real flight numbers and dated schedules. Candidate refresh tooling and a bounded runner are available; recurring jobs and schedule display are not yet enabled.
+See [ROADMAP.md](ROADMAP.md) for the proposed zero-cost automatic refresh pipeline and investigation of real flight numbers and dated schedules. Daily candidate collection and Avinor research captures are configured on the existing development Mac. Publication remains reviewed, and schedule display is not yet enabled; see [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only) for operation and shutdown.
 
 The expanded snapshot contains **572 carriers/brand networks, 1,304 carrier–origin relationships at 699 distinct hub/base airports, 3,358 airports, and 32,648 listed service records**. It retains all 100 carriers from the previous version and adds 472. Another **650 future or suspended/ended entries** are separate from the displayed network.
 

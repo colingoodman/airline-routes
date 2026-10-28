@@ -159,6 +159,8 @@ measurement was about 245 MiB for the collector alone. The parent/comparison and
 Node validation need additional memory. Do not install the Linux collector timer
 on this droplet at its current size or buy additional capacity for this project.
 
+The two local collection agents are enabled on the existing development Mac. Their initial startup completed successfully, and their daily gates correctly skipped duplicate same-day collection. Use `work/automatic-refresh/installation.json` for the exact pinned collector revision; no collector job was installed on the droplet.
+
 Use the existing development Mac for collection instead. The opt-in installer
 `scripts/install_refresh_agents.py` freezes scripts and baseline data from a clean
 Git HEAD into ignored local state, then creates two launch agents. It uses the
@@ -189,6 +191,8 @@ rerunning the installer from an accepted clean commit; changing branches in the
 working checkout does not change a running pinned collector. Keep the referenced
 `.venv` and Node executable available. Retire old runtime directories only after
 confirming no installed agent references them and no old job is running.
+
+The jobs collect staged evidence only; they do not update the public viewer. The existing route snapshot and its projection remain unchanged until an accepted data commit is deployed. The new optional freshness summary has been browser-checked with both legacy data and the fully dated candidate.
 
 Inspect or stop the jobs as the same macOS user:
 
