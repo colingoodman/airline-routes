@@ -116,3 +116,26 @@ export function restoreExplorerState(data,query){
  s.seasonal=p.get('seasonal')!=='0';s.charter=p.get('charter')==='1';s.regional=p.get('regional')==='1';if(['yes','no','unknown'].includes(p.get('low_cost')))s.lowCost=p.get('low_cost');
  for(const [key,param] of [['minKm','min_km'],['maxKm','max_km']])if(p.has(param)&&Number.isFinite(Number(p.get(param))))s[key]=Math.max(0,Math.min(20020,Number(p.get(param))));if(s.minKm>s.maxKm)[s.minKm,s.maxKm]=[s.maxKm,s.minKm];return s;
 }
+
+export function airportDistanceKm(a,b){
+ const rad=Math.PI/180,dlat=(b.latitude-a.latitude)*rad,dlon=(b.longitude-a.longitude)*rad;
+ const h=Math.sin(dlat/2)**2+Math.cos(a.latitude*rad)*Math.cos(b.latitude*rad)*Math.sin(dlon/2)**2;
+ return 6371.0088*2*Math.atan2(Math.sqrt(Math.max(0,Math.min(1,h))),Math.sqrt(Math.max(0,1-h)));
+}
+export function destinationGroups(data,routes,focus=''){
+ const ix=indexData(data),groups=new Map();
+ for(const r of routes){const endpoints=[r.hub_airport_id,r.destination_airport_id];if(focus&&!endpoints.includes(focus))continue;
+  for(const id of new Set(focus?endpoints.filter(id=>id!==focus):endpoints)){
+   if(!groups.has(id))groups.set(id,{id,airport:ix.airports.get(id),airlines:new Set(),routes:[],seasonalOnly:true,charterOnly:true,lowCost:false,regional:false,distanceKm:focus?airportDistanceKm(ix.airports.get(focus),ix.airports.get(id)):null});
+   const g=groups.get(id),model=routeModel(ix,r);g.airlines.add(r.airline_id);g.routes.push(r);g.seasonalOnly&&=r.status==='seasonal';g.charterOnly&&=r.service_type==='charter';g.lowCost||=model.low_cost===true;g.regional||=model.regional===true;
+  }
+ }
+ return [...groups.values()];
+}
+export function sortDestinations(groups,sort='name'){
+ const name=g=>g.airport.city||g.airport.name,code=g=>g.airport.iata||g.airport.icao||g.id;
+ return [...groups].sort((a,b)=>(sort==='distance'?(a.distanceKm??Infinity)-(b.distanceKm??Infinity):sort==='airlines'?b.airlines.size-a.airlines.size:sort==='country'?String(a.airport.country).localeCompare(String(b.airport.country)):sort==='code'?code(a).localeCompare(code(b)):name(a).localeCompare(name(b)))||code(a).localeCompare(code(b)));
+}
+export function airlineNetworkStats(routes){
+ const stats=new Map();for(const r of routes){if(!stats.has(r.airline_id))stats.set(r.airline_id,{airports:new Set(),hubs:new Set()});const s=stats.get(r.airline_id);s.airports.add(r.hub_airport_id);s.airports.add(r.destination_airport_id);s.hubs.add(r.hub_airport_id);}return stats;
+}
