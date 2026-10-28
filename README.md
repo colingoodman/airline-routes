@@ -2,6 +2,8 @@
 
 A local interactive map and one normalized JSON dataset of worldwide passenger airline networks. The snapshot date is **27 October 2026**.
 
+See [ROADMAP.md](ROADMAP.md) for the proposed zero-cost automatic refresh pipeline and investigation of real flight numbers and dated schedules. These integrations are not yet enabled.
+
 The expanded snapshot contains **572 carriers/brand networks, 1,304 carrier–origin relationships at 699 distinct hub/base airports, 3,358 airports, and 32,648 listed service records**. It retains all 100 carriers from the previous version and adds 472. Another **650 future or suspended/ended entries** are separate from the displayed network.
 
 The search audited **1,310 directory entries**: 955 in Wikipedia's worldwide passenger inventory, 197 regional entries, and 158 current low-cost entries. These overlap and are not 1,310 distinct airlines. After identity and operating-status review, 728 carrier proposals reached route admission; 572 had at least one usable origin. The complete candidate and origin decisions are embedded in `web/data.json`, including 156 rejected carrier proposals and 323 rejected origin proposals. Rejection means insufficient usable evidence for this map, not necessarily a defunct airline.
