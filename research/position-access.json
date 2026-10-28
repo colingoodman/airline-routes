@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "decision": "bounded_private_research_only",
+  "production_access": "conditional_contact_and_reuse_review_pending",
+  "region": {
+    "airport": "OSL",
+    "latitude": 60.193901,
+    "longitude": 11.1004,
+    "radius_nm": 50
+  },
+  "probe_attempts": 2,
+  "research_daily_attempt_cap": 180,
+  "research_session_attempt_cap": 60,
+  "minimum_interval_seconds": 20,
+  "probes": [
+    {
+      "environment": "development",
+      "url": "https://api.adsb.lol/v2/point/60.193901/11.1004/50",
+      "fetched_at": "2026-10-28T19:40:02.753344+00:00",
+      "http_status": 200,
+      "bytes": 7567,
+      "sha256": "36673a74dcfc5c8b4c727f382f66c3ee43d221e491b2b5a9e64bf0d47fd87da3",
+      "aircraft_records": 11,
+      "with_coordinates": 11,
+      "with_callsign": 11,
+      "latency_seconds": 0.434,
+      "advertised_rate_limit": "4, 4;w=1, 60;w=60, 500;w=86400"
+    },
+    {
+      "environment": "droplet",
+      "url": "https://api.adsb.lol/v2/point/60.193901/11.1004/50",
+      "fetched_at": "2026-10-28T19:40:33.653338+00:00",
+      "http_status": 200,
+      "bytes": 7988,
+      "sha256": "a2239f77306c49e09bba5b9966a97c1cc5e9086f4a50beebcc639e7cd38f94f5",
+      "aircraft_records": 12,
+      "with_coordinates": 12,
+      "with_callsign": 12,
+      "latency_seconds": 0.4813,
+      "advertised_rate_limit": "4, 4;w=1, 60;w=60, 500;w=86400"
+    }
+  ]
+}
