@@ -1,0 +1,11 @@
+[Unit]
+Description=Check airport metadata daily and route evidence when its weekly cache expires
+
+[Timer]
+OnCalendar=*-*-* 03:00:00 UTC
+RandomizedDelaySec=30m
+Persistent=true
+Unit=airplanes-refresh.service
+
+[Install]
+WantedBy=timers.target

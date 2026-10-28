@@ -11685,5 +11685,16 @@
     "metadata_distance_km": 0.373,
     "method": "Wikipedia airport infobox explicit ICAO and coordinate match",
     "alias_evidence": "Requested Wikipedia article or exact canonical title/h1/bold lead airport name in cached source"
+  },
+  "Longjia_Airport": {
+    "iata": "CGQ",
+    "icao": "ZYCC",
+    "ourairports_id": "27237",
+    "revision": 1382362418,
+    "source_url": "https://en.wikipedia.org/w/index.php?oldid=1382362418",
+    "method": "Pinned airport infobox IATA/ICAO identifiers and coordinates agree with the same physical OurAirports row",
+    "canonical": "Changchun Longjia International Airport",
+    "verified_on": "2026-10-28",
+    "metadata_distance_km": 0.025
   }
 }

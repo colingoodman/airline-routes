@@ -2,6 +2,8 @@
 
 A local interactive map and one normalized JSON dataset of worldwide passenger airline networks. The snapshot date is **27 October 2026**.
 
+See [ROADMAP.md](ROADMAP.md) for the proposed zero-cost automatic refresh pipeline and investigation of real flight numbers and dated schedules. Candidate collection and Avinor research captures run through isolated systemd jobs on the droplet; no Mac login/background jobs are used. Publication remains reviewed, and schedule display is not yet enabled; see [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only) for operation and shutdown.
+
 The expanded snapshot contains **572 carriers/brand networks, 1,304 carrier–origin relationships at 699 distinct hub/base airports, 3,358 airports, and 32,648 listed service records**. It retains all 100 carriers from the previous version and adds 472. Another **650 future or suspended/ended entries** are separate from the displayed network.
 
 The search audited **1,310 directory entries**: 955 in Wikipedia's worldwide passenger inventory, 197 regional entries, and 158 current low-cost entries. These overlap and are not 1,310 distinct airlines. After identity and operating-status review, 728 carrier proposals reached route admission; 572 had at least one usable origin. The complete candidate and origin decisions are embedded in `web/data.json`, including 156 rejected carrier proposals and 323 rejected origin proposals. Rejection means insufficient usable evidence for this map, not necessarily a defunct airline.
@@ -123,12 +125,29 @@ npm run validate
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m unittest discover -s tests -p 'test_*.py'
-.venv/bin/python scripts/rebuild.py --as-of 2026-10-27
+.venv/bin/python scripts/rebuild.py --candidate work/candidates/my-refresh
 ```
 
-The 38 Node tests cover filter composition, scoped brand models, reciprocal connections, airport aliases, full curved bounds and repeated-world geometry. The 21 Python tests cover source table ancestry, primary-brand matching, section labels, status/date handling, metadata safety, uncoded airports conservative business-model classification and directory identity boundaries. Dataset validation checks every key/reference, source pin, carrier-origin count, evidence flag, partial-coverage gap and admission-audit count, plus the Denver/Paris example routes. Browser checks exercise model filters and brand scoping on the rendered map. Projection tests compare every service field and filter result with the complete normalized dataset; geometry tests cover projection, simplification error, clipping, spatial hit testing and buffer reuse.
+Node tests cover filter composition, scoped brand models, reciprocal connections, airport aliases, full curved bounds and repeated-world geometry. Python tests cover source table ancestry, primary-brand matching, section labels, status/date handling, metadata safety, uncoded airports conservative business-model classification and directory identity boundaries. Refresh and schedule tests also cover isolation, source revalidation, failed requests, resource limits, identity conflicts, UTC/DST handling, quotas and offline replay. Dataset validation checks every key/reference, source pin, carrier-origin count, evidence flag, partial-coverage gap and admission-audit count, plus the Denver/Paris example routes. Browser checks exercise model filters and brand scoping on the rendered map. Projection tests compare every service field and filter result with the complete normalized dataset; geometry tests cover projection, simplification error, clipping, spatial hit testing and buffer reuse.
 
-The rebuild also requires Node.js to regenerate the display projection. The rebuild uses the reviewed roster, aliases, metadata corrections/addition and classifications in `scripts/`; it downloads public OurAirports metadata and fetches airport articles using cached responses and bounded retries. A newer date does not automatically re-review those inputs. Use a fresh cache for a route refresh and review changed roster/classification/identity evidence. Network failures and newly unresolved entries are recorded explicitly. A rebuilt snapshot must pass validation before release.
+The rebuild requires Node.js to generate and validate the display projection. It writes an isolated candidate, **never the published `web/` files**. Each candidate contains `data.json`, `map-data.json`, a frozen baseline, reviewed input copies, `manifest.json`, `changes.json`, collection logs and validation results. Failures mark the manifest failed and leave the existing release intact. Candidate directories must be new and outside `web/`.
+
+Reviewed inputs include the roster, hub evidence, aliases, metadata corrections/additions, business-model classifications and discovery audit. Their hashes and collector hashes are recorded in the manifest. A newer snapshot date does not re-review these inputs. Generated airports retain the persistent OurAirports row ID; synthetic reviewed additions do not claim an OurAirports ID.
+
+Wikipedia responses expire after seven days by default. `--refresh` forces a conditional check; `--cache-max-age SECONDS` changes the expiry. Requests use a descriptive user agent, bounded retries and backoff, honor `Retry-After`, and stop on access denial. Fetch/check times are separate from the effective snapshot date. `--offline` uses captured responses and metadata, preserving their original dates; legacy cache entries have unknown retrieval dates. No filesystem timestamp is treated as a source retrieval date.
+
+```sh
+# Reuse captured inputs without making network requests:
+.venv/bin/python scripts/rebuild.py --offline --candidate work/candidates/offline-check
+# Validate a candidate independently:
+node scripts/validate.mjs --data work/candidates/my-refresh/data.json --map work/candidates/my-refresh/map-data.json --inputs work/candidates/my-refresh/inputs
+```
+
+Review the semantic change report and all coverage/identity changes before promoting a candidate. The original snapshot checks remain on by default. `--structural` skips only fixed historical expectations for investigation/fixtures; it does not establish release acceptance. Unchanged polling dates do not count as a semantic data change. Commit accepted data and its regenerated projection before using the existing deployment process.
+
+For recurring collection, see the bounded runner and systemd templates in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only). They collect candidates only; no automatic publication is enabled.
+
+For the measured Avinor departure sample, bounded capture tool and remaining pilot gates, see [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md).
 
 For a new discovery inventory, without modifying the released roster or dataset:
 

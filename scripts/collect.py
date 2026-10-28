@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Rebuild the source-evidenced alliance/hub route snapshot. See README for scope."""
-import argparse, csv, datetime as dt, hashlib, json, re, time, unicodedata, os
+import argparse, csv, datetime as dt, hashlib, json, re, time, unicodedata, os, tempfile, gc
+from collections import OrderedDict
 from pathlib import Path
 from urllib.parse import quote, unquote, urlencode, urlsplit
 from urllib.request import Request, urlopen
@@ -8,7 +9,7 @@ from bs4 import BeautifulSoup, NavigableString, Tag
 from urllib.error import HTTPError
 
 TODAY=dt.date(2026,10,27)
-USER_AGENT='AllianceRouteMap/1.0 (personal educational research)'
+USER_AGENT='AllianceRouteMap/1.1 (https://github.com/colingoodman/airline-routes; personal research)'
 BRANDS={
  'UA':['United Airlines','United Express'], 'AA':['American Airlines','American Eagle'],
  'DL':['Delta Air Lines','Delta Connection'], 'AC':['Air Canada','Air Canada Express','Air Canada Rouge'],
@@ -31,7 +32,7 @@ def norm(s):
  s=unquote(s).replace('_',' ').split('#')[0]
  return re.sub(r'[^a-z0-9]','',unicodedata.normalize('NFKD',s).encode('ascii','ignore').decode().lower())
 def title(a):
- h=a.get('href','')
+ h=urlsplit(a.get('href','')).path
  return unquote(h.split('/wiki/',1)[1]).split('#')[0] if '/wiki/' in h else unquote(h[2:]).split('#')[0] if h.startswith('./') else None
 
 def wikipedia_title(url):
@@ -40,33 +41,73 @@ def wikipedia_title(url):
  if parsed.hostname not in ['en.wikipedia.org','en.m.wikipedia.org'] or not parsed.path.startswith('/wiki/'):return None
  return unquote(parsed.path.split('/wiki/',1)[1])
 
-def fetch(title_, cache, delay=0.8):
+def atomic_json(path, data):
+ path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+ with tempfile.NamedTemporaryFile(mode='w',dir=path.parent,prefix='.'+path.name,suffix='.tmp',delete=False) as file:
+  temporary=Path(file.name)
+  try:
+   json.dump(data,file,ensure_ascii=False,indent=2);file.write('\n');file.flush();os.fsync(file.fileno())
+  except BaseException:
+   temporary.unlink(missing_ok=True);raise
+ try:temporary.replace(path)
+ finally:temporary.unlink(missing_ok=True)
+
+def fetch(title_, cache, delay=0.8, *, max_age=604800, refresh=False, offline=None, now=None):
+ """Fetch one canonical article, retaining truthful timestamps and HTTP validators."""
  title_=unquote(title_)
  if title_.startswith(('http://','https://')):raise ValueError('Expected an English Wikipedia article title, not an external URL')
+ now=now or dt.datetime.now(dt.timezone.utc)
  p=cache/(hashlib.sha256(title_.encode()).hexdigest()+'.json')
- if p.exists(): return json.loads(p.read_text())
- if os.environ.get('ROUTE_CACHE_ONLY'): raise ValueError('Not cached yet')
- url='https://en.wikipedia.org/w/api.php?'+urlencode({'action':'parse','page':title_.replace('_',' '),'prop':'text|revid','format':'json'})
- urls=['https://en.wikipedia.org/wiki/'+quote(title_.replace(' ','_'),safe=''),'https://en.wikipedia.org/wiki/'+quote(title_.replace(' ','_'),safe='')+'?useskin=vector',url+'&redirects=1','https://en.wikipedia.org/api/rest_v1/page/html/'+quote(title_.replace(' ','_'),safe=''),'https://en.wikipedia.org/wiki/'+quote(title_.replace(' ','_'),safe='')+'?x=1']
- for n in range(6):
+ cached=json.loads(p.read_text()) if p.exists() else None
+ metadata=(cached or {}).get('_fetch',{})
+ offline=bool(os.environ.get('ROUTE_CACHE_ONLY')) if offline is None else offline
+ if cached:
+  # Legacy cache entries have no trustworthy retrieval time. Never substitute mtime.
+  checked=metadata.get('checked_at')
+  age=(now-dt.datetime.fromisoformat(checked)).total_seconds() if checked else None
+  if offline or not refresh and age is not None and 0<=age<max_age:
+   return {**cached,'_fetch':{**metadata,'mode':'cache' if checked else 'legacy_cache'}}
+ if offline:raise ValueError('Not cached yet: '+title_)
+ url='https://en.wikipedia.org/wiki/'+quote(title_.replace(' ','_'),safe='')
+ headers={'User-Agent':USER_AGENT,'Accept':'text/html'}
+ if metadata.get('etag'):headers['If-None-Match']=metadata['etag']
+ if metadata.get('last_modified'):headers['If-Modified-Since']=metadata['last_modified']
+ for attempt in range(3):
+  time.sleep(delay)
   try:
-   time.sleep(delay)
-   selected=urls[n%len(urls)]
-   raw=urlopen(Request(selected,headers={'User-Agent':'Mozilla/5.0'}),timeout=70).read().decode()
-   if raw.lstrip().startswith('{'):
-    data=json.loads(raw)
-   else:
-    rev=re.search(r'(?:revision/|oldid=)([0-9]+)',raw)
-    if not rev:
-     rev=re.search(r'"wgRevisionId":([0-9]+)',raw)
-    if not rev: raise ValueError('Cannot pin source revision')
-    data={'parse':{'title':title_.replace('_',' '),'revid':int(rev[1]),'text':{'*':raw}}}
-   if 'error' in data: raise ValueError(data['error'])
-   p.write_text(json.dumps(data)); return data
-  except Exception as e:
-   print('retry',title_,n,str(e),flush=True)
-   if n==5: raise
-   time.sleep(1 if n<3 else 4)
+   with urlopen(Request(url,headers=headers),timeout=30) as response:
+    raw=response.read(8*1024*1024+1)
+    if len(raw)>8*1024*1024:raise ValueError('Article exceeds 8 MiB limit')
+    raw=raw.decode('utf-8')
+    if raw.lstrip().startswith('{'):
+     data=json.loads(raw)
+    else:
+     rev=re.search(r'(?:revision/|oldid=)([0-9]+)',raw) or re.search(r'"wgRevisionId":([0-9]+)',raw)
+     if not rev:raise ValueError('Cannot pin source revision')
+     data={'parse':{'title':title_.replace('_',' '),'revid':int(rev[1]),'text':{'*':raw}}}
+    if 'error' in data:raise ValueError(str(data['error']))
+    if not data.get('parse',{}).get('revid') or not isinstance(data['parse'].get('text',{}).get('*'),str):raise ValueError('Invalid article response')
+    stamp=now.isoformat()
+    data['_fetch']={'fetched_at':stamp,'checked_at':stamp,'mode':'fetched','url':url,
+     'etag':response.headers.get('ETag'),'last_modified':response.headers.get('Last-Modified')}
+    atomic_json(p,data);return data
+  except HTTPError as error:
+   error.close()
+   if error.code==304 and cached:
+    cached['_fetch']={**metadata,'checked_at':now.isoformat(),'mode':'revalidated'}
+    atomic_json(p,cached);return cached
+   if error.code not in (429,500,502,503,504) or attempt==2:raise
+   retry=error.headers.get('Retry-After')
+   if retry:
+    from email.utils import parsedate_to_datetime
+    seconds=float(retry) if retry.isdigit() else (parsedate_to_datetime(retry)-now).total_seconds()
+    if seconds>120:raise RuntimeError('Retry-After exceeds this run budget') from error
+    time.sleep(max(0,seconds))
+   else:time.sleep(2**attempt)
+  except (OSError,TimeoutError):
+   if attempt==2:raise
+   time.sleep(2**attempt)
+ raise RuntimeError('Article fetch failed')
 
 def date_in(text):
  text=re.sub(r'(\d)(?:st|nd|rd|th)\b',r'\1',text)
@@ -166,6 +207,9 @@ def apply_metadata_overrides(rows,corrections,as_of):
   r=dict(row)
   for old,entry in corrections.items():
    if str(row.get('id'))==str(entry['ourairports_id']) and entry.get('effective_on',entry.get('verified_on','9999-12-31'))<=as_of.isoformat():
+    for field in ('iata_code','icao_code'):
+     allowed={entry.get(field,''),entry.get('previous_iata','') if field=='iata_code' else ''}
+     if field in entry and row.get(field,'') not in allowed:raise ValueError('Upstream identifier conflicts with reviewed override: '+str(row['id']))
     r.update({k:entry[k] for k in ['iata_code','icao_code','name','wikipedia_link'] if k in entry})
     previous=entry.get('previous_iata') or row.get('iata_code','')
     if previous and previous!=r['iata_code']:r['_former_iata_code']=previous
@@ -179,12 +223,14 @@ def airport_identifier(row):
  return 'oa:'+row['ident']
 
 def airport_indexes(rows,overrides):
- active=[r for r in rows if r.get('type')!='closed']
- bycode={airport_identifier(r):r for r in active}
+ active=[r for r in rows if r.get('type') not in ('closed','closed_airport')]
+ codes={}
  for r in active:
-  if r.get('_former_iata_code'):bycode[r['_former_iata_code']]=r
-  bycode['oa:'+r['ident']]=r
-  if r.get('icao_code'):bycode['icao:'+r['icao_code']]=r
+  keys=[airport_identifier(r),'oa:'+r['ident']]
+  if r.get('_former_iata_code'):keys.append(r['_former_iata_code'])
+  if r.get('icao_code'):keys.append('icao:'+r['icao_code'])
+  for key in keys:codes.setdefault(key,[]).append(r)
+ bycode={key:matches[0] for key,matches in codes.items() if len({r['id'] for r in matches})==1}
  titles={}
  for r in active:
   for link in [r.get('wikipedia_link'),r.get('_original_wikipedia_link')]:
@@ -205,32 +251,39 @@ def add_reviewed_airports(rows,additions,as_of):
  return result
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--work',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--as-of',default='2026-10-27');args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--work',type=Path,required=True);ap.add_argument('--out',type=Path,required=True);ap.add_argument('--as-of',default=dt.datetime.now(dt.timezone.utc).date().isoformat());ap.add_argument('--inputs',type=Path,default=Path(__file__).parent);ap.add_argument('--refresh',action='store_true');ap.add_argument('--offline',action='store_true');ap.add_argument('--cache-max-age',type=int,default=604800);args=ap.parse_args()
  global TODAY
  TODAY=dt.date.fromisoformat(args.as_of)
  w=args.work;cache=w/'airports-cache';cache.mkdir(exist_ok=True)
+ inputs=args.inputs
+ fetch_options={'refresh':args.refresh,'offline':args.offline or bool(os.environ.get('ROUTE_CACHE_ONLY')),'max_age':args.cache_max_age}
  roster=json.loads((w/'roster-hubs.json').read_text()); airlines=roster['airlines']
- rows=list(csv.DictReader((w/'ourairports.csv').open()))
- corrections_path=Path(__file__).with_name('airport-metadata-overrides.json')
+ with (w/'ourairports.csv').open() as metadata_file:rows=list(csv.DictReader(metadata_file))
+ corrections_path=inputs/'airport-metadata-overrides.json'
  corrections=json.loads(corrections_path.read_text()) if corrections_path.exists() else {}
  rows=apply_metadata_overrides(rows,corrections,TODAY)
- additions_path=Path(__file__).with_name('airport-additions.json')
+ additions_path=inputs/'airport-additions.json'
  rows=add_reviewed_airports(rows,json.loads(additions_path.read_text()) if additions_path.exists() else [],TODAY)
  overrides=json.loads((w/'airport-overrides.json').read_text()) if (w/'airport-overrides.json').exists() else {}
  bycode,bytitle=airport_indexes(rows,overrides)
- models_path=Path(__file__).with_name('airline-models.json')
+ models_path=inputs/'airline-models.json'
  models=json.loads(models_path.read_text()) if models_path.exists() else {'airlines':{},'brands':{}}
- audit_path=Path(__file__).with_name('discovery-audit.json')
+ audit_path=inputs/'discovery-audit.json'
  discovery=json.loads(audit_path.read_text()) if audit_path.exists() else {'sources':[],'candidates':[]}
  sources=[];source_index={}
  def source(url,kind,**kw):
-  if url in source_index: return source_index[url]
-  id_='s'+str(len(sources)+1);sources.append({'id':id_,'url':url,'kind':kind,'retrieved_on':TODAY.isoformat(),**kw});source_index[url]=id_;return id_
- airports={}
+  if url in source_index:
+   sid=source_index[url];existing=next(s for s in sources if s['id']==sid);existing.update(kw)
+   if kind=='airport_passenger_routes':existing['kind']=kind
+   return sid
+  id_='s'+str(len(sources)+1);sources.append({'id':id_,'url':url,'kind':kind,**kw});source_index[url]=id_;return id_
+ airports={};physical_ids={}
  def airport(r):
   code=airport_identifier(r)
+  if code in physical_ids and physical_ids[code]!=r['id']:raise ValueError('Airport code maps to two physical records: '+code)
+  physical_ids[code]=r['id']
   if code not in airports:
-   airports[code]={'id':code,'iata':r.get('iata_code') or None,'icao':r.get('icao_code') or None,'ident':r['ident'],'local_code':r.get('local_code') or None,'name':r['name'],'city':r['municipality'],'country':r['iso_country'],'latitude':float(r['latitude_deg']),'longitude':float(r['longitude_deg']),'wikipedia_url':r['wikipedia_link'],'source_id':'airports'}
+   airports[code]={'id':code,'iata':r.get('iata_code') or None,'icao':r.get('icao_code') or None,'ident':r['ident'],'local_code':r.get('local_code') or None,'name':r['name'],'city':r['municipality'],'country':r['iso_country'],'ourairports_id':r['id'] if not r.get('_addition_source') else None,'latitude':float(r['latitude_deg']),'longitude':float(r['longitude_deg']),'wikipedia_url':r['wikipedia_link'],'source_id':'airports'}
   if r.get('_addition_source'):
    ev=r['_addition_source'];airports[code]['source_id']=source(ev['source_url'],'reviewed_airport_addition',revision_id=int(ev['source_revision']),note=ev['note'],verified_on=ev['verified_on'])
   if r.get('_metadata_override'):
@@ -258,7 +311,7 @@ def main():
    model=next((models.get('brands',{})[k] for k in candidates if k in models.get('brands',{})),{})
    brand_models[key]={'id':key,'name':name,'airline_id':carrier,**model_fields(model)}
   return key
- routes=[];hubs=[];issues=[];excluded=[];out_airlines=[];page_cache={}
+ routes=[];hubs=[];issues=[];excluded=[];out_airlines=[];page_cache=OrderedDict();failed_pages={}
 
  for a in airlines:
   airlineid=a['id']; brands=a.get('service_brands') or BRANDS.get(airlineid,[a['name']]); aliases={norm(x) for x in brands}|{norm(a['wikipedia']),norm(a['name'])}
@@ -279,12 +332,22 @@ def main():
     last_error=None
     for fetch_title in fetch_titles:
      try:
+      if fetch_title in failed_pages:
+       failure=failed_pages[fetch_title]
+       raise (ValueError if failure['alias_allowed'] else RuntimeError)(failure['message'])
       if fetch_title not in page_cache:
-       parsed=fetch(fetch_title,cache)['parse'];page_cache[fetch_title]=(parsed,BeautifulSoup(parsed['text']['*'],'html.parser'))
-      parsed,soup=page_cache[fetch_title];break
-     except Exception as e:last_error=e
+       response=fetch(fetch_title,cache,**fetch_options);parsed=response['parse'];page_cache[fetch_title]=(parsed,BeautifulSoup(parsed['text']['*'],'html.parser'),response.get('_fetch',{}))
+       while len(page_cache)>2:
+        _,evicted=page_cache.popitem(last=False);evicted[1].decompose();del evicted
+       gc.collect()
+      page_cache.move_to_end(fetch_title)
+      parsed,soup,provenance=page_cache[fetch_title];break
+     except Exception as e:
+      last_error=e;failed_pages[fetch_title]={'message':str(e),'alias_allowed':isinstance(e,ValueError) or isinstance(e,HTTPError) and e.code==404}
+      if isinstance(e,HTTPError) and e.code!=404:raise
+      if not isinstance(e,(ValueError,HTTPError)):raise
     else:raise last_error
-    sid=source('https://en.wikipedia.org/w/index.php?oldid='+str(parsed['revid']),'airport_passenger_routes',page_title=parsed['title'],revision_id=parsed['revid'],sha256=hashlib.sha256(parsed['text']['*'].encode()).hexdigest())
+    sid=source('https://en.wikipedia.org/w/index.php?oldid='+str(parsed['revid']),'airport_passenger_routes',page_title=parsed['title'],revision_id=parsed['revid'],sha256=hashlib.sha256(parsed['text']['*'].encode()).hexdigest(),retrieved_on=(provenance.get('fetched_at') or '')[:10] or None,fetch=provenance)
     unavailable=airport_unavailable(soup,r.get('iso_country'))
     if unavailable:
      hub.update(coverage='unavailable',route_source_id=sid)
@@ -346,9 +409,10 @@ def main():
   ev_url=ev.get('source_url') or ('https://en.wikipedia.org/w/index.php?oldid='+str(ev['revision']) if ev.get('revision') else 'https://en.wikipedia.org/wiki/'+quote(ev.get('canonical',wiki).replace(' ','_')))
   alias_sid=source(ev_url,'airport_identity')
   airport_aliases.append({'wikipedia_title':wiki,'airport_id':code,'method':ev.get('method','Reviewed airport identifier'),'source_id':alias_sid,**({'wikidata_id':ev['wikidata_id']} if ev.get('wikidata_id') else {})})
- sources.append({'id':'airports','url':'https://ourairports.com/data/','download_url':'https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv','kind':'airport_metadata','license':'Public domain','retrieved_on':TODAY.isoformat(),'sha256':hashlib.sha256((w/'ourairports.csv').read_bytes()).hexdigest()})
+ metadata_fetch=json.loads((w/'ourairports-fetch.json').read_text()) if (w/'ourairports-fetch.json').exists() else {'mode':'legacy_cache','fetched_at':None}
+ sources.append({'id':'airports','url':'https://ourairports.com/data/','download_url':'https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv','kind':'airport_metadata','license':'Public domain','retrieved_on':(metadata_fetch.get('fetched_at') or '')[:10] or None,'fetch':metadata_fetch,'sha256':hashlib.sha256((w/'ourairports.csv').read_bytes()).hexdigest()})
  data={'schema_version':1,'as_of':TODAY.isoformat(),'scope':{'membership':'Active full members of Star Alliance, SkyTeam, and oneworld, plus documented current passenger airlines discovered in worldwide Wikipedia passenger, regional, and low-cost directories. Explicit affiliates retain their own membership type. Suspended members are distinguished from active members and independents. Alaska remains in oneworld.','hubs':'Wikipedia hubs, secondary hubs, operating bases, or focus cities; a directly documented operating-airport statement or directory hub cell can also establish an origin for small carriers. Headquarters cities and destination lists do not establish hubs. Roles and evidence are retained; no inferred all-to-all routes.','routes':'Passenger destination entries in each selected hub or base airport Wikipedia table, matched to the airline or explicitly enumerated service brands. Airport table entries are source-listed services, not independently verified nonstop flight schedules.','seasonality':'Seasonal services included and labeled; future and suspended/ended entries are separate. Undated listed entries reflect the retrieved page, not a guarantee of operation on as_of.','coverage':'Coverage status means the source table was parsed. It does not certify the source is exhaustive or up to date. See issues for every unresolved entry.','direction':'Records are hub-origin services. A route listed at both hubs appears in both directions; no reciprocal service is invented.'},'alliances':[{'id':'star','name':'Star Alliance','color':'#d89614','kind':'alliance'},{'id':'skyteam','name':'SkyTeam','color':'#2474d2','kind':'alliance'},{'id':'oneworld','name':'oneworld','color':'#bd4294','kind':'alliance'},{'id':'nonaligned','name':'Non-aligned','color':'#12856f','kind':'category','description':'Documented passenger airlines outside active membership in the three global alliances.'},{'id':'suspended','name':'Suspended members','color':'#7b7187','kind':'category','description':'Current passenger airlines with explicitly suspended global-alliance participation.'}],'airlines':out_airlines,'service_brand_models':list(brand_models.values()),'airports':sorted(airports.values(),key=lambda x:x['id']),'hubs':hubs,'routes':routes,'excluded_routes':excluded,'sources':sources,'issues':issues,'airport_aliases':airport_aliases,'membership_notes':roster.get('notes',[]),'suspended_members':roster.get('suspended',[]),'discovery_audit':discovery,'operating_model_methodology':models.get('methodology','Low-cost and regional flags are evidence-based and nullable. Missing evidence is unknown; explicit service-brand evidence takes precedence over a parent classification.')}
- args.out.parent.mkdir(parents=True,exist_ok=True);args.out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+ atomic_json(args.out,data)
  (w/'collection-summary.json').write_text(json.dumps({'airlines':len(airlines),'hubs':len(hubs),'routes':len(routes),'airports':len(airports),'issues':len(issues)},indent=2))
  print((w/'collection-summary.json').read_text(),flush=True)
 if __name__=='__main__':main()
