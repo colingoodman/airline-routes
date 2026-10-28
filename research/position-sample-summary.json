@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "study": "osl-bounded-position-sample",
+  "provenance": {
+    "session": "20261028T194757608457Z",
+    "source_manifest_sha256": "cf5e6bc7d7323dca387e6c6314103450e60374ac2936f13d7c01fa00beda2213",
+    "capture_code_sha256": "85e18b35e3667b5ac1c300bbbb87b7388196fd4f67882db5d9ac569b79a2ae01",
+    "analysis_code_sha256": "ba7ebd788634bd6c24d6699f127e574fd438c4aef38a72666e9e84cb06837d5f",
+    "raw_response_sha256": [
+      "93ca00a1d72030505f09e76dabc16c05beae9548a9d64240afa671f48f4eb544",
+      "01d5a16b17231a1b3dc4e9cb3bae33ed1fef01eee92a284ce8f428540c552a76",
+      "8f539a9b40fd240f3ae44615ff4745ff3ea1b35fc31adbf71214aeb0980cdf03",
+      "dc2490a2d6c6a5edbb25da19ef73d6e34d42475be640e273603831e09b2d632c",
+      "298812a1375cefd093d7fa1c2cc119638af1e20cd0146b873ce286e0a1839cfb",
+      "e4c7d72f3cf0ce38478b9a65381a500398cf9606af8e458b0fb14b40e453779a",
+      "20b1610a2b2c21e424084ea8956575da3408a501003824859d49f29cf97b2b93",
+      "e4a9d139febd49db1bac5213978402c5b29d2f809f5bc03b81549d192717ba6f",
+      "bb05a0021e278a607c9cb971de6c82429e9e2c248b2dbd5f87e2cb483642da50",
+      "7ef92d61a4f06b51c04f26e4fbefa7689e675611e8aa330381239a7b07db9df9",
+      "f25735b6d3605cb235d1210bb157e49221b55f59f7a7872363c341ffa6863f07",
+      "36bd9e176f4f9701e67fb8dea45a82ae199b08c67b1336993ed14198fa0cf4b9",
+      "024c58adae88bc43b369296223a6be055c2b99edbc09e36c273ed046d6483b8c",
+      "f13e7fda9d7bb982eb2641572581dbdc29cb8b1ad3d2b400bd866a4a5fee35f8",
+      "19b3cab6732220742cb76f84eae145cf2c9956515257a765848f1d35d7e12854",
+      "0faafa714ef0b1ee07ff149d424622906b8a838dc54849ceb80c871d72dc6610",
+      "1259bb993ea907acd4e7d7544290cd1f581127fc487b070346136fecce4a0b90",
+      "6a635e4cf0298eb000c6aae36fc2777908be526dada00efb22c0fe725e697d97",
+      "bb74b9565f45ccc3962fa337d6797c3daa4c5883202b16905fe1046004bf424f",
+      "cd836bd178a7f6fb267c0a2a41e0043b12ef62ec0c3e1b1f9ebd455ec7988a37",
+      "2ab2ccd68ff62786fd227b17dc49d1957c9c20cec33a33ff9f91d12ee76845fb",
+      "10016bd648e44af44549b651364042e2f8bbb865676299f1e981ca0e3aab4447",
+      "0aa664e306539bc12f35c13b4e3653b802247935a5312d829901882a00515452",
+      "e001ced53cb81cae76448f53615d4c12550d32ab6835d099a0d362ee4c5084f6",
+      "0eec865d3b84b22630537c83c647c4d89c2413ee28539494bc9125679727cefd",
+      "b070acd4b18c05d5f6752cb788301cfd1cc0d89114b7408ae4a7d6bc92837df3",
+      "b5465adc8b94d6971b751669f8490cf134c9ddf3f074ad6d2ca2b1c027e8cd6e",
+      "77297b151b9b1143d4f1146d61010c29777fddc0e1b8c33fe46e0c693af7743c",
+      "bae5955386aaf3a1a94861234763ff400689ae92d6635d460c3a5cda0e9ed8cf",
+      "1c1be561e33b1b8ad6e4ecad6fed95704d8dfc682aa39b1a2c056684699f1ba7",
+      "5271833ea274fa6258a27292a17bded6e6dcee5374d7bd7d1a30418b4a1263c9",
+      "b715e894b03831a5b3d46ae5c9cd4230bd9d13fdf3d6158ae99cace1afa6553a",
+      "3449b6f31ef5137d4b4ae7111e8b8c200746c076a151df9b5bb86ca0e75f1891",
+      "2b9c53039ee30667857d89a48fb55e6996d5a3b1183f3c5069f0479e25ad2470",
+      "667fc0ddc03df5df40a5a08a3c2d145346bd07aa4b837aa661ec294e3d1ceaf4",
+      "7411d8d89ba6de832832a8c66e449d7090c26a14a0e38b494dae7b721bc12bc7",
+      "386f304d394696d339a57912dcba12d8840f9814224ab24b8a186cf808e444b4",
+      "65f9f0d8695021d06c1ad1e8c614cbe0643fc9c2e46b39e36e077522c7e92c94",
+      "e15df0e2468fee7cfe2a4b5c0f66b7da4a3a98dcb490929d84c4bfddb21c57c7",
+      "19a6defd79ff75e2e41e27cead46008022768169395aa333a1ccdad49208881d",
+      "f3a6c3726caa2783d554cb946f8da3b72d80cfe867c3744d8b70809d9fe5a300",
+      "dd4867c0ad58b0eac27b8dbf650971728018db3307a3245a0b1694722fc5ab77",
+      "a510737b9bec3a7ef5efe7aca475215f531631ed0b81f53dd81c861952d13278",
+      "75974fa373ca7dba94b2f9952d2c7c1feb65eb5c881721ce77f863a7583af8d8",
+      "1bf37c761aab4c8fd2637f3f095ade369cfb2c92c4cb57b85cfa230a8bfb30b3",
+      "fcf22edc9fd1ad81b6fabbe3382e975e74cf19ca19921a89172e9a0ddd24b1d6",
+      "edcb6c8b14315113db882ebee41567c2a9899f814309b793d8d81fe83a7f2052",
+      "92235c67d2bbfaa201d12f1510c4b573ea7b3771b5d8f442285693224689505c",
+      "ba6d54f6881c1ab90e16930b2cb24c9014beae7b136475718018432dd9d2440c",
+      "855d4ac0e9c4689751b466d6d013fcc5941917b73a45412bd75128ac8708786a",
+      "fd7c0b06189d9f499b8233784a63a4b69dd5d85dae2b224fb1454d2787a98057",
+      "d0dcef2d1b6aff0f2b0c05559cbc9e7835253adda6558bafd950a1ba95582e07",
+      "641278e92817189eab9beb872c88f43d105ea0095f76833fc39422b4fd29caa5",
+      "424c98edd2302c303955a7bebe02254728f2f02c8d6017688f4e5a9661483a85",
+      "111fedd204fb2e4fc2ffa7df9f977df3651397e295e9313b69aef30d46c5197d",
+      "d4205506521923c9da4fde3ce1270d70b79f9eb50b7ba8928f6ac353d04bef7f",
+      "c6de37a671d2ab0f4df2f9918515c2515c89f11366b3bfcd60e6d6b91f5360e7",
+      "6c3c509e653bcb11c2d1d430639b7541db6191b98cf395393df52db696aa62b0",
+      "be8c96bcbb333358a32b668e1fc6fbb1adfd9d5c92289dcaf905634c0af289a3",
+      "3ad865d75f1fc300652e510d517954e1ef8af6c71a4497573c3380952b4e2fe1"
+    ],
+    "raw_and_normalized_aircraft_records_in_git": false
+  },
+  "results": {
+    "schema_version": 1,
+    "provider": "adsb.lol",
+    "region": {
+      "airport": "OSL",
+      "latitude": 60.193901,
+      "longitude": 11.1004,
+      "radius_nm": 50
+    },
+    "policy": {
+      "stale_after_seconds": 60,
+      "future_tolerance_seconds": 5,
+      "trail_gap_seconds": 120,
+      "jump_speed_knots": 1400,
+      "jump_tolerance_nm": 1
+    },
+    "started_at": "2026-10-28T19:47:57.608457+00:00",
+    "finished_at": "2026-10-28T20:07:38.386682+00:00",
+    "capture_code_sha256": "85e18b35e3667b5ac1c300bbbb87b7388196fd4f67882db5d9ac569b79a2ae01",
+    "analysis_code_sha256": "ba7ebd788634bd6c24d6699f127e574fd438c4aef38a72666e9e84cb06837d5f",
+    "attempts": 60,
+    "successful_responses": 60,
+    "http_statuses": {
+      "200": 60
+    },
+    "sample_seconds": 1180.12023,
+    "latency_seconds": {
+      "median": 0.487112,
+      "p95": 0.953619
+    },
+    "response_bytes": {
+      "total": 474486,
+      "max": 9819
+    },
+    "unique_positioned_aircraft": 24,
+    "aircraft_reports": 759,
+    "accepted_position_reports": 752,
+    "rejection_reasons": {
+      "out_of_order_position": 7
+    },
+    "airborne_position_reports": 602,
+    "ground_position_reports": 150,
+    "unknown_ground_state_reports": 0,
+    "airborne_position_age_seconds": {
+      "median": 0.602476,
+      "p95": 1.048042,
+      "max": 3.548152
+    },
+    "airborne_fresh_within_60_seconds": {
+      "numerator": 602,
+      "denominator": 602
+    },
+    "missing_callsign_reports": 4,
+    "missing_quality_fields": {
+      "nic": 0,
+      "nac_p": 5,
+      "sil": 5,
+      "rc": 0
+    },
+    "source_types": {
+      "adsb_icao": 752
+    },
+    "trail_events": {
+      "start": 24,
+      "update": 718,
+      "repeated_position": 9,
+      "gap": 1
+    },
+    "observed_update_interval_seconds": {
+      "median": 20.002,
+      "p95": 21.269
+    },
+    "disappearances_between_snapshots": 16,
+    "reappearances_between_snapshots": 5,
+    "schedule_comparison": "Not assessed: a position/callsign alone does not establish a scheduled departure or dated flight identity.",
+    "coverage_limit": "One fixed region and sampled period; no all-day availability, completeness or end-to-end flight-path claim."
+  },
+  "audit": {
+    "all_60_source_checksums_verified": true,
+    "offline_replay_repeated_identically": true,
+    "replay_preserved_request_ledger": true,
+    "replay_changes_from_initial_capture_report": {
+      "accepted_position_reports": {
+        "capture": 751,
+        "corrected_replay": 752
+      },
+      "rejection_reasons": {
+        "capture": {
+          "out_of_order_position": 8
+        },
+        "corrected_replay": {
+          "out_of_order_position": 7
+        }
+      },
+      "ground_position_reports": {
+        "capture": 149,
+        "corrected_replay": 150
+      },
+      "source_types": {
+        "capture": {
+          "adsb_icao": 751
+        },
+        "corrected_replay": {
+          "adsb_icao": 752
+        }
+      },
+      "trail_events": {
+        "capture": {
+          "start": 24,
+          "update": 718,
+          "repeated_position": 8,
+          "gap": 1
+        },
+        "corrected_replay": {
+          "start": 24,
+          "update": 718,
+          "repeated_position": 9,
+          "gap": 1
+        }
+      },
+      "disappearances_between_snapshots": {
+        "capture": 17,
+        "corrected_replay": 16
+      },
+      "reappearances_between_snapshots": {
+        "capture": 6,
+        "corrected_replay": 5
+      }
+    },
+    "normalizer_change_reason": "Canonicalize observed time to ISO microsecond precision; retained genuine millisecond regressions remain quarantined. Optional invalid quality fields become unknown.",
+    "remaining_timestamp_regressions_milliseconds": {
+      "count": 7,
+      "min": -3.0,
+      "max": -1.0,
+      "interpretation": "Small source-derived timestamp regressions; quarantined conservatively, not evidence of equivalent receiver outages."
+    }
+  },
+  "request_budget": {
+    "sample_attempts": 60,
+    "droplet_access_probe_attempts": 1,
+    "development_access_probe_attempts": 1,
+    "minimum_sample_request_interval_seconds": 20.000725,
+    "maximum_sample_request_interval_seconds": 20.005841,
+    "configured_minimum_interval_seconds": 20,
+    "daily_research_cap": 180,
+    "advertised_provider_daily_limit": 500,
+    "continuous_20_second_requests_per_day": 4320,
+    "continuous_20_second_operation_under_observed_anonymous_allowance": "not_feasible",
+    "project_position_query_attempts_total": 62
+  },
+  "schedule_context": {
+    "source": "avinor",
+    "source_captured_at": "2026-10-28T15:11:47.859836+00:00",
+    "source_sha256": "ed67e4165f6c425d11d6ffcf1a0b15c71cd9352d324c9acd672c788b4252c82c",
+    "scheduled_departures_in_sample_window": 7,
+    "matched_observed_departures": null,
+    "unobserved_departures": null,
+    "unresolved_associations": 7,
+    "reason": "No verified aircraft-to-dated-flight matching in stages 1\u20132; a geographic position is not proof of departure. Snapshot may differ from subsequent operations."
+  },
+  "droplet_resources": {
+    "service_runtime_seconds": 1181.713,
+    "cpu_seconds": 6.752,
+    "memory_peak_mib_as_reported": 17.2,
+    "memory_swap_peak_bytes": 0,
+    "source": "systemd-run completion and journal",
+    "hard_memory_limit_mib": 64,
+    "hard_runtime_seconds": 1500,
+    "cpu_quota_percent": 25
+  }
+}

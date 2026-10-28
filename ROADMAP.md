@@ -134,4 +134,9 @@ Expected checkpoints, measured from the start of implementation rather than prom
 
 Keep the daily route candidate and Avinor research jobs running within their existing budgets. Review refresh candidates separately; retain the three-weekly-cycle gate before considering unattended route publication. Broad schedule-provider expansion and historical archive ingestion are deferred until the live position and identity experiments show which missing evidence would materially improve this pilot.
 
-The next implementation slice is stage 1 and a small stage-2 capture tool: documented free access, explicit budgets, normalized positions and replayable samples. It introduces no Mac background job, billing, automatic public data promotion or unbounded global collector.
+The first implementation slice has delivered stage-1 access research and one
+checked stage-2 Oslo sample with capture/replay tooling; see
+[LIVE_TRACKING_RESEARCH.md](LIVE_TRACKING_RESEARCH.md). The observed 500/day
+anonymous allowance rules out continuous 20-second polling. Two more time-of-day
+samples, aircraft-to-flight matching and a permitted, sustainable live publication
+path remain unresolved. Existing collection and public route data are unchanged.
