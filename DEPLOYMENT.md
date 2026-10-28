@@ -28,7 +28,7 @@ git pull --ff-only origin main
 ./deploy/deploy.sh
 ```
 
-Commit intended changes first. The script refuses tracked dirty files and exports **HEAD only**; untracked files, `.git`, caches, research scratch and credentials are excluded. It runs the frontend tests and data validator, creates deterministic precompressed assets, checksums every deployed file, uploads a release, atomically switches `current`, and checks the origin. A failed origin check restores the previous pointer. Successful deploys refresh the server's README. Override the SSH destination with `AIRPLANES_HOST` if the server changes.
+Commit intended changes first. The script refuses tracked dirty files and exports **HEAD only**; untracked files, `.git`, caches, research scratch and credentials are excluded. It runs the frontend tests and data validator, creates deterministic precompressed assets without macOS metadata sidecars, checksums every deployed file, uploads a release, atomically switches `current`, and checks the origin. A failed origin check restores the previous pointer. Successful deploys refresh the server's README. Override the SSH destination with `AIRPLANES_HOST` if the server changes.
 
 Data changes must first run `npm run build:data`; validation rejects a stale `web/map-data.json`. Ordinary deploys do not refresh or scrape Wikipedia. The complete `data.json` remains downloadable, while startup loads the compact projection.
 

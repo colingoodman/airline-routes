@@ -24,10 +24,10 @@ for p in sorted(root.rglob('*')):
 lines=[hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p.relative_to(root)) for p in sorted(root.rglob('*')) if p.is_file()]
 (root/'SHA256SUMS').write_text('\n'.join(lines)+'\n')
 PY
-tar -czf "$stage/site.tar.gz" -C "$stage/web" .
+COPYFILE_DISABLE=1 tar --no-xattrs -czf "$stage/site.tar.gz" -C "$stage/web" .
 remote_archive="/tmp/airplanes-${revision}-$$.tar.gz"
-scp -q "$stage/site.tar.gz" "$host:$remote_archive"
-ssh "$host" bash -s -- "$revision" "$remote_archive" < deploy/activate.sh
+scp -q -o BatchMode=yes -o ConnectTimeout=15 "$stage/site.tar.gz" "$host:$remote_archive"
+ssh -o BatchMode=yes -o ConnectTimeout=15 "$host" bash -s -- "$revision" "$remote_archive" < deploy/activate.sh
 # Keep operating instructions outside the public document root and release switch.
-scp -q "$stage/README.md" "$host:/var/www/airplanes/README.md"
+scp -q -o BatchMode=yes -o ConnectTimeout=15 "$stage/README.md" "$host:/var/www/airplanes/README.md"
 printf 'Deployed %s to https://colingoodman.net/airplanes/\n' "$revision"

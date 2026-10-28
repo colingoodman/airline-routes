@@ -27,12 +27,16 @@ mv -Tf "$base/.current-$$" "$base/current"
 if ! python3 - "$revision" <<'PY'
 import json, subprocess, sys
 revision=sys.argv[1]
-def request(path):
-    return subprocess.check_output(['curl','--fail','--silent','--show-error','--max-time','30','--resolve','colingoodman.net:443:127.0.0.1','https://colingoodman.net/airplanes/'+path])
-assert request('DEPLOYED_REVISION').decode().strip()==revision
-assert b'Airline network route map' in request('')
-assert b'function' in request('app.mjs')
-assert len(json.loads(request('map-data.json'))['routes'])>0
+def request(path,expected):
+    output=subprocess.check_output(['curl','--fail','--silent','--show-error','--max-time','30','--resolve','colingoodman.net:443:127.0.0.1','--write-out','\n%{http_code} %{content_type}','https://colingoodman.net/airplanes/'+path])
+    body,metadata=output.rsplit(b'\n',1)
+    status,content_type=metadata.decode().split(' ',1)
+    assert status=='200' and content_type.split(';')[0]==expected, (path,metadata)
+    return body
+assert request('DEPLOYED_REVISION','application/octet-stream').decode().strip()==revision
+assert b'Airline network route map' in request('','text/html')
+assert b'function' in request('app.mjs','application/javascript')
+assert len(json.loads(request('map-data.json','application/json'))['routes'])>0
 print('Origin release, HTML, module and data checks passed.')
 PY
 then
