@@ -11,7 +11,7 @@ const embeddedResponse=id=>`Promise.resolve({ok:true,json:async()=>JSON.parse(do
 app=app.replace("fetch('map-data.json', {cache:'no-cache'})",embeddedResponse('embedded-map')).replace("fetch('world.geojson')",embeddedResponse('embedded-world'));
 app=app.replace('function persist(){',"function persist(){if(location.protocol==='file:')return;");
 let html=read('index.html').replace(/<link rel="stylesheet" href="vendor\/leaflet.css">/,`<style>${read('vendor/leaflet.css')}</style>`).replace(/<link rel="stylesheet" href="style.css[^\"]*">/,`<style>${read('style.css')}</style>`);
-html=html.replace('<a href="../README.md">Project documentation</a>','<p>This portable viewer includes its complete data and map assets. The source repository contains methodology and rebuild instructions.</p>');
+html=html.replace('<a href="https://github.com/colingoodman/airline-routes#readme" target="_blank" rel="noopener">Project documentation</a>','<p>This portable viewer includes its complete data and map assets. The source repository contains methodology and rebuild instructions.</p>');
 const inline=(code,type='')=>`<script${type?' type="'+type+'"':''}>${code.replaceAll('</script','<\\/script')}</script>`;
 const jsonScript=(id,json)=>`<script id="${id}" type="application/json">${safeJson(json)}</script>`;
 const modules=['geography.mjs','model.mjs','route-renderer.mjs','runtime.mjs','perf.mjs'].map(p=>read(p).replace(/^import .*?;\n/gm,'').replaceAll('export ','')).join('\n');

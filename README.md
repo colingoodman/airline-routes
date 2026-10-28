@@ -8,6 +8,10 @@ The search audited **1,310 directory entries**: 955 in Wikipedia's worldwide pas
 
 **Coverage remains partial:** 159 linked destination entries across 80 admitted origins could not be resolved safely. Their resolved services are displayed, their coverage is `parsed_with_unresolved`, and every gap remains in `issues` with its source. The map header shows the partial-origin count. The dataset is a sourced reference snapshot, not an exhaustive worldwide timetable.
 
+## Hosting
+
+Live viewer: [colingoodman.net/airplanes/](https://colingoodman.net/airplanes/). See [DEPLOYMENT.md](DEPLOYMENT.md) for server paths, repeatable deploys, nginx configuration, verification and rollback.
+
 ## Run
 
 Requires Python 3. From this repository:
