@@ -136,7 +136,10 @@ Keep the daily route candidate and Avinor research jobs running within their exi
 
 The first implementation slice has delivered stage-1 access research and one
 checked stage-2 Oslo sample with capture/replay tooling; see
-[LIVE_TRACKING_RESEARCH.md](LIVE_TRACKING_RESEARCH.md). The observed 500/day
-anonymous allowance rules out continuous 20-second polling. Two more time-of-day
+[LIVE_TRACKING_RESEARCH.md](LIVE_TRACKING_RESEARCH.md). adsb.lol's observed
+500/day anonymous allowance rules out continuous 20-second polling on that feed;
+[other free feeds and contributor benefits](LIVE_TRACKING_RESEARCH.md#higher-limit-free-feeds-and-contribution-benefits)
+have higher documented limits, with adsb.fi bounded access verified and
+FlyItalyADSB keyed access still untested. Two more time-of-day
 samples, aircraft-to-flight matching and a permitted, sustainable live publication
 path remain unresolved. Existing collection and public route data are unchanged.

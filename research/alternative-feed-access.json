@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "checked_date_india": "2026-10-29",
+  "purpose": "read-only higher-limit feed research",
+  "position_query_attempts": 2,
+  "probes": [
+    {
+      "provider": "adsb.fi",
+      "environment": "development",
+      "url": "https://opendata.adsb.fi/api/v3/lat/60.193901/lon/11.1004/dist/50",
+      "fetched_at": "2026-10-28T20:18:18.404769+00:00",
+      "http_status": 200,
+      "bytes": 5262,
+      "sha256": "8b8a4ac89e9fdde9549786158765ae233413472e301d19689b667ab1c27ef12a",
+      "aircraft_records": 8,
+      "with_coordinates": 8,
+      "with_callsign": 8,
+      "latency_seconds": 0.2113,
+      "accepted_positions": 8,
+      "advertised_limit_headers": {},
+      "rejection_counts": {}
+    },
+    {
+      "provider": "adsb.fi",
+      "environment": "droplet",
+      "url": "https://opendata.adsb.fi/api/v3/lat/60.193901/lon/11.1004/dist/50",
+      "fetched_at": "2026-10-28T20:18:34.750893+00:00",
+      "http_status": 200,
+      "bytes": 5267,
+      "sha256": "52d63bfa8d9eb245d37ea00052331daa610b72eb4681f716560cfcfb6db1dabd",
+      "aircraft_records": 8,
+      "with_coordinates": 8,
+      "with_callsign": 8,
+      "latency_seconds": 0.1916,
+      "accepted_positions": 8,
+      "advertised_limit_headers": {},
+      "rejection_counts": {}
+    }
+  ],
+  "limits_interpretation": "No limit headers observed; use documented 1 request/second limit, not an unlimited-access assumption. Two probes do not prove sustained availability.",
+  "raw_aircraft_data_committed": false
+}

@@ -1,9 +1,10 @@
 # Live position feed research
 
-## Stage 1: access decision
+## Stage 1: initial access decision
 
-Checked on 29 October 2026 India time (probe timestamps below are UTC). Proceed
-with bounded, private adsb.lol research around OSL. Public live deployment remains
+Checked on 29 October 2026 India time (probe timestamps below are UTC). The initial
+experiment used bounded, private adsb.lol research around OSL. The higher-limit
+comparison below now prioritizes adsb.fi for further testing. Public live deployment remains
 conditional on the provider's production-contact guidance and a separate data
 publication design; no provider was contacted and no account or paid service was
 created. This work does not change the map or publish aircraft records.
@@ -223,3 +224,125 @@ timers and nginx remain active, and the public viewer revision remains `7040cd0`
   compare them. Stage 3 must resolve aircraft/flight identities and assess the
   seven scheduled departures; unknown associations remain unknown. Nothing in
   this sample authorizes or publishes a live aircraft map.
+
+## Higher-limit free feeds and contribution benefits
+
+Researched on 29 October 2026 India time. The 500/day finding above belongs to
+adsb.lol's observed anonymous endpoint; it is **not a limit shared by all free
+feeds**. Continuous regional tracking appears feasible under other documented
+free plans. Sustained availability and coverage still need a longer test.
+
+### Request budget for continuous operation
+
+One shared regional query every 20 seconds is 4,320 requests/day, or **133,920 in
+a 31-day month**. At 15 seconds it is 178,560/month; at 10 seconds it is
+267,840/month. A 300,000/month plan with our 20% reserve allows 240,000 usable
+requests, so 15–20-second polling fits; continuous 10-second polling does not
+leave the planned reserve. These calculations cover one region and one shared
+upstream collector. Each extra region, endpoint and retry consumes the same
+budget. Viewer count must not multiply provider requests.
+
+### Options without receiver hardware
+
+| Provider | Documented free access | Continuous regional fit | Verification and remaining conditions |
+| --- | --- | --- | --- |
+| [adsb.fi](https://github.com/adsbfi/opendata/blob/main/README.md) | Anonymous public queries at 1 request/second; geographic radius up to 250 NM | 20-second polling fits the documented rate; no daily/monthly ceiling stated | Two bounded Oslo probes passed, one locally and one on the droplet. No rate/quota headers appeared. This is not proof of unlimited access or 24-hour availability. Personal, non-commercial use with visible attribution/link; do not infer permission for unrelated data redistribution or relicensing. |
+| [FlyItalyADSB](https://flyitalyadsb.com/en/data/api/) | Free email-based key; 30/minute, 300,000/month, radius up to 500 **km**; also a 100/minute IP cap | One 15–20-second regional query fits with 20% reserve even in 31-day months | No key requested and no authenticated query tested. Current plan applies since 27 October 2026; older 100/minute claims are insufficient. Free regional access needs no receiver. |
+| [adsb.win](https://adsb.win/privacy-license) | Documents 20 requests/second sustained, short bursts of 40 and 16 concurrent connections | Numerically ample; not ready for our public cache/export design | Non-commercial API use is free, but systematic downloading and feed redistribution require permission. Its own terms say partner data remains merged into the live API despite display-only restrictions. Keep deferred until provenance and intended reuse are clarified; no position query made. |
+
+**adsb.fi measured access:** the documented v3 geographic endpoint for the same
+OSL center/50 NM returned HTTP 200 from both environments at 20:18 UTC on
+28 October. Each response contained eight positioned aircraft with callsigns,
+used about 5.3 KB and completed in 0.19–0.21 seconds. Both raw hashes passed and
+all eight positions normalized without rejection. The API uses the same wrapper
+shape/millisecond time observed in our adsb.lol sample. The two calls were 16
+seconds apart and are not a simultaneous cross-provider completeness comparison.
+Evidence is summarized in [research/alternative-feed-access.json](research/alternative-feed-access.json);
+raw aircraft records remain in ignored research storage. No continuous collector
+was enabled. The current sampler still has adsb.lol-specific identity/attribution
+and budgets; do not simply change its URL without a provider adapter and tests.
+
+For FlyItalyADSB, the [current API terms](https://flyitalyadsb.com/en/terms/)
+allow a product's server to cache data for its users, require attribution and
+CC BY-SA 4.0 compliance, and distinguish that from redistributing a live API/feed
+for other people's products. All devices share the key's quota. Use a key on our
+server, not in browser assets. Its native API uses **kilometres and Unix seconds**;
+the compatible ADS-B Exchange format uses nautical miles/milliseconds. Neither
+format supplies verified airport-to-airport routes. Its [FAQ](https://flyitalyadsb.com/en/faq/)
+confirms server caching, a best-effort service and error responses rather than
+automatic overage billing. Authenticated Oslo coverage remains untested.
+
+### What contributing real receiver data unlocks
+
+| Provider | Contributor benefit | Conditions / limits |
+| --- | --- | --- |
+| [FlyItalyADSB feeder benefit](https://flyitalyadsb.com/en/faq/) | Pro limits free for non-commercial use: **300/minute, 10 million/month, worldwide radius** | Activate the benefit in My API from the receiver's network after it is feeding. Active contributions required, with three days of grace after stopping. Data access is documented, not tested for this project. |
+| [adsb.fi feeder snapshot](https://github.com/adsbfi/opendata/blob/main/README.md) | All-aircraft snapshot refreshed twice a minute; one request every 30 seconds | Hosting a contributing receiver unlocks access from its feeder IP. This broadens area rather than raising the regional public rate. Personal/non-commercial terms still apply. |
+| [ADSBHub](https://www.adsbhub.org/howtogetdata.php) | Aggregated continuous SBS/30003 TCP stream from participating stations, port 5002 | Must contribute at least one live ADS-B station and authorize access IPs in the profile. Published terms allow publication and commercial use. This is a stream rather than a per-query allowance; bandwidth, completeness and tiny-droplet processing cost are unmeasured. No connection attempted without entitlement. |
+| [adsb.lol feeder re-api](https://www.adsb.lol/docs/feeders-only/re-api/) | Direct readsb HTTP API for the network, ODbL | Feeder-IP access; the documentation permits using a VPN/proxy from the station for another location. No numeric high-rate entitlement is published there, so do not call it unlimited or assume it removes our observed anonymous cap. Project-key requests are another conditional route. |
+| [ADSB IQ](https://adsbiq.com/api/docs) | Documents active-feeder REST access every 20 seconds and a 10-second WebSocket push tier | Geographic stream/deltas may be useful. Data budgets still apply. API docs and [terms](https://adsbiq.com/terms) disagree about non-feeder access and key use from other IPs; defer adoption until reconciled. No account, trial or live connection started. |
+
+The [FlyItalyADSB feeder guide](https://flyitalyadsb.com/en/community/feeder/)
+and provider setup pages require a working 1090 MHz receiver, antenna and decoder
+such as readsb/dump1090, with an internet connection. A receiver can contribute
+outside Norway and still unlock the documented network-wide benefit. An existing
+station can often feed several networks; a separate receiver per provider is not
+inherently required. Its actual RF reception, uptime and eligibility must be
+verified, and feeding loops must be avoided.
+
+The droplet is a virtual server and cannot hear ADS-B radio transmissions by
+itself. Running feeder software there with no real incoming receiver data does
+not earn a contribution benefit. Re-uploading another API's data or inventing
+messages is not a substitute for owning/operating a permitted receiver source.
+With the project's no-spending rule, a feeder path is an option only if suitable
+hardware and ongoing power/connectivity are already available without additional
+spend. No such receiver is confirmed in this project. We have not installed
+feeder software, registered accounts, requested keys or contacted providers.
+
+### Exclusions and weaker leads
+
+- [adsb.lol raw BEAST/MLAT output](https://www.adsb.lol/docs/feeders-only/beast-mlat-out/)
+  is explicitly marked permanently paused for resource costs. Do not recommend
+  this stream as an available feeder entitlement. The separate HTTP re-api and
+  [ad-hoc project-key request page](https://www.adsb.lol/request) remain leads,
+  with the actual approved quotas unresolved.
+- [AvioADSB](https://avioadsb.org/docs/api) grants active contributors 10,000
+  requests/month, versus 100/day anonymously. A higher per-second rate is not
+  sufficient: even its contributor monthly quota is far below 133,920 for one
+  20-second query throughout a 31-day month.
+- [OpenSky's documented active-feeder allowance](https://openskynetwork.github.io/opensky-api/rest.html)
+  rises from 4,000 to 8,000 daily credits with at least 30% receiver uptime/month.
+  A sufficiently small region costs one credit/query, so 4,320/day can fit that
+  contributor allowance, but global queries cost four credits. Its
+  [operational-use written-agreement requirement](https://opensky-network.org/about/terms-of-use)
+  remains; feeding alone does not establish permission for our live service.
+- [Flightradar24's API FAQ](https://fr24api.flightradar24.com/docs/faq) explicitly
+  says receiver hosts do not receive free API access. A contributor web/app plan
+  is not an API entitlement. [ADS-B Exchange's Developer Hub](https://www.adsbexchange.com/community/developer-hub/)
+  advertises a paid community API, not a verified zero-cost route for this project.
+- [FlightBank](https://flightbank.co.uk/feed-adsb-data.html) documents free access
+  while a real receiver contributes, but the examined feeder page does not
+  establish a sustained quota, intended public redistribution rights or Oslo
+  coverage. Keep it as an unverified lead rather than a primary dependency.
+- ADSB IQ's [MCP limits](https://adsbiq.com/api/other/mcp) are separate from its
+  REST/WebSocket tiers; a 3-day trial is not permanent free access. Do not mix
+  protocol-specific quotas or count unapproved publisher access as a feeder grant.
+
+### Recommended next decision
+
+1. **First test adsb.fi for a longer regional window.** It needs no account or
+   receiver and both bounded access probes passed. Use one shared query, start
+   at 20 seconds, cap attempts and measure freshness/continuity. Reconfirm the
+   personal/non-commercial display use before a public endpoint or export.
+2. **Keep FlyItalyADSB as the best documented keyed regional alternative.** Its
+   published monthly quota fits continuous 15–20-second polling and explicitly
+   supports a cached product display. An email-based free key and an Oslo sample
+   are still required; the name does not establish Italian-only coverage.
+3. **If a real receiver is already available, investigate FlyItalyADSB's free
+   contributor Pro benefit first**, then adsb.fi's global snapshots or ADSBHub's
+   stream. Validate entitlement and IP restrictions before deployment. A global
+   access grant does not prove worldwide reception or resource suitability.
+
+The new research establishes promising request budgets and one alternative's
+bounded accessibility. It does not prove a 24-hour service, create a live map,
+resolve flight numbers/routes or change the existing 500/day adsb.lol sampler.
