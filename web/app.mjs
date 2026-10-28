@@ -1,9 +1,9 @@
-import {indexData,filterRoutes,visibleHubs,greatCircle,uniqueConnections,routeBounds,canonicalAirportIds,airlineOptions} from './model.mjs?v=20261027-performance';
+import {indexData,filterRoutes,visibleHubs,greatCircle,uniqueConnections,routeBounds,canonicalAirportIds,airlineOptions,defaultExplorerState,explorerParams,restoreExplorerState} from './model.mjs?v=20261027-performance';
 import {measure,recordMetric,markReady} from './perf.mjs?v=20261027-performance';
 import {createRouteLayer,projectRoutePath} from './route-renderer.mjs?v=20261027-performance';
 import {decodeMapData,prepareDownload} from './runtime.mjs?v=20261027-performance';
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const state={alliances:new Set(),airlines:new Set(),airports:new Set(),seasonal:true,charter:false,lowCost:'all',regional:false};
+let state;
 let data,ix,map,routeLayer,pins,pinRenderer,baseRenderer,worldGeo,filtered=[],connections=[],relevant=new Set(),hubIds=new Set(),servingByAirport=new Map(),eligibleAirlines=[],page=0;const PAGE_SIZE=75;const worldLayers=new Map(),routeGeometry=new Map(),pinLayers=new Map(),eligibilityCache=new Map();
 const airportCode=a=>a.iata||a.icao||a.local_code||a.ident||a.id;
 const airlineCode=a=>a.iata||a.icao||(a.id.startsWith('wiki:')?'':a.id.replace(/^icao:/,''));
@@ -16,7 +16,7 @@ function renderAllianceOptions(){
 }
 function renderAirlines(){return measure('airlineChoices',renderAirlinesImpl);}
 function renderAirlinesImpl(){
- const q=$('airline-search').value.toLowerCase(),eligible=eligibleAirlines,eligibleIds=new Set(eligible.map(a=>a.id)),available=[...eligible,...data.airlines.filter(a=>state.airlines.has(a.id)&&state.alliances.has(a.alliance_id)&&!eligibleIds.has(a.id))];
+ const q=$('airline-search').value.toLowerCase(),eligible=eligibleAirlines,eligibleIds=new Set(eligible.map(a=>a.id)),available=[...eligible,...data.airlines.filter(a=>state.airlines.has(a.id)&&!eligibleIds.has(a.id))];
  $('airlines').innerHTML=available.filter(a=>(a.name+' '+a.id).toLowerCase().includes(q)).sort((a,b)=>a.name.localeCompare(b.name)).map(a=>`<label class="option"><input type="checkbox" data-airline="${a.id}" ${state.airlines.has(a.id)?'checked':''}><span class="dot" style="background:${airlineColor(a.id)}"></span>${esc(a.name)}<small>${a.membership_type==='connecting_partner'?'Partner · ':a.membership_type==='affiliate'?'Affiliate · ':''}${a.low_cost===true?'LCC · ':''}${a.regional===true?'Regional · ':''}${esc(airlineCode(a))}${eligibleIds.has(a.id)?'':' · no matching services'}</small></label>`).join('')||'<p class="hint">No matching airlines.</p>';
  $('airline-count').textContent=state.airlines.size?`${state.airlines.size} selected`:`All ${available.length}`;
 }
@@ -24,6 +24,7 @@ function renderAirports(){
  const q=$('airport-search').value.trim().toLowerCase(),hubs=hubIds;
  const choices=data.airports.filter(a=>q?(a.id+' '+(a.former_iata_codes||[]).join(' ')+' '+(a.icao||'')+' '+(a.ident||'')+' '+(a.local_code||'')+' '+a.city+' '+a.name+' '+a.country).toLowerCase().includes(q):hubs.has(a.id)).sort((a,b)=>(b.id.toLowerCase()===q)-(a.id.toLowerCase()===q)||a.id.localeCompare(b.id));
  $('airports').innerHTML=choices.slice(0,60).map(a=>`<label class="option"><input type="checkbox" data-airport="${a.id}" ${state.airports.has(a.id)?'checked':''}>${esc(airportLabel(a))}<small>${hubs.has(a.id)?'hub/base':''}</small></label>`).join('')+(choices.length>60?'<p class="hint">Showing 60 results. Refine your search.</p>':'')||'<p class="hint">No matching airports.</p>';
+ $('airport-search-results').hidden=!q;$('airport-search-results').innerHTML=q?choices.slice(0,12).map(a=>`<button data-inspect-airport="${a.id}">${esc(airportLabel(a))} <small>${esc(a.name)}</small></button>`).join('')||'<p>No matching airports.</p>':'';
  $('airport-selection').innerHTML=[...state.airports].map(id=>`<button class="tag" data-remove-airport="${id}" aria-label="Remove ${id} airport filter">${esc(airportCode(ix.airports.get(id)))} ×</button>`).join('');
 }
 function renderTable(){
@@ -90,7 +91,7 @@ function prepareView(){
  relevant=new Set();for(const r of filtered){relevant.add(r.hub_airport_id);relevant.add(r.destination_airport_id);}if(!state.airports.size)for(const h of hubs)relevant.add(h.airport_id);
 }
 function update(){return measure('update',updateImpl);}
-function updateImpl(){filtered=filterRoutes(data,state);prepareView();page=Math.min(page,Math.max(0,Math.ceil(filtered.length/PAGE_SIZE)-1));renderAirlines();renderAirports();renderMap();renderTable();persist();}
+function updateImpl(){filtered=filterRoutes(data,state);prepareView();page=Math.min(page,Math.max(0,Math.ceil(filtered.length/PAGE_SIZE)-1));renderAirlines();renderAirports();renderMap();renderTable();renderChips();persist();}
 function fit(){
  const pts=[...new Set(filtered.flatMap(r=>[r.hub_airport_id,r.destination_airport_id]))].map(id=>{const a=ix.airports.get(id);return[a.latitude,a.longitude];});
  if(!pts.length)return;
@@ -98,8 +99,22 @@ function fit(){
  for(const r of connections)paths.push(...geometryFor(ix.airports.get(r.hub_airport_id),ix.airports.get(r.destination_airport_id)).paths);
  map.fitBounds(routeBounds(pts,paths,map.getCenter().lng),{padding:[30,30],maxZoom:7});
 }
-function persist(){const p=new URLSearchParams();if(new URLSearchParams(location.search).has('audit'))p.set('audit','1');if(state.alliances.size!==data.alliances.length)p.set('alliances',[...state.alliances].join(','));if(state.airlines.size)p.set('airlines',[...state.airlines].join(','));if(state.airports.size)p.set('airports',[...state.airports].join(','));if(!state.seasonal)p.set('seasonal','0');if(state.charter)p.set('charter','1');if(state.lowCost!=='all')p.set('low_cost',state.lowCost);if(state.regional)p.set('regional','1');history.replaceState(null,'',location.pathname+(p.size?'?'+p:'')+location.hash);}
-function restore(){state.alliances=new Set(data.alliances.map(a=>a.id));const p=new URLSearchParams(location.search);for(const [key,ids] of [['alliances',new Set(data.alliances.map(a=>a.id))],['airlines',new Set(data.airlines.map(a=>a.id))],['airports',new Set(data.airports.map(a=>a.id))]])if(p.has(key))state[key]=new Set(key==='airports'?canonicalAirportIds(data.airports,p.get(key).split(',')):p.get(key).split(',').filter(x=>ids.has(x)));state.seasonal=p.get('seasonal')!=='0';state.charter=p.get('charter')==='1';state.lowCost=['yes','no','unknown'].includes(p.get('low_cost'))?p.get('low_cost'):'all';state.regional=p.get('regional')==='1';}
+function persist(){const p=explorerParams(state,data);if(new URLSearchParams(location.search).has('audit'))p.set('audit','1');history.replaceState(null,'',location.pathname+(p.size?'?'+p:'')+location.hash);}
+function restore(){state=restoreExplorerState(data,location.search);}
+function syncControls(){for(const key of ['seasonal','charter','regional'])$(key).checked=state[key];$('low-cost-filter').value=state.lowCost;$('airport-mode').value=state.airportMode;}
+function clearFilters(resetView=false){
+ const previous=state;state=defaultExplorerState(data);if(!resetView)for(const key of ['colorBy','labels','unit','airlineSort','destinationSort','view'])state[key]=previous[key];
+ for(const id of ['airline-search','airport-search'])$(id).value='';page=0;syncControls();renderAllianceOptions();update();if(resetView)map.fitBounds([[-60,-180],[80,180]],{padding:[10,10]});
+}
+function renderChips(){
+ const chips=[];const chip=(key,value,label)=>chips.push(`<button class="tag" data-chip-key="${key}" data-chip-value="${esc(value)}" aria-label="Remove ${esc(label)} filter">${esc(label)} ×</button>`);
+ if(state.alliances.size!==data.alliances.length){chip('alliances','',state.alliances.size?[...state.alliances].map(id=>ix.alliances.get(id).name).join(', '):'No alliances');}
+ for(const id of state.airlines)chip('airlines',id,ix.airlines.get(id).name);for(const id of state.airports)chip('airports',id,airportCode(ix.airports.get(id)));
+ if(state.airportMode!=='touches')chip('airportMode','',state.airportMode==='between'?'Between airports':'Listed from hubs/bases');
+ if(!state.seasonal)chip('seasonal','','Exclude seasonal');if(state.charter)chip('charter','','Include charter');if(state.lowCost!=='all')chip('lowCost','',`Airline model: ${state.lowCost}`);if(state.regional)chip('regional','','Regional only');
+ $('filter-chips').innerHTML=chips.join('')||'<span class="hint">All networks · default service filters</span>';
+ $('airport-mode-help').textContent=state.airportMode==='between'&&state.airports.size<2?'Select at least two airports to see connections between them.':state.airportMode==='hub'?'Matches the source hub/base endpoint; flight direction is not verified.':'';
+}
 async function init(){const dataStart=performance.now();
  const response=await fetch('map-data.json', {cache:'no-cache'});if(!response.ok)throw new Error(`Dataset request failed (${response.status})`);data=decodeMapData(await response.json());recordMetric('data',performance.now()-dataStart);ix=indexData(data);restore();prepareDownload(document.querySelector('header a'));
  map=L.map('map',{preferCanvas:true,minZoom:0,maxZoom:10,zoomSnap:.25,worldCopyJump:true}).fitBounds([[-60,-180],[80,180]],{padding:[10,10]});map.attributionControl.addAttribution('Basemap: Natural Earth / geo-countries · Airport data: OurAirports · Routes: Wikipedia');
@@ -113,8 +128,8 @@ async function init(){const dataStart=performance.now();
  $('snapshot').textContent=`Snapshot: ${data.as_of} · ${data.airlines.length} airlines · ${data.hubs.length} airline–hub/base records · ${data.hubs.filter(h=>h.coverage==='parsed_with_unresolved').length} with partial mapping`;
  const gaps=data.hubs.filter(h=>!['parsed'].includes(h.coverage));
  $('methodology').innerHTML=`<p>${data.discovery_audit?.summary?.directory_entries||0} directory entries reviewed; ${data.discovery_audit?.summary?.rejected_carriers||0} proposed carriers had no origin with usable passenger-route evidence. The complete admission audit is embedded in the JSON.</p><p>${esc(data.scope.routes)}</p><p>${esc(data.scope.seasonality)}</p><p>${data.issues_count} extraction issues; ${gaps.length} airline–hub/base records need source or mapping review. “Parsed” describes extraction, not schedule completeness. Inspect the JSON issues and per-hub coverage fields.</p><p>Future and suspended/ended entries are retained in <code>excluded_routes</code> and omitted from this map.</p><p>Non-aligned covers documented current passenger carriers outside the three global alliances. Explicit affiliate and connecting-partner status is retained; suspended members have a separate category. Alaska remains in oneworld. Airport pins include source-labeled operating bases and focus cities for point-to-point carriers.</p><p>Enumerated regional and group service brands are grouped under their selected airline or brand group; operating carrier is not independently verified. This is a research snapshot, not a booking schedule.</p><p>Low-cost and regional filters use explicit source classifications. Unknown is not “no.” A documented service brand takes precedence over its parent, so Rouge services can be low-cost without labeling all Air Canada services low-cost. The JSON includes classification evidence and the discovery/admission audit.</p><p>Source: Wikipedia (CC BY-SA); airport metadata: OurAirports (public domain); verified airport aliases: Wikipedia and Wikidata (CC0). Pinned source revisions are linked from the service table.</p>`;
- renderAllianceOptions();$('seasonal').checked=state.seasonal;$('charter').checked=state.charter;$('low-cost-filter').value=state.lowCost;$('regional').checked=state.regional;
- $('alliances').addEventListener('change',e=>{const id=e.target.dataset.alliance;if(!id)return;e.target.checked?state.alliances.add(id):state.alliances.delete(id);state.airlines=new Set([...state.airlines].filter(x=>state.alliances.has(ix.airlines.get(x).alliance_id)));page=0;update();});
+ syncControls();renderAllianceOptions();$('seasonal').checked=state.seasonal;$('charter').checked=state.charter;$('low-cost-filter').value=state.lowCost;$('regional').checked=state.regional;
+ $('alliances').addEventListener('change',e=>{const id=e.target.dataset.alliance;if(!id)return;e.target.checked?state.alliances.add(id):state.alliances.delete(id);page=0;update();});
  $('airlines').addEventListener('change',e=>{const id=e.target.dataset.airline;if(!id)return;e.target.checked?state.airlines.add(id):state.airlines.delete(id);page=0;update();});
  $('airports').addEventListener('change',e=>{const id=e.target.dataset.airport;if(!id)return;e.target.checked?state.airports.add(id):state.airports.delete(id);page=0;update();});
  $('airport-selection').addEventListener('click',e=>{const id=e.target.closest('[data-remove-airport]')?.dataset.removeAirport;if(id){state.airports.delete(id);page=0;update();}});
@@ -124,7 +139,11 @@ async function init(){const dataStart=performance.now();
  for(const key of ['seasonal','charter'])$(key).addEventListener('change',()=>{state[key]=$(key).checked;page=0;update();});
  function changeModel(){state.lowCost=$('low-cost-filter').value;state.regional=$('regional').checked;page=0;update();}
  $('low-cost-filter').addEventListener('change',changeModel);$('regional').addEventListener('change',changeModel);
- $('fit').addEventListener('click',fit);$('reset').addEventListener('click',()=>{state.alliances=new Set(data.alliances.map(a=>a.id));state.airlines.clear();state.airports.clear();state.seasonal=true;state.charter=false;state.lowCost='all';state.regional=false;$('low-cost-filter').value='all';$('regional').checked=false;$('seasonal').checked=true;$('charter').checked=false;$('airline-search').value='';$('airport-search').value='';page=0;renderAllianceOptions();update();map.fitBounds([[-60,-180],[80,180]],{padding:[10,10]});});
+ $('fit').addEventListener('click',fit);$('reset').addEventListener('click',()=>clearFilters(true));$('clear-filters').addEventListener('click',()=>clearFilters());
+ $('airport-mode').addEventListener('change',()=>{state.airportMode=$('airport-mode').value;page=0;update();});
+ $('airport-search-results').addEventListener('click',e=>{const id=e.target.closest('[data-inspect-airport]')?.dataset.inspectAirport;if(id){selectAirport(id);$('airport-search').value='';renderAirports();}});
+ $('airport-search').addEventListener('keydown',e=>{if(e.key==='Escape'){$('airport-search').value='';renderAirports();}if(e.key==='Enter')$('airport-search-results').querySelector('button')?.click();});
+ $('filter-chips').addEventListener('click',e=>{const button=e.target.closest('[data-chip-key]');if(!button)return;const key=button.dataset.chipKey;if(key==='alliances')state.alliances=new Set(data.alliances.map(a=>a.id));else if(state[key] instanceof Set)state[key].delete(button.dataset.chipValue);else state[key]=defaultExplorerState(data)[key];page=0;syncControls();renderAllianceOptions();update();});
  $('previous').addEventListener('click',()=>{page--;renderTable();});$('next').addEventListener('click',()=>{page++;renderTable();});
  $('loading').textContent='';update();markReady();
 }
