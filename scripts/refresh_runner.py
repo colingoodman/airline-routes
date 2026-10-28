@@ -109,7 +109,9 @@ def run(args):
         previous = json.loads(state_file.read_text()) if state_file.exists() else {}
         if not daily_due(previous.get('last_attempted_at'),now,args.daily_after_utc):
             return {'status':'not_due'}
-        state = {**previous, 'last_attempted_at':now.isoformat()}
+        state = {**previous, 'last_attempted_at':now.isoformat(), 'status':'collecting'}
+        # Survive a service/cgroup kill: never lose the attempt or retry it repeatedly that day.
+        write_json(state_file,state)
         candidates = state_dir/'candidates'
         prune_candidates(candidates, args.retain-1)
         candidate = candidates/stamp

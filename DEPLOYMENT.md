@@ -106,105 +106,102 @@ If a module returns HTML, the viewer's nginx location/include is missing. If a m
 
 ## Candidate refresh runner (collection only)
 
-`scripts/refresh_runner.py` runs collection with an exclusive lock, a runtime limit,
-a disk budget and bounded candidate retention. It never copies data to `web/`,
-commits, deploys, or changes the active release. Successful unchanged checks update
-only its private `state.json`; collection failures preserve the last-successful
-check and publication timestamps. `latest.log` and the candidate manifest identify
-failures. Exit status 1 is an actionable collection failure; overlapping runs exit
-successfully without starting another job.
+Collection belongs on the existing droplet. The two Mac launch agents have been
+unloaded and their plist files removed; this branch no longer includes a macOS
+background-job installer. Captured evidence is retained for migration.
+
+The collector is independent of the public viewer:
+
+- Versioned runtime: `/opt/airplanes-refresh/releases/<full-git-commit>`.
+- Runtime pointer: `/opt/airplanes-refresh/repo`.
+- Installed revision: `/opt/airplanes-refresh/COLLECTOR_REVISION`.
+- Unprivileged account: `airplanes-refresh`, with no login shell or deployment key.
+- Refresh candidates/cache: `/var/lib/airplanes-refresh`.
+- Avinor observations: `/var/lib/airplanes-schedule-research`.
+
+The droplet has 458 MiB RAM. The installer uses 1 GiB of swap on its existing disk
+(`/var/lib/airplanes-refresh.swap`, mode 0600, persisted in `/etc/fstab`) and Ubuntu's
+Node.js/Python virtualenv packages. It does not resize the droplet, buy services,
+change nginx, or touch `/var/www/airplanes/current` or the existing homepage.
+
+The route service has 128 MiB memory pressure throttling, a 160 MiB hard RAM limit,
+768 MiB maximum swap, half a CPU, a 90-minute collection budget and 1 GiB of state.
+It retains three candidates and stops the process group on budget exhaustion.
+The smaller schedule service has a 96 MiB RAM limit, 256 MiB swap limit, quarter of
+a CPU, a 150-second startup timeout and 128 MiB of captured evidence. Systemd
+orders it after an overlapping route refresh. Both services use read-only runtime
+files, private temporary directories, no elevated capabilities and private state.
+
+### Install or update
+
+On the development machine, commit and check the intended branch first:
 
 ```sh
-.venv/bin/python scripts/refresh_runner.py --state work/refresh-runner
+# Optional seed directories avoid downloading source pages or losing observations.
+REFRESH_SEED_CACHE="$PWD/work/automatic-refresh/refresh/cache" \
+REFRESH_SEED_SCHEDULES="$PWD/work/automatic-refresh/schedules" \
+./deploy/install-refresh.sh
 ```
 
-Default limits are 45 minutes, 2 GiB of runner state, three candidates and a
-seven-day Wikipedia cache. Airport metadata is fetched on every online run. Budget
-exhaustion stops the entire collector process group and requires checking the
-logs/cache before retrying; it cannot publish partial results. Raw caches are
-retained for resumption, so a cache at its disk limit needs operator maintenance.
+The installer exports HEAD only, creates a versioned collector/virtualenv,
+validates the bundled baseline, seeds state only when absent, checks the systemd
+units and leaves the timers stopped. It refuses to change the runtime pointer
+while a collector is active. Install a new accepted commit through the same
+command; a working-branch change on the Mac cannot alter the deployed collector.
+No jobs are installed on the Mac by this workflow.
 
-`deploy/refresh/airplanes-refresh.service` and `.timer` are templates, not installed
-jobs. The timer checks daily at 03:00 UTC (08:30 India time), with up to 30 minutes
-of randomized delay, and catches up after downtime. Route pages are rechecked as
-their weekly cache expires. Prepare a separate checkout of the accepted collector
-commit at `/opt/airplanes-refresh/repo`, its Python environment and Node runtime,
-a dedicated `airplanes-refresh` user, and writable state at
-`/var/lib/airplanes-refresh`. The collector needs no access to the public web root,
-SSH deploy keys or nginx configuration. Keep source code read-only to that user.
-
-Before installing/enabling the templates on the existing server, measure a full
-candidate run there, confirm available disk/memory/network capacity, run
-`systemd-analyze verify` on the units, and perform a manual service run. Enabling
-collection is separate from enabling automatic publication. Review the first
-three weekly cycles and define accepted change thresholds before implementing
-unattended publication; no such publication path exists today.
-
-For a candidate release, review `changes.json`, `manifest.json`, source dates and
-validation logs. Check the candidate baseline still matches the current canonical
-JSON and that all manifest input hashes match the intended reviewed files. Copy
-only accepted candidate `data.json` and `map-data.json` into `web/`, rerun tests and
-validation, commit both files, then deploy that commit through the normal script.
-An offline or structural-only investigation is not evidence of a fresh accepted
-release. No-change checks should not create commits. Record actual successful
-publication time separately from collection time when a release is deployed.
-
-### Existing-host choice and macOS agents
-
-The existing droplet was inspected on 28 October 2026: 458 MiB RAM, about 241 MiB
-available, no swap, and no Node.js installation. The old collector retained every
-parsed HTML tree and exceeded 3 GiB in a representative run. Its parser cache now
-retains at most two trees and explicitly frees evicted trees; a subsequent
-measurement was about 245 MiB for the collector alone. The parent/comparison and
-Node validation need additional memory. Do not install the Linux collector timer
-on this droplet at its current size or buy additional capacity for this project.
-
-The two local collection agents are enabled on the existing development Mac. Their initial startup completed successfully, and their daily gates correctly skipped duplicate same-day collection. Use `work/automatic-refresh/installation.json` for the exact pinned collector revision; no collector job was installed on the droplet.
-
-Use the existing development Mac for collection instead. The opt-in installer
-`scripts/install_refresh_agents.py` freezes scripts and baseline data from a clean
-Git HEAD into ignored local state, then creates two launch agents. It uses the
-existing Python virtual environment and Node runtime; no new account or paid
-service is involved. Hourly scheduler wakeups check explicit UTC due times, but
-each job attempts collection at most once per UTC day, including failed attempts.
-Route pages retain their weekly cache. Neither agent can commit or deploy data.
+From the droplet, check capacity and manually run the services before enabling:
 
 ```sh
-# Generate locally staged plists and a pinned runtime without loading agents:
-.venv/bin/python scripts/install_refresh_agents.py --seed-candidate work/candidates/ACCEPTED_ONLINE_CANDIDATE
-# Enable the agents after checking the candidate and local resource use:
-.venv/bin/python scripts/install_refresh_agents.py --seed-candidate work/candidates/ACCEPTED_ONLINE_CANDIDATE --seed-cache work/refresh-cache --seed-schedules work/schedule-research --enable
+swapon --show
+systemctl start airplanes-refresh.service
+systemctl start airplanes-schedule-research.service
+systemctl show airplanes-refresh.service airplanes-schedule-research.service -p Result -p ExecMainStatus -p MemoryPeak
+cat /var/lib/airplanes-refresh/state.json
+journalctl -u airplanes-refresh.service -u airplanes-schedule-research.service -n 50 --no-pager
+systemctl enable --now airplanes-refresh.timer airplanes-schedule-research.timer
+systemctl list-timers 'airplanes-*'
 ```
 
-The seed must have passed full online validation against the pinned baseline and
-collector hashes. Its collection result seeds runner state without claiming a
-publication occurred. Existing captured schedule days can be copied into the
-private observation state; copying/replaying a capture does not create another
-observation day. Without `--enable`, plist files remain under local state and are
-not written to LaunchAgents. A loaded job can catch up when the Mac is awake after
-its due time. It does not promise collection while the Mac is off.
+Each job attempts collection at most once per UTC day, including failures. A
+seeded same-day schedule capture may correctly make the schedule service return
+`not_due`; its copied observation remains one observation day. The route timer
+checks at 03:00 UTC (08:30 India time), plus up to 30 minutes of jitter. The schedule
+timer checks at 03:45 UTC (09:15 India time), plus up to ten minutes of jitter.
+Persistent timers catch up after downtime. Route evidence is rechecked when its
+seven-day cache expires; airport metadata is checked on every online run.
 
-Default state is `work/automatic-refresh/`: `installation.json` records the pinned
-revision and agent labels; refresh results are in `refresh/state.json`, captures
-in `schedules/captures/`, and job output in the adjacent logs. A code update requires
-rerunning the installer from an accepted clean commit; changing branches in the
-working checkout does not change a running pinned collector. Keep the referenced
-`.venv` and Node executable available. Retire old runtime directories only after
-confirming no installed agent references them and no old job is running.
+A failed job leaves the last successful collection and published release intact.
+Its last attempt is written before child launch, so a resource-limit kill cannot
+silently lose the attempt or cause repeated same-day restarts. Inspect private
+state and the journal for failures. No external notification channel is configured.
+Budget exhaustion requires checking the logs/cache before retrying; raw evidence
+is not silently deleted to make room.
 
-The jobs collect staged evidence only; they do not update the public viewer. The existing route snapshot and its projection remain unchanged until an accepted data commit is deployed. The new optional freshness summary has been browser-checked with both legacy data and the fully dated candidate.
+### Review, publish, stop or roll back
 
-Inspect or stop the jobs as the same macOS user:
+The services never copy data into `web/`, commit, deploy or change the public
+release. The new source-freshness display supports both legacy and fully dated
+snapshots, but the public snapshot remains unchanged until an accepted data commit
+is deployed.
+
+Review `changes.json`, source dates, identity/coverage changes, the manifest and
+validation logs. Confirm the candidate's frozen baseline and reviewed input
+hashes still match the intended release. Copy only accepted `data.json` and
+`map-data.json` into `web/`, run checks, commit both and use the normal viewer
+release process. An offline/structural-only investigation is not a fresh accepted
+release. Review three weekly cycles and agree change thresholds before adding any
+unattended publication; no automatic publication path exists today.
+
+To stop collection without affecting the website:
 
 ```sh
-launchctl print gui/$(id -u)/net.colingoodman.airplanes.refresh
-launchctl print gui/$(id -u)/net.colingoodman.airplanes.schedules
-launchctl bootout gui/$(id -u) "$HOME/Library/LaunchAgents/net.colingoodman.airplanes.refresh.plist"
-launchctl bootout gui/$(id -u) "$HOME/Library/LaunchAgents/net.colingoodman.airplanes.schedules.plist"
+systemctl disable --now airplanes-refresh.timer airplanes-schedule-research.timer
+systemctl stop airplanes-refresh.service airplanes-schedule-research.service
 ```
 
-Bootout stops the current registration; remove the two matching plist files as
-well if the jobs must remain disabled after the next login. Check meaningful
-failures in the private state/logs. No external notification channel has been
-configured. The public viewer and active server release stay independent of these
-local collection jobs.
+To roll back collector code, first stop timers and wait for active collection to
+finish, repoint `/opt/airplanes-refresh/repo` to a retained version, then verify the
+services and restart the timers. Keep its recorded revision and unit files aligned
+with that version. Never repoint the public viewer for a collector-only rollback.
+Do not delete raw observations, cache or swap as part of an ordinary code rollback.

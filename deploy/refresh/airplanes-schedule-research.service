@@ -1,18 +1,28 @@
 [Unit]
 Description=Capture the fixed free Avinor schedule research sample
 Wants=network-online.target
-After=network-online.target
+After=network-online.target airplanes-refresh.service
 
 [Service]
 Type=oneshot
 User=airplanes-refresh
 Group=airplanes-refresh
 WorkingDirectory=/opt/airplanes-refresh/repo
-ExecStart=/opt/airplanes-refresh/repo/.venv/bin/python scripts/schedule_research.py --work /var/lib/airplanes-schedule-research --airports OSL BNN --hours 168 --max-requests 24 --max-disk-mib 256
+ExecStart=/opt/airplanes-refresh/repo/.venv/bin/python scripts/schedule_research.py --work /var/lib/airplanes-schedule-research --airports OSL BNN --hours 168 --max-requests 24 --max-disk-mib 128 --daily-after-utc 03:45
+StateDirectoryMode=0700
 StateDirectory=airplanes-schedule-research
 TimeoutStartSec=150
 KillMode=control-group
+MemoryHigh=64M
+MemoryMax=96M
+MemorySwapMax=256M
+CPUQuota=25%
+Nice=10
+IOSchedulingClass=idle
+Environment=PYTHONDONTWRITEBYTECODE=1
 NoNewPrivileges=true
+CapabilityBoundingSet=
+RestrictSUIDSGID=true
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=true

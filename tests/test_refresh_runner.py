@@ -40,6 +40,18 @@ class RunnerTests(unittest.TestCase):
                 state=runner.run(self.args(root))
             self.assertEqual(state['status'],'unchanged')
             self.assertIn('last_successful_at',state)
+    def test_attempt_is_recorded_before_starting_the_child(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            def interrupted(*args):
+                saved=json.loads((root/'state.json').read_text())
+                self.assertEqual(saved['status'],'collecting')
+                self.assertIn('last_attempted_at',saved)
+                raise KeyboardInterrupt()
+            with patch.object(runner,'execute',side_effect=interrupted):
+                with self.assertRaises(KeyboardInterrupt):runner.run(self.args(root))
+            self.assertIn('last_attempted_at',json.loads((root/'state.json').read_text()))
+
     def test_collection_failure_preserves_last_success(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
