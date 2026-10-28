@@ -154,3 +154,16 @@ export function geographyMatches(index,route,state){
  if(state.minKm>0||state.maxKm<20020){const km=routeDistanceKm(index,route);if(km<(state.minKm||0)||km>(state.maxKm??20020))return false;}return true;
 }
 export function stableAirlineColor(id){let hash=2166136261;for(const c of id)hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;return `hsl(${hash%360} 65% ${35+(hash>>>12)%13}%)`;}
+
+export function airportPairKey(route){return [route.hub_airport_id,route.destination_airport_id].sort().join('|');}
+export function compareNetworks(data,state){
+ const active=!!state.compareA&&!!state.compareB&&state.compareA!==state.compareB;
+ if(!active)return {active:false,routes:filterRoutes(data,state),groups:new Map(),counts:{shared:0,a:0,b:0}};
+ const routes=filterRoutes(data,{...state,airlines:new Set([state.compareA,state.compareB])}).filter(r=>!state.focus||r.hub_airport_id===state.focus||r.destination_airport_id===state.focus),groups=new Map();
+ for(const route of routes){const key=state.focus?(route.hub_airport_id===state.focus?route.destination_airport_id:route.hub_airport_id):airportPairKey(route);if(!groups.has(key))groups.set(key,{key,airlines:new Set(),routes:[]});const g=groups.get(key);g.airlines.add(route.airline_id);g.routes.push(route);}
+ const counts={shared:0,a:0,b:0},categories=new Map();for(const g of groups.values()){g.category=g.airlines.size===2?'shared':g.airlines.has(state.compareA)?'a':'b';counts[g.category]++;for(const r of g.routes)categories.set(r.id,g.category);}
+ return {active:true,routes:routes.filter(r=>state.compareShow.has(categories.get(r.id))),groups,counts,categories};
+}
+export function comparisonConnections(routes){
+ const groups=new Map();for(const route of routes){const key=airportPairKey(route);if(!groups.has(key))groups.set(key,{...route,services:[]});groups.get(key).services.push(route);}return [...groups.values()];
+}

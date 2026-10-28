@@ -31,3 +31,14 @@ test('geography endpoint modes compose country and region on the same airport',(
 test('distance boundaries are inclusive, cached per physical airport pair and dataset',()=>{
  const ix=indexData(located),r=data.routes[0],distance=routeDistanceKm(ix,r),s=defaultExplorerState(located);s.minKm=distance;s.maxKm=distance;assert.equal(geographyMatches(ix,r,s),true);s.maxKm=distance-1;assert.equal(geographyMatches(ix,r,s),false);assert.equal(routeDistanceKm(ix,{...r,hub_airport_id:r.destination_airport_id,destination_airport_id:r.hub_airport_id}),distance);assert.equal(ix.distances.size,1);assert.equal(airportRegion({country:'US'}),'NA');assert.equal(airportRegion({country:'XX'}),'unknown');assert.equal(stableAirlineColor('UA'),stableAirlineColor('UA'));assert.notEqual(stableAirlineColor('UA'),stableAirlineColor('AF'));
 });
+
+import {compareNetworks,comparisonConnections} from '../web/model.mjs';
+test('comparison uses unordered physical airport pairs and preserves every source record',()=>{
+ const r={...data.routes[0],id:'a'},routes=[r,{...r,id:'b',airline_id:'AF',hub_airport_id:'NRT',destination_airport_id:'DEN'},{...r,id:'c',destination_airport_id:'ALY'},{...r,id:'d',airline_id:'AF',hub_airport_id:'NRT',destination_airport_id:'ALY'}],d={...located,routes},s=defaultExplorerState(d);s.compareA='UA';s.compareB='AF';s.airlines.add('ignored');
+ let result=compareNetworks(d,s);assert.equal(result.active,true);assert.deepEqual(result.counts,{shared:1,a:1,b:1});assert.equal(result.routes.length,4);assert.equal(comparisonConnections(result.routes).length,3);assert.equal(comparisonConnections(result.routes).find(c=>c.services.length===2).services.length,2);
+ s.compareShow=new Set(['shared']);result=compareNetworks(d,s);assert.equal(result.routes.length,2);assert.deepEqual(result.counts,{shared:1,a:1,b:1});s.compareShow.clear();assert.equal(compareNetworks(d,s).routes.length,0);
+ s.compareShow=new Set(['shared','a','b']);s.focus='DEN';result=compareNetworks(d,s);assert.deepEqual(result.counts,{shared:1,a:1,b:0});assert.equal(result.routes.length,3);s.countries.add('EG');result=compareNetworks(d,s);assert.deepEqual(result.counts,{shared:0,a:1,b:0});s.alliances.delete('star');assert.equal(compareNetworks(d,s).routes.length,0);
+});
+test('partial or identical comparison selections retain ordinary filter semantics',()=>{
+ const s=defaultExplorerState(located);s.compareA='UA';assert.equal(compareNetworks(located,s).active,false);s.compareB='UA';assert.equal(compareNetworks(located,s).active,false);s.airlines.add('AF');assert.equal(compareNetworks(located,s).routes.length,0);
+});
