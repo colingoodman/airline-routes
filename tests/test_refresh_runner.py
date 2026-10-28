@@ -1,4 +1,5 @@
 import json
+import datetime as dt
 from pathlib import Path
 import sys
 import tempfile
@@ -15,6 +16,14 @@ class RunnerTests(unittest.TestCase):
         candidate=Path(command[command.index('--candidate')+1])
         write_json(candidate/'manifest.json',{'status':'validated','validation':'reviewed_snapshot'})
         write_json(candidate/'changes.json',{'semantic_change':False,'hold_reasons':[]})
+    def test_daily_gate_counts_failed_attempts_and_honors_utc_time(self):
+        now=dt.datetime(2026,10,28,3,30,tzinfo=dt.timezone.utc)
+        self.assertFalse(runner.daily_due(None,now,'03:45'))
+        self.assertTrue(runner.daily_due(None,now,'03:00'))
+        self.assertFalse(runner.daily_due('2026-10-28T03:01:00+00:00',now,'03:00'))
+        self.assertTrue(runner.daily_due('2026-10-27T03:01:00+00:00',now,'03:00'))
+        with self.assertRaises(ValueError):runner.daily_due(None,now,'25:00')
+
     def test_lock_prevents_overlapping_collection(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)

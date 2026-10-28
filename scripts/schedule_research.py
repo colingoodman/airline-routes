@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
 from rebuild import ROOT, write_json
-from refresh_runner import locked, size_bytes
+from refresh_runner import locked, size_bytes, daily_due
 
 PROVIDER_URL = 'https://asrv.avinor.no/XmlFeed/v1.0'
 TERMS_URL = 'https://partner.avinor.no/tjenester/flydata/'
@@ -105,6 +105,17 @@ def summarize(samples):
             'note':'Seven days of future departures in one response is not seven days of repeat observations.'}
 
 
+def compare_samples(previous,current):
+    old={r['source_record_id']:r for sample in previous for r in sample['records']}
+    new={r['source_record_id']:r for sample in current for r in sample['records']}
+    fields=('published_flight_number','origin_airport_id','destination_iata','scheduled_departure_utc',
+            'status_as_reported','via_airports','operating_airline_iata','codeshares')
+    changed=[{'source_record_id':key,'fields':[f for f in fields if old[key].get(f)!=new[key].get(f)]}
+             for key in sorted(old.keys() & new.keys()) if any(old[key].get(f)!=new[key].get(f) for f in fields)]
+    return {'comparable':True,'added':sorted(new.keys()-old.keys()),'removed':sorted(old.keys()-new.keys()),
+            'changed':changed,'note':'Removed records are not automatically classified as cancelled.'}
+
+
 def capture(args):
     work = args.work.resolve()
     if work == ROOT or work in ROOT.parents or work == ROOT/'web' or ROOT/'web' in work.parents:
@@ -122,6 +133,9 @@ def capture(args):
         stamp = now.strftime('%Y%m%dT%H%M%S%fZ')
         ledger_file = work/'request-ledger.json'
         ledger = json.loads(ledger_file.read_text()) if ledger_file.exists() else {}
+        prior_attempt=max(ledger.get('last_attempts',{}).values(),default=None)
+        if not daily_due(prior_attempt,now,args.daily_after_utc):
+            return {'status':'not_due'}
         known = {a['id'] for a in json.loads(args.data.read_text())['airports']}
         if set(airports)-known:
             raise ValueError('Pilot origin is absent from the route map')
@@ -165,18 +179,26 @@ def capture(args):
                 samples.append(sample)
             report = summarize(samples)
             # Only complete captures count toward the multi-day observation gate.
-            days = set()
+            days = set();previous_captures=[]
             for prior in (work/'captures').glob('*/manifest.json'):
                 recorded = json.loads(prior.read_text())
                 if (recorded.get('status')=='captured' and sorted(recorded.get('requested_airports',[]))==sorted(airports)
                     and recorded.get('requested_hours_ahead')==args.hours and recorded.get('schema_version')==1):
-                    days.add(recorded['captured_at'][:10])
+                    days.add(recorded['captured_at'][:10]);previous_captures.append((recorded['captured_at'],prior.parent,recorded))
+            if previous_captures:
+                _,prior_directory,prior_manifest=max(previous_captures,key=lambda item:item[0])
+                if prior_manifest.get('normalizer_sha256')==metadata['normalizer_sha256']:
+                    previous=[json.loads((prior_directory/(airport+'.json')).read_text()) for airport in airports]
+                    report['comparison']=compare_samples(previous,samples)
+                else:
+                    report['comparison']={'comparable':False,'reason':'Normalizer changed; replay prior raw evidence before comparing'}
+            else:report['comparison']={'comparable':False,'reason':'First observation'}
             days.add(day)
             report.update(observation_days=len(days),observation_gate='pending' if len(days)<7 else 'ready_for_review')
             write_json(output/'report.json',report)
             metadata.update(status='captured',summary=report)
             write_json(output/'manifest.json',metadata)
-            return {'capture':str(output),**report}
+            return {'capture':str(output),**report,'comparison':{k:(len(v) if isinstance(v,list) else v) for k,v in report['comparison'].items()}}
         except Exception as error:
             metadata.update(status='failed',error=str(error))
             write_json(output/'manifest.json',metadata)
@@ -214,6 +236,7 @@ def replay(args):
 def parser():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--work',type=Path,default=ROOT/'work/schedule-research')
+    p.add_argument('--daily-after-utc',help='Attempt once per UTC day after HH:MM; safe for hourly scheduler wakeups')
     p.add_argument('--replay',type=Path,help='Re-normalize an existing complete capture without API requests')
     p.add_argument('--data',type=Path,default=ROOT/'web/data.json')
     p.add_argument('--airports',nargs='+',default=['OSL','BNN'])

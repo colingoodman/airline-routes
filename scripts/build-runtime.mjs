@@ -4,9 +4,17 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {parseArgs} from 'node:util';
 const pick=(value,keys)=>Object.fromEntries(keys.filter(k=>value[k]!==undefined).map(k=>[k,value[k]]));
+export function freshnessFor(data){
+ if(!data.sources.some(s=>s.fetch))return null;
+ const routes=data.sources.filter(s=>s.kind==='airport_passenger_routes');
+ const checks=routes.map(s=>s.fetch?.checked_at).filter(t=>typeof t==='string'&&Number.isFinite(Date.parse(t))).sort((a,b)=>Date.parse(a)-Date.parse(b));
+ const airport=data.sources.find(s=>s.kind==='airport_metadata')?.fetch?.checked_at;
+ return {route_sources_total:routes.length,route_sources_known:checks.length,oldest_route_check:checks[0]||null,newest_route_check:checks.at(-1)||null,airport_metadata_check:typeof airport==='string'&&Number.isFinite(Date.parse(airport))?airport:null};
+}
 export function projectMapData(data,sha256){
  const airlineIndex=new Map(data.airlines.map((a,i)=>[a.id,i])),airportIndex=new Map(data.airports.map((a,i)=>[a.id,i])),brandIndex=new Map(data.service_brand_models.map((b,i)=>[b.id,i])),sourceIndex=new Map(data.sources.map((s,i)=>[s.id,i]));
- return {projection_version:1,canonical_sha256:sha256,as_of:data.as_of,scope:data.scope,alliances:data.alliances,discovery_audit:{summary:data.discovery_audit.summary},issues_count:data.issues.length,
+ const freshness=freshnessFor(data);
+ return {projection_version:1,...(freshness?{freshness}:{}),canonical_sha256:sha256,as_of:data.as_of,scope:data.scope,alliances:data.alliances,discovery_audit:{summary:data.discovery_audit.summary},issues_count:data.issues.length,
   airlines:data.airlines.map(a=>pick(a,['id','name','iata','icao','alliance_id','membership_type','low_cost','regional'])),
   airports:data.airports.map(a=>pick(a,['id','iata','icao','ident','local_code','former_iata_codes','name','city','country','latitude','longitude'])),
   service_brand_models:data.service_brand_models.map(b=>pick(b,['id','name','airline_id','low_cost','regional'])),

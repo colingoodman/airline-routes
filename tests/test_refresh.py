@@ -158,6 +158,20 @@ class CandidateTests(unittest.TestCase):
             self.assertIsNone(next(s for s in data['sources'] if s['id']=='airports')['retrieved_on'])
             self.assertEqual(data['airports'][0]['ourairports_id'],'1')
             self.assertEqual(rebuild.digest(ROOT/'web/data.json'),before)
+            # A denied request at a later origin cannot reuse the previous airport's soup.
+            second_roster=copy.deepcopy(roster)
+            second_roster['airlines'][0]['hubs'].append({'iata':'MCI','wikipedia':'Airport_MCI','kind':'hub','source_revision':13})
+            run=base/'candidate/inputs'
+            (run/'roster-hubs.json').write_text(json.dumps(second_roster))
+            page={'parse':{'title':'Airport DEN','revid':12,'text':{'*':html}},'_fetch':{}}
+            denied=HTTPError('url',403,'Denied',{},None)
+            with patch.object(sys,'argv',['collect','--work',str(run),'--inputs',str(run),'--out',str(base/'denied.json')]),patch.object(collect,'fetch',side_effect=[page,denied]):
+                collect.main()
+            denied_data=json.loads((base/'denied.json').read_text())
+            self.assertEqual(denied_data['hubs'][1]['coverage'],'fetch_failed')
+            self.assertFalse(any(r['hub_airport_id']=='MCI' for r in denied_data['routes']))
+            (run/'roster-hubs.json').write_text(json.dumps(roster))
+            denied.close()
             # A missing article must produce a failed candidate, never activate the partial graph.
             next(cache.iterdir()).unlink()
             args.candidate=base/'failed'

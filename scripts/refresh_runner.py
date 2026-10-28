@@ -17,7 +17,15 @@ from rebuild import ROOT, write_json
 
 def size_bytes(directory):
     # Do not follow candidate cache links or count shared files multiple times.
-    return sum(p.stat().st_size for p in directory.rglob('*') if p.is_file() and not p.is_symlink())
+    total=0
+    for path in directory.rglob('*'):
+        try:
+            if path.is_file() and not path.is_symlink():
+                total+=path.stat().st_size
+        except FileNotFoundError:
+            # The collector atomically renames temporary files while this scan runs.
+            continue
+    return total
 
 
 def locked(directory):
@@ -75,6 +83,18 @@ def prune_candidates(directory, retain):
         shutil.rmtree(old)
 
 
+def daily_due(previous_attempt, now, after):
+    if not after:
+        return True
+    import re
+    if not re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d',after):
+        raise ValueError('Daily UTC time must be HH:MM')
+    hour,minute=map(int,after.split(':'))
+    if (now.hour,now.minute)<(hour,minute):
+        return False
+    return not previous_attempt or dt.datetime.fromisoformat(previous_attempt).astimezone(dt.timezone.utc).date()!=now.date()
+
+
 def run(args):
     state_dir = args.state.resolve()
     if state_dir == ROOT or state_dir in ROOT.parents or (ROOT/'web') == state_dir or (ROOT/'web') in state_dir.parents:
@@ -87,6 +107,8 @@ def run(args):
         stamp = now.strftime('%Y%m%dT%H%M%S%fZ')
         state_file = state_dir/'state.json'
         previous = json.loads(state_file.read_text()) if state_file.exists() else {}
+        if not daily_due(previous.get('last_attempted_at'),now,args.daily_after_utc):
+            return {'status':'not_due'}
         state = {**previous, 'last_attempted_at':now.isoformat()}
         candidates = state_dir/'candidates'
         prune_candidates(candidates, args.retain-1)
@@ -125,6 +147,7 @@ def parser():
     p.add_argument('--max-disk-mib', type=int, default=2048)
     p.add_argument('--retain', type=int, default=3)
     p.add_argument('--cache-max-age', type=int, default=604800)
+    p.add_argument('--daily-after-utc', help='Attempt at most once per UTC day after HH:MM, including failed runs')
     p.add_argument('--offline', action='store_true')
     return p
 

@@ -55,6 +55,15 @@ class ScheduleTests(unittest.TestCase):
         self.assertEqual(result['issues'][0]['kind'],'invalid_record')
         for body in [b'<html/>',feed().replace(b'name="OSL"',b'name="BNN"'),b'<!DOCTYPE x><airport name="OSL"><flights/></airport>']:
             with self.assertRaises(ValueError):self.parse(body)
+    def test_comparison_distinguishes_time_status_changes_and_disappearance(self):
+        previous=self.parse(feed())
+        current=self.parse(feed(time='2026-10-28T23:45:00Z',extra='<status code="C"/>'))
+        comparison=schedules.compare_samples([previous],[current])
+        self.assertEqual(comparison['changed'][0]['fields'],['scheduled_departure_utc','status_as_reported'])
+        removed=schedules.compare_samples([previous],[])
+        self.assertEqual(len(removed['removed']),1)
+        self.assertIn('not automatically',removed['note'])
+
     def test_throttle_and_daily_quota_stop_before_network(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)

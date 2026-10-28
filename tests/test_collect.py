@@ -47,6 +47,10 @@ class ParsingTests(unittest.TestCase):
   row={'id':'1','ident':'TEST1','type':'small_airport','iata_code':'','icao_code':'','wikipedia_link':'https://en.wikipedia.org/wiki/Airport_A'}
   self.assertEqual(c.airport_identifier(row),'oa:TEST1');codes,titles=c.airport_indexes([row],{});self.assertEqual(titles[c.norm('Airport A')],row)
   row['icao_code']='ABCD';self.assertEqual(c.airport_identifier(row),'icao:ABCD')
+ def test_redlink_query_is_not_part_of_the_explicit_airport_identity(self):
+  a=BeautifulSoup('<a class="new" href="/wiki/T%C3%B4lanaro_Airport?action=edit&amp;redlink=1">Taolagnaro</a>','html.parser').a
+  self.assertEqual(c.title(a),'Tôlanaro_Airport')
+
  def test_external_metadata_url_is_never_a_wikipedia_title(self):
   self.assertIsNone(c.wikipedia_title('https://example.com/wiki/Fake'));self.assertEqual(c.wikipedia_title('https://en.wikipedia.org/wiki/Airport_A'),'Airport_A')
  def test_closed_status_is_not_inferred_from_history(self):

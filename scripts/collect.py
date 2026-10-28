@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Rebuild the source-evidenced alliance/hub route snapshot. See README for scope."""
-import argparse, csv, datetime as dt, hashlib, json, re, time, unicodedata, os, tempfile
+import argparse, csv, datetime as dt, hashlib, json, re, time, unicodedata, os, tempfile, gc
+from collections import OrderedDict
 from pathlib import Path
 from urllib.parse import quote, unquote, urlencode, urlsplit
 from urllib.request import Request, urlopen
@@ -31,7 +32,7 @@ def norm(s):
  s=unquote(s).replace('_',' ').split('#')[0]
  return re.sub(r'[^a-z0-9]','',unicodedata.normalize('NFKD',s).encode('ascii','ignore').decode().lower())
 def title(a):
- h=a.get('href','')
+ h=urlsplit(a.get('href','')).path
  return unquote(h.split('/wiki/',1)[1]).split('#')[0] if '/wiki/' in h else unquote(h[2:]).split('#')[0] if h.startswith('./') else None
 
 def wikipedia_title(url):
@@ -257,7 +258,7 @@ def main():
  inputs=args.inputs
  fetch_options={'refresh':args.refresh,'offline':args.offline or bool(os.environ.get('ROUTE_CACHE_ONLY')),'max_age':args.cache_max_age}
  roster=json.loads((w/'roster-hubs.json').read_text()); airlines=roster['airlines']
- rows=list(csv.DictReader((w/'ourairports.csv').open()))
+ with (w/'ourairports.csv').open() as metadata_file:rows=list(csv.DictReader(metadata_file))
  corrections_path=inputs/'airport-metadata-overrides.json'
  corrections=json.loads(corrections_path.read_text()) if corrections_path.exists() else {}
  rows=apply_metadata_overrides(rows,corrections,TODAY)
@@ -310,7 +311,7 @@ def main():
    model=next((models.get('brands',{})[k] for k in candidates if k in models.get('brands',{})),{})
    brand_models[key]={'id':key,'name':name,'airline_id':carrier,**model_fields(model)}
   return key
- routes=[];hubs=[];issues=[];excluded=[];out_airlines=[];page_cache={};failed_pages={}
+ routes=[];hubs=[];issues=[];excluded=[];out_airlines=[];page_cache=OrderedDict();failed_pages={}
 
  for a in airlines:
   airlineid=a['id']; brands=a.get('service_brands') or BRANDS.get(airlineid,[a['name']]); aliases={norm(x) for x in brands}|{norm(a['wikipedia']),norm(a['name'])}
@@ -331,13 +332,20 @@ def main():
     last_error=None
     for fetch_title in fetch_titles:
      try:
-      if fetch_title in failed_pages:raise failed_pages[fetch_title]
+      if fetch_title in failed_pages:
+       failure=failed_pages[fetch_title]
+       raise (ValueError if failure['alias_allowed'] else RuntimeError)(failure['message'])
       if fetch_title not in page_cache:
        response=fetch(fetch_title,cache,**fetch_options);parsed=response['parse'];page_cache[fetch_title]=(parsed,BeautifulSoup(parsed['text']['*'],'html.parser'),response.get('_fetch',{}))
+       while len(page_cache)>2:
+        _,evicted=page_cache.popitem(last=False);evicted[1].decompose();del evicted
+       gc.collect()
+      page_cache.move_to_end(fetch_title)
       parsed,soup,provenance=page_cache[fetch_title];break
      except Exception as e:
-      last_error=e;failed_pages[fetch_title]=e
-      if isinstance(e,HTTPError) or not isinstance(e,ValueError):break
+      last_error=e;failed_pages[fetch_title]={'message':str(e),'alias_allowed':isinstance(e,ValueError) or isinstance(e,HTTPError) and e.code==404}
+      if isinstance(e,HTTPError) and e.code!=404:raise
+      if not isinstance(e,(ValueError,HTTPError)):raise
     else:raise last_error
     sid=source('https://en.wikipedia.org/w/index.php?oldid='+str(parsed['revid']),'airport_passenger_routes',page_title=parsed['title'],revision_id=parsed['revid'],sha256=hashlib.sha256(parsed['text']['*'].encode()).hexdigest(),retrieved_on=(provenance.get('fetched_at') or '')[:10] or None,fetch=provenance)
     unavailable=airport_unavailable(soup,r.get('iso_country'))

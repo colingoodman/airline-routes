@@ -104,7 +104,7 @@ ssh root@100.76.114.95 'nginx -t; systemctl status nginx --no-pager; tail -50 /v
 
 If a module returns HTML, the viewer's nginx location/include is missing. If a module returns `application/octet-stream`, inspect the `.mjs` MIME extension. If a source deploy seems stale, compare `DEPLOYED_REVISION`, the current symlink, HTTP cache headers, and Cloudflare behavior before changing the data. Remote requests may work even when the local agent environment cannot resolve the public hostname; distinguish local DNS restrictions from a production outage.
 
-## Candidate refresh runner (not installed)
+## Candidate refresh runner (collection only)
 
 `scripts/refresh_runner.py` runs collection with an exclusive lock, a runtime limit,
 a disk budget and bounded candidate retention. It never copies data to `web/`,
@@ -148,3 +148,59 @@ validation, commit both files, then deploy that commit through the normal script
 An offline or structural-only investigation is not evidence of a fresh accepted
 release. No-change checks should not create commits. Record actual successful
 publication time separately from collection time when a release is deployed.
+
+### Existing-host choice and macOS agents
+
+The existing droplet was inspected on 28 October 2026: 458 MiB RAM, about 241 MiB
+available, no swap, and no Node.js installation. The old collector retained every
+parsed HTML tree and exceeded 3 GiB in a representative run. Its parser cache now
+retains at most two trees and explicitly frees evicted trees; a subsequent
+measurement was about 245 MiB for the collector alone. The parent/comparison and
+Node validation need additional memory. Do not install the Linux collector timer
+on this droplet at its current size or buy additional capacity for this project.
+
+Use the existing development Mac for collection instead. The opt-in installer
+`scripts/install_refresh_agents.py` freezes scripts and baseline data from a clean
+Git HEAD into ignored local state, then creates two launch agents. It uses the
+existing Python virtual environment and Node runtime; no new account or paid
+service is involved. Hourly scheduler wakeups check explicit UTC due times, but
+each job attempts collection at most once per UTC day, including failed attempts.
+Route pages retain their weekly cache. Neither agent can commit or deploy data.
+
+```sh
+# Generate locally staged plists and a pinned runtime without loading agents:
+.venv/bin/python scripts/install_refresh_agents.py --seed-candidate work/candidates/ACCEPTED_ONLINE_CANDIDATE
+# Enable the agents after checking the candidate and local resource use:
+.venv/bin/python scripts/install_refresh_agents.py --seed-candidate work/candidates/ACCEPTED_ONLINE_CANDIDATE --seed-cache work/refresh-cache --seed-schedules work/schedule-research --enable
+```
+
+The seed must have passed full online validation against the pinned baseline and
+collector hashes. Its collection result seeds runner state without claiming a
+publication occurred. Existing captured schedule days can be copied into the
+private observation state; copying/replaying a capture does not create another
+observation day. Without `--enable`, plist files remain under local state and are
+not written to LaunchAgents. A loaded job can catch up when the Mac is awake after
+its due time. It does not promise collection while the Mac is off.
+
+Default state is `work/automatic-refresh/`: `installation.json` records the pinned
+revision and agent labels; refresh results are in `refresh/state.json`, captures
+in `schedules/captures/`, and job output in the adjacent logs. A code update requires
+rerunning the installer from an accepted clean commit; changing branches in the
+working checkout does not change a running pinned collector. Keep the referenced
+`.venv` and Node executable available. Retire old runtime directories only after
+confirming no installed agent references them and no old job is running.
+
+Inspect or stop the jobs as the same macOS user:
+
+```sh
+launchctl print gui/$(id -u)/net.colingoodman.airplanes.refresh
+launchctl print gui/$(id -u)/net.colingoodman.airplanes.schedules
+launchctl bootout gui/$(id -u) "$HOME/Library/LaunchAgents/net.colingoodman.airplanes.refresh.plist"
+launchctl bootout gui/$(id -u) "$HOME/Library/LaunchAgents/net.colingoodman.airplanes.schedules.plist"
+```
+
+Bootout stops the current registration; remove the two matching plist files as
+well if the jobs must remain disabled after the next login. Check meaningful
+failures in the private state/logs. No external notification channel has been
+configured. The public viewer and active server release stay independent of these
+local collection jobs.

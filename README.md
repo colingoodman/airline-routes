@@ -128,7 +128,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/rebuild.py --candidate work/candidates/my-refresh
 ```
 
-The 38 Node tests cover filter composition, scoped brand models, reciprocal connections, airport aliases, full curved bounds and repeated-world geometry. The 21 Python tests cover source table ancestry, primary-brand matching, section labels, status/date handling, metadata safety, uncoded airports conservative business-model classification and directory identity boundaries. Dataset validation checks every key/reference, source pin, carrier-origin count, evidence flag, partial-coverage gap and admission-audit count, plus the Denver/Paris example routes. Browser checks exercise model filters and brand scoping on the rendered map. Projection tests compare every service field and filter result with the complete normalized dataset; geometry tests cover projection, simplification error, clipping, spatial hit testing and buffer reuse.
+Node tests cover filter composition, scoped brand models, reciprocal connections, airport aliases, full curved bounds and repeated-world geometry. Python tests cover source table ancestry, primary-brand matching, section labels, status/date handling, metadata safety, uncoded airports conservative business-model classification and directory identity boundaries. Refresh and schedule tests also cover isolation, source revalidation, failed requests, resource limits, identity conflicts, UTC/DST handling, quotas and offline replay. Dataset validation checks every key/reference, source pin, carrier-origin count, evidence flag, partial-coverage gap and admission-audit count, plus the Denver/Paris example routes. Browser checks exercise model filters and brand scoping on the rendered map. Projection tests compare every service field and filter result with the complete normalized dataset; geometry tests cover projection, simplification error, clipping, spatial hit testing and buffer reuse.
 
 The rebuild requires Node.js to generate and validate the display projection. It writes an isolated candidate, **never the published `web/` files**. Each candidate contains `data.json`, `map-data.json`, a frozen baseline, reviewed input copies, `manifest.json`, `changes.json`, collection logs and validation results. Failures mark the manifest failed and leave the existing release intact. Candidate directories must be new and outside `web/`.
 
@@ -145,7 +145,7 @@ node scripts/validate.mjs --data work/candidates/my-refresh/data.json --map work
 
 Review the semantic change report and all coverage/identity changes before promoting a candidate. The original snapshot checks remain on by default. `--structural` skips only fixed historical expectations for investigation/fixtures; it does not establish release acceptance. Unchanged polling dates do not count as a semantic data change. Commit accepted data and its regenerated projection before using the existing deployment process.
 
-For recurring collection, see the bounded runner and systemd templates in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-not-installed). They collect candidates only; no automatic publication is enabled.
+For recurring collection, see the bounded runner and systemd templates in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only). They collect candidates only; no automatic publication is enabled.
 
 For the measured Avinor departure sample, bounded capture tool and remaining pilot gates, see [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md).
 

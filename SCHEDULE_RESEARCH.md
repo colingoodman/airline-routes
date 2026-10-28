@@ -1,6 +1,6 @@
 # Free schedule investigation
 
-Status: first capture and parser checks completed on 28 October 2026. Seven-day repeat observation and independent airline/airport spot checks are pending. No schedule data has been added to the viewer or downloadable route dataset.
+Status: first capture and parser checks completed on 28 October 2026. Three departure records were cross-checked against the dated Avinor passenger board. Seven-day repeat observation and independent airline checks are pending. No schedule data has been added to the viewer or downloadable route dataset.
 
 ## Decision
 
@@ -30,6 +30,18 @@ Source UTC timestamps are retained separately from the departure-local date, cal
 
 A departure board provides a scheduled departure at its queried airport. An arrival board provides a scheduled arrival at its queried airport. A future full-leg timetable would need verified pairing or another permitted source; this sample does not invent the missing end time, duration, aircraft type, bookability or a recurring weekly pattern.
 
+## Passenger-board spot check
+
+On 28 October, the [dated Oslo passenger board](https://www.avinor.no/en/airport/oslo/flight-times/) matched these source records after UTC-to-Oslo conversion:
+
+| Flight | Destination | Source scheduled UTC | Passenger-board scheduled local time |
+| --- | --- | --- | --- |
+| RC435 | FAE | 11:25 | 12:25 |
+| SK809 | LHR | 13:55 | 14:55 |
+| DY1308 | LGW | 14:30 | 15:30 |
+
+RC435's updated time was shown separately from its original scheduled time. The board also displayed WF148 at 16:40 local with both Sandane and Sogndal destinations, supporting the decision to preserve its multistop/circular source information for explicit leg resolution. This checks our interpretation against Avinor's passenger presentation; it is not an independent-provider completeness check.
+
 ## Reproduce and observe
 
 ```sh
@@ -40,9 +52,9 @@ A departure board provides a scheduled departure at its queried airport. An arri
 
 The tool accepts only the two reviewed origins. It has an exclusive lock, a daily request-attempt ledger (24 by default), a three-minute minimum between requests for the same airport, an 8 MiB response limit and a 256 MiB storage budget. Failed requests consume the local budget. It never switches to a paid source or changes `web/`. Storage exhaustion stops new collection; raw evidence is not silently deleted. Replay verifies raw checksums, preserves original fetch times and does not count as a new observation day.
 
-Each capture has raw XML, normalized records, issues, attribution, request URLs, normalizer hash and a comparison summary. Only complete captures of the same origins, horizon and schema count toward the observation gate. Seven days of future departures returned today are **one** observation day.
+Each capture has raw XML, normalized records, issues, attribution, request URLs, normalizer hash and a comparison summary. Comparable captures report added/removed records and changed schedule/status fields. Disappearance is not classified as cancellation. A changed normalizer requires replaying prior raw evidence before comparison. Only complete captures of the same origins, horizon and schema count toward the observation gate. Seven days of future departures returned today are **one** observation day.
 
-Optional daily systemd templates live in `deploy/refresh/airplanes-schedule-research.*`. They are not installed. Use the same dedicated account/read-only collector checkout described in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-not-installed), with separate writable state at `/var/lib/airplanes-schedule-research`. Verify the units and run the service manually before enabling the timer. The template captures once daily at 03:45 UTC (09:15 India time), plus up to ten minutes of jitter: two requests/day, well below the local 24-attempt cap.
+Optional daily systemd templates live in `deploy/refresh/airplanes-schedule-research.*`. They are not installed. Use the same dedicated account/read-only collector checkout described in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only), with separate writable state at `/var/lib/airplanes-schedule-research`. Verify the units and run the service manually before enabling the timer. The template captures once daily at 03:45 UTC (09:15 India time), plus up to ten minutes of jitter: two requests/day, well below the local 24-attempt cap.
 
 Before a viewer pilot:
 
