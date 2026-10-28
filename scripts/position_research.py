@@ -300,9 +300,11 @@ def capture(args):
                 frames.append(frame);attempt['status']='captured'
                 # adsb.fi publishes its rate but does not return quota headers.
                 # Preserve any stricter observed policy if a later response omits it.
-                observed=headers.get('x-ratelimit-limit')
-                if provider=='adsb.lol' or observed is not None:ledger['rate_limit']=observed
-                cap,min_interval=provider_policy(ledger,provider)
+                observed=headers.get('x-ratelimit-limit');candidate_policy=dict(ledger)
+                if provider=='adsb.lol' or observed is not None:candidate_policy['rate_limit']=observed
+                cap,min_interval=provider_policy(candidate_policy,provider)
+                # Invalid headers halt this run without poisoning tomorrow's policy.
+                ledger=candidate_policy
                 bounded_json(ledger_file,ledger,work)
                 if budget_used(ledger,now)>cap:raise ValueError('Observed provider allowance is below the research budget')
             except BaseException as error:

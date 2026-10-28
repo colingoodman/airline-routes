@@ -73,6 +73,18 @@ class ProviderTests(unittest.TestCase):
             self.assertEqual(result['report']['sample_seconds'],60)
             self.assertEqual(json.loads((root/'request-ledger.json').read_text())['rate_limit'],'1;w=60')
 
+    def test_invalid_policy_response_preserves_the_last_known_allowance(self):
+        for provider,headers in [('adsb.lol',{}),('adsb.fi',{'x-ratelimit-limit':'unknown'})]:
+            with self.subTest(provider=provider),tempfile.TemporaryDirectory() as directory:
+                root=Path(directory)
+                known='500;w=86400'
+                write_json(root/'request-ledger.json',{'days':{},'provider':provider,'url':p.PROVIDERS[provider]['url'],'rate_limit':known})
+                with patch.object(p,'utcnow',return_value=NOW),patch.object(p,'fetch',return_value=(body(),headers,200)):
+                    with self.assertRaises(ValueError):p.capture(self.args(root,provider=provider))
+                saved=json.loads((root/'request-ledger.json').read_text())
+                self.assertEqual(saved['rate_limit'],known)
+                self.assertEqual(saved['halted_day'],NOW.date().isoformat())
+
     def test_extended_count_does_not_extend_lol_and_long_fi_runtime_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
