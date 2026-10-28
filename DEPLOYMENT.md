@@ -135,7 +135,9 @@ change nginx, or touch `/var/www/airplanes/current` or the existing homepage.
 
 The route service has 128 MiB memory pressure throttling, a 160 MiB hard RAM limit,
 768 MiB maximum swap, half a CPU, a 90-minute collection budget and 1 GiB of state.
-It retains three candidates and stops the process group on budget exhaustion.
+It retains three recent candidates and additionally preserves the last successful
+candidate if it is older. The disk budget still applies; collection stops rather
+than deleting that protected candidate. It stops the process group on budget exhaustion.
 The smaller schedule service has a 96 MiB RAM limit, 256 MiB swap limit, quarter of
 a CPU, a 150-second startup timeout and 128 MiB of captured evidence. Systemd
 orders it after an overlapping route refresh. Both services use read-only runtime

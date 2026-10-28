@@ -74,13 +74,16 @@ def execute(command, log_path, state_dir, seconds, max_bytes):
                 stop(process)
 
 
-def prune_candidates(directory, retain):
+def prune_candidates(directory, retain, protected=None):
     if not directory.exists():
         return
+    protected = Path(protected).resolve() if protected else None
     candidates = sorted((p for p in directory.iterdir() if p.is_dir() and not p.is_symlink()
                          and (p/'manifest.json').is_file()), key=lambda p:p.name, reverse=True)
     for old in candidates[retain:]:
-        shutil.rmtree(old)
+        # Failed attempts must never evict the last validated collection.
+        if old.resolve() != protected:
+            shutil.rmtree(old)
 
 
 def daily_due(previous_attempt, now, after):
@@ -113,7 +116,7 @@ def run(args):
         # Survive a service/cgroup kill: never lose the attempt or retry it repeatedly that day.
         write_json(state_file,state)
         candidates = state_dir/'candidates'
-        prune_candidates(candidates, args.retain-1)
+        prune_candidates(candidates, args.retain-1, previous.get('latest_candidate'))
         candidate = candidates/stamp
         budget = args.max_disk_mib*1024*1024
         try:

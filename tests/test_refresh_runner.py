@@ -72,6 +72,36 @@ class RunnerTests(unittest.TestCase):
                 state=runner.run(self.args(root,'--max-disk-mib','1'))
             self.assertEqual(state['status'],'failed')
             execute.assert_not_called()
+    def test_repeated_failures_retain_last_validated_candidate_until_replaced(self):
+        for retain in (1,3):
+            with self.subTest(retain=retain), tempfile.TemporaryDirectory() as directory:
+                root=Path(directory)
+                args=self.args(root,'--retain',str(retain))
+                with patch.object(runner,'execute',side_effect=self.successful_candidate):
+                    success=runner.run(args)
+                original=Path(success['latest_candidate'])
+                manifest=(original/'manifest.json').read_bytes()
+                def failed_candidate(command,*_):
+                    candidate=Path(command[command.index('--candidate')+1])
+                    write_json(candidate/'manifest.json',{'status':'failed'})
+                    raise RuntimeError('source unavailable')
+                for _ in range(4):
+                    with patch.object(runner,'execute',side_effect=failed_candidate):
+                        state=runner.run(args)
+                    self.assertEqual(state['status'],'failed')
+                    self.assertEqual(state['latest_candidate'],str(original))
+                    self.assertEqual(state['last_successful_at'],success['last_successful_at'])
+                    self.assertEqual((original/'manifest.json').read_bytes(),manifest)
+                    self.assertLessEqual(len(list((root/'candidates').iterdir())),retain+1)
+                with patch.object(runner,'execute',side_effect=self.successful_candidate):
+                    replacement=runner.run(args)
+                latest=Path(replacement['latest_candidate'])
+                self.assertNotEqual(latest,original)
+                with patch.object(runner,'execute',side_effect=failed_candidate):
+                    state=runner.run(args)
+                self.assertTrue((latest/'manifest.json').is_file())
+                self.assertEqual(state['latest_candidate'],str(latest))
+                self.assertFalse(original.exists())
     def test_runtime_budget_terminates_process_group(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
