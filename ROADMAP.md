@@ -1,6 +1,6 @@
 # Data refresh and flight schedule roadmap
 
-Status: implementation in progress. Source access checked on 28 October 2026. Candidate tooling for milestone 1 and the bounded runner/systemd templates for milestone 2 are implemented and tested; recurring jobs and new integrations are not enabled. Live candidate validation remains a separate acceptance check.
+Status: implementation in progress. Source access checked on 28 October 2026. Candidate tooling for milestone 1 and the bounded runner/systemd templates for milestone 2 are implemented and tested; recurring jobs and new integrations are not enabled. Live candidate validation remains a separate acceptance check. Milestone 3 has a tested Avinor capture tool and a first measured sample; see [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md) for unresolved gates.
 
 Keep the project at **$0 in additional spend**. First make the existing route dataset refreshable and auditable. Then investigate adding genuine flight numbers and dated schedules where free sources support them. Worldwide schedule coverage is an open research question, not a promised deliverable.
 

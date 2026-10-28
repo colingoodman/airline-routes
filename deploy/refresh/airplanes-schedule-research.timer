@@ -1,0 +1,11 @@
+[Unit]
+Description=Observe the same two airport departure feeds once each day
+
+[Timer]
+OnCalendar=*-*-* 03:45:00 UTC
+RandomizedDelaySec=10m
+Persistent=true
+Unit=airplanes-schedule-research.service
+
+[Install]
+WantedBy=timers.target

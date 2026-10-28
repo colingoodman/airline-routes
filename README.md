@@ -147,6 +147,8 @@ Review the semantic change report and all coverage/identity changes before promo
 
 For recurring collection, see the bounded runner and systemd templates in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-not-installed). They collect candidates only; no automatic publication is enabled.
 
+For the measured Avinor departure sample, bounded capture tool and remaining pilot gates, see [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md).
+
 For a new discovery inventory, without modifying the released roster or dataset:
 
 ```sh
