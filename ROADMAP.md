@@ -1,147 +1,137 @@
-# Data refresh and flight schedule roadmap
+# Live aircraft tracking research roadmap
 
-Status: candidate collection and Avinor research captures run daily on the existing droplet, pinned to checked collector commit `1193dec430f403e9004f77fc8708bdc5fa623231`. Both Mac background jobs have been removed. A full droplet candidate passed reviewed-snapshot validation on 28 October 2026: 572 carriers, 1,304 origins, 3,361 airports and 32,652 route records. The published dataset remains unchanged. Three weekly review cycles and seven distinct schedule-observation days are pending. No unattended publication or schedule display is enabled. See [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only) for operating details and [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md) for the measured samples.
+Goal: show real aircraft moving on a map, with flight numbers and airport pairs supported by evidence. Build toward that goal at **$0 in additional spend**, starting with a regional pilot around Oslo. Worldwide coverage and consistently verified flight details remain unproven.
 
-Keep the project at **$0 in additional spend**. First make the existing route dataset refreshable and auditable. Then investigate adding genuine flight numbers and dated schedules where free sources support them. Worldwide schedule coverage is an open research question, not a promised deliverable.
+This is a research and testing plan, updated 29 October 2026. It does not enable live polling, change production data or authorize a public live launch. Each stage ends with measured results and a continue, narrow-scope or stop decision.
 
-## Scope and constraints
+## What already exists
 
-- Use existing compute and storage. No paid API plans, trials that convert to billing, new hardware, or paid infrastructure. Set request, disk and runtime budgets before enabling a collector; stop when a budget is exhausted.
-- Keep the viewer static. Collect data separately, validate a candidate release, and serve generated files through the existing deployment process.
-- Preserve physical airport identities, reviewed overrides, airline/brand distinctions and source attribution. A changed code must not silently move a route to a different airport.
-- Keep three distinct kinds of evidence: a source-listed route, a dated scheduled flight, and an observed flight. One must not silently become another.
-- Provider permissions must cover the intended use: map display, retained records, downloadable JSON and the offline portable viewer. Keep restricted data out of those artifacts unless the provider explicitly permits it.
+- A deployed static passenger-route atlas, physical airport identities and source links. Its airport-to-airport lines show source-listed services, not actual flight paths.
+- Daily candidate collection and a bounded Avinor schedule study on the existing droplet. Both use committed code; Mac background jobs have been removed.
+- A validated refresh candidate awaiting data review. Automatic collection does not publish it.
+- Real flight numbers and dated departures for the OSL/BNN research sample. The latest verified capture on 28 October contained 1,885 records. Repeat observations and independent airline checks remain pending; this is not a claim about today's collection result.
+- A freshness display and immutable frontend releases with rollback. There is no integrated live position feed, aircraft-to-flight matcher or moving-aircraft UI.
 
-## Starting point before this branch
+Operating details are in [DEPLOYMENT.md](DEPLOYMENT.md); measured schedule results and remaining schedule checks are in [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md).
 
-The original `scripts/rebuild.py` downloaded OurAirports metadata and wrote directly to `web/data.json` and its compact projection. The original collector reused cached Wikipedia responses without an expiry and labelled retrieval dates using the supplied snapshot date. Rerunning it with a newer date therefore did not prove that evidence had been fetched again. This branch replaces that behavior with isolated candidates, expiring caches and actual source-check timestamps.
+## Evidence we must keep separate
 
-The roster, hub selections, model classifications, aliases and discovery audit are reviewed inputs. Fetching airport pages does not update those decisions. Validation also includes fixed membership counts and example-route expectations, which need a review path when the real network changes.
-
-Deployment exports committed HEAD into an immutable release directory identified by its Git commit. A refresh must produce a new reviewed data commit before deployment; it cannot replace files inside an existing release. See [DEPLOYMENT.md](DEPLOYMENT.md).
-
-## Milestones
-
-| Milestone | Deliverable | Completion condition |
+| Label | Evidence required | What it does not establish |
 | --- | --- | --- |
-| 1. Reliable candidate builds | Isolated rebuild, honest freshness metadata, expiring cache and change report | A failed or partial collection cannot alter the released dataset |
-| 2. Automatic refresh collection | Recurring collection on existing infrastructure, bounded resource use and release checks | Three consecutive weekly candidate runs complete with reviewed results; failure and rollback paths are exercised |
-| 3. Free schedule investigation | Comparable source samples, coverage measurements and reuse decisions | At least one source is suitable for a bounded pilot, or the evidence establishes why none qualifies |
-| 4. Schedule pilot | Optional, dated flight details for supported airports | Times, identities, codeshares, expiry and offline behavior pass validation within the free quota |
-| 5. Observed route investigation | Small experiment using open aircraft traces | Airport matching accuracy and resource costs justify continuing, or the experiment is closed |
+| Observed position | Provider, aircraft identifier, position timestamp and coordinates | Flight number, destination or a complete flight path |
+| Scheduled flight | A dated airport/airline record, explicit flight number and endpoints | That a particular aircraft is operating it |
+| Matched flight | A supported association between an observed aircraft and that dated flight, with evidence and ambiguity checks | That its planned destination will be its actual landing airport |
+| Observed trail | A sequence of received positions, with gaps marked | Positions during missing coverage or future movement |
+| Observed airport pair | Sufficient departure and arrival evidence for the same flight instance | A recurring schedule or the route of tomorrow's flight |
 
-Milestones 1 and 2 take priority. Milestone 3 can run alongside them. Milestone 4 depends on the investigation result. Milestone 5 is optional and must not delay the refresh work.
+A callsign prefix substitution is not verified flight-number matching. Proximity to an airport is not proof of departure or arrival. An unknown route must not hide an otherwise valid aircraft position. A static route line must never become a simulated live flight path.
 
-## 1. Make refreshes reliable
+## Sequence and dependencies
 
-### Isolate inputs and outputs
-
-- Add explicit candidate output paths to the rebuild and projection workflow. Stage raw responses, normalized data, projection and validation results outside `web/` until promotion.
-- Record an input manifest covering the collector version, roster, hub evidence, aliases, metadata corrections/additions, brand models and discovery audit. Some inputs currently load relative to the collector itself; make their provenance explicit.
-- Preserve OurAirports' persistent row identifier alongside public airport codes. Compare against that identity when codes, names, closure status or coordinates change. Flag conflicts with reviewed overrides instead of overwriting them.
-- Separate actual fetch/check timestamps from the snapshot's effective date. Record source revision/hash and whether evidence was fetched, revalidated or reused. Failed requests must never make old evidence appear newly fetched.
-
-### Refresh sources politely
-
-- Introduce cache expiry and a deliberate refresh mode. Use conditional requests where supported, descriptive identification, bounded retries and backoff. Respect provider rate limits and `Retry-After`; do not switch endpoints to evade a block.
-- Deduplicate requests for shared airport pages. Resume interrupted work without refetching successful pages unnecessarily.
-- Preserve the last successful release on failure. Retained evidence remains visibly dated and must not be promoted as a successful fresh snapshot.
-
-### Compare before publishing
-
-Produce a concise change report: airport identity/coordinate changes, route additions/removals, seasonal/future changes, source ages, missing carrier rows, unresolved destinations and coverage by origin.
-
-Existing partial coverage is the comparison baseline, not grounds to invent missing routes. A newly inaccessible source is a collection failure, not evidence that its services ended. Changes in airport identity, roster, alliance membership or hub selection require review. Initially, route additions and removals also require review.
-
-Keep structural validation separate from reviewed snapshot expectations. Retain example and membership checks, but allow a documented, evidence-backed update when a real-world change invalidates an old expectation.
-
-**Acceptance:** exercise unchanged inputs, expired caches, revalidation, rate limits, interrupted downloads, missing tables, malformed CSV and changed airport codes. Each failure leaves canonical files intact. Rebuilding fixed captured inputs produces the same semantic dataset. Run the existing Node/Python suites and dataset/projection validation on successful candidates.
-
-## 2. Enable automatic collection and controlled releases
-
-| Data | Initial cadence | Release policy |
+| Stage | Research question | Deliverable / decision gate |
 | --- | --- | --- |
-| OurAirports metadata | Daily check | Stage changes; review identity conflicts, code reassignment and material coordinate changes |
-| Wikipedia airport route evidence | Weekly refresh | Stage a candidate and compare with the last release |
-| Roster, alliances, hubs and brand classifications | Monthly review, plus significant announcements | Update reviewed inputs with evidence |
-| Schedule records | Provider-specific, decided in milestone 3 | Refresh and expire independently of the route snapshot |
+| 1. Free feed feasibility | Can we obtain suitable live positions with usable access and reuse terms? | Source comparison, one bounded sample and a justified request budget |
+| 2. Position quality and coverage | How fresh, continuous and interpretable are the positions around Oslo? | Captured/replayable samples and a coverage report |
+| 3. Aircraft-to-flight matching | Which aircraft can we reliably associate with dated Avinor flights? | Evidence-backed matches, measured errors and explicit unknowns |
+| 4. Moving-map prototype | Can we display positions, trails and uncertainty clearly? | Local prototype replaying the same captured samples |
+| 5. Droplet and failure testing | Can one shared collector serve the prototype within existing resources? | Bounded load/failure results and a deployment proposal |
+| 6. Regional live pilot | Does the complete experience remain useful over repeated observations? | Seven-day pilot report and a decision about expansion |
 
-Use a single runner on existing infrastructure with a lock against overlapping runs, explicit timezone, timeouts, resumable caches and bounded artifact retention. Choose its location after measuring a full staged rebuild and confirming network access. A system timer on the existing server is a candidate; the static viewer must not depend on the collector being online.
+Stage 1 starts first. Stage 2 and the existing schedule study then run alongside one another. Stage 4 can start with captured positions before stage 3 completes, showing aircraft with unknown flight details. Stage 5 requires a viable feed and replay prototype. A public pilot depends on access, accuracy, resource and failure gates passing. None of this waits for three weekly route-refresh cycles; that separate gate concerns unattended route-data publication.
 
-Start with automatic collection and reviewed promotion. After three successful weekly cycles, define concrete change-size thresholds from the observed baseline and allow only agreed routine changes to publish automatically. Hold identity changes, new coverage gaps, unexpected carrier loss and unusually large diffs for review. Document those thresholds before enabling unattended publication.
+## 1. Establish a usable free position source
 
-For every release:
+Investigate **adsb.lol first**. Its [API page](https://www.adsb.lol/docs/open-data/api/) documents public access and ODbL data. Its [OpenAPI description](https://api.adsb.lol/api/openapi.json) documents geographic and aircraft queries, requests contact for production use and warns of possible future feeder-backed key requirements. These are research leads, not a guarantee of durable access. Source documentation was checked on 29 October 2026; sustained access from our droplet still needs testing.
 
-1. Validate data, source ages, references and the compact projection; run the affected tests.
-2. Commit the accepted data changes and deploy that exact commit with the existing release script. Do not create releases solely because a check timestamp changed; keep successful no-change checks in runner state.
-3. Verify origin and public assets, matching data/projection hashes, source links and the existing homepage. Exercise airport filters, comparison and the portable viewer after schema changes.
-4. Retain the previous release and use the existing atomic switch/rollback process. Define bounded retention for inactive releases so regular refreshes cannot exhaust disk space.
+Keep alternatives conditional:
 
-Record last attempted check, last successful check and last published data separately. Expose the relevant data age and partial coverage in the viewer. Notify only on publication, actionable failures or required review; keep unchanged checks quiet.
+- [airplanes.live](https://airplanes.live/api-docs/): our earlier test returned HTTP 403 requesting project details. Recheck the documented access path; do not bypass it. Its globe viewer is not a separate data source.
+- [OpenSky](https://opensky-network.org/about/terms-of-use): operational REST integration requires a written agreement. Its [API documentation](https://openskynetwork.github.io/opensky-api/) excludes schedules and related commercial flight information. It is not an assumed free production dependency.
+- Any additional source must meet the same access, field, quota and reuse checks. Do not replace an unavailable free feed with a paid plan, a trial or receiver hardware purchases.
 
-**Acceptance:** demonstrate that overlapping jobs are prevented, failed collection/validation cannot deploy, a failed activation restores the previous release, and a no-change run creates no data commit. Scheduling and deployment changes are future implementation work, not part of this roadmap.
+For each candidate, record access requirements, free allowances, permitted polling, geographic limits, data fields, attribution, retention, browser display, server redistribution and offline-export conditions. Distinguish an open-source API implementation from permission to reuse its data. Keep live evidence separate from the route dataset while reuse obligations are unresolved. Do not contact providers, register accounts or accept new agreements as part of the initial read-only investigation.
 
-## 3. Investigate free flight numbers and schedules
+Start with one geographically bounded response around Oslo. Inspect aircraft identifiers, callsigns, position age, altitude type/units, ground speed, track versus heading, on-ground flags and available quality indicators. Confirm how response time differs from the last position timestamp. Test access from the droplet as well as the development environment; a successful local request is insufficient.
 
-### Source shortlist
+**Gate:** a sample can be parsed and its intended research use is supported. Before repeated requests, document a defensible cadence and hard attempt budget. If limits or production conditions are unclear, keep the experiment bounded and mark public deployment blocked on that question. Do not silently treat the absence of a published quota as unlimited access.
 
-| Source | Investigation | Current evidence and limits |
-| --- | --- | --- |
-| [Avinor](https://partner.avinor.no/tjenester/flydata/) | First pilot: Oslo and a smaller Norwegian airport | Public XML request returned HTTP 200 with flight IDs, scheduled times, gates and statuses. Covers Avinor airports. Free reuse requires attribution; cache on the server and respect its three-minute polling guidance. Verify the available time window and codeshare semantics. |
-| [Swedavia](https://apideveloper.swedavia.se/faq) | Compare a major and smaller Swedish airport | Official free account provides 10,000 requests/month and stops access at quota exhaustion. Requires registration/key. Authenticated responses, time horizon, retention and export permissions remain untested. |
-| [Finavia](https://apiportal.finavia.fi/) | Compare Helsinki and a smaller Finnish airport | Official portal offers a free Public Flights API with registration/key. Confirm the actual subscription quota, fields, date horizon and retention/export rights. |
-| [AirLabs](https://airlabs.co/docs/schedules) | Optional comparison for airports outside the Nordic feeds | Rendered [pricing](https://airlabs.co/#Pricing) lists 1,000 monthly free requests for personal use. Schedule docs specify up to ten hours ahead and 50 records/page for free keys. Confirm field access and display/export rights. This quota cannot support daily refreshes of all our origins. |
-| [US BTS](https://www.transtats.bts.gov/ontime/Index.aspx) | Assess historical flight-number and frequency enrichment | Free monthly US domestic reporting-carrier records include flight numbers and scheduled/actual times. Historical coverage must stay separate from future schedules. |
+## 2. Measure position quality and regional coverage
 
-OurAirports remains the airport reference: [nightly public-domain downloads](https://ourairports.com/data/) and [field definitions](https://ourairports.com/help/data-dictionary.html). Its `scheduled_service` flag indicates whether scheduled airline service exists; it supplies no flight timetable.
+Use a fixed region centered on OSL, initially a 50-nautical-mile radius if the provider supports it. Observe BNN separately only after establishing the first query's budget. Do not claim Norwegian or worldwide coverage from this region.
 
-### Investigation method
+After stage 1 permits sampling, target three 20-minute sessions at different times of day. Proposed ceilings are 60 request attempts per session and 180 per day, with polling no faster than once every 20 seconds. These are experiment limits, not provider entitlements: use any stricter provider limit, reserve 20% of a stated allowance, count retries and stop at exhaustion. Requests get a 15-second timeout and a 4 MiB response cap; oversized responses require narrowing the sample. No unattended job is installed before these limits are justified.
 
-- Use a fixed sample of major/small airports, mainline/regional operators, domestic/international services and codeshares. Include airports already in the map so matching quality can be measured.
-- For each provider, record authentication, permanent free quota, pagination, time horizon, timestamp semantics, update behavior, available fields, attribution and display/retention/export permissions. Recheck access terms before integration.
-- Compare samples with dated official airline/airport information. Measure missing flight numbers/times, unresolved airport identities, duplicate codeshares and stale or conflicting records. Do not claim worldwide completeness from a small sample.
-- Observe samples across at least seven days where quotas permit. Calculate the request budget including pagination, retries and rechecks before proposing a cadence; reserve at least 20% of the free allowance.
-- Fail closed at the free quota. Keep keys outside browser files, Git, downloaded datasets and portable HTML. Do not sign up for billing or accept account terms automatically as part of the investigation.
+Retain a bounded sample of raw responses where permitted, plus normalized positions and capture timestamps. Cap research evidence at 128 MiB initially; stop rather than silently deleting samples needed for review. Replay must preserve observation times and must not count as new live evidence.
 
-Produce one source comparison with a go/no-go decision per provider and a bounded pilot proposal. Use only sources whose access and reuse permissions fit the proposed delivery. If no source qualifies, finish the investigation with that finding and continue shipping refreshed route data.
+Measure:
 
-## 4. Add a bounded schedule pilot
+- Successful responses, rate limits, response latency/bytes and last-position age, including median and 95th percentile.
+- Aircraft with usable positions, missing callsigns, missing quality fields, invalid coordinates and duplicates.
+- Per-aircraft update gaps, disappearance/reappearance, ground versus airborne coverage, and continuity within the region.
+- Scheduled departures in the same time window: observed, not observed, ineligible for comparison or unresolved. Missing tracking does not mean a flight did not operate.
 
-Start with Avinor if milestone 3 confirms suitability. Keep schedules in a separate generated artifact, with its own source coverage, fetch time and expiry. Load it when an airport or route is inspected so global startup stays small. The map remains usable if schedule collection fails.
+Exercise absent fields, delayed/out-of-order timestamps, duplicates, implausible jumps, provider outages and receiver gaps. Reject unusable points and retain the reason; avoid inventing precision when quality fields are absent. Any numeric jump/stale thresholds must be documented, replay-tested and reported in the results.
 
-Publish bounded static snapshots through the same committed, immutable release process. Choose the cadence after measuring the source horizon and repository/release growth; polling a provider does not itself trigger a deploy. A continuously updating departure board would need a separate publication design and is outside this pilot.
+**Gate:** select an update cadence and stale-data policy supported by measured position age and gaps. Publish the results even if continuity is inadequate. A suggested initial freshness target is 95% of displayed airborne positions no older than 60 seconds; this is a target to test, not an existing guarantee.
 
-The proposed data contract must include:
+## 3. Match aircraft to dated flights and routes
 
-- Source-specific record ID, physical origin/destination airport references and departure-local service date.
-- Published flight number as text, with marketing and operating carrier/number stored separately when explicitly supplied. Preserve leading zeros and suffixes; unknown values remain unknown.
-- Scheduled departure/arrival timestamps with verified timezones or offsets, separate from estimated/actual times. Use a maintained free timezone source or provider offsets; OurAirports does not provide this mapping.
-- Source, fetched time, valid-until time and any explicit operating days/effective dates. A near-term departure board must not become a presumed recurring weekly timetable.
+Continue the existing Avinor study without increasing its polling to match the position-feed cadence. Seven days of future departures in one response remain one observation day. Before comparing changed normalizers, replay the earlier raw schedule evidence as described in [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md).
 
-Handle overnight arrivals, daylight-saving changes, cancellations and codeshares explicitly. A source's term “direct” does not itself establish nonstop operation. Missing schedule data means unavailable, not no service. Never infer a marketed flight number solely by replacing the prefix of an ADS-B callsign.
+Research the association between transponder identifiers, transmitted callsigns, registrations when available, operating carriers and marketed flight numbers. Treat the aircraft identifier as an aircraft identity, not a permanent flight identity. Build dated flight instances and retain every candidate match, evidence source, time window and rejection reason.
 
-Show exact date, timezone, source and freshness beside flight details. Expired records leave the upcoming schedule view; a failed request must not make cached records appear current. Keep provider attribution visible.
+Test ordinary departures, missing and alphanumeric callsigns, reused flight numbers, midnight and daylight-saving boundaries, codeshares, aircraft substitutions, diversions, intermediate stops and circular services. Resolve the existing RRS/SRP/OLA map identity gaps using explicit evidence before displaying affected endpoints. Handle general aviation, cargo and airlines absent from our passenger atlas as valid aircraft with unknown schedule details.
 
-Only include schedule records in downloadable JSON or portable HTML when retention and redistribution rights permit it. Otherwise keep those exports route-only and explain the coverage. A frozen offline schedule must show its capture date and must not be labeled live.
+Use dated official airport/airline information and observed departure behavior as corroboration. A schedule at OSL can support a planned destination; label the actual destination unverified until sufficient arrival evidence exists. Do not invent paired arrival times or a complete airport-to-airport trail from an OSL-only observation window. End-to-end track verification needs a separately budgeted sample covering both endpoints.
 
-**Acceptance:** confirm sampled identities and times against official information; test midnight/DST cases, leading zeros, duplicate codeshares, cancellations, expired records, quota exhaustion and collection outages. Document coverage and measured resource use. Broader rollout requires a separate decision based on the pilot.
+Review at least 100 proposed associations across at least two service dates, plus 20 deliberately ambiguous or nonmatching cases. Report confirmed-match precision with its numerator/denominator, match coverage among eligible observed departures, ambiguous cases and false matches. Sample across operators and difficult cases; show results by case type and do not extrapolate regional results to all flights.
 
-## 5. Investigate observed routes separately
+**Gate:** proposed initial target is at least 98% independently supported matches in that reviewed sample, with no forced confirmed matches in the deliberately ambiguous/negative cases. This small sample is not statistical proof of general accuracy. If identity matching falls short, continue only as a position-only pilot with unknown routes. Preserve unresolved flights rather than increasing apparent coverage through guesses.
 
-[adsb.lol's API](https://www.adsb.lol/docs/open-data/api/) returned HTTP 200 without a key during research. It also offers [free daily track archives](https://www.adsb.lol/docs/open-data/historical) under ODbL. Test a small, capped historical sample before considering regular ingestion. Record attribution and derivative-database obligations separately from the existing sources.
+## 4. Test the moving-map experience with captured data
 
-Investigate whether sufficiently complete tracks can establish an airport pair, observed departure/arrival times and a callsign. Require evidence near both airports; do not treat first/last received coordinates as automatic takeoff/landing positions. Record uncertainty and reject ambiguous legs. Compare results against the schedule pilot and manually verified flights.
+Build a local, optional aircraft layer while preserving route exploration. Replay the same real samples for comparisons so improvements cannot be explained by different traffic.
 
-The possible output is “observed operating during this period,” with a last-observed date. It does not establish a future schedule, bookability, marketing carrier or absence of seasonal service. No live aircraft overlay is included in this roadmap.
+Test aircraft orientation, selection, timestamp/age display and short observed trails. Keep course over ground distinct from the aircraft's nose heading. Smooth motion between received points only with a documented rendering delay; identify any extrapolation and stop it at a tested short limit. Never animate indefinitely during an outage. Break trails across gaps, invalid jumps and aircraft/flight-instance changes. Handle crossing the date line and repeated map worlds using our existing map behavior.
 
-Do not make the refresh pipeline depend on these sources without resolving their current limitations:
+Aircraft details should separately show position source/time, transmitted callsign, matched published flight number, planned endpoints, observed trail and unresolved identity. The UI must distinguish unknown, ambiguous, stale and unavailable data. Codeshares should not create duplicate aircraft icons. Offline exports remain a dated replay or route-only atlas, never a live display.
 
-- [airplanes.live](https://airplanes.live/api-docs/): the public test returned HTTP 403 requesting project details by email. Access and permission to retain/export data are unconfirmed. [globe.airplanes.live](https://globe.airplanes.live/) is its viewer, not a separate schedule source.
-- [OpenSky](https://opensky-network.org/about/terms-of-use): current terms require a written agreement for operational REST API integration, including live nonprofit services. Its [API documentation](https://openskynetwork.github.io/opensky-api/) excludes commercial schedule data.
-- [adsbdb](https://github.com/mrjackwills/adsbdb): route mappings are available, but its README restricts copying, publishing or incorporating that route data into other databases without explicit permission.
+**Gate:** replay ordinary traffic, missing updates, resumed tabs, reordered responses and source outages. Confirm that aircraft do not jump to a static route line, frozen data is visibly stale and closing the live layer stops browser polling. Check desktop and mobile interaction and rendering performance, including 100- and 500-aircraft replay loads; these stress loads are not claims about regional coverage.
 
-**Acceptance:** publish measured matching quality, coverage gaps, download size, processing time and storage needs for the sample. Proceed only if the results are useful within existing resource budgets; otherwise close this workstream without delaying refreshes or schedules.
+## 5. Validate the existing droplet and failure behavior
 
-## First implementation slice
+The existing droplet has about 458 MiB RAM and 1 GiB swap. Its route collector has a 160 MiB RAM cap and used roughly 36 minutes for its first full run. Measure current spare resources before proposing another service; swap is not evidence that sustained ingestion will be comfortable.
 
-Implement milestone 1 first: isolated candidate output, honest source timestamps, explicit cache refresh, input manifest and a semantic change report. Deliver one locally validated candidate against the current release before installing any recurring job. In parallel, define the Avinor sample and quota/rights checklist for milestone 3. Leave production data and serving behavior unchanged until a candidate is accepted for release.
+Prototype one regional upstream collector with a shared latest-state cache and a bounded observed-trail buffer. Serve the same cached response to all viewers; browser count must not multiply upstream calls. Keep provider credentials server-side if needed. Avoid user-driven arbitrary geographic fan-out: the initial service covers one fixed region, and a broader region requires a new budget.
+
+Keep the frontend static, with an optional separate same-origin live-data endpoint. Keep live state outside immutable releases, Git, route JSON and portable exports. Decide whether the small endpoint can be served as atomically replaced JSON or needs a process after measuring the response size and desired cadence. A fresh wrapper timestamp must not conceal old underlying positions.
+
+Benchmark 1, 10 and 50 simulated viewers against cached/replayed data, not additional provider calls. Measure CPU, peak RAM, swap activity, disk growth, upstream attempts, cache age and HTTP latency. Compare homepage/viewer latency with collection disabled, then exercise overlap with a route refresh. Initial candidate targets are at most 64 MiB additional service RAM, 128 MiB retained live state and less than 20% increase in existing-site 95th-percentile response latency under the defined test load. These are proposed ceilings to validate, not demonstrated capacity.
+
+Exercise HTTP 429/Retry-After, 403, malformed/oversized responses, connection timeouts, disk exhaustion, process termination and server restart. Verify capped retries, backoff, single-collector locking, atomic cache replacement and preserved timestamps. If source access fails, show tracking unavailable; do not cycle endpoints/accounts. Ensure exceptions never affect nginx, the static atlas, schedule evidence or the last validated route candidate.
+
+**Gate:** propose service CPU/RAM/disk/runtime limits only after measurements. If the droplet cannot meet the targets, reduce the region, cadence, retained trails or supported viewers. If that still fails, stop the live pilot rather than resize or buy another service. Test stopping the live collector and rolling back the frontend without disturbing existing jobs.
+
+## 6. Run and evaluate a regional pilot
+
+A public pilot requires the earlier access, matching/display and resource gates to pass. A position-only pilot remains an explicit option if reliable route matching is not established. Keep geographic coverage and update delay visible.
+
+Observe at least seven distinct days, including daytime/evening sessions and overlap with scheduled collection. Record actual sampled periods and downtime; intermittent sessions must not be reported as continuous uptime. Report position freshness, continuity, match precision/coverage, unknown aircraft, false matches, API attempts, outages and droplet load. Add independent spot checks across multiple operators and dates.
+
+Expansion order is evidence-driven: another Avinor airport, a second region with suitable ground truth, then a separately measured coverage expansion. Each needs a revised request/resource budget and endpoint-matching assessment. Full-day persistence, global snapshots, complete flight histories, worldwide schedules and guaranteed availability are outside the initial pilot.
+
+**Gate:** recommend regional expansion, continued limited observation, position-only operation or stopping. Worldwide tracking needs a fresh feasibility decision; success around Oslo does not establish global coverage.
+
+## Outputs, checkpoints and existing work
+
+Maintain one concise research report and a machine-readable metrics file, with sample manifests linking exact provider responses, observation windows, parser versions and test results. Keep raw captures private to the research state unless their redistribution is supported. Separate measured facts, proposed targets and unresolved questions. Check each implementation stage and commit it before proceeding.
+
+Expected checkpoints, measured from the start of implementation rather than promised calendar dates:
+
+- First 1–2 working days: source/access decision, bounded position sample and an initial coverage/freshness result. Report a blocker immediately if no source qualifies.
+- Next 2–4 working days: replay prototype and first manually checked aircraft-to-flight associations. These can proceed alongside repeated schedule observations; access and data quality may extend the work.
+- After at least seven distinct observation days: first combined regional-pilot assessment. Public live deployment remains dependent on the gates above and is a separate implementation step.
+
+Keep the daily route candidate and Avinor research jobs running within their existing budgets. Review refresh candidates separately; retain the three-weekly-cycle gate before considering unattended route publication. Broad schedule-provider expansion and historical archive ingestion are deferred until the live position and identity experiments show which missing evidence would materially improve this pilot.
+
+The next implementation slice is stage 1 and a small stage-2 capture tool: documented free access, explicit budgets, normalized positions and replayable samples. It introduces no Mac background job, billing, automatic public data promotion or unbounded global collector.
