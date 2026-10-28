@@ -1,15 +1,23 @@
 import {createHash} from 'node:crypto';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
-const root=new URL('../',import.meta.url),d=JSON.parse(fs.readFileSync(new URL('web/data.json',root),'utf8'));
+import {parseArgs} from 'node:util';
+import path from 'node:path';
+const {values:options}=parseArgs({options:{data:{type:'string'},map:{type:'string'},inputs:{type:'string'},structural:{type:'boolean',default:false}}});
+const root=new URL('../',import.meta.url),dataPath=options.data||new URL('web/data.json',root),mapPath=options.map||new URL('web/map-data.json',root);
+const inputPath=name=>options.inputs?path.join(options.inputs,name):new URL('scripts/'+name,root);
+const d=JSON.parse(fs.readFileSync(dataPath,'utf8'));
+assert.ok(d.routes.length>0,'Empty network');
 function index(rows,label){const ids=new Set();for(const r of rows){assert.ok(r.id,`${label} id missing`);assert.ok(!ids.has(r.id),`Duplicate ${label}: ${r.id}`);ids.add(r.id);}return ids;}
 const al=index(d.alliances,'alliance'),air=index(d.airlines,'airline'),ap=index(d.airports,'airport'),src=index(d.sources,'source'),routes=index([...d.routes,...d.excluded_routes],'route'),brands=index(d.service_brand_models,'brand');
 const sourceBy=new Map(d.sources.map(s=>[s.id,s])),brandBy=new Map(d.service_brand_models.map(b=>[b.id,b]));
-const roster=JSON.parse(fs.readFileSync(new URL('scripts/roster-hubs.json',root),'utf8'));
-assert.equal(d.airlines.length,roster.airlines.length);assert.ok(d.alliances.some(a=>a.id==='nonaligned'&&a.kind==='category'));
+const roster=JSON.parse(fs.readFileSync(inputPath('roster-hubs.json'),'utf8'));
+assert.deepEqual([...air].sort(),roster.airlines.map(a=>a.id).sort(),'Carrier identities must match reviewed roster');assert.equal(d.airlines.length,roster.airlines.length);assert.ok(d.alliances.some(a=>a.id==='nonaligned'&&a.kind==='category'));
+if(!options.structural){
 for(const id of ['EK','EY','B6','WN','DE','LY','6E','LA','WS','KC'])assert.equal(d.airlines.find(a=>a.id===id)?.alliance_id,'nonaligned',`Requested independent missing: ${id}`);
 assert.equal(d.airlines.find(a=>a.id==='AS')?.alliance_id,'oneworld');
 for(const [alliance,count] of [['star',26],['skyteam',18],['oneworld',16]])assert.equal(d.airlines.filter(a=>a.alliance_id===alliance&&a.membership_type==='full_member').length,count);
+}
 function model(a){for(const f of ['low_cost','regional']){assert.ok(a[f]===null||typeof a[f]==='boolean');for(const id of a[f+'_source_ids'])assert.ok(src.has(id));if(a[f]!==null)assert.ok(a[f+'_source_ids'].length,`Missing ${f} evidence: ${a.id}`);}}
 for(const a of d.airlines){assert.ok(al.has(a.alliance_id));assert.ok(src.has(a.membership_source_id));for(const s of a.classification_source_ids||[])assert.ok(src.has(s));assert.ok(d.hubs.some(h=>h.airline_id===a.id));for(const id of a.service_brand_ids)assert.ok(brands.has(id));model(a);}
 for(const b of d.service_brand_models){assert.ok(air.has(b.airline_id));assert.ok(b.id.startsWith(b.airline_id+'|'));model(b);}
@@ -19,11 +27,12 @@ for(const a of d.airport_aliases){assert.ok(ap.has(a.airport_id));assert.ok(src.
 for(const a of d.airports){assert.ok(a.iata===null||/^[A-Z]{3}$/.test(a.iata));if(a.iata)assert.equal(a.id,a.iata);else assert.ok(a.id.startsWith('icao:')||a.id.startsWith('oa:'));assert.ok(Number.isFinite(a.latitude)&&a.latitude>=-90&&a.latitude<=90);assert.ok(Number.isFinite(a.longitude)&&a.longitude>=-180&&a.longitude<=180);assert.ok(src.has(a.source_id));if(a.identifier_source_id)assert.ok(src.has(a.identifier_source_id));for(const s of a.supporting_identifier_source_ids||[])assert.ok(src.has(s));if(a.wikipedia_url)assert.ok(/^https?:\/\/([a-z-]+\.)*(?:wikipedia\.org)\//.test(a.wikipedia_url),`Unexpected metadata URL: ${a.id}`);}
 for(const r of [...d.routes,...d.excluded_routes]){assert.ok(air.has(r.airline_id));assert.ok(ap.has(r.hub_airport_id));assert.ok(ap.has(r.destination_airport_id));assert.ok(src.has(r.source_id));assert.ok(hubkeys.has(r.airline_id+'|'+r.hub_airport_id));assert.notEqual(r.hub_airport_id,r.destination_airport_id);assert.ok(sourceBy.get(r.source_id).revision_id,'Unpinned route source');assert.ok(brands.has(r.service_brand_id));assert.equal(brandBy.get(r.service_brand_id).airline_id,r.airline_id);}
 for(const r of d.routes){assert.ok(['scheduled','charter'].includes(r.service_type));assert.ok(!/\bsuspended\b/i.test(r.note||''),'Suspended active service');assert.ok(['listed','seasonal'].includes(r.status));assert.ok(!(r.change_date>d.as_of && /begin|start|commenc|resum/i.test(r.note||'')),'Future start active');}
-for(const [id,hub,dests] of [['UA','DEN',['MCI','COS','FRA']],['AF','CDG',['BOM','JFK']]])for(const dest of dests)assert.ok(d.routes.some(r=>r.airline_id===id&&r.hub_airport_id===hub&&r.destination_airport_id===dest),`Missing example ${id} ${hub} ${dest}`);
+if(!options.structural)for(const [id,hub,dests] of [['UA','DEN',['MCI','COS','FRA']],['AF','CDG',['BOM','JFK']]])for(const dest of dests)assert.ok(d.routes.some(r=>r.airline_id===id&&r.hub_airport_id===hub&&r.destination_airport_id===dest),`Missing example ${id} ${hub} ${dest}`);
 for(const i of d.issues){assert.equal(i.kind,'unresolved_destination','A released origin cannot lack matching passenger evidence');assert.ok(hubkeys.has(i.airline_id+'|'+i.hub_airport_id));assert.ok(src.has(i.source_id));}
 assert.ok(d.airlines.every(a=>d.routes.some(r=>r.airline_id===a.id)));
-const audit=d.discovery_audit;assert.equal(audit.summary.admitted_carriers,d.airlines.length);assert.equal(audit.summary.admitted_origins,d.hubs.length);assert.equal(audit.summary.directory_entries,audit.candidates.length);assert.equal(audit.carrier_admissions.filter(a=>a.admitted).length,d.airlines.length);assert.equal(audit.origin_admissions.filter(a=>a.admitted).length,d.hubs.length);assert.deepEqual(audit,JSON.parse(fs.readFileSync(new URL('scripts/discovery-audit.json',root))));
-for(const [id,icao] of [['ALY','HEAX'],['PXN','VEPU'],['XYI','ZJYX']]){const a=d.airports.find(a=>a.id===id);assert.equal(a?.icao,icao);assert.ok(a.identifier_source_id);}assert.ok(!ap.has('HBE'));assert.deepEqual(d.airports.find(a=>a.id==='ALY').former_iata_codes,['HBE']);
+const audit=d.discovery_audit;assert.equal(audit.summary.admitted_carriers,d.airlines.length);assert.equal(audit.summary.admitted_origins,d.hubs.length);assert.equal(audit.summary.directory_entries,audit.candidates.length);assert.equal(audit.carrier_admissions.filter(a=>a.admitted).length,d.airlines.length);assert.equal(audit.origin_admissions.filter(a=>a.admitted).length,d.hubs.length);assert.deepEqual(audit,JSON.parse(fs.readFileSync(inputPath('discovery-audit.json'))));
+if(!options.structural){for(const [id,icao] of [['ALY','HEAX'],['PXN','VEPU'],['XYI','ZJYX']]){const a=d.airports.find(a=>a.id===id);assert.equal(a?.icao,icao);assert.ok(a.identifier_source_id);}assert.ok(!ap.has('HBE'));assert.deepEqual(d.airports.find(a=>a.id==='ALY').former_iata_codes,['HBE']);
+}
 console.log(JSON.stringify({airlines:d.airlines.length,hubs:d.hubs.length,airports:d.airports.length,services:d.routes.length,excluded:d.excluded_routes.length,unresolvedLinkedDestinations:d.issues.length,partialOrigins:d.hubs.filter(h=>h.coverage==='parsed_with_unresolved').length,classification:{lowCost:d.airlines.filter(a=>a.low_cost===true).length,regional:d.airlines.filter(a=>a.regional===true).length},discovery:audit.summary},null,2));
 
-const mapProjection=JSON.parse(fs.readFileSync(new URL('web/map-data.json',root),'utf8'));assert.equal(mapProjection.canonical_sha256,createHash('sha256').update(fs.readFileSync(new URL('web/data.json',root))).digest('hex'),'Map projection is stale. Run npm run build:data.');assert.equal(mapProjection.routes.length,d.routes.length);
+const mapProjection=JSON.parse(fs.readFileSync(mapPath,'utf8'));assert.equal(mapProjection.canonical_sha256,createHash('sha256').update(fs.readFileSync(dataPath)).digest('hex'),'Map projection is stale. Run npm run build:data.');assert.equal(mapProjection.routes.length,d.routes.length);

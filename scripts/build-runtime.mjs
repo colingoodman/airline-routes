@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {parseArgs} from 'node:util';
 const pick=(value,keys)=>Object.fromEntries(keys.filter(k=>value[k]!==undefined).map(k=>[k,value[k]]));
 export function projectMapData(data,sha256){
  const airlineIndex=new Map(data.airlines.map((a,i)=>[a.id,i])),airportIndex=new Map(data.airports.map((a,i)=>[a.id,i])),brandIndex=new Map(data.service_brand_models.map((b,i)=>[b.id,i])),sourceIndex=new Map(data.sources.map((s,i)=>[s.id,i]));
@@ -13,5 +14,8 @@ export function projectMapData(data,sha256){
   hubs:data.hubs.map(h=>pick(h,['airline_id','airport_id','kind','source_id','coverage','route_count','note','seasonal'])),
   routes:data.routes.map(r=>{const row=[airlineIndex.get(r.airline_id),airportIndex.get(r.hub_airport_id),airportIndex.get(r.destination_airport_id),brandIndex.get(r.service_brand_id),sourceIndex.get(r.source_id),(r.status==='seasonal'?1:0)|(r.service_type==='charter'?2:0),r.note||null,r.id];row.push(r.change_date||null,r.via_note||null,r.service_brand!==data.service_brand_models[brandIndex.get(r.service_brand_id)].name?r.service_brand:null);while(row.length>8&&row.at(-1)===null)row.pop();return row;})};
 }
-export function buildRuntime(root){const raw=fs.readFileSync(path.join(root,'web/data.json')),data=JSON.parse(raw);const projected=projectMapData(data,createHash('sha256').update(raw).digest('hex'));const packed=JSON.stringify(projected)+'\n';fs.writeFileSync(path.join(root,'web/map-data.json'),packed);return {canonical_bytes:raw.length,runtime_bytes:Buffer.byteLength(packed)};}
-if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))console.log(buildRuntime(path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')));
+export function buildRuntime(root,options={}){const input=options.data||path.join(root,'web/data.json'),output=options.out||path.join(root,'web/map-data.json');const raw=fs.readFileSync(input),data=JSON.parse(raw);const projected=projectMapData(data,createHash('sha256').update(raw).digest('hex'));const packed=JSON.stringify(projected)+'\n';fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,packed);return {canonical_bytes:raw.length,runtime_bytes:Buffer.byteLength(packed)};}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ const {values}=parseArgs({options:{data:{type:'string'},out:{type:'string'}}});
+ console.log(buildRuntime(path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),values));
+}
