@@ -1,0 +1,20 @@
+[Unit]
+Description=Collect and validate an airline map refresh candidate
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=airplanes-refresh
+Group=airplanes-refresh
+WorkingDirectory=/opt/airplanes-refresh/repo
+ExecStart=/opt/airplanes-refresh/repo/.venv/bin/python scripts/refresh_runner.py --state /var/lib/airplanes-refresh --max-seconds 2700 --max-disk-mib 2048 --retain 3
+StateDirectory=airplanes-refresh
+TimeoutStartSec=2800
+KillMode=control-group
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/airplanes-refresh
+UMask=0077

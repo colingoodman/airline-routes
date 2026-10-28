@@ -2,7 +2,7 @@
 
 A local interactive map and one normalized JSON dataset of worldwide passenger airline networks. The snapshot date is **27 October 2026**.
 
-See [ROADMAP.md](ROADMAP.md) for the proposed zero-cost automatic refresh pipeline and investigation of real flight numbers and dated schedules. Candidate refresh tooling is available; recurring jobs and schedule display are not yet enabled.
+See [ROADMAP.md](ROADMAP.md) for the proposed zero-cost automatic refresh pipeline and investigation of real flight numbers and dated schedules. Candidate refresh tooling and a bounded runner are available; recurring jobs and schedule display are not yet enabled.
 
 The expanded snapshot contains **572 carriers/brand networks, 1,304 carrier–origin relationships at 699 distinct hub/base airports, 3,358 airports, and 32,648 listed service records**. It retains all 100 carriers from the previous version and adds 472. Another **650 future or suspended/ended entries** are separate from the displayed network.
 
@@ -144,6 +144,8 @@ node scripts/validate.mjs --data work/candidates/my-refresh/data.json --map work
 ```
 
 Review the semantic change report and all coverage/identity changes before promoting a candidate. The original snapshot checks remain on by default. `--structural` skips only fixed historical expectations for investigation/fixtures; it does not establish release acceptance. Unchanged polling dates do not count as a semantic data change. Commit accepted data and its regenerated projection before using the existing deployment process.
+
+For recurring collection, see the bounded runner and systemd templates in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-not-installed). They collect candidates only; no automatic publication is enabled.
 
 For a new discovery inventory, without modifying the released roster or dataset:
 

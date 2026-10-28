@@ -103,3 +103,48 @@ ssh root@100.76.114.95 'nginx -t; systemctl status nginx --no-pager; tail -50 /v
 ```
 
 If a module returns HTML, the viewer's nginx location/include is missing. If a module returns `application/octet-stream`, inspect the `.mjs` MIME extension. If a source deploy seems stale, compare `DEPLOYED_REVISION`, the current symlink, HTTP cache headers, and Cloudflare behavior before changing the data. Remote requests may work even when the local agent environment cannot resolve the public hostname; distinguish local DNS restrictions from a production outage.
+
+## Candidate refresh runner (not installed)
+
+`scripts/refresh_runner.py` runs collection with an exclusive lock, a runtime limit,
+a disk budget and bounded candidate retention. It never copies data to `web/`,
+commits, deploys, or changes the active release. Successful unchanged checks update
+only its private `state.json`; collection failures preserve the last-successful
+check and publication timestamps. `latest.log` and the candidate manifest identify
+failures. Exit status 1 is an actionable collection failure; overlapping runs exit
+successfully without starting another job.
+
+```sh
+.venv/bin/python scripts/refresh_runner.py --state work/refresh-runner
+```
+
+Default limits are 45 minutes, 2 GiB of runner state, three candidates and a
+seven-day Wikipedia cache. Airport metadata is fetched on every online run. Budget
+exhaustion stops the entire collector process group and requires checking the
+logs/cache before retrying; it cannot publish partial results. Raw caches are
+retained for resumption, so a cache at its disk limit needs operator maintenance.
+
+`deploy/refresh/airplanes-refresh.service` and `.timer` are templates, not installed
+jobs. The timer checks daily at 03:00 UTC (08:30 India time), with up to 30 minutes
+of randomized delay, and catches up after downtime. Route pages are rechecked as
+their weekly cache expires. Prepare a separate checkout of the accepted collector
+commit at `/opt/airplanes-refresh/repo`, its Python environment and Node runtime,
+a dedicated `airplanes-refresh` user, and writable state at
+`/var/lib/airplanes-refresh`. The collector needs no access to the public web root,
+SSH deploy keys or nginx configuration. Keep source code read-only to that user.
+
+Before installing/enabling the templates on the existing server, measure a full
+candidate run there, confirm available disk/memory/network capacity, run
+`systemd-analyze verify` on the units, and perform a manual service run. Enabling
+collection is separate from enabling automatic publication. Review the first
+three weekly cycles and define accepted change thresholds before implementing
+unattended publication; no such publication path exists today.
+
+For a candidate release, review `changes.json`, `manifest.json`, source dates and
+validation logs. Check the candidate baseline still matches the current canonical
+JSON and that all manifest input hashes match the intended reviewed files. Copy
+only accepted candidate `data.json` and `map-data.json` into `web/`, rerun tests and
+validation, commit both files, then deploy that commit through the normal script.
+An offline or structural-only investigation is not evidence of a fresh accepted
+release. No-change checks should not create commits. Record actual successful
+publication time separately from collection time when a release is deployed.
