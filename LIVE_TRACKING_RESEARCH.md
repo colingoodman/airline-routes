@@ -262,8 +262,8 @@ shape/millisecond time observed in our adsb.lol sample. The two calls were 16
 seconds apart and are not a simultaneous cross-provider completeness comparison.
 Evidence is summarized in [research/alternative-feed-access.json](research/alternative-feed-access.json);
 raw aircraft records remain in ignored research storage. No continuous collector
-was enabled. The current sampler still has adsb.lol-specific identity/attribution
-and budgets; do not simply change its URL without a provider adapter and tests.
+was enabled. At the time of those probes the sampler was adsb.lol-specific; the longer
+test below adds a separate provider profile with identity, budgets and replay checks.
 
 For FlyItalyADSB, the [current API terms](https://flyitalyadsb.com/en/terms/)
 allow a product's server to cache data for its users, require attribution and
@@ -333,10 +333,10 @@ feeder software, registered accounts, requested keys or contacted providers.
 
 ### Recommended next decision
 
-1. **First test adsb.fi for a longer regional window.** It needs no account or
-   receiver and both bounded access probes passed. Use one shared query, start
-   at 20 seconds, cap attempts and measure freshness/continuity. Reconfirm the
-   personal/non-commercial display use before a public endpoint or export.
+1. **Continue measured regional work with adsb.fi.** The one-hour test below
+   completed without request failures. Next assess busy daytime coverage and
+   replay a UI with explicit position aging; retain one shared upstream query.
+   Reconfirm personal/non-commercial display use before a public endpoint or export.
 2. **Keep FlyItalyADSB as the best documented keyed regional alternative.** Its
    published monthly quota fits continuous 15–20-second polling and explicitly
    supports a cached product display. An email-based free key and an Oslo sample
@@ -352,7 +352,7 @@ resolve flight numbers/routes or change the existing 500/day adsb.lol sampler.
 
 ## adsb.fi longer regional test
 
-The next bounded experiment is a one-hour session on the existing droplet:
+This bounded experiment ran for approximately one hour on the existing droplet:
 180 samples, at least 20 seconds apart, using the documented v3 public endpoint
 within 50 nautical miles of OSL. This is a single private research run, not a
 24-hour service or a public aircraft display.
@@ -384,5 +384,91 @@ PYTHONPATH=/opt/airplanes-refresh/repo/scripts python3 /path/to/position_researc
 Implementation checks include a simulated complete 180-response session with no
 quota headers, correct source attribution in capture and replay, provider ledger
 isolation, stricter-header persistence, legacy adsb.lol safeguards and request /
-runtime ceilings. Live results and independent replay checks will be recorded
-after the session finishes.
+runtime ceilings. All **85 Python tests pass**. A further regression reproduced
+an invalid quota header overwriting the last known policy; the fix validates new
+headers before updating the ledger and preserves the same-day halt.
+
+### Completed hour: measured results
+
+The captured window is **20:35:38–21:35:19 UTC on 28 October 2026**
+(**02:05:38–03:05:19 India time on 29 October**, 21:35:38–22:35:19 Oslo time).
+The service completed in 59 minutes 42.997 seconds. Aggregate evidence, all 180
+raw-response hashes and six consecutive 30-response blocks are recorded in
+[research/adsbfi-regional-test.json](research/adsbfi-regional-test.json).
+
+| Measurement | Result |
+| --- | --- |
+| Request results | 180/180 HTTP 200; no request failure, retry or provider switch |
+| Actual request-start intervals | 20.000623–20.014253 s |
+| Distinct aircraft identifiers | 15 |
+| Returned / accepted position reports | 592 / 592; no validation rejection |
+| Ground state | All 592 indicated airborne; ground/MLAT behavior not established by this sample |
+| Position age at capture | Median 1.036 s; p95 18.305 s; maximum 61.237 s |
+| Airborne reports within 60 seconds | 591/592 (99.8%); one stale report retained and marked |
+| Reports within 15 / 30 seconds | 561/592 / 571/592 |
+| Response latency | Median 0.375 s; p95 0.497 s |
+| Provider-wrapper age | Median 0.557 s; p95 1.440 s; maximum 2.148 s |
+| Downloaded response bytes | 399,094 total; largest response 4,032 |
+| Missing fields | Callsign absent in 14 reports; NACp and SIL absent in 3 each |
+| Trail events | 15 starts, 545 updates, 26 repeats, 6 gaps over 120 s |
+| Longest positive per-aircraft observation gap | 526.345 s; not proof of an outage or a flight endpoint |
+| CPU / peak RAM / swap | 23.140 s / 18.4 MiB reported / 0 bytes |
+| Recorded request budget | 180 session attempts plus the earlier droplet probe = 181; below the local 360 cap |
+
+Freshness is conditional on returned, accepted position reports and weights
+repeated observations of an aircraft. It is not a coverage percentage or an
+independent positional-accuracy assessment. Missing aircraft and positions do not
+enter that denominator. The API remained reachable, but the six trail gaps and
+18 disappearance / 6 reappearance events may reflect region boundary crossings
+or reception gaps; they do not establish arrival, cancellation or outage counts.
+No flight number, airport pair or scheduled departure was independently matched.
+
+### Variation during the hour
+
+These are successive 30-response blocks, each spanning about ten minutes; the
+same aircraft can appear in several blocks. This avoids interpreting the overall
+percentile as uniform freshness throughout the session.
+
+| Responses | Distinct identifiers | Airborne reports | Position-age p95 | Within 60 s |
+| --- | --- | --- | --- | --- |
+| 1–30 | 4 | 68 | 21.233 s | 68/68 |
+| 31–60 | 4 | 73 | 47.660 s | 73/73 |
+| 61–90 | 6 | 59 | 30.333 s | 59/59 |
+| 91–120 | 8 | 132 | 1.365 s | 132/132 |
+| 121–150 | 7 | 151 | 2.428 s | 151/151 |
+| 151–180 | 6 | 109 | 18.305 s | 108/109 |
+
+HTTP success and a fresh wrapper do not make every aircraft position current.
+One point was already over 60 seconds old when fetched, and other points can
+cross the stale threshold between polls. A future UI must age positions using
+observation timestamps independently of request success, expire or visibly mark
+stale positions, and break trails across gaps. Interpolation must not imply a
+new measurement. The 60-second research freshness target passed; this is not
+instantaneous FlightRadar24-equivalent tracking.
+
+### Provenance, replay and decision
+
+The capture ran committed implementation `4889e9f`, with immutable source SHA-256
+`4d4b3bf1b411a2dc1e3fff9da9b426a4898e7a49e3855fff057d57f74636bc73`.
+Analysis used the checked `02d260f` version, which changes invalid-header recovery,
+not position normalization. All 180 response checksums passed on the droplet and
+locally. Two local replays produced identical metrics, preserved the request
+ledger, and matched every original capture metric except the analyzer's code
+hash. Supporting-module hashes also matched the committed helpers.
+
+Raw and normalized aircraft records remain private under
+`/var/lib/airplanes-position-research-adsbfi` and ignored local
+`work/position-research/adsbfi-long/airplanes-position-research-adsbfi/`.
+The corrected export is one `positions.json` with provider attribution and capture
+provenance. Only aggregate results are committed. The transient unit stopped and
+was removed on completion. The two existing daily collectors remain enabled;
+nginx and the original public route files are unchanged.
+
+**Decision: proceed as a candidate for further regional testing and a replay
+prototype, with explicit position aging.** This one late-evening 50-NM window
+supports sustained 20-second querying for approximately an hour within the
+measured resource budget. It does not establish 24-hour availability, peak
+traffic capacity, ground coverage, worldwide reception or verified routes.
+Collect a busy daytime window before broad coverage claims; establish public
+reuse conditions and aircraft-to-flight matching before a live route display.
+No recurring tracking service or frontend deployment is part of this test.

@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "study": "adsbfi-one-hour-osl-regional-test",
+  "capture_status": "captured",
+  "capture_error": null,
+  "provenance": {
+    "session": "20261028T203537806664Z",
+    "source_manifest_sha256": "bfe8fc19233380cbf5367fb3761a4c42f794051b5a29e689e0bcfc5b4045eb85",
+    "capture_code_sha256": "4d4b3bf1b411a2dc1e3fff9da9b426a4898e7a49e3855fff057d57f74636bc73",
+    "analysis_code_sha256": "617270278853575f064735b215fd1f65e24484c58858ff2cc8a0a429dd64e8db",
+    "capture_implementation_commit": "4889e9f",
+    "raw_response_sha256": [
+      "356d71112cd3e965e96d3c3bac00884df8a03358202789df17fd152835ab38c4",
+      "da7439cb71ebae896b8b4caf70ce590bfc4aee1c3f4ed9b5d75d2b2eafe01df9",
+      "0d19b01ddd216c6a8c795e041e164be10cf7fa5c7d0773404e5ee274579b9c70",
+      "a527e72122139cd768e9cbba2bb14a455974cc3728fc93cbd4557de6cc53881c",
+      "d8fdb169daef0302cef7a9a0b6b68990923ed1d39db99d831849c4ea382dcb46",
+      "ae08e3b0388ad6e6320b25a87d999bad24e3489e65a3af423eb5f0a4fa11c19d",
+      "b125953962e7f1ea5288e58baa84f044c0d17cd5742c1a279fcee5070aedbb5b",
+      "1d5c39916a5975a950afb3fe65c7cdb1860e9f8a840e43a55cad13056c26bed9",
+      "e01fad03ee2bc09bbdddae203762844913ecc9a7f82ab46b72a56df99669565f",
+      "bd96cd77643bf2ce2e1e9e85a7e87c277d05ff47dbcc4e140ec68baba1aae3d3",
+      "1620fc2408eb682dbc1aebf7d4d0cb0d04b4c832112a73c819a1aa6fd45c659e",
+      "7f1d859e2884854fe167321f834fed56bcd9a58ea15ddb6ea40f6cb5b0662ab5",
+      "2a242f49fc5a669ccd5fcb37b0b0a16764d2658be2f6c6da2e8979cb3018ade2",
+      "0e319161f466a1d8644d4123a9769a33765c729fc1032fe49fa257a4e5d8b2ae",
+      "113859cd0f6581537cb758e67ed0245874683985f735de81a264027887a06227",
+      "d13e2ed5d9538d7b61350945346a057050ea4d649afb83137ff39b126f40c90c",
+      "40c6d2c574445fc1f4c4f6c7b5cd72dbc7ae0614d807580fffc081eb98500bac",
+      "de6c9ab4d15b484f54a6d288a5fee8492477bc006c10b4268919124ada09d475",
+      "20fb3b35c57468384b8d4a1201d20a3686fb19d742f04d83f22edfcfaf12f2c0",
+      "05fcc1a2d3cb0ff3c7e868c0df8f5b015a6a883bc52dbdb376a16be6a45595ba",
+      "29888493ade2fc24a4366ba96f461c41737c073f1f7b6f9c565d79b03e9c47fd",
+      "36b8a8a032559194ec420caf15ac7f9ab65e791d34bcf4b7ca92b9c366885a69",
+      "36597e5f46b9caaac6abf8a6645c6cb1d3cacc95013e6834eba3771bd28deef3",
+      "e784fef6611875cb7d6c6e7838ce8bedca4d404608438afafff410ca9b13443b",
+      "4a7ad472a8ef37ea2d017de6436b0026c0decce2a925dfaba9ed9835c91b7b44",
+      "90230d71efb884c2e4ae6eb5d2e0fad08007cd205da86120a8c7198c83e417a5",
+      "af04f0e148e1e8db437ea598f8681d8e9f04d1b51691c0c6e6caaabc2eda327a",
+      "31e8cf90ae9826d20b07f8fe8e0357d4a289046610f557743308e87f45dc20a9",
+      "eabd078c3077c883d57a3a5cdf6165094a68d473ec170812d1b9fde4eb5ae680",
+      "57846e1523603c67cfa62d471db77d30617ffff5c3caa74e814581db4c81ddbe",
+      "a141f27322bdfcfc903685e628726923345f8a48a47e48e80787f01c6a5cc1f6",
+      "67fc6258abdee9c61a5a0ef52cd196ab4e5c42ad383284a93ae4df8abde3d31e",
+      "6c2d10e2d50916e099f9d75eba126719fa2bcc9f4f886aac9c3788da13175106",
+      "4a7ba6acabcdc9278a22f30a404a3512f0e2fd134a94d0b309dde613df3c117d",
+      "97ad1fae9f096b55c5c898647350e24879bde709b57b551adef22ea457cd2534",
+      "7e871455ef3572f5d3e8645f6b12a7741992b93a166eb3bba210fb31b2d35d45",
+      "ad33f5e5d53f02ae68e0324a9109f678f830f82b974d5f1de7dd12edb795d7b6",
+      "e3f15162ceafdd26e2da5464b7f31fd6356daa6132e95773f58b62478f2b94ab",
+      "527c40b335ce0143c6b7cf7fe2d33f555703d2305681ab16984471281df1f177",
+      "b75a4efb66f57fc19e9afbe760527f041fb85d8344e17f893dbc58f97761812b",
+      "99a6234445934f13cef2bf79b70e226248769b2566438382e1b2a2ce5db422d1",
+      "4939ad375f19d28575ca57470fd9815b93bd50f9e4b950ce3006a2b49936f223",
+      "75460cd07a2d906bab17990da42219fd0ed8061c180076b0062d27a2b707cf8e",
+      "6bd12b30d3240ade131946d8291715ef6d604ad81ec9c35fe148456589c01ddc",
+      "9c10e27d5152cbe21a2977fc46e1392dc61a72b11b61094c5026c91d80f65a22",
+      "74b2eea630e4b4bc2d9170abf4627b70e1dacce51e0e154d30c3b06481b1870f",
+      "63671e2fc085da81e8c1814d6f151aca08da4079bfb93de6148a6135a8f58e68",
+      "8f9257e1d1eb63efe99461e31ad0d9759276b444e60d52c6afcd141aff7fd93e",
+      "90e660bad8db8c7b3d00f7a95cbd4eadde48b2a15ff8d0eabb68627e5892b102",
+      "c158f3ab517c7bf75979f25f37ed7e18b1424a2e6f05b79e26e60dd1bea61191",
+      "fcc9a09fa556254fcc4ce5fd87764b201f389e5e89398b99ed20d92bf6885ccf",
+      "eb179921947d38bdd56ba5264c73ee8d479e222c729d7e6acc8cb136e843d9de",
+      "6f02467cc54b8db0c02d3f701cb4bd396b620410f995f4abc90c3f0555530094",
+      "e9b700044cadd7cb3852dd0630c61f1442be250cfc81bda1f56da59240cf9b42",
+      "659fe63a7993f18d96c94b44d7ce2cd33597afdc5a1ab283dbd7676f59d525da",
+      "9866ccc59db107e717380c9112c2b1165ba26e1e658067a2b989c14ce9533e69",
+      "af75a2fbc51b3999afb05438719e258cc18e082d6dc2528350247c1784e6f13b",
+      "4c250da17dcaafdd6ec0160e889d33120c7995cd55072db7da5e374db4ce9a6d",
+      "0a9625d9794cd5c0e42472bf4e05c80438dabea4bb89ed53ab05ce168f85c6dc",
+      "396ba67a022c5696b9bba3a41a5e6a7de12db068bdd9f6263e3a777e24b1c968",
+      "de1303ff8aaa45cd2d77ade4c42736abb6cd4bfdcad368cbd48b3fc51aa840f4",
+      "618c4f92a7e9671f3c7905fb8cf8aeeab576ae39983592083938cf49fd29df65",
+      "c72ed1606d4ab85e49f41f06c21e983613cc35159ab4856b900103c20287198e",
+      "9d41e9523c051696679908db195b97a6c22f409862e4563ba6af53ef243635b3",
+      "6ec69ec72fd43750b0a24824df022d0ef6e1bb317face18d4c2c0e3c4383567e",
+      "4931f61c6839c5e8c51a583a37493376a33cc06d30e29834206dd3f55f21af11",
+      "04600eeda9927d5a4c5e76ca724f5eea289bb419aab6e9d33b72bf2512d90631",
+      "6a63f4a40965013855614e95560dbce4796b0c3426da972a3816d0aaa11a491d",
+      "fe3fb6cf41e46d83729d7ece4d0c24f8ffa4838c77a14a34e995067ae1011161",
+      "aa6cc1cd9cd6085bc08967e87eed21c570b58cb0248ce028ac7627a877980d7a",
+      "fc7f91bf455a57e8f8fc8401480b487e128911c7bb039ac48f2038fd52db6d69",
+      "2b59d4439d25b299b7c068de7ffa06b455a2c036b21a9351a82dd8d62ff07b31",
+      "016535c8cfedce6f794a5f472e126bfed48e645aa2f1081d740f840741d5c5dc",
+      "076bb1b62a764927f45b2e6cf63a8fcf9800ff578f15b58099558a25663cc66a",
+      "ea01ca11e196c8ed9968549fcd3e81c1e0c94a2105d7298373340060582ceaa2",
+      "ddc2df7aee2b500701dc96cff352ec6c8b35c36ef1f21a4d577fc74a111c03a9",
+      "ff53fe46be8ff50b83da28ec089274430541f148f9ef14ccb863842146e491ea",
+      "e03d39a24d4844cec2db04faad205673bec8e999398a4f736c2424fee82018a7",
+      "9a4d650bfcf661378dadeafac4fbc9ab168b70ffeabf8269ffd5f0ecd4eda4f2",
+      "063226d94b2d4c3ea54fa1744ac2fffe69f949d29d8730f9f6d149639a8e0651",
+      "b1ec588ec406f80b8756e4aa04396e34906e37526756e56433347c1cc1c81133",
+      "3943c69d24dfd298dd941203439875723ff3ce5308c54e24b71b1ff3acd02ce1",
+      "58664684650721f7d470e6b4897490a26b1393f01a47b5d06b11e41782d6d6d9",
+      "8837dede42369826d2294c393953cf9f9143a87aa25745f66bda12822eb1b9bd",
+      "3415b426e8a90d57d703c5be83df5e7c7eca2d3e08e593006e4b5eaf2b4bab57",
+      "f256cbff32956d73b30ed507fffbe433a9dc535877bdab66f6f95f39685c0028",
+      "6dbace447f02b2c0a21b874e63b8444bc65f65b543808b8096d4ca599448dba8",
+      "d454b7af6f9b52f7bc6abc7f6366f2dafa91332f44a01a373cbf8295b3a5faa5",
+      "fccc3a411de3a3a8278cb2af3d33d9b0e1ac7780358899c22928699ccc77b6d3",
+      "2db61ea31fe88b95ae15be198421bfc8aab740548103e810a24d4c14fd7a2206",
+      "8af10d26ed579acaab794ef337ee6e8da9a1e8e1aebe73be5413a61b95b834be",
+      "567b933b29d62881a6797b4861c290b8b65da226b761b83df199d5f39d211332",
+      "8576b8d12b290abee926af521bc4a57e3630c2e1f7f7bcaf56cf7cacce8eb5f0",
+      "8148131ecae0584a26010144c701b0105bfb1035fa79f2103df3b853af2a4fc2",
+      "849c2400df2d8094f26fdf916fc65a7c87d9418c7179f851418d99a80f32ea0b",
+      "db7c8f25fb8bde4bdbfb93f1d7bee63d5bfeb36c9d2750bc7df39a0cb4fedb63",
+      "e8a04315bbbc613dc6387cd5a2485050f772d5126e9ea7605009797cd92eae40",
+      "3034a0c516babec3cf942bef1ccb1092ae618e10fda32705f628478d31621d83",
+      "3715be94227a7cdf4eb5f1595f73f98cce326201535023996e084cb732e64e8d",
+      "6ab781a4dc6295162b09b2c3856d18ff068451366161a05e2052e82e3eec352d",
+      "492385d820051cfd1e9c2d5526f03d7635c2d7b7e465e52332cd9eaf1ccc3dfe",
+      "2e4e95fb83c8478ea8ef03d7d3c9905f2f00f784336a9b93f5f74ecd9ee5df85",
+      "196a209909b5ff80544aa5deef208a7fbd3828f76f6983df72faa56f7740a3f2",
+      "aab6b63944b02e6579a5dda6131cefd598c17561ed385ed2feb22f30721ea857",
+      "1fc8ed6ebc94790a9bfd7f8742e423e544611c65d8d51b2c4652fde48821278a",
+      "4ca03de8d3886ef5cf7fcf74a83c670da184f7603e07edbf3e0dbbb1cb161ebe",
+      "179ef734138596e3ae965c097c50a901a46ae4ec7be92043066dcd3219245e19",
+      "4b09b7873f26f5d598645ba9953297e7c31028b331769c7078943567e9d9d03f",
+      "4640737c779b303f1768629fe7a3f9b7b7be6aa45dcb32a4518c967b2e9dc537",
+      "5a6db19a4d67c45fb95e6d497c6b99e442575792e6f20977809e98c071d3e55e",
+      "65d3cb90618e3aa986b104208003be87ff151324b5d38cb0d0f8f6fe51c6ba4e",
+      "6cd4031ead44ed1690f87dfa883c1a8501f76f2e02e1d3a2cc60d450fefb1467",
+      "209d32e7e7603e8b3b0b90244795870bd05bcf1e670bb03658547be9dedf965d",
+      "aa5a71d3ea181eeb45f2a6fbe8fa41fdc6faad30e86b9a8527973865756c89bb",
+      "e236a978c9ee9d88497ab528707ed8ae20852766920aed68dbbdbdde3444dc52",
+      "ffea7318ed2b60e3ce44033349761008d73f61ba52f3d566180af1e2e1cca357",
+      "6dc1fc85b0c744464bf62767a0435f59d4b84b6c7ddb6e1da02bb5cf7c97fab8",
+      "7d383b73c0ef866c4ce4ad1e77959083184d8d02ba52e6927d36a333b8b060e8",
+      "91d8ae44fd7b9a498c08e17e7ea315ea91fa31da06b2e56369f46b5691b4e47a",
+      "ec14c942ba34a8a6ea59f7c61aa8c00370af129b4eaf9ab2506b4956bf6995f8",
+      "6774bcaaa079bde8338f90373e6319c8c133d5032311d4881b43333047afd3f7",
+      "3a9916ef95bdb3a688e36e4da025990bccd2651c0d715b1f0ee123aa89f9fddd",
+      "9bd80ea1f8b66e4b3bb040f8f81ea98769f05e4f81dfdafd5696266554064e25",
+      "d9b3d1399a3445d0ba5364fd7235aa9271af95b7651d43f7ccb4244a8fee3616",
+      "edbd7ea42597d29a840cde5a6557c7b61749836a28af14c8fc4c4363133fefcc",
+      "d9c805e2ed5bdcaf2dd8f2bb7629fcd222cd9cc04d11ae405878a4f5fbf04385",
+      "4e8494af7b61a04524bc4780a4170fdf04f3fdc81989cf1e3940072547a4d6ca",
+      "b0fe671f78b966b1b2cc981c3128e04e49ccf08d0cfab7ddf53ad0ab303fffd1",
+      "6090b5f0b505e1a0e8dd118c17e58e5899d0faec89fd42f588933102c3adec4f",
+      "3b53ad9255a7e163249afbefdf5d6e163bd54cd612a8c05c0bd712231ea28353",
+      "564ed445e5c7d3b59252f4c219977c9ea4ada7dccbd5043a987215dca944c916",
+      "c017795f83e94328e191350b2a7745a62285ee641118cd3d720ccaf8b07f6af4",
+      "1d7e97695d1d5cd7b3de5ef4e086ca1ddbe855334000697a3843827b91c55265",
+      "78aeb344bfd44cb0e382aab47d31ffd8c8766e12dfed657624f8f4f44152e55f",
+      "19ad657ce1c7370da74525f33c8553efb6e26b84f5a8675d479957b80c4bae41",
+      "49b96a40308594aa4785b802c969718b7d10509228be73d49f066b8a858f96af",
+      "4c7a823c8f5f31564ee98631761eee7c95414d489dd3f89048904fdea7d2c404",
+      "fde3e7dd81c40f8e92e763fc7328ac1be486cd7dbcd9fd3dba2e89b0b19ca8cd",
+      "035b01838c217595883ffc6a946916a69347227d245e0e8a3595d12f70e45414",
+      "7d3c89e8f9d9080acbf1e793ac26095e83b3c2a63913e4c6c43f6a1fb48f47d2",
+      "18c5f52caaff43deccc0c3267656829bdd299ea0199746fea4954429aae7412a",
+      "f7fbcd10a529d10806272a16a2de18eb3f28af7df90ca7f24c29560f2b8878ec",
+      "ddab1c74e2e488cc91decaa8879c09cfdf96ad5711a914392878ab6e9a4fd99e",
+      "a5e51e7c2886648f3a6db8c6c55ea26d6d7d78ab65aed96387fb1fe8f453ba9e",
+      "8187e5cab45bc32b1293c5b5e3687782752212b0460c0ca883f83cc81b8177f0",
+      "44d44ae40d118450900ad684b91d969a6b975f1a2ac14ff644f02577de7f3f65",
+      "2eadf42d2a73b60d19e5d4e045f103c724fe358493297fb549ac6d6fd6fd95b3",
+      "a9f257683e84e242f6fb35818df676d8342ddf8f299b6fd11e19c382444bc188",
+      "aad2f0b56d5ae56b96d7c0a35cab3bdc7781ea4c037cdeca4ee6f7433f3a0bdf",
+      "e92383b7c2c1ff1bbf222ee03ea38c18f825e7292a25708dfdcf0aabe342bf34",
+      "9b680f2b5300e8e20d4c4cd4799318e10545082eccf83fa704a08b8fc1a4b25e",
+      "3dd886767b2e8c1c3c26e82b13049a36cf82af04d042f75fa1b90d4dd55e96d0",
+      "71bafc46a55bbf9858646a4d24aa9e3a4cb179722d4e411f93c3a377cc0941e1",
+      "9aac3963227586c88721c7e0664bfacb02a71d0668d47af28a9fc05e4d9cea96",
+      "c883ee363579f9f9c3487c017dd74b424cbfc629dd866421f4ee0369e2e6eb04",
+      "3bb83d37c33af14cc44f4e2c2764d963780a664f845b49f580c00bed084e76d8",
+      "dea87c28afaabad7dda18775b446da9f759918b8dbe6d2fe6e002e52bf8d8543",
+      "360767f8463a1960ee064c2a82ac230024ece1487d353fe4c4f3dc31fed330fc",
+      "2822a554a4353bdf25c42ffd37a55306e874cfefe61724219ff7a5e32b732aa9",
+      "5e33c9f8ca8c966ea5539976745744c64b1915133d4c2ea9d651ad00d52f698e",
+      "bb2bd0182bd21b4fd62d3ef8e17d264393fffa30e0566bc660d077bad6d7b1a2",
+      "fdb8568cb9a23e8c21898be6be6c0f5ceaab4f5eb93645e49d908c2f70deea37",
+      "e6d4493458b432bc1a59e018f8b14a4c21303239844081dcd177bb45035456c7",
+      "01398c6892229adcff8ee553a52cd1920f3d4b1fb3a654c1db190c48805a727a",
+      "e4595fad570216ddc2695bb9fc2e3b9ff33468480355ac1d205c36766045d067",
+      "6bbd0cbeecf324c225d16384a34bf99f3d009458d735e1ce16ed8693b3d5b0da",
+      "01a0edd951f85c2ee9d8c3edac4ca9ee4677acc7472a2e02b9b3acaffe565fe5",
+      "1cfe47800db2876c01b6154ea0331e0eb4ebebc57a2d7a3696a7a84665080dd2",
+      "60f8d5f038a327066b06f59e474dbdb2ae41fc44eee803905373a3cbc1636506",
+      "f3dbd28c7427bdc43ca538820cf2c830d9f48c7b6bee3d6347f0e859fc5c3ca2",
+      "d49eda3db515317f34f320d7d06bdffa4a199f9812aa5bf210ef324a1310d6a3",
+      "1b727c2134475a0c924e8dcb7903436d20f87bb0eade7ef76550f4cc0e599fea",
+      "f5634fb58fcfc4961149ec69c15cca35c4f9c20aa716d18b653bd8fc9f3c78b0",
+      "a974e0c2f2370835ccd377ecb00927a2e53d53eb6df4d48a8d39ffd5f2e84af9",
+      "6ffed2e521452d282a021ceb99db4c5b8b1ffacae22c8333585c0f2aba133dd9",
+      "9ac5a4b2c151c7e21d3205dafc1ebb566a8437724faa2b5332cc46d691e0782c",
+      "0e0dc58be06b542f526b073fe3900d49840cc4978735615a53ba7b950b9666ea",
+      "c876c4de1129e70a62c38af3633500decdb1b743b1ab79d4aa244005ecc492c7",
+      "c792b53eb1035d0853c58071a5eda240c95e0fe0cfbda612131ea6c1a1a3195d",
+      "8f93d9bd308439445c793c93184a44556c5318f3b599aa17147234bf77308e15"
+    ],
+    "raw_aircraft_data_committed": false,
+    "analysis_implementation_commit": "02d260f",
+    "support_code_sha256": {
+      "rebuild": "6733c181c25d79e5f7548db1d246679aab395dc929036f282b3841f74e174a7f",
+      "refresh_runner": "957a1af479b0141232f65071caf956d1eafe1c9e06aa3788c915c60d2122d83a"
+    }
+  },
+  "results": {
+    "schema_version": 1,
+    "provider": "adsb.fi",
+    "region": {
+      "airport": "OSL",
+      "latitude": 60.193901,
+      "longitude": 11.1004,
+      "radius_nm": 50
+    },
+    "policy": {
+      "stale_after_seconds": 60,
+      "future_tolerance_seconds": 5,
+      "trail_gap_seconds": 120,
+      "jump_speed_knots": 1400,
+      "jump_tolerance_nm": 1
+    },
+    "started_at": "2026-10-28T20:35:37.806664+00:00",
+    "finished_at": "2026-10-28T21:35:19.702072+00:00",
+    "capture_code_sha256": "4d4b3bf1b411a2dc1e3fff9da9b426a4898e7a49e3855fff057d57f74636bc73",
+    "analysis_code_sha256": "617270278853575f064735b215fd1f65e24484c58858ff2cc8a0a429dd64e8db",
+    "attempts": 180,
+    "successful_responses": 180,
+    "http_statuses": {
+      "200": 180
+    },
+    "sample_seconds": 3581.275075,
+    "latency_seconds": {
+      "median": 0.375441,
+      "p95": 0.496518
+    },
+    "response_bytes": {
+      "total": 399094,
+      "max": 4032
+    },
+    "unique_positioned_aircraft": 15,
+    "aircraft_reports": 592,
+    "accepted_position_reports": 592,
+    "rejection_reasons": {},
+    "airborne_position_reports": 592,
+    "ground_position_reports": 0,
+    "unknown_ground_state_reports": 0,
+    "airborne_position_age_seconds": {
+      "median": 1.03566,
+      "p95": 18.305329,
+      "max": 61.23738
+    },
+    "airborne_fresh_within_60_seconds": {
+      "numerator": 591,
+      "denominator": 592
+    },
+    "missing_callsign_reports": 14,
+    "missing_quality_fields": {
+      "nic": 0,
+      "nac_p": 3,
+      "sil": 3,
+      "rc": 0
+    },
+    "source_types": {
+      "adsb_icao": 592
+    },
+    "trail_events": {
+      "start": 15,
+      "update": 545,
+      "repeated_position": 26,
+      "gap": 6
+    },
+    "observed_update_interval_seconds": {
+      "median": 20.004,
+      "p95": 20.435
+    },
+    "disappearances_between_snapshots": 18,
+    "reappearances_between_snapshots": 6,
+    "schedule_comparison": "Not assessed: a position/callsign alone does not establish a scheduled departure or dated flight identity.",
+    "coverage_limit": "One fixed region and sampled period; no all-day availability, completeness or end-to-end flight-path claim."
+  },
+  "consecutive_30_response_blocks": [
+    {
+      "block": 1,
+      "first_sample": 1,
+      "last_sample": 30,
+      "first_capture_at": "2026-10-28T20:35:38.260196+00:00",
+      "last_capture_at": "2026-10-28T20:45:18.242460+00:00",
+      "successful_responses": 30,
+      "unique_positioned_aircraft": 4,
+      "airborne_position_reports": 68,
+      "ground_position_reports": 0,
+      "airborne_position_age_seconds": {
+        "median": 0.554046,
+        "p95": 21.232694,
+        "max": 44.135164
+      },
+      "airborne_fresh_within_60_seconds": {
+        "numerator": 68,
+        "denominator": 68
+      },
+      "rejection_reasons": {},
+      "latency_seconds": {
+        "median": 0.313634,
+        "p95": 0.445545
+      }
+    },
+    {
+      "block": 2,
+      "first_sample": 31,
+      "last_sample": 60,
+      "first_capture_at": "2026-10-28T20:45:38.150779+00:00",
+      "last_capture_at": "2026-10-28T20:55:18.439020+00:00",
+      "successful_responses": 30,
+      "unique_positioned_aircraft": 4,
+      "airborne_position_reports": 73,
+      "ground_position_reports": 0,
+      "airborne_position_age_seconds": {
+        "median": 0.520191,
+        "p95": 47.660138,
+        "max": 59.247313
+      },
+      "airborne_fresh_within_60_seconds": {
+        "numerator": 73,
+        "denominator": 73
+      },
+      "rejection_reasons": {},
+      "latency_seconds": {
+        "median": 0.369373,
+        "p95": 0.454884
+      }
+    },
+    {
+      "block": 3,
+      "first_sample": 61,
+      "last_sample": 90,
+      "first_capture_at": "2026-10-28T20:55:38.517193+00:00",
+      "last_capture_at": "2026-10-28T21:05:18.555319+00:00",
+      "successful_responses": 30,
+      "unique_positioned_aircraft": 6,
+      "airborne_position_reports": 59,
+      "ground_position_reports": 0,
+      "airborne_position_age_seconds": {
+        "median": 0.784118,
+        "p95": 30.332637,
+        "max": 50.365877
+      },
+      "airborne_fresh_within_60_seconds": {
+        "numerator": 59,
+        "denominator": 59
+      },
+      "rejection_reasons": {},
+      "latency_seconds": {
+        "median": 0.386859,
+        "p95": 0.446011
+      }
+    },
+    {
+      "block": 4,
+      "first_sample": 91,
+      "last_sample": 120,
+      "first_capture_at": "2026-10-28T21:05:38.538659+00:00",
+      "last_capture_at": "2026-10-28T21:15:18.858364+00:00",
+      "successful_responses": 30,
+      "unique_positioned_aircraft": 8,
+      "airborne_position_reports": 132,
+      "ground_position_reports": 0,
+      "airborne_position_age_seconds": {
+        "median": 0.885122,
+        "p95": 1.364544,
+        "max": 4.188089
+      },
+      "airborne_fresh_within_60_seconds": {
+        "numerator": 132,
+        "denominator": 132
+      },
+      "rejection_reasons": {},
+      "latency_seconds": {
+        "median": 0.35025,
+        "p95": 0.436966
+      }
+    },
+    {
+      "block": 5,
+      "first_sample": 121,
+      "last_sample": 150,
+      "first_capture_at": "2026-10-28T21:15:38.816803+00:00",
+      "last_capture_at": "2026-10-28T21:25:19.154616+00:00",
+      "successful_responses": 30,
+      "unique_positioned_aircraft": 7,
+      "airborne_position_reports": 151,
+      "ground_position_reports": 0,
+      "airborne_position_age_seconds": {
+        "median": 1.160616,
+        "p95": 2.42787,
+        "max": 58.993089
+      },
+      "airborne_fresh_within_60_seconds": {
+        "numerator": 151,
+        "denominator": 151
+      },
+      "rejection_reasons": {},
+      "latency_seconds": {
+        "median": 0.411387,
+        "p95": 0.591933
+      }
+    },
+    {
+      "block": 6,
+      "first_sample": 151,
+      "last_sample": 180,
+      "first_capture_at": "2026-10-28T21:25:39.324761+00:00",
+      "last_capture_at": "2026-10-28T21:35:19.535271+00:00",
+      "successful_responses": 30,
+      "unique_positioned_aircraft": 6,
+      "airborne_position_reports": 109,
+      "ground_position_reports": 0,
+      "airborne_position_age_seconds": {
+        "median": 1.498765,
+        "p95": 18.305329,
+        "max": 61.23738
+      },
+      "airborne_fresh_within_60_seconds": {
+        "numerator": 108,
+        "denominator": 109
+      },
+      "rejection_reasons": {},
+      "latency_seconds": {
+        "median": 0.421421,
+        "p95": 0.505318
+      }
+    }
+  ],
+  "freshness_at_capture": {
+    "15": {
+      "numerator": 561,
+      "denominator": 592
+    },
+    "30": {
+      "numerator": 571,
+      "denominator": 592
+    },
+    "60": {
+      "numerator": 591,
+      "denominator": 592
+    }
+  },
+  "provider_wrapper_age_seconds": {
+    "median": 0.556952,
+    "p95": 1.440168,
+    "max": 2.148168
+  },
+  "continuity": {
+    "minimum_request_start_interval_seconds": 20.000623,
+    "maximum_request_start_interval_seconds": 20.014253,
+    "largest_positive_aircraft_update_gap_seconds": 526.345,
+    "timestamp_regressions_milliseconds": {
+      "count": 0,
+      "min": null,
+      "max": null
+    },
+    "interpretation": "Request success is regional endpoint availability, not aircraft completeness. Observation gaps may reflect boundary crossings or rejected points; no arrivals or flights inferred."
+  },
+  "budget": {
+    "requested_samples": 180,
+    "sample_attempts": 180,
+    "prior_droplet_probe_attempts": 1,
+    "droplet_ledger_attempts": 181,
+    "research_daily_attempt_cap": 360,
+    "daily_cap_is_project_safety_limit_not_provider_entitlement": true,
+    "minimum_request_interval_seconds": 20,
+    "max_session_seconds": 3900,
+    "max_response_bytes": 4194304,
+    "max_state_bytes": 134217728,
+    "automatic_retries": 0
+  },
+  "audit": {
+    "raw_response_checksums_verified": true,
+    "replay_repeated_identically": true,
+    "replay_preserved_ledger": true,
+    "semantic_metrics_match_original_capture": true,
+    "analysis_code_difference": "Post-capture-version audit fix validates quota headers before replacing the known policy; successful capture normalization is unchanged."
+  },
+  "limitations": [
+    "One late-evening Oslo window, not 24-hour availability or worldwide reception.",
+    "No matched flight numbers, actual airport pairs or independent positional-accuracy proof.",
+    "No simultaneous provider comparison; do not compare aircraft counts as provider completeness.",
+    "Personal/non-commercial research only; public redistribution and continuous deployment are separate decisions."
+  ],
+  "droplet_resources": {
+    "service_runtime_seconds": 3582.997,
+    "cpu_seconds": 23.14,
+    "memory_peak_mib_as_reported": 18.4,
+    "memory_swap_peak_bytes": 0,
+    "hard_memory_limit_mib": 64,
+    "memory_high_mib": 48,
+    "cpu_quota_percent": 25,
+    "hard_runtime_seconds": 3900,
+    "source": "systemd-run completion and journal"
+  }
+}
