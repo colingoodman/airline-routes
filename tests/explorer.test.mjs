@@ -22,3 +22,12 @@ test('distance is symmetric across the date line and destination sorting is stab
  const a={latitude:0,longitude:179},b={latitude:0,longitude:-179};assert.ok(Math.abs(airportDistanceKm(a,b)-222.39)<.1);assert.equal(airportDistanceKm(a,a),0);assert.equal(airportDistanceKm(a,b),airportDistanceKm(b,a));
  const groups=destinationGroups(located,data.routes);assert.equal(sortDestinations(groups,'name')[0].id,'DEN');assert.equal(sortDestinations(groups,'country')[0].id,'NRT');assert.equal(airlineNetworkStats(data.routes).get('UA').airports.size,2);
 });
+
+import {geographyMatches,indexData,routeDistanceKm,stableAirlineColor} from '../web/model.mjs';
+import {airportRegion} from '../web/geography.mjs';
+test('geography endpoint modes compose country and region on the same airport',()=>{
+ const s=defaultExplorerState(located),ix=indexData(located),r=data.routes[0];s.countries.add('US');assert.equal(geographyMatches(ix,r,s),true);s.geoMode='both';assert.equal(geographyMatches(ix,r,s),false);s.geoMode='destination';assert.equal(geographyMatches(ix,r,s),false);s.geoMode='hub';assert.equal(geographyMatches(ix,r,s),true);s.geoMode='either';s.regions.add('AS');assert.equal(geographyMatches(ix,r,s),false);s.countries.clear();assert.equal(geographyMatches(ix,r,s),true);
+});
+test('distance boundaries are inclusive, cached per physical airport pair and dataset',()=>{
+ const ix=indexData(located),r=data.routes[0],distance=routeDistanceKm(ix,r),s=defaultExplorerState(located);s.minKm=distance;s.maxKm=distance;assert.equal(geographyMatches(ix,r,s),true);s.maxKm=distance-1;assert.equal(geographyMatches(ix,r,s),false);assert.equal(routeDistanceKm(ix,{...r,hub_airport_id:r.destination_airport_id,destination_airport_id:r.hub_airport_id}),distance);assert.equal(ix.distances.size,1);assert.equal(airportRegion({country:'US'}),'NA');assert.equal(airportRegion({country:'XX'}),'unknown');assert.equal(stableAirlineColor('UA'),stableAirlineColor('UA'));assert.notEqual(stableAirlineColor('UA'),stableAirlineColor('AF'));
+});

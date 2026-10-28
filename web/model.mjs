@@ -1,7 +1,8 @@
+import {airportRegion} from './geography.mjs';
 const dataIndexes=new WeakMap();
 export function indexData(data) {
  if(dataIndexes.has(data))return dataIndexes.get(data);
- const index={ models:new WeakMap(), sources:new Map((data.sources||[]).map(s=>[s.id,s])), airports: new Map(data.airports.map(a=>[a.id,a])), airlines:new Map(data.airlines.map(a=>[a.id,a])), alliances:new Map(data.alliances.map(a=>[a.id,a])), brands:new Map((data.service_brand_models||[]).map(b=>[b.id,b])) };
+ const index={ models:new WeakMap(), distances:new Map(), sources:new Map((data.sources||[]).map(s=>[s.id,s])), airports: new Map(data.airports.map(a=>[a.id,a])), airlines:new Map(data.airlines.map(a=>[a.id,a])), alliances:new Map(data.alliances.map(a=>[a.id,a])), brands:new Map((data.service_brand_models||[]).map(b=>[b.id,b])) };
  dataIndexes.set(data,index);return index;
 }
 export function routeModel(index,route) {
@@ -17,7 +18,7 @@ export function filterRoutes(data,state) {
  const ix=indexData(data),typed=state.regional||(state.lowCost&&state.lowCost!=='all');
  return data.routes.filter(r=>{
   const a=ix.airlines.get(r.airline_id);
-  return state.alliances.has(a.alliance_id) && (!state.airlines.size || state.airlines.has(a.id)) && airportMatches(r,state) && (state.seasonal || r.status!=='seasonal') && (state.charter || r.service_type!=='charter') && (!typed||modelMatches(routeModel(ix,r),state));
+  return state.alliances.has(a.alliance_id) && (!state.airlines.size || state.airlines.has(a.id)) && airportMatches(r,state) && geographyMatches(ix,r,state) && (state.seasonal || r.status!=='seasonal') && (state.charter || r.service_type!=='charter') && (!typed||modelMatches(routeModel(ix,r),state));
  });
 }
 export function airlineOptions(data,state) {
@@ -139,3 +140,17 @@ export function sortDestinations(groups,sort='name'){
 export function airlineNetworkStats(routes){
  const stats=new Map();for(const r of routes){if(!stats.has(r.airline_id))stats.set(r.airline_id,{airports:new Set(),hubs:new Set()});const s=stats.get(r.airline_id);s.airports.add(r.hub_airport_id);s.airports.add(r.destination_airport_id);s.hubs.add(r.hub_airport_id);}return stats;
 }
+
+export function routeDistanceKm(index,route){
+ const a=route.hub_airport_id,b=route.destination_airport_id,key=a<b?a+'|'+b:b+'|'+a;
+ if(!index.distances.has(key))index.distances.set(key,airportDistanceKm(index.airports.get(a),index.airports.get(b)));return index.distances.get(key);
+}
+export function geographyMatches(index,route,state){
+ if(state.countries?.size||state.regions?.size){
+  const matches=id=>{const a=index.airports.get(id);return (!state.countries?.size||state.countries.has(a.country))&&(!state.regions?.size||state.regions.has(airportRegion(a)));};
+  const a=matches(route.hub_airport_id),b=matches(route.destination_airport_id),mode=state.geoMode||'either';
+  if(!(mode==='both'?a&&b:mode==='hub'?a:mode==='destination'?b:a||b))return false;
+ }
+ if(state.minKm>0||state.maxKm<20020){const km=routeDistanceKm(index,route);if(km<(state.minKm||0)||km>(state.maxKm??20020))return false;}return true;
+}
+export function stableAirlineColor(id){let hash=2166136261;for(const c of id)hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;return `hsl(${hash%360} 65% ${35+(hash>>>12)%13}%)`;}

@@ -14,7 +14,7 @@ let html=read('index.html').replace(/<link rel="stylesheet" href="vendor\/leafle
 html=html.replace('<a href="../README.md">Project documentation</a>','<p>This portable viewer includes its complete data and map assets. The source repository contains methodology and rebuild instructions.</p>');
 const inline=(code,type='')=>`<script${type?' type="'+type+'"':''}>${code.replaceAll('</script','<\\/script')}</script>`;
 const jsonScript=(id,json)=>`<script id="${id}" type="application/json">${safeJson(json)}</script>`;
-const modules=['model.mjs','route-renderer.mjs','runtime.mjs','perf.mjs'].map(p=>read(p).replaceAll('export ','')).join('\n');
+const modules=['geography.mjs','model.mjs','route-renderer.mjs','runtime.mjs','perf.mjs'].map(p=>read(p).replace(/^import .*?;\n/gm,'').replaceAll('export ','')).join('\n');
 html=html.replace(/<script src="vendor\/leaflet.js"><\/script><script type="module" src="app.mjs[^\"]*"><\/script>/,
  jsonScript('canonical-data',JSON.stringify(JSON.parse(read('data.json'))))+jsonScript('embedded-map',read('map-data.json'))+jsonScript('embedded-world',JSON.stringify(JSON.parse(read('world.geojson'))))+inline(read('vendor/leaflet.js'))+inline(modules+'\n'+app,'module'));
 const out=path.resolve(process.argv[2]||path.join(root,'work','alliance-map.html'));fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,html);console.log(out);
