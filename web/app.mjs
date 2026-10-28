@@ -129,7 +129,18 @@ function showRouteHover(connection,latlng){
  if(!connection){$('route-hover').textContent='Hover a route or destination to highlight it.';for(const [key,marker] of pinLayers){const id=key.split('@')[0];marker.setStyle({weight:id===state.focus?2.5:hubIds.has(id)?1.2:.3});}return;}
  const a=ix.airports.get(connection.hub_airport_id),b=ix.airports.get(connection.destination_airport_id),airlines=[...new Set(filtered.filter(r=>(r.hub_airport_id===a.id&&r.destination_airport_id===b.id)||(r.hub_airport_id===b.id&&r.destination_airport_id===a.id)).map(r=>r.airline_id))];
  $('route-hover').textContent=`${airportCode(a)} ↔ ${airportCode(b)} · ${airlines.map(id=>ix.airlines.get(id).name).join(', ')} · approx. ${formatDistance(airportDistanceKm(a,b))} · ${connection.services.every(s=>s.status==='seasonal')?'Seasonal':'Listed service'}${connection.services.some(s=>s.service_type==='charter')?' · includes charter':''}`;
- if(latlng)routeTooltip=L.tooltip({direction:'top',offset:[0,-10],opacity:1,className:'route-hover-tooltip'}).setLatLng(latlng).setContent(esc($('route-hover').textContent)).addTo(map);
+ if(latlng){
+  const names=airlines.map(id=>ix.airlines.get(id).name),status=connection.services.every(s=>s.status==='seasonal')?'Seasonal service':'Listed service';
+  const content=`<strong class="route-tooltip-airports">${esc(airportCode(a))} <span aria-hidden="true">↔</span> ${esc(airportCode(b))}</strong><div class="route-tooltip-airlines">${esc(names.slice(0,4).join(', '))}${names.length>4?` <span>+${names.length-4} more</span>`:''}</div><div class="route-tooltip-meta"><span>Approx. ${formatDistance(airportDistanceKm(a,b))}</span><span>${status}${connection.services.some(s=>s.service_type==='charter')?' · charter':''}</span></div><div class="route-tooltip-hint">Click route for service details</div>`;
+  routeTooltip=L.tooltip({direction:'top',offset:[0,-12],opacity:1,className:'route-hover-tooltip'}).setLatLng(latlng).setContent(content).addTo(map);
+  // Leaflet's auto-sized tooltip can shrink into a narrow column near an edge.
+  // Give it a deliberate width, then keep the card inside the map viewport.
+  const size=map.getSize(),element=routeTooltip.getElement();element.style.width=Math.min(300,size.x-24)+'px';
+  const point=map.latLngToContainerPoint(latlng),width=element.offsetWidth,height=element.offsetHeight,bottom=point.y<height+24;
+  routeTooltip.options.direction=bottom?'bottom':'top';routeTooltip.options.offset=L.point(0,bottom?12:-12);
+  const x=Math.max(width/2+12,Math.min(size.x-width/2-12,point.x)),y=bottom?Math.min(point.y,size.y-height-24):Math.max(point.y,height+24);
+  routeTooltip.setLatLng(map.containerPointToLatLng(L.point(x,y)));
+ }
  for(const [key,marker] of pinLayers){const id=key.split('@')[0];if(id===a.id||id===b.id)marker.setStyle({weight:3});}
 }
 function renderLabels(){
