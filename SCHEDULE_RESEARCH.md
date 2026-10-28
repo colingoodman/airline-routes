@@ -1,6 +1,6 @@
 # Free schedule investigation
 
-Status: first capture and parser checks completed on 28 October 2026. Three departure records were cross-checked against the dated Avinor passenger board. Seven-day repeat observation and independent airline checks are pending. No schedule data has been added to the viewer or downloadable route dataset.
+Status: captures and parser checks completed on 28 October 2026; daily observation is now enabled on the droplet. Three departure records were cross-checked against the dated Avinor passenger board. Seven-day repeat observation and independent airline checks are pending. No schedule data has been added to the viewer or downloadable route dataset.
 
 ## Decision
 
@@ -23,6 +23,13 @@ The fixed sample is Oslo (OSL) and Brønnøysund (BNN), with `TimeFrom=1`, `Time
 | Invalid records after preserving circular services explicitly | 0 |
 | Paired scheduled arrival time in a departure record | Unavailable |
 | Distinct observation days | 1; repeat-observation gate pending |
+
+The droplet's live verification capture at 15:11 UTC on 28 October returned
+1,885 records, including 116 with codeshares, 47 with intermediate stops and
+11 circular services. The 37 missing map references remain unresolved. Earlier
+raw captures and their request ledger were migrated intact. This is still one
+distinct observation day. Comparison with the earlier normalizer is withheld
+until its raw evidence is replayed; the daily collector now uses a fixed commit.
 
 The first parser rejected circular itineraries that leave OSL, call at SDN/SOG and return to OSL. It now preserves those source records and flags them for leg resolution. It does not turn a circular itinerary into a nonstop route or guess its first leg. Missing destinations remain unresolved map references; they are not discarded or assigned to another airport.
 
@@ -54,7 +61,7 @@ The tool accepts only the two reviewed origins. It has an exclusive lock, a dail
 
 Each capture has raw XML, normalized records, issues, attribution, request URLs, normalizer hash and a comparison summary. Comparable captures report added/removed records and changed schedule/status fields. Disappearance is not classified as cancellation. A changed normalizer requires replaying prior raw evidence before comparison. Only complete captures of the same origins, horizon and schema count toward the observation gate. Seven days of future departures returned today are **one** observation day.
 
-Daily droplet service definitions live in `deploy/refresh/airplanes-schedule-research.*`; the installer and verification steps are in the deployment guide. Use the same dedicated account/read-only collector checkout described in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only), with separate writable state at `/var/lib/airplanes-schedule-research`. Verify the units and run the service manually before enabling the timer. The template captures once daily at 03:45 UTC (09:15 India time), plus up to ten minutes of jitter: two requests/day, well below the local 24-attempt cap.
+Daily droplet service definitions live in `deploy/refresh/airplanes-schedule-research.*`; the installer and verification steps are in the deployment guide. Use the same dedicated account/read-only collector checkout described in [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only), with separate writable state at `/var/lib/airplanes-schedule-research`. Verify the units and run the service manually before enabling the timer. The enabled timer captures once daily at 03:45 UTC (09:15 India time), plus up to ten minutes of jitter: two requests/day, well below the local 24-attempt cap.
 
 Before a viewer pilot:
 

@@ -14,7 +14,7 @@
 - Viewer nginx snippet: `/etc/nginx/snippets/airplanes.conf` (source: `deploy/airplanes.nginx.conf`).
 - nginx backups: `/etc/nginx/backups/website.*`, outside nginx's include directories.
 
-The viewer is entirely static. There is no server-side Node/Python process, database, API key, dependency installation or build on the droplet. Keep the existing homepage, TLS/Certbot directives and its `/assets/` rules intact. This path uses the existing certificate and DNS.
+The viewer is entirely static and needs no application server or database. Separate scheduled Python/Node collection runs outside its release directory, as described below. Keep the existing homepage, TLS/Certbot directives and its `/assets/` rules intact. This path uses the existing certificate and DNS.
 
 ## Subsequent deploys
 
@@ -109,6 +109,15 @@ If a module returns HTML, the viewer's nginx location/include is missing. If a m
 Collection belongs on the existing droplet. The two Mac launch agents have been
 unloaded and their plist files removed; this branch no longer includes a macOS
 background-job installer. Captured evidence is retained for migration.
+
+Both droplet timers are enabled. The installed collector is commit
+`1193dec430f403e9004f77fc8708bdc5fa623231`. Its first full service run on
+28 October 2026 passed reviewed-snapshot validation in 35 minutes 49 seconds;
+service RAM peaked at 128.5 MiB, with no out-of-memory events. It produced a
+review-required candidate with 32,652 route records and 3,361 airports. A live
+OSL/BNN schedule capture also succeeded, and the daily schedule service passed
+its same-day gate. The public viewer remains on revision
+`15181c0765d5b52a71c7d50bb95c1395c0fc5fb5`.
 
 The collector is independent of the public viewer:
 

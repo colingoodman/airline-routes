@@ -1,6 +1,6 @@
 # Data refresh and flight schedule roadmap
 
-Status: candidate collection and Avinor research captures are moving to the existing droplet, pinned to a checked Git commit. The Mac background jobs have been removed. The first full candidate validates all 572 carriers and 1,304 origins, with dated checks for 699 route sources; the published dataset remains unchanged. Three weekly review cycles and seven distinct schedule-observation days are pending. No unattended publication or schedule display is enabled. See [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only) for operating details and [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md) for the measured sample. Source access was verified on 28 October 2026; droplet service validation is required before enabling its timers.
+Status: candidate collection and Avinor research captures run daily on the existing droplet, pinned to checked collector commit `1193dec430f403e9004f77fc8708bdc5fa623231`. Both Mac background jobs have been removed. A full droplet candidate passed reviewed-snapshot validation on 28 October 2026: 572 carriers, 1,304 origins, 3,361 airports and 32,652 route records. The published dataset remains unchanged. Three weekly review cycles and seven distinct schedule-observation days are pending. No unattended publication or schedule display is enabled. See [DEPLOYMENT.md](DEPLOYMENT.md#candidate-refresh-runner-collection-only) for operating details and [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md) for the measured samples.
 
 Keep the project at **$0 in additional spend**. First make the existing route dataset refreshable and auditable. Then investigate adding genuine flight numbers and dated schedules where free sources support them. Worldwide schedule coverage is an open research question, not a promised deliverable.
 
@@ -12,9 +12,9 @@ Keep the project at **$0 in additional spend**. First make the existing route da
 - Keep three distinct kinds of evidence: a source-listed route, a dated scheduled flight, and an observed flight. One must not silently become another.
 - Provider permissions must cover the intended use: map display, retained records, downloadable JSON and the offline portable viewer. Keep restricted data out of those artifacts unless the provider explicitly permits it.
 
-## Starting point
+## Starting point before this branch
 
-`scripts/rebuild.py` downloads OurAirports metadata and rebuilds `web/data.json` and its compact projection. It writes directly to the canonical files. `scripts/collect.py` reuses cached Wikipedia responses without an expiry, and labels source retrieval dates using the supplied snapshot date. Rerunning it with a newer date therefore does not prove that the evidence was fetched again.
+The original `scripts/rebuild.py` downloaded OurAirports metadata and wrote directly to `web/data.json` and its compact projection. The original collector reused cached Wikipedia responses without an expiry and labelled retrieval dates using the supplied snapshot date. Rerunning it with a newer date therefore did not prove that evidence had been fetched again. This branch replaces that behavior with isolated candidates, expiring caches and actual source-check timestamps.
 
 The roster, hub selections, model classifications, aliases and discovery audit are reviewed inputs. Fetching airport pages does not update those decisions. Validation also includes fixed membership counts and example-route expectations, which need a review path when the real network changes.
 
