@@ -149,6 +149,11 @@ For recurring collection, see the bounded runner and systemd templates in [DEPLO
 
 For the measured Avinor departure sample, bounded capture tool and remaining pilot gates, see [SCHEDULE_RESEARCH.md](SCHEDULE_RESEARCH.md).
 
+The follow-up [candidate review](research/candidate-review.json) and
+[alphanumeric callsign investigation](CALLSIGN_RESOLUTION_RESEARCH.md) separate
+dated schedule corroboration from unresolved aircraft identity. They do not
+enable a public live flight display.
+
 For a new discovery inventory, without modifying the released roster or dataset:
 
 ```sh

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "session": "20261028T203537806664Z",
+  "unsupported_format_episodes": 6,
+  "categories": {
+    "reviewed_carrier_alphanumeric": 6
+  },
+  "reviewed_carrier_alphanumeric_episodes_by_prefix": {
+    "NOZ": 2,
+    "SAS": 2,
+    "WIF": 2
+  },
+  "decoded_flight_numbers": 0,
+  "new_confirmed_associations": 0,
+  "provenance": {
+    "position_manifest_sha256": "bfe8fc19233380cbf5367fb3761a4c42f794051b5a29e689e0bcfc5b4045eb85",
+    "carrier_mapping_sha256": "7ee05e6089d3704c3737d80e1eff8394b875aeab32f1addaf57b73af6b7603e1",
+    "inventory_code_sha256": "9752b2bf88a4c9fca922927b61f7dd9169deccb36e2174765fd1903b2ccedc84",
+    "position_normalizer_sha256": "617270278853575f064735b215fd1f65e24484c58858ff2cc8a0a429dd64e8db",
+    "episode_builder_sha256": "268fd588818ff8a9d450ca1d5b27592ffd4ae086517c2ce1cd2ac51b11383d11"
+  },
+  "limits": [
+    "Shape classification only; no new identity, registration or operating-carrier verification.",
+    "A reviewed carrier prefix does not decode its alphanumeric operational identifier.",
+    "No aircraft identifiers, callsign rows or positions are exported."
+  ]
+}

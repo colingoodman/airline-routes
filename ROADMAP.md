@@ -144,7 +144,12 @@ evening (180-response) and morning (179-response) regional tests. FlyItalyADSB
 keyed access remains untested. The first
 [aircraft-to-flight matching pass](FLIGHT_MATCHING_RESEARCH.md) produces 14 dated
 flight-number/planned-route hypotheses across those two service dates, with no
-independently confirmed aircraft/flight associations. Alphanumeric callsigns,
+independently confirmed aircraft/flight associations. A follow-up
+[14-case review](research/candidate-review.json) corroborates ten dated flight/endpoint
+records from airline/airport pages, with four official checks still unresolved.
+[Alphanumeric callsign research](CALLSIGN_RESOLUTION_RESEARCH.md) identifies 19
+morning cases with reviewed carrier prefixes, but establishes no permitted dated
+decoder. Alphanumeric callsigns,
 ground/departure corroboration, the independent precision gate, further time-of-day
 and availability sampling, and a permitted sustainable public live-data path
 remain unresolved. Existing collection and public route data are unchanged.

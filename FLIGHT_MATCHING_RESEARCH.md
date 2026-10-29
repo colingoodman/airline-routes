@@ -4,6 +4,13 @@ The first implementation generates **offline hypotheses** linking observed aircr
 episodes to dated Avinor OSL departures. It does not assert confirmed flight
 identities or actual destinations, and it does not alter the public map.
 
+The follow-up [external candidate review](#external-review-of-the-14-candidates-29-october)
+corroborates ten dated flight/endpoint records; four official checks remain
+unresolved. The [alphanumeric callsign investigation](CALLSIGN_RESOLUTION_RESEARCH.md)
+separates the morning's 31 unsupported-format episodes into 19 reviewed-carrier
+operational identifiers and 12 other cases. Aircraft associations remain
+unconfirmed; the current full suite passes 109 tests.
+
 ## First real-data results
 
 Both completed adsb.fi captures were replayed against the existing Avinor
