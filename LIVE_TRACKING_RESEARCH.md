@@ -472,3 +472,75 @@ traffic capacity, ground coverage, worldwide reception or verified routes.
 Collect a busy daytime window before broad coverage claims; establish public
 reuse conditions and aircraft-to-flight matching before a live route display.
 No recurring tracking service or frontend deployment is part of this test.
+
+## Daytime Oslo follow-up, 29 October 2026
+
+The follow-up uses the same 50-NM OSL region, adsb.fi endpoint, 20-second
+cadence and committed capture implementation (SHA-256
+`617270278853575f064735b215fd1f65e24484c58858ff2cc8a0a429dd64e8db`).
+Its one-off droplet unit has the same 64-MiB RAM, 64-MiB swap, 25%-CPU,
+128-MiB research-state and 3,900-second runtime ceilings. The
+[provider's documented rate and personal/noncommercial conditions](https://github.com/adsbfi/opendata/blob/main/README.md)
+were rechecked before capture.
+
+The experiment reserves **179 requests**, approximately 59 minutes. The first
+180-request launch was refused by preflight before any feed request: the previous
+UTC day's 181 attempts still count toward the conservative local 360-attempt
+rolling-day safety budget. The revised run fits exactly; no ledger was reset and
+no limit increased. This project budget is separate from the provider's published
+one-request-per-second limit. No further adsb.fi sampling is available within
+this local budget until older attempts age out of the conservative window.
+
+Aggregate reports can now be reproduced with the checked offline helper:
+
+```sh
+.venv/bin/python scripts/summarize_positions.py PRIVATE_SESSION \
+  --out research/NEW_AGGREGATE.json
+```
+
+The helper verifies raw-response checksums, replays normalization, requires
+semantic agreement with the original capture report, checks the requested
+cadence and exports consecutive 30-response blocks. It includes source/code
+hashes but no aircraft rows. Three new checks and the 85 existing Python checks
+pass independently of the subsequent flight-matching stage.
+
+### Completed morning: results
+
+The sampled window was **06:44:44–07:44:07 UTC on 29 October**
+(**07:44:44–08:44:07 Oslo**, **12:14:44–13:14:07 India**). The transient unit
+finished successfully in 59 minutes 25.506 seconds. Aggregate evidence and all
+179 response hashes are in [research/adsbfi-daytime-test.json](research/adsbfi-daytime-test.json).
+
+| Measurement | Result |
+| --- | --- |
+| Requests | 179/179 HTTP 200; no failed feed request or retry |
+| Distinct positioned aircraft identifiers | 52 |
+| Accepted / returned position reports | 2,125 / 2,125; no validation rejection |
+| Airborne position age | Median 1.308 s; p95 4.945 s; maximum 61.527 s |
+| Within 60 seconds | 2,121/2,125 (99.8%); four stale reports retained and marked |
+| Ground state | All reports indicated airborne; zero ground reports |
+| Source types as reported | 2,080 adsb_icao, 39 mlat, 6 mode_s |
+| Missing data | Three reports without callsigns; NACp/SIL absent in 52 each |
+| HTTP latency | Median 0.396 s; p95 0.490 s |
+| Downloaded bytes | 1,423,762 total; largest response 11,545 |
+| Trail events | 52 starts, 2,008 updates, 62 repeats, three gaps over 120 s |
+| CPU / peak RAM / swap | 35.160 s / 25.7M as reported / zero bytes |
+
+The six consecutive blocks have position-age p95 values of 4.907, 15.084,
+18.477, 2.436, 3.830 and 1.576 seconds (the last block has 29 responses).
+The overall research freshness target passes, with variation during the hour.
+The morning yielded more identifiers/reports than the evening, but these are
+different traffic periods, not an independent coverage or provider comparison.
+MLAT/mode_s labels were observed; their positional accuracy was not independently
+checked. Zero ground reports means this sample cannot validate ground coverage
+or provide a measured ground-to-air departure transition.
+
+Server and local replays agree with the original report. Repeating local summary
+generation gives identical results, preserves the ledger and confirms supporting
+module hashes. Private raw/replayed evidence remains under
+`/var/lib/airplanes-position-research-adsbfi` and ignored local
+`work/position-research/adsbfi-daytime/`. The collector exhausted its reserved local
+budget and finished; it does not recur. This second regional window supports
+continued replay and identity research, with aging/expiry still required. It
+does not establish continuous daily availability, peak-traffic capacity or
+verified flight routes.
