@@ -1,0 +1,11 @@
+{
+  "checked_on": "2026-10-29",
+  "purpose": "Carrier identity only. Numeric suffix equality generates a hypothesis, never a verified flight association. Alphanumeric suffixes are not translated.",
+  "carriers": {
+    "SAS": {"iata": "SK", "sources": ["https://www.icao.int/CORSIA/AeroplaneOperators", "https://www.flysas.com/es-es/informacion-legal/condiciones-de-transporte"]},
+    "WIF": {"iata": "WF", "sources": ["https://www.iata.org/en/about/members/airline-list/wideroe/233/"]},
+    "NOZ": {"iata": "DY", "sources": ["https://www.aena.es/en/alicante-elche-miguel-hernandez/airlines/norwegian-air-shuttle.html"]},
+    "NSZ": {"iata": "D8", "sources": ["https://www.aena.es/en/tenerife-sur/airlines/norwegian-sweden.html"]},
+    "BAW": {"iata": "BA", "sources": ["https://www.aena.es/en/ibiza/airlines/british-airways.html"]}
+  }
+}

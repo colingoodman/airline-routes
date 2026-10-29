@@ -1,6 +1,6 @@
 # Free schedule investigation
 
-Status: captures and parser checks completed on 28 October 2026; daily observation is now enabled on the droplet. Three departure records were cross-checked against the dated Avinor passenger board. Seven-day repeat observation and independent airline checks are pending. No schedule data has been added to the viewer or downloadable route dataset.
+Status: two distinct observation days are captured through 29 October 2026; daily observation is enabled on the droplet. Three departure records were cross-checked against the dated Avinor passenger board. Seven-day repeat observation and independent airline checks are pending. No schedule data has been added to the viewer or downloadable route dataset.
 
 ## Decision
 
@@ -38,6 +38,13 @@ Source UTC timestamps are retained separately from the departure-local date, cal
 A departure board provides a scheduled departure at its queried airport. An arrival board provides a scheduled arrival at its queried airport. A future full-leg timetable would need verified pairing or another permitted source; this sample does not invent the missing end time, duration, aircraft type, bookability or a recurring weekly pattern.
 
 ## Passenger-board spot check
+
+The 29 October daily droplet capture at 04:01 UTC returned 1,817 OSL and 44 BNN
+departures (1,861 total), with 11 circular services and 37 missing map endpoint
+references. Its report records two observation days; the seven-day gate remains
+pending. The OSL XML checksum and exact current-parser replay were checked
+before using this existing capture in the [flight-matching investigation](FLIGHT_MATCHING_RESEARCH.md).
+No additional schedule polling was added for aircraft tracking.
 
 On 28 October, the [dated Oslo passenger board](https://www.avinor.no/en/airport/oslo/flight-times/) matched these source records after UTC-to-Oslo conversion:
 

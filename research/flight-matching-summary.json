@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "study": "initial-osl-aircraft-to-dated-flight-hypotheses",
+  "analyses": [
+    {
+      "label": "evening",
+      "position_session": "20261028T203537806664Z",
+      "summary": {
+        "aircraft": 15,
+        "episodes": 22,
+        "states": {
+          "unknown": 18,
+          "candidate": 4
+        },
+        "reasons": {
+          "unreviewed_carrier": 5,
+          "independent_aircraft_to_flight_confirmation_required": 4,
+          "non_numeric_or_unrecognized_callsign_format": 6,
+          "missing_callsign": 4,
+          "no_eligible_schedule_candidate": 3
+        },
+        "episodes_with_departure_evidence": 0,
+        "confirmed_matches": 0,
+        "precision": null,
+        "match_coverage": null,
+        "validation_gate": "Pending independent review of 100 associations on two dates and 20 negative cases."
+      },
+      "schedule_window_comparison": {
+        "scheduled_departures_in_capture_window": 4,
+        "with_aircraft_hypothesis": 1,
+        "without_aircraft_hypothesis": 3,
+        "interpretation": "Schedule-time window only; a hypothesis is not a confirmed departure. Missing hypotheses do not establish non-operation or feed incompleteness."
+      },
+      "candidate_counts_by_published_carrier": {
+        "SK": 4
+      },
+      "provenance": {
+        "position_manifest_sha256": "bfe8fc19233380cbf5367fb3761a4c42f794051b5a29e689e0bcfc5b4045eb85",
+        "position_capture_code_sha256": "4d4b3bf1b411a2dc1e3fff9da9b426a4898e7a49e3855fff057d57f74636bc73",
+        "position_analysis_code_sha256": "617270278853575f064735b215fd1f65e24484c58858ff2cc8a0a429dd64e8db",
+        "schedule_manifest_sha256": "35ec43d10ea22131d55604e6cf5952cf88eae2e16c468299a94115c513606b67",
+        "schedule_raw_sha256": "9282f86921d12b60090ecfa65f4611a7b71bf1d7501a21c8ec8f174728fd1514",
+        "schedule_parser_sha256": "0f014c132c0ce1348a7c2e7d7dbf6ae586058ad6f0833cf466b0a9dc151c2854",
+        "matcher_sha256": "268fd588818ff8a9d450ca1d5b27592ffd4ae086517c2ce1cd2ac51b11383d11",
+        "carrier_mapping_sha256": "7ee05e6089d3704c3737d80e1eff8394b875aeab32f1addaf57b73af6b7603e1",
+        "position_attribution": {
+          "text": "adsb.fi",
+          "url": "https://adsb.fi/",
+          "license": null,
+          "terms_url": "https://github.com/adsbfi/opendata/blob/main/README.md",
+          "use": "personal, non-commercial; attribution required"
+        },
+        "schedule_attribution": {
+          "text": "Flydata fra Avinor",
+          "url": "https://www.avinor.no/",
+          "terms_url": "https://partner.avinor.no/tjenester/flydata/"
+        }
+      },
+      "audit": {
+        "repeat_analysis_identical": true,
+        "source_evidence_unchanged": true
+      }
+    },
+    {
+      "label": "daytime",
+      "position_session": "20261029T064443225755Z",
+      "summary": {
+        "aircraft": 52,
+        "episodes": 57,
+        "states": {
+          "unknown": 47,
+          "candidate": 10
+        },
+        "reasons": {
+          "no_eligible_schedule_candidate": 11,
+          "non_numeric_or_unrecognized_callsign_format": 31,
+          "independent_aircraft_to_flight_confirmation_required": 10,
+          "unreviewed_carrier": 2,
+          "missing_callsign": 3
+        },
+        "episodes_with_departure_evidence": 0,
+        "confirmed_matches": 0,
+        "precision": null,
+        "match_coverage": null,
+        "validation_gate": "Pending independent review of 100 associations on two dates and 20 negative cases."
+      },
+      "schedule_window_comparison": {
+        "scheduled_departures_in_capture_window": 25,
+        "with_aircraft_hypothesis": 8,
+        "without_aircraft_hypothesis": 17,
+        "interpretation": "Schedule-time window only; a hypothesis is not a confirmed departure. Missing hypotheses do not establish non-operation or feed incompleteness."
+      },
+      "candidate_counts_by_published_carrier": {
+        "DY": 5,
+        "SK": 5
+      },
+      "provenance": {
+        "position_manifest_sha256": "d7525988c323e5ae933f99e05534c37805c9392b0378889a05a56653ccacd893",
+        "position_capture_code_sha256": "617270278853575f064735b215fd1f65e24484c58858ff2cc8a0a429dd64e8db",
+        "position_analysis_code_sha256": "617270278853575f064735b215fd1f65e24484c58858ff2cc8a0a429dd64e8db",
+        "schedule_manifest_sha256": "0708c3724ca5dcd29961be70f879ddc2bce24f449d1a9e6fa066d15d697bd713",
+        "schedule_raw_sha256": "057d99fc10895b33afed2007f94cd602f7da2a2c694512b92b53fae4d506aec0",
+        "schedule_parser_sha256": "0f014c132c0ce1348a7c2e7d7dbf6ae586058ad6f0833cf466b0a9dc151c2854",
+        "matcher_sha256": "268fd588818ff8a9d450ca1d5b27592ffd4ae086517c2ce1cd2ac51b11383d11",
+        "carrier_mapping_sha256": "7ee05e6089d3704c3737d80e1eff8394b875aeab32f1addaf57b73af6b7603e1",
+        "position_attribution": {
+          "text": "adsb.fi",
+          "url": "https://adsb.fi/",
+          "license": null,
+          "terms_url": "https://github.com/adsbfi/opendata/blob/main/README.md",
+          "use": "personal, non-commercial; attribution required"
+        },
+        "schedule_attribution": {
+          "text": "Flydata fra Avinor",
+          "url": "https://www.avinor.no/",
+          "terms_url": "https://partner.avinor.no/tjenester/flydata/"
+        }
+      },
+      "audit": {
+        "repeat_analysis_identical": true,
+        "source_evidence_unchanged": true
+      }
+    }
+  ],
+  "validation": {
+    "python_tests": 106,
+    "deliberately_ambiguous_or_negative_synthetic_cases": 20,
+    "independently_reviewed_real_associations": 0,
+    "confirmed_precision": null,
+    "real_match_coverage": null,
+    "real_precision_gate": "pending"
+  },
+  "limitations": [
+    "Numeric callsign-to-flight-number agreement is a hypothesis, not independent confirmation.",
+    "Alphanumeric callsigns, arrivals, overflights and other operators remain unresolved.",
+    "Planned endpoints are not actual destinations or verified complete flown routes.",
+    "Synthetic refusal checks do not count as reviewed real associations.",
+    "No raw aircraft rows, recurring collector or public display is published."
+  ]
+}

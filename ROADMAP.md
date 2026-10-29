@@ -139,7 +139,12 @@ checked stage-2 Oslo sample with capture/replay tooling; see
 [LIVE_TRACKING_RESEARCH.md](LIVE_TRACKING_RESEARCH.md). adsb.lol's observed
 500/day anonymous allowance rules out continuous 20-second polling on that feed;
 [other free feeds and contributor benefits](LIVE_TRACKING_RESEARCH.md#higher-limit-free-feeds-and-contribution-benefits)
-have higher documented limits, with adsb.fi access verified through a checked one-hour, 180-response regional
-test and FlyItalyADSB keyed access still untested. Two more time-of-day
-samples, aircraft-to-flight matching and a permitted, sustainable live publication
-path remain unresolved. Existing collection and public route data are unchanged.
+have higher documented limits, with adsb.fi access verified through checked
+evening (180-response) and morning (179-response) regional tests. FlyItalyADSB
+keyed access remains untested. The first
+[aircraft-to-flight matching pass](FLIGHT_MATCHING_RESEARCH.md) produces 14 dated
+flight-number/planned-route hypotheses across those two service dates, with no
+independently confirmed aircraft/flight associations. Alphanumeric callsigns,
+ground/departure corroboration, the independent precision gate, further time-of-day
+and availability sampling, and a permitted sustainable public live-data path
+remain unresolved. Existing collection and public route data are unchanged.
