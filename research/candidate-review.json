@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-29",
+  "method": "Manual review of rendered airline/airport public pages; no new feed requests.",
+  "source_hypotheses_sha256": {
+    "evening": "6d251297d315eb833aa2f257db035ca8c33741f6e85dd3e2edbc96c8e22d1709",
+    "daytime": "5d9067163a3a8f61cef0ebe1a8b801948cf4aa7f4d0ecf070374c1a6d04cb34c"
+  },
+  "cases": [
+    {
+      "published_flight_number": "SK1330",
+      "departure_local_date": "2026-10-28",
+      "planned_pair": [
+        "OSL",
+        "AES"
+      ],
+      "scheduled_departure_utc": "2026-10-28T19:55:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK1330&date=2026-10-28",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK1330",
+        "origin": "OSL",
+        "destination": "AES",
+        "scheduled_departure_local": "20:55",
+        "takeoff_local_as_reported": "21:28",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "SK1488",
+      "departure_local_date": "2026-10-28",
+      "planned_pair": [
+        "OSL",
+        "ARN"
+      ],
+      "scheduled_departure_utc": "2026-10-28T20:30:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK1488&date=2026-10-28",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK1488",
+        "origin": "OSL",
+        "destination": "ARN",
+        "scheduled_departure_local": "21:30",
+        "takeoff_local_as_reported": "21:46",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "SK382",
+      "departure_local_date": "2026-10-28",
+      "planned_pair": [
+        "OSL",
+        "TRD"
+      ],
+      "scheduled_departure_utc": "2026-10-28T20:50:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK382&date=2026-10-28",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK0382",
+        "origin": "OSL",
+        "destination": "TRD",
+        "scheduled_departure_local": "21:50",
+        "takeoff_local_as_reported": "21:58",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "SK320",
+      "departure_local_date": "2026-10-28",
+      "planned_pair": [
+        "OSL",
+        "HAU"
+      ],
+      "scheduled_departure_utc": "2026-10-28T20:15:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK320&date=2026-10-28",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK0320",
+        "origin": "OSL",
+        "destination": "HAU",
+        "scheduled_departure_local": "21:15",
+        "takeoff_local_as_reported": "22:12",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "DY804",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "ARN"
+      ],
+      "scheduled_departure_utc": "2026-10-29T06:30:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "destination_airport_date_number_endpoints_agree",
+      "official_airline_url": "https://www.norwegian.com/uk/flight-status/",
+      "evidence": {
+        "provider": "Swedavia",
+        "url": "https://www.swedavia.se/arlanda/ankomster/#/2026-10-29/DY804",
+        "origin": "OSL",
+        "destination": "ARN",
+        "scheduled_arrival_local": "08:40",
+        "landed_local_as_reported": "08:20",
+        "timezone": "Europe/Stockholm",
+        "departure_time_checked": false,
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "SK821",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "AMS"
+      ],
+      "scheduled_departure_utc": "2026-10-29T06:45:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK821&date=2026-10-29",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK0821",
+        "origin": "OSL",
+        "destination": "AMS",
+        "scheduled_departure_local": "07:45",
+        "takeoff_local_as_reported": "07:52",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "DY1718",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "MAD"
+      ],
+      "scheduled_departure_utc": "2026-10-29T06:45:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "unresolved",
+      "official_airline_url": "https://www.norwegian.com/uk/flight-status/",
+      "reason": "Norwegian public page presented anti-bot challenge; no challenge solved.",
+      "additional_check": {
+        "url": "https://www.flightradar24.com/data/flights/dy1718",
+        "result": "Search-indexed 29 October schedule supports OSL-MAD at 06:45 UTC; secondary lead only, not accepted as an official airline/airport check."
+      }
+    },
+    {
+      "published_flight_number": "SK251",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "BGO"
+      ],
+      "scheduled_departure_utc": "2026-10-29T07:00:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK251&date=2026-10-29",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK0251",
+        "origin": "OSL",
+        "destination": "BGO",
+        "scheduled_departure_local": "08:00",
+        "takeoff_local_as_reported": "08:09",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "SK332",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "TRD"
+      ],
+      "scheduled_departure_utc": "2026-10-29T07:00:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK332&date=2026-10-29",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK0332",
+        "origin": "OSL",
+        "destination": "TRD",
+        "scheduled_departure_local": "08:00",
+        "takeoff_local_as_reported": "08:14",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "DY524",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "SVG"
+      ],
+      "scheduled_departure_utc": "2026-10-29T07:00:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "unresolved",
+      "official_airline_url": "https://www.norwegian.com/uk/flight-status/",
+      "reason": "Norwegian public page presented anti-bot challenge; no challenge solved."
+    },
+    {
+      "published_flight_number": "DY182",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "HAU"
+      ],
+      "scheduled_departure_utc": "2026-10-29T07:35:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "unresolved",
+      "official_airline_url": "https://www.norwegian.com/uk/flight-status/",
+      "reason": "Norwegian public page presented anti-bot challenge; no challenge solved.",
+      "additional_check": {
+        "url": "https://www.flightstats.com/v2/flight-tracker/DY/182?date=29&flightId=1416879953&month=10&year=2026",
+        "result": "Search-indexed 29 October schedule supports OSL-HAU at 08:35 CET; secondary lead only, not accepted as an official airline/airport check."
+      }
+    },
+    {
+      "published_flight_number": "SK4082",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "EVE"
+      ],
+      "scheduled_departure_utc": "2026-10-29T07:30:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK4082&date=2026-10-29",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK4082",
+        "origin": "OSL",
+        "destination": "EVE",
+        "scheduled_departure_local": "08:30",
+        "takeoff_local_as_reported": "08:37",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "SK4472",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "KKN"
+      ],
+      "scheduled_departure_utc": "2026-10-29T07:30:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "airline_date_number_endpoints_time_agree",
+      "official_airline_url": "https://www.flysas.com/ie-en/flight-status?flightNumber=SK4472&date=2026-10-29",
+      "evidence": {
+        "provider": "SAS",
+        "method": "rendered dated search and expanded flight details",
+        "displayed_number": "SK4472",
+        "origin": "OSL",
+        "destination": "KKN",
+        "scheduled_departure_local": "08:30",
+        "takeoff_local_as_reported": "08:39",
+        "timezone": "Europe/Oslo",
+        "registration_available": false
+      }
+    },
+    {
+      "published_flight_number": "DY932",
+      "departure_local_date": "2026-10-29",
+      "planned_pair": [
+        "OSL",
+        "CPH"
+      ],
+      "scheduled_departure_utc": "2026-10-29T06:30:00+00:00",
+      "aircraft_link": "unresolved",
+      "actual_route": "unverified",
+      "external_schedule_check": "unresolved",
+      "official_airline_url": "https://www.norwegian.com/uk/flight-status/",
+      "reason": "Norwegian public page presented anti-bot challenge; no challenge solved.",
+      "additional_check": {
+        "url": "https://www.cph.dk/flyinformation/ankomster/DY932_20261029_A_0",
+        "result": "Flight title and dated URL only; no rendered dated time record. Insufficient corroboration."
+      }
+    }
+  ],
+  "limits": [
+    "External schedule agreement does not identify an aircraft or validate an observed complete route.",
+    "Airline/airport information may share underlying sources with Avinor; lineage independence is not established.",
+    "No airline registration or dated operational-callsign field was available in the reviewed pages.",
+    "Not a licensed API integration, recurring scraper, or evidence of general API access."
+  ],
+  "summary": {
+    "reviewed_candidates": 14,
+    "external_schedule_checks": {
+      "airline_date_number_endpoints_time_agree": 9,
+      "destination_airport_date_number_endpoints_agree": 1,
+      "unresolved": 4
+    },
+    "aircraft_links_confirmed": 0,
+    "actual_routes_verified": 0,
+    "independent_match_precision": null
+  }
+}

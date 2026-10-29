@@ -47,6 +47,44 @@ stale reports cannot create or extend a flight candidate's time window.
 
 ## Evidence and matching rules
 
+### External review of the 14 candidates, 29 October
+
+The [case review](research/candidate-review.json) records a disposition for all
+14 candidates, with dated source URLs and explicit limits. **Ten have corroborated
+dated flight numbers and planned endpoints from an airline or destination airport;
+four remain unresolved at that source standard. No aircraft association is
+confirmed.** These sources may share operational data with Avinor, so this is an
+external presentation check rather than proof of independent data lineage.
+
+All nine SAS candidates matched the airline's rendered dated status search,
+including planned endpoints and scheduled departure after conversion to Oslo
+time: SK1330, SK1488, SK382 and SK320 on 28 October; SK821, SK251, SK332,
+SK4082 and SK4472 on 29 October. For example, the
+[SK821 dated result](https://www.flysas.com/ie-en/flight-status?flightNumber=SK821&date=2026-10-29)
+showed OSL–AMS at 07:45 local, with takeoff separately reported at 07:52. Expanded
+details were checked for all nine. Gate departure, takeoff and scheduled time
+remain separate fields. The page did not expose a registration or operational
+callsign, so the aircraft link remains unresolved. SAS displayed some numbers
+with a zero-padded numeric portion; these exact page-level aliases are recorded
+in the review, without changing the matcher's conservative string rules.
+
+The [dated Swedavia arrival record](https://www.swedavia.se/arlanda/ankomster/#/2026-10-29/DY804)
+supported DY804 from Oslo to ARN on 29 October, scheduled arrival 08:40 local,
+landed as reported at 08:20. This checks the dated airport pair, not its departure
+time or aircraft. The board's default current-time filter initially hid this
+earlier arrival; selecting 00:00 revealed it. An empty filtered board is not
+evidence of non-operation.
+
+Norwegian's [public status page](https://www.norwegian.com/uk/flight-status/)
+presented an anti-bot challenge in both the direct request and normal browser.
+No challenge was solved and no alternate restricted endpoint was used.
+DY1718, DY524, DY182 and DY932 therefore remain unresolved under the official
+dated airline/airport check. Copenhagen's dated DY932 page rendered a flight
+title but no time record, which is insufficient. Search-indexed FR24/Cirium
+records for DY1718/DY182 are recorded as secondary leads, not accepted official
+checks or evidence of API reuse rights. No paid/trial access, account creation,
+provider contact or extra position-feed polling was used.
+
 `scripts/flight_matching.py` verifies every position-response checksum and replays
 the source bytes. It separately verifies the captured Avinor XML checksum and
 normalizes it with the current schedule parser. Saved normalized schedule rows
